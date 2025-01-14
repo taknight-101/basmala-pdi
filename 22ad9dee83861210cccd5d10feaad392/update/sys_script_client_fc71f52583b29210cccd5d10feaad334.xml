@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Hide Feedback related list</name>
+        <order>100</order>
+        <script><![CDATA[function onLoad() {
+	if (g_form.getValue('state') != 3){
+		g_form.hideRelatedList('REL:c71be9e983729210cccd5d10feaad347');
+		g_form.hideRelatedList('REL:74e37b3a836ada10cccd5d10feaad35c');
+	}
+   
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 17:42:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fc71f52583b29210cccd5d10feaad334</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Hide Feedback related list</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_client_fc71f52583b29210cccd5d10feaad334</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 17:49:23</sys_updated_on>
+        <table>x_1522458_automo_0_service_request</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

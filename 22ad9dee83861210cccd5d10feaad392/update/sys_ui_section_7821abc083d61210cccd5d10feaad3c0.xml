@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Service Request" section_id="7821abc083d61210cccd5d10feaad3c0" sys_domain="global" table="x_1522458_automo_0_service_request" version="3" view="manager_view">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>inspection_date</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 10:02:48</sys_created_on>
+            <sys_id>65296364834b9610cccd5d10feaad37d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Request" display_value="Service Request" name="x_1522458_automo_0_service_request" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">7821abc083d61210cccd5d10feaad3c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 10:02:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>desired_time</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 10:02:48</sys_created_on>
+            <sys_id>6d296364834b9610cccd5d10feaad37d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Request" display_value="Service Request" name="x_1522458_automo_0_service_request" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">7821abc083d61210cccd5d10feaad3c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 10:02:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 10:02:48</sys_created_on>
+            <sys_id>65296364834b9610cccd5d10feaad37e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Request" display_value="Service Request" name="x_1522458_automo_0_service_request" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">7821abc083d61210cccd5d10feaad3c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 10:02:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vehicle</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 10:02:48</sys_created_on>
+            <sys_id>6d296364834b9610cccd5d10feaad37e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Request" display_value="Service Request" name="x_1522458_automo_0_service_request" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">7821abc083d61210cccd5d10feaad3c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 10:02:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 10:02:48</sys_created_on>
+            <sys_id>65296364834b9610cccd5d10feaad37f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Request" display_value="Service Request" name="x_1522458_automo_0_service_request" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">7821abc083d61210cccd5d10feaad3c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 10:02:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>standard</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 10:02:48</sys_created_on>
+            <sys_id>6d296364834b9610cccd5d10feaad37f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Request" display_value="Service Request" name="x_1522458_automo_0_service_request" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">7821abc083d61210cccd5d10feaad3c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 10:02:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>has_feedback</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 10:02:48</sys_created_on>
+            <sys_id>65296364834b9610cccd5d10feaad380</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Request" display_value="Service Request" name="x_1522458_automo_0_service_request" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">7821abc083d61210cccd5d10feaad3c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 10:02:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>tasks_rated</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 10:02:48</sys_created_on>
+            <sys_id>6d296364834b9610cccd5d10feaad380</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Service Request" display_value="Service Request" name="x_1522458_automo_0_service_request" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">7821abc083d61210cccd5d10feaad3c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 10:02:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Service Request</caption>
+            <header>false</header>
+            <name>x_1522458_automo_0_service_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-01 13:23:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7821abc083d61210cccd5d10feaad3c0</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>x_1522458_automo_0_service_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_7821abc083d61210cccd5d10feaad3c0</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-17 13:01:17</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="manager view" name="manager_view">41d3364c83d21210cccd5d10feaad3f5</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

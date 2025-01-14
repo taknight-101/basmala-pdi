@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">ac41c285835e1610cccd5d10feaad379</sp_column>
+        <sp_widget display_value="CAB Workbench - Meetings Calendar">28b1fc649f131200b18a7feea57fcf48</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 08:59:09</sys_created_on>
+        <sys_id>ce518a85835e1610cccd5d10feaad3e3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_instance_ce518a85835e1610cccd5d10feaad3e3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 08:59:42</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=ce518a85835e1610cccd5d10feaad3e3"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sp_instance_ce518a85835e1610cccd5d10feaad3e3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">ac41c285835e1610cccd5d10feaad379</sp_column><sp_widget display_value="CAB Workbench - Meetings Calendar">28b1fc649f131200b18a7feea57fcf48</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 08:59:09</sys_created_on><sys_id>ce518a85835e1610cccd5d10feaad3e3</sys_id><sys_mod_count>2</sys_mod_count><sys_name/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sp_instance_ce518a85835e1610cccd5d10feaad3e3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 08:59:42</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=ce518a85835e1610cccd5d10feaad3e3"/></record_update>]]></payload>
+        <payload_hash>-1450153295</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 08:59:42</sys_created_on>
+        <sys_id>1a714ec9835e1610cccd5d10feaad3dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19390e58a610000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 08:59:42</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>de714ec9b35e161052a7f69d800dc1dc</update_guid>
+        <update_guid_history>de714ec9b35e161052a7f69d800dc1dc:-1450153295,a5714ec9845e1610981a6700d4641073:2110397682,8a518a85af5e1610b7ec986d8cb1cfe5:1375981363</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">85918ec9835e1610cccd5d10feaad373</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 09:00:10</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>44bb11ff1572449eb35c6738035b97e4</sys_id>
+        <sys_metadata>ce518a85835e1610cccd5d10feaad3e3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sp_instance_ce518a85835e1610cccd5d10feaad3e3</sys_update_name>
+        <sys_update_version display_value="sp_instance_ce518a85835e1610cccd5d10feaad3e3">1a714ec9835e1610cccd5d10feaad3dd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 09:00:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

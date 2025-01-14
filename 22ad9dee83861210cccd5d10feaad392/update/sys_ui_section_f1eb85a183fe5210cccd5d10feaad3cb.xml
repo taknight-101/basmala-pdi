@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Inspection and Diagnosis:" section_id="f1eb85a183fe5210cccd5d10feaad3cb" sys_domain="global" table="x_1522458_automo_0_customer_feedback" version="3" view="Manager_Feedback_View">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_satisfied_were_you_with_the_clarity_and_thoroughness_of_the_inspection_proce</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:54:02</sys_created_on>
+            <sys_id>0aebc5a183fe5210cccd5d10feaad358</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection and Diagnosis:" display_value="Inspection and Diagnosis:" name="x_1522458_automo_0_customer_feedback" sys_domain="global" view="01d989ed83be5210cccd5d10feaad37b">f1eb85a183fe5210cccd5d10feaad3cb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:54:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>did_the_inspection_appointment_meet_your_expectations</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:54:02</sys_created_on>
+            <sys_id>02ebc5a183fe5210cccd5d10feaad359</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection and Diagnosis:" display_value="Inspection and Diagnosis:" name="x_1522458_automo_0_customer_feedback" sys_domain="global" view="01d989ed83be5210cccd5d10feaad37b">f1eb85a183fe5210cccd5d10feaad3cb</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:54:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Inspection and Diagnosis:</caption>
+            <header>false</header>
+            <name>x_1522458_automo_0_customer_feedback</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:54:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f1eb85a183fe5210cccd5d10feaad3cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_customer_feedback</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_f1eb85a183fe5210cccd5d10feaad3cb</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:54:01</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Manager Feedback View" name="Manager_Feedback_View">01d989ed83be5210cccd5d10feaad37b</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

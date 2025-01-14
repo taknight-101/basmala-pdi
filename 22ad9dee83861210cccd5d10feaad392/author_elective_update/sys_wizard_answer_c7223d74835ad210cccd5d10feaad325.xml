@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="DELETE">
+        <active>true</active>
+        <answer>Task Item</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Task Item</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">60cc817a0d2112104f349799ccc973ae</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-03 13:14:23</sys_created_on>
+        <sys_id>c7223d74835ad210cccd5d10feaad325</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task Item</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_wizard_answer_c7223d74835ad210cccd5d10feaad325</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-03 13:14:23</sys_updated_on>
+        <table/>
+        <target_url>x_1522458_automo_0_service_task.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_wizard_answer_c7223d74835ad210cccd5d10feaad325</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>Task Item</answer><button_label/><dependent_value/><element/><name>Task Item</name><next_question/><order>100</order><payload_name/><question display_value="Task" name="Task">60cc817a0d2112104f349799ccc973ae</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-03 13:14:23</sys_created_on><sys_id>c7223d74835ad210cccd5d10feaad325</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Task Item</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_wizard_answer_c7223d74835ad210cccd5d10feaad325</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-03 13:14:23</sys_updated_on><table/><target_url>x_1522458_automo_0_service_task.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+        <payload_hash>1564392790</payload_hash>
+        <record_name>Task Item</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-05 09:36:29</sys_created_on>
+        <sys_id>72735f5d83d21210cccd5d10feaad3fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193962d94df0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-05 09:36:29</sys_updated_on>
+        <type>Answer</type>
+        <update_guid>32735f5d72d21210ac8729cbe7a803fd</update_guid>
+        <update_guid_history>32735f5d72d21210ac8729cbe7a803fd:1564392790</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-05 09:36:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_wizard_answer">sys_wizard_answer</sys_db_object>
+        <sys_id>72894ff0f0e348e19ac212c6c9367ea9</sys_id>
+        <sys_metadata>c7223d74835ad210cccd5d10feaad325</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task Item</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Task">60cc817a0d2112104f349799ccc973ae</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_wizard_answer_c7223d74835ad210cccd5d10feaad325</sys_update_name>
+        <sys_update_version display_value="sys_wizard_answer_c7223d74835ad210cccd5d10feaad325">72735f5d83d21210cccd5d10feaad3fd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-05 09:36:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.state == 'completed'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Close Task</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[if (current.state == 'completed' && current.insoection) {
+        current.state = 'closed_complete';
+        current.update();
+
+        // Check if the task has a referenced request
+        if (current.request) {
+            var grRequest = new GlideRecord('x_1522458_automo_0_service_request'); // Replace 'request' with the actual table name
+            if (grRequest.get(current.request)) { // Fetch the referenced request
+                grRequest.setValue('state', 6);
+                grRequest.update(); // Save the request record
+            } else {
+                gs.addErrorMessage('Referenced request record not found.');
+            }
+        } else {
+            gs.addErrorMessage('No referenced request found for this task.');
+        }
+
+        // Notify the user and refresh the form
+        gs.addInfoMessage('Task started. The related request is now inspected.');
+        action.setRedirectURL(current); // Refresh the form to hide the button
+    }
+
+    else if(current.state == 'completed' && !current.insoection) {
+        // Update the task state to 'In Progress'
+        current.state = 'closed_complete';
+        current.update(); // Save the task record
+
+        // Check if the task has a referenced request
+        if (current.request) {
+            var grReques = new GlideRecord('x_1522458_automo_0_service_request'); // Replace 'request' with the actual table name
+            if (grReques.get(current.request)) { // Fetch the referenced request
+                grReques.setValue('state', 3); // Set the state to 'SERVICE COMPLETE'
+                grReques.update(); // Save the request record
+            } else {
+                gs.addErrorMessage('Referenced request record not found.');
+            }
+        } else {
+            gs.addErrorMessage('No referenced request found for this task.');
+        }
+
+        // Notify the user and refresh the form
+        gs.addInfoMessage('Task closed completed. The related request is now service complete.');
+        action.setRedirectURL(current); // Refresh the form to hide the button
+    }
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-10 08:25:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>52c2780f8316d210cccd5d10feaad325</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Close Task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ui_action_52c2780f8316d210cccd5d10feaad325</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 07:50:17</sys_updated_on>
+        <table>x_1522458_automo_0_task</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>52c2780f8316d210cccd5d10feaad325</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-10 08:25:01</sys_created_on>
+        <sys_id>f413384f8316d210cccd5d10feaad304</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-10 08:25:01</sys_updated_on>
+        <table>sys_ui_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

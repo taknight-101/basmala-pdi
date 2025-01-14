@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Offer" section_id="5796dbf383aa1250cccd5d10feaad3c6" sys_domain="global" table="x_1522458_automo_0_offer" version="3" view="manager_view">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>d2e6573783aa1250cccd5d10feaad339</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>spare_parts_cost</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>d2e6573783aa1250cccd5d10feaad39d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>labor_cost</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>dae6573783aa1250cccd5d10feaad39d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>price</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>d2e6573783aa1250cccd5d10feaad39e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>dae6573783aa1250cccd5d10feaad39e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>request_number</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>d2e6573783aa1250cccd5d10feaad39f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>dae6573783aa1250cccd5d10feaad39f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>d2e6573783aa1250cccd5d10feaad3a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>dae6573783aa1250cccd5d10feaad3a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:31:59</sys_created_on>
+            <sys_id>d2e6573783aa1250cccd5d10feaad3a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">5796dbf383aa1250cccd5d10feaad3c6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Offer</caption>
+            <header>false</header>
+            <name>x_1522458_automo_0_offer</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-25 14:30:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5796dbf383aa1250cccd5d10feaad3c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_offer</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_5796dbf383aa1250cccd5d10feaad3c6</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-25 14:30:41</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="manager view" name="manager_view">41d3364c83d21210cccd5d10feaad3f5</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

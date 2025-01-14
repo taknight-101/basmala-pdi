@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+//	c.Redirect = function(){
+		
+		
+		//top.window.location = "customer_portal?id=asm_request_service &table=x_1522458_automo_0_service_request&view=Customer_view";
+	
+		
+//	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+.{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.standard-services-title {
+  text-align: center;
+  margin-bottom: 50px; 
+}
+
+
+.standard-services-title h2 {
+  font-size: 3.5rem; 
+  font-weight: normal; 
+  color: rgba(0, 0, 0, 0.85); 
+  margin-top: 0; 
+  padding: 20px; 
+}
+
+/* Parent Container */
+.standard-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Individual Cards */
+.service-card {
+  background-color: rgba(255, 255, 255, 0.6); 
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid rgba(221, 221, 221, 0.8);
+  flex: 0 1 calc(30% - 20px);
+  min-width: 250px;
+  max-width: 300px;
+  height: 360px; /* Adjusted height */
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Image Styling */
+.service-image {
+  width: 100%;
+  height: 45%; /* Adjusted height for image */
+  overflow: hidden;
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  position: relative;
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Details Section (Title and Description) */
+.service-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px; /* Padding for content inside details section */
+  text-align: left;
+  height: 45%; /* Adjust to fit with the new image height */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Card Title */
+.service-card h3 {
+  font-size: 2.5rem; /* Increased title size */
+  font-weight: 600; /* Slightly bold title */
+  margin-bottom: 10px; /* Increased space below the title */
+  color: rgba(0, 0, 0, 0.85);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Card Description */
+.service-card p {
+  font-size: 1.5rem; /* Larger description text */
+  color: rgba(0, 0, 0, 0.75);
+  height: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 4 lines for better spacing */
+  -webkit-box-orient: vertical;
+}
+
+/* Hover Effects for Cards */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .service-card {
+    flex: 0 1 calc(45% - 20px); /* Adjust layout for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 0 1 calc(100% - 20px); /* Adjust layout for small screens */
+  }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>standard services</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    var services = [];
+    var gr = new GlideRecord('x_1522458_automo_0_standard_services');
+    gr.query();
+    var instanceUrl = 'https://dev231407.service-now.com'; 
+    
+    while (gr.next()) {
+        var imageSysId = gr.getValue('image'); 
+        var imageUrl = getImageUrl(imageSysId); 
+
+        services.push({
+					  sys_id: gr.getValue('sys_id'),
+            title: gr.getValue('title'),
+            description: gr.getValue('description'),
+            image: imageUrl
+        });
+    }
+
+    data.services = services;
+
+   
+    function getImageUrl(imageSysId) {
+        if (!imageSysId) return ''; // Return empty string if no image
+
+        var attachmentGr = new GlideRecord('sys_attachment');
+        attachmentGr.addQuery('sys_id', imageSysId);
+        attachmentGr.query();
+
+        if (attachmentGr.next()) {
+            return instanceUrl + '/sys_attachment.do?sys_id=' + attachmentGr.sys_id; // Construct the full image URL
+        }
+        return ''; 
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 14:07:11</sys_created_on>
+        <sys_id>99daef8c83d61210cccd5d10feaad3d9</sys_id>
+        <sys_mod_count>128</sys_mod_count>
+        <sys_name>standard services</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_99daef8c83d61210cccd5d10feaad3d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-31 14:15:04</sys_updated_on>
+        <template><![CDATA[<div class="standard-services-title">
+  <h2>Standard Services</h2>
+</div>
+
+<div class="standard-services">
+  <div class="row">
+    <div class="col-md-4" ng-repeat="service in c.data.services">
+      <a ng-href="/customer_portal?id=request_standard_service&sys_id={{service.sys_id}}">
+      <div class="service-card">
+      
+        <div class="service-image">
+          <!-- Image will use the full URL passed from the server-side -->
+          <img ng-src="{{service.image}}" alt="{{service.title}}">
+        </div>
+        <div class="service-details">
+           
+          <h3>{{service.title}}</h3>
+          <p>{{service.description}}</p>
+              
+        </div>
+      </div>
+    </a>
+        </div>
+      
+  </div>
+</div>
+
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>99daef8c83d61210cccd5d10feaad3d9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 14:07:10</sys_created_on>
+        <sys_id>b81ba7cc83d61210cccd5d10feaad3c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-01 14:07:10</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

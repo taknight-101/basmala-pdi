@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="" section_id="156df38f834ad210cccd5d10feaad339" sys_domain="global" table="x_1522458_automo_0_colors" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-11-28 12:54:22</sys_created_on>
+            <sys_id>95ad7743838ad210cccd5d10feaad357</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_colors" sys_domain="global" view="Default view">156df38f834ad210cccd5d10feaad339</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-11-28 12:54:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>color</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-11-28 12:54:22</sys_created_on>
+            <sys_id>9dad7743838ad210cccd5d10feaad357</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_colors" sys_domain="global" view="Default view">156df38f834ad210cccd5d10feaad339</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-11-28 12:54:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption/>
+            <header>false</header>
+            <name>x_1522458_automo_0_colors</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-11-28 12:53:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>156df38f834ad210cccd5d10feaad339</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_colors</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_156df38f834ad210cccd5d10feaad339</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-11-28 12:53:16</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ui_section_156df38f834ad210cccd5d10feaad339</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="156df38f834ad210cccd5d10feaad339" sys_domain="global" table="x_1522458_automo_0_colors" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>name</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-28 12:54:22</sys_created_on><sys_id>95ad7743838ad210cccd5d10feaad357</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_colors" sys_domain="global" view="Default view">156df38f834ad210cccd5d10feaad339</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-28 12:54:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>color</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-28 12:54:22</sys_created_on><sys_id>9dad7743838ad210cccd5d10feaad357</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_colors" sys_domain="global" view="Default view">156df38f834ad210cccd5d10feaad339</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-28 12:54:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_1522458_automo_0_colors</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-28 12:53:16</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>156df38f834ad210cccd5d10feaad339</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1522458_automo_0_colors</sys_name><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ui_section_156df38f834ad210cccd5d10feaad339</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-28 12:53:16</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>1322063861</payload_hash>
+        <record_name>Colors</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-28 12:54:22</sys_created_on>
+        <sys_id>91ad7743838ad210cccd5d10feaad35a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19372d63a070000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-28 12:54:22</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>59ad7743ef8ad21011b093cd171f9c59</update_guid>
+        <update_guid_history>59ad7743ef8ad21011b093cd171f9c59:1322063861,d56dbf03098ad210b313829e9b891cf8:-1955870028,556dbf03948ad21000fdc76b3307b5f6:1581549498</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-28 13:09:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>5dcc1d648e574458a9a42d76f64a2640</sys_id>
+        <sys_metadata>156df38f834ad210cccd5d10feaad339</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1522458_automo_0_colors</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="">9c6dbf03838ad210cccd5d10feaad335</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ui_section_156df38f834ad210cccd5d10feaad339</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_156df38f834ad210cccd5d10feaad339">91ad7743838ad210cccd5d10feaad35a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-28 13:09:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

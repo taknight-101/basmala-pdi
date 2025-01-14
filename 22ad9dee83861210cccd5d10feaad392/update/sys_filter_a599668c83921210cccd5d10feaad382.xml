@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_filter">
+    <sys_filter action="INSERT_OR_UPDATE">
+        <filter table="x_1522458_automo_0_service_request">department=3d510ffa83429210cccd5d10feaad3d1^state!=3^ORstate!=4^EQ<item display_table="cmn_department" display_value="Engine Department" endquery="false" field="department" goto="false" newquery="false" operator="=" or="false" value="3d510ffa83429210cccd5d10feaad3d1"/>
+            <item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="!=" or="false" value="3"/>
+            <item display_value="Closed Incomplete" endquery="false" field="state" goto="false" newquery="false" operator="!=" or="true" value="4"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <group display_value="Service Managers" name="Service Managers">4a31692683c61210cccd5d10feaad347</group>
+        <last_used/>
+        <mobile>false</mobile>
+        <roles/>
+        <sys_class_name>sys_filter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 09:21:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a599668c83921210cccd5d10feaad382</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Manager View</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_filter_a599668c83921210cccd5d10feaad382</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-01 09:21:03</sys_updated_on>
+        <table>x_1522458_automo_0_service_request</table>
+        <title>Service Manager View</title>
+        <user/>
+    </sys_filter>
+    <sys_translated_text action="delete_multiple" query="documentkey=a599668c83921210cccd5d10feaad382"/>
+</record_update>

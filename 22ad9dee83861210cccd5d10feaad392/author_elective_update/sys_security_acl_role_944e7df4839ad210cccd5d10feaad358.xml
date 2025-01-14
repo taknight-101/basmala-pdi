@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-03 14:07:29</sys_created_on>
+        <sys_id>944e7df4839ad210cccd5d10feaad358</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1522458_automo_0_service_task.x_1522458_automo_0.admin</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_security_acl display_value="x_1522458_automo_0_service_task">bc592bd8839a5210cccd5d10feaad30a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_944e7df4839ad210cccd5d10feaad358</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-03 14:07:29</sys_updated_on>
+        <sys_user_role display_value="x_1522458_automo_0.admin" name="x_1522458_automo_0.admin">faad9dee83861210cccd5d10feaad3ae</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_security_acl_role_944e7df4839ad210cccd5d10feaad358</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-03 14:07:29</sys_created_on><sys_id>944e7df4839ad210cccd5d10feaad358</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1522458_automo_0_service_task.x_1522458_automo_0.admin</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_security_acl display_value="x_1522458_automo_0_service_task">bc592bd8839a5210cccd5d10feaad30a</sys_security_acl><sys_update_name>sys_security_acl_role_944e7df4839ad210cccd5d10feaad358</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-03 14:07:29</sys_updated_on><sys_user_role display_value="x_1522458_automo_0.admin" name="x_1522458_automo_0.admin">faad9dee83861210cccd5d10feaad3ae</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1743794278</payload_hash>
+        <record_name>x_1522458_automo_0_service_task.x_1522458_automo_0.admin</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-03 14:07:29</sys_created_on>
+        <sys_id>c15e3df4839ad210cccd5d10feaad3fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1938cd8f81c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-03 14:07:29</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>c55e3df4aa9ad210ba01bf856e71b7fa</update_guid>
+        <update_guid_history>c55e3df4aa9ad210ba01bf856e71b7fa:1743794278</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1522458_automo_0_service_task.x_1522458_automo_0.admin">d78ef138839ad210cccd5d10feaad3ea</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-03 14:08:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>a4174991bc0c4817852580618e878d61</sys_id>
+        <sys_metadata>944e7df4839ad210cccd5d10feaad358</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1522458_automo_0_service_task.x_1522458_automo_0.admin</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="">bc592bd8839a5210cccd5d10feaad30a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_944e7df4839ad210cccd5d10feaad358</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_944e7df4839ad210cccd5d10feaad358">c15e3df4839ad210cccd5d10feaad3fb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-03 14:08:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

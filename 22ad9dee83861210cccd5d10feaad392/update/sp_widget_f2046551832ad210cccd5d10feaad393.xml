@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+  /* widget controller */
+  var c = this;
+	
+	c.activeTab_engine = 'general';
+	c.activeTab_body = 'exterior';
+
+  c.switchTab = function (tabName) {
+    c.activeTab_engine = tabName;
+		c.activeTab_body = tabName;
+  };
+	
+	
+	
+	c.errors = {}; 
+  //c.reportAttachment = null; 
+c.reportText = c.data.report || {
+    generalIssues: {},
+    specificIssues: {},
+};
+	
+	c.reportText_body = c.data.report || {
+		 exterior:{},
+		lights:{},
+		interior:{}
+};
+
+	//console.log(c.data.userRole);
+	/*function showPopup(title, message) {
+    document.getElementById("popupTitle").innerText = title;
+    document.getElementById("popupText").innerText = message;
+    document.getElementById("popupMessage").style.display = "flex";
+  }*/
+	
+	c.generateReportString = function() {
+    var {generalIssues, specificIssues } = c.reportText;
+   var reportString= "";
+	if(c.data.userRole=='engine'){
+		  // General Engine Issues Section
+    reportString += "General Engine Issues:\n";
+    if (c.report.generalIssues.wontStart) reportString += "- Engine won't start\n";
+    if (c.report.generalIssues.unusualNoises) reportString += "- Engine is making unusual noises\n";
+    if (c.report.generalIssues.overheating) reportString += "- Engine overheating\n";
+    if (c.report.generalIssues.excessiveSmoke) reportString += "- Excessive smoke from exhaust\n";
+    if (c.report.generalIssues.oilLeaks) reportString += "- Oil leaks detected\n";
+    if (c.report.generalIssues.poorPerformance) reportString += "- Poor acceleration or performance\n";
+    if (c.report.generalIssues.unstableIdling) reportString += "- Unstable idling (engine misfires or stalls)\n";
+    if (c.report.generalIssues.checkEngineLight) reportString += "- Check Engine light is on\n";
+    if (c.report.generalIssues.additionalDetails) {
+        reportString += "Additional Details: \n"+c.report.generalIssues.additionalDetails+"\n";
+    }
+
+    // Specific Components Section
+    reportString += "\nSpecific Components:\n";
+    if (c.report.specificIssues.airIntake) reportString += "- Issues with the air intake system\n";
+    if (c.report.specificIssues.fuelInjectors) reportString += "- Malfunctioning fuel injectors\n";
+    if (c.report.specificIssues.ignitionSystem) reportString += "- Faulty ignition system (spark plugs, coils)\n";
+    if (c.report.specificIssues.turbocharger) reportString += "- Turbocharger or supercharger issues\n";
+    if (c.report.specificIssues.timingBelt) reportString += "- Damaged or worn timing belt/chain\n";
+    if (c.report.specificIssues.sensors) reportString += "- Malfunctioning sensors\n";
+    if (c.report.specificIssues.transmission) reportString += "- Transmission problems\n";
+    if (c.report.specificIssues.batteryAlternator) reportString += "- Battery or alternator issues\n";
+    if (c.report.specificIssues.additionalDetails) {
+        reportString += "Additional Details: \n" +c.report.specificIssues.additionalDetails+"\n";
+    }
+	}else if(c.data.userRole=='body'){
+		
+		 var { exterior, lights, interior } = c.reportText_body;
+
+    // Exterior Issues Section
+    reportString += "Exterior Issues:\n";
+    if (c.report.exterior.dentsScratches) reportString += "- Dents or scratches on body panels\n";
+    if (c.report.exterior.rust) reportString += "- Rust or corrosion detected\n";
+    if (c.report.exterior.crackedGlass) reportString += "- Cracked or broken glass (windshield, windows)\n";
+    if (c.report.exterior.misalignedPanels) reportString += "- Misaligned body panels\n";
+    if (c.report.exterior.paintIssues) reportString += "- Paint peeling or fading\n";
+    if (c.report.exterior.damagedBumpers) reportString += "- Damaged bumpers or fenders\n";
+    if (c.report.exterior.doorHandlesLocks) reportString += "- Issues with door handles or locks\n";
+    if (c.report.exterior.additionalDetails) {
+        reportString += "Additional Details: \n"+c.report.exterior.additionalDetails+"\n";
+    }
+
+    // Lights and Mirrors Section
+    reportString += "\nLights and Mirrors:\n";
+    if (c.report.lights.headlights) reportString += "- Headlights not working or dim\n";
+    if (c.report.lights.brakeLights) reportString += "- Brake lights malfunctioning\n";
+    if (c.report.lights.indicatorLights) reportString += "- Indicator lights not functioning\n";
+    if (c.report.lights.sideMirrors) reportString += "- Side mirrors damaged or loose\n";
+    if (c.report.lights.interiorLights) reportString += "- Interior lights not functioning\n";
+    if (c.report.lights.additionalDetails) {
+        reportString += "Additional Details: \n"+c.report.lights.additionalDetails+"\n";
+    }
+
+    // Interior and Safety Systems Section
+    reportString += "\nInterior and Safety Systems:\n";
+    if (c.report.interior.damagedSeats) reportString += "- Damaged or worn seats\n";
+    if (c.report.interior.faultySeatBelts) reportString += "- Faulty seat belts\n";
+    if (c.report.interior.acHeatingIssues) reportString += "- Malfunctioning air conditioning or heating system\n";
+    if (c.report.interior.dashboardGauges) reportString += "- Dashboard gauges not functioning correctly\n";
+    if (c.report.interior.unusualNoises) reportString += "- Unusual noises or vibrations inside the car\n";
+    if (c.report.interior.additionalDetails) {
+        reportString += "Additional Details: \n"+c.report.interior.additionalDetails+"\n";
+    }
+
+	}
+  
+
+    console.log(reportString); // For testing; replace with your desired action
+    return reportString;
+};
+
+
+  /*function closePopup() {
+    document.getElementById("popupMessage").style.display = "none";
+  }
+  document.getElementById("saveReportBtn").addEventListener("click", function () {
+    showPopup("Report Saved", "Your report has been saved successfully.");
+  });
+*/
+	
+ /*document.getElementById("start").addEventListener("click", function () {
+    if (!this.disabled) {
+      showPopup("Task Started", "The task has been started successfully.");
+    }
+  });
+
+  document.getElementById("complete").addEventListener("click", function () {
+    if (!this.disabled) {
+      showPopup("Task Completed", "The task has been completed successfully.");
+    }
+  });*/
+	
+	    c.closeReportDialog = function() {
+      document.getElementById('reportDialog').style.display = 'none';
+    };
+
+document.getElementById('openDialogBtn').addEventListener('click', function() {
+  document.getElementById('reportDialog').style.display = 'flex';
+});
+
+document.getElementById('closeDialogBtn').addEventListener('click', function() {
+  document.getElementById('reportDialog').style.display = 'none';
+});
+
+
+/*document.getElementById('saveReportBtn').addEventListener('click', function() {
+  //var reportText = document.getElementById('reportTextarea').value;
+  
+  // Example of setting the value to a field in ServiceNow
+  var record = new GlideRecord('incident'); // Replace 'incident' with your record type
+  if (record.get('sys_id', 'your_record_sys_id')) { // Replace 'your_record_sys_id' with actual sys_id
+    record.report_field = reportText;  // Replace 'report_field' with your actual field name
+    record.update();  // Update the record
+  }
+  
+
+  document.getElementById('reportDialog').style.display = 'none';
+});*/
+
+	c.saveReport = function (reportText) {
+  if (c.reportText) {
+    c.data.action = 'saveReport';
+    c.data.sys_id = c.data.task.sys_id;
+    c.data.reportText = reportText;
+
+    c.server.update().then(function (response) {
+      if (response.success) {
+        c.data.task.report = c.reportText;
+       // alert('Report saved successfully!');
+        document.getElementById('reportDialog').style.display = 'none'; // Close modal
+      } else {
+        alert('Failed to save the report: ' + response.error);
+      }
+    });
+  } else {
+    alert('Report text cannot be empty.');
+  }
+};
+
+//	var input = document.querySelector('input[type="file"]');
+//var file = input.files[0];
+	//console.log('file: '+file);
+	c.role=c.data.userRole;
+  c.startTask = function () {
+    c.data.action = 'startTask';
+    c.server.update().then(function (response) {
+      if (response.success) {
+        c.data.task.state = 'In Progress'; 
+      } else {
+        alert('Failed to update task state. Error: ' + response.error);
+      }
+    });
+		/*if(c.data.userRole && c.data.userRole === 'engine'){
+			document.getElementById('general').style.display = 'flex';
+		}*/
+		
+  };
+	
+	/*c.onFileChange = function() {
+  var fileInput = document.querySelector('input[type="file"]');
+  c.reportAttachment = fileInput.files[0]; 
+  console.log('change: '+c.reportAttachment); 
+};*/
+	
+	c.completeTask = function () {
+	//	 var fileInput = document.querySelector('input[type="file"]');
+  //c.reportAttachment = fileInput.files; 
+		//console.log( c.reportAttachment);
+	//    if (c.data.task.state === 'In Progress' && !c.reportAttachment) {
+  ////    c.errors.reportAttachment = 'Attachment is required to complete the task.';
+  //    return;
+  //  }
+	//	 c.errors.reportAttachment = null;
+		if (!c.reportText) {
+      alert('You must write a report before completing the task.');
+      return;
+    }
+    c.data.action = 'completeTask'; 
+   /*if (c.reportAttachment) {
+        c.data.attachmentSysId = c.reportAttachment; 
+			console.log( c.reportAttachment);
+    } else {
+        c.data.attachmentSysId = null;
+    }*/
+    c.server.update().then(function (response) {
+      if (response.success) {
+        c.data.task.state = 'Done'; 
+      } else {
+        alert('Failed to update task state. Error: ' + response.error);
+      }
+    });
+  };
+	
+		
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.form-group{
+width:100%;
+}
+
+#num,
+#Date{
+margin-right:10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eff2f3;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 50%;
+}
+
+.container {
+	font-family: 'Lato', sans-serif;
+	margin: 0 auto;
+}
+
+label {
+    display: block;
+    font-weight: 800;
+    font-size: 1.5rem; 
+    margin-bottom: 8px;
+    color: #444;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.number-state-section,
+.date-time-section{
+display:flex;
+  width:100%;
+}
+.attach-toggle-section{
+display:flex;
+width:70%;
+}
+.text,
+input[type="date"],
+select,
+.textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7); 
+    font-weight: 600; 
+    color: #333;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+.textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+}
+
+.textarea {
+    resize: none;
+}
+
+.buttons {
+    width: 40%;
+    padding: 12px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  margin-left:10px
+}
+
+.form-buttons{
+  display:flex;
+  width:70%;
+  margin-left:30%;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.popup-content i {
+    font-size: 5rem;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.popup-content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.popup-content .close-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; 
+}
+
+.popup-content .close-btn:hover {
+    background-color: #218838;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 4px;
+    display: block;
+}
+.star{
+color:red;
+   font-size: 1em;
+    font-weight: 600;
+}
+/* Fade-in animation for the form */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-form {
+    animation: fadeIn 1s ease-out; /* Apply fade-in animation */
+}
+
+/* Input field focus animation */
+@keyframes inputFocus {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+    100% {
+        transform: scale(1.02);
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    }
+}
+
+input:focus,
+select:focus,
+.textarea:focus {
+    animation: inputFocus 0.3s ease-in-out forwards; 
+}
+
+@keyframes buttonBounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.buttons:hover {
+    animation: buttonBounce 0.4s ease-in-out;
+}
+
+/* Popup fade-in and slide animation */
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup-content {
+    animation: slideFadeIn 0.6s ease-out;
+}
+
+.form-container {
+    width: 100%;
+    position: relative;
+}
+
+.custom-form {
+   animation: fadeIn 1s ease-out; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); 
+    flex: 1;
+    background: #ffffff;
+    padding: 0px 0px 30px 0px;
+  border:none;
+    position: relative;
+}
+.upper-container{
+margin:0;
+  background-color:#001F54;
+  height:350px;
+  position:relative;
+  border:none;
+}
+
+img{
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:70%;
+}
+
+form{
+ padding:30px 30px 0px 30px;
+}
+
+
+.circle-icon {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff; 
+    border: none; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    z-index: 10; 
+}
+
+.circle-icon i {
+    font-size: 48px; 
+    color: #0056b3; 
+}
+
+#start{
+   background: linear-gradient(140deg, #4cc9f0, #001F54);
+}
+
+#complete{
+   background: linear-gradient(140deg, #68ff68, #007000);
+}
+#start:hover {
+    background: linear-gradient(145deg, #0056b3, #001F54);
+    transform: translateY(-2px); 
+}
+
+#complete:hover {
+    background: linear-gradient(145deg, #094a25, #007000);
+    transform: translateY(-2px);
+}
+
+
+input[readonly],
+textarea[readonly] {
+  width:100% ;
+  background-color: #e9ecef; 
+  color: #495057;
+  cursor: not-allowed; 
+  border: 1px solid #ced4da;
+  padding: 10px; 
+  border-radius: 5px; 
+  font-size: 1.25rem;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+input[readonly]:hover,
+textarea[readonly]:hover {
+  background-color: #dee2e6;
+  border-color: #ced4da; 
+  box-shadow: none;
+}
+
+button:disabled {
+   background: #b0b0b0; 
+    color: #ffffff; 
+    cursor: not-allowed;
+    box-shadow: none; 
+    transform: none;
+    opacity: 1;
+}
+#complete:disabled,
+#start:disabled {
+    background: #b0b0b0;
+   transform: none; 
+}
+#complete:disabled:hover,
+#start:disabled:hover {
+    background: #b0b0b0; 
+    transform: none; 
+}
+
+.toggle-btn{
+display:flex;
+}
+
+#type{
+margin-top:15px;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  margin-left:7px;
+  margin-right:7px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: not-allowed;
+}
+
+.toggle-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    pointer-events: none; 
+}
+
+.toggle-switch input:checked + .slider {
+    transform: translateX(30px);
+    background-color: white;
+}
+
+.toggle-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+input:checked + .slider {
+    background-color: #28a745;
+}
+
+input:not(:checked) + .slider {
+    background-color: #034078;
+}
+
+
+@media (min-width: 1024px) {
+.upper-container{
+  height:250px;
+}
+  .buttons {
+    width: 30%;
+  }
+
+img{
+  height:60%;
+}
+  .number-state-work-section{
+  display:flex;
+    width:100%
+  }
+  .form-container{
+  width:60%;
+   margin-top:2%;
+   margin-left:20%;
+    margin-bottom:3%;
+  }
+  
+ #state{
+margin-right:10px;
+}
+.toggle-container {
+  margin-right:0px;
+}
+
+.toggle-switch {
+    width: 60px;
+}
+}
+.dotted-container {
+    border: 4px dotted gray;  
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.button_rep {
+  background-color: transparent;  
+  color: blue;                    
+  border: none;                   
+  text-decoration: underline;     
+  font-size: 16px;                
+  cursor: pointer;               
+  padding: 0;            
+   box-shadow: none; 
+  width:200px;
+}
+
+.button_rep:hover {
+  color: darkblue;               
+}
+
+.button_rep:disabled{ 
+    color: #b0b0b0;
+   transform: none; 
+   text-decoration: none;    
+   color:#ffffff;
+}
+.button_rep:disabled:hover {
+    color: #b0b0b0; 
+    transform: none; 
+   text-decoration: none;
+  color:#ffffff;
+}
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+#saveReportBtn{
+background: linear-gradient(140deg, #4cc9f0, #001F54);
+}
+#closeDialogBtn{
+background: linear-gradient(140deg, #68ff68, #007000);
+}
+#saveReportBtn:hover {
+    background: linear-gradient(145deg, #0056b3, #001F54);
+    transform: translateY(-2px); 
+}
+
+#closeDialogBtn:hover {
+    background: linear-gradient(145deg, #094a25, #007000);
+    transform: translateY(-2px);
+}
+.modal-content {
+    background-color: #fff;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-height: 80vh; 
+    overflow-y: scroll;
+    
+  scrollbar-width: none;
+    position: relative;
+}
+
+  .textarea {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+ .accordion-item {
+    margin-bottom: 10px;
+  }
+  .accordion-toggle-body, .accordion-toggle-engine{
+    width: 100%;
+    text-align: left;
+    background-color: #f1f1f1;
+    color:#000000;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+}
+  .accordion-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  .accordion-toggle-body.active + .accordion-content {
+    display: block;
+  }
+ .accordion-toggle-engine.active + .accordion-content {
+    display: block;
+  }
+  .checkbox-row {
+    text-align: left;
+    margin-left:3%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .checkbox-row label {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+.accordion-toggle-body, .accordion-toggle-engine{
+    transition: none !important; 
+    transform: none !important; 
+  border: 2px solid transparent; 
+}
+
+.accordion-toggle-engine:hover {
+    transform: none !important;  
+   border: 2px solid #00008B;
+  
+}
+
+.accordion-toggle-body:hover {
+    transform: none !important;  
+   border: 2px solid #00008B;
+  
+}
+ .textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+.activity-stream-container {
+  margin-top: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+
+  /* Hide scrollbar for modern browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.activity-stream-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}
+
+
+.textarea #post-input{
+margin-top:0%;
+}
+
+h2.h4.panel-title.ng-binding.ng-scope{
+font-weight:bold;
+font-size:21px;
+color:#001F54;
+}
+
+
+.tabs-container {
+  background: #f4f4f4;
+  border-bottom: 2px solid #ccc;
+  padding: 0px 0;
+}
+
+/* Tabs styling */
+.tabs {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs li {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #444;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tabs li:hover {
+  background: #e0e0e0;
+  color: #000;
+}
+
+.tabs li.active {
+  border-bottom: 4px solid #289fdb;
+  color: #289fdb;
+}
+
+.checkbox-row {
+  margin: 10px 0;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>task_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Task Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+  data.sys_id = $sp.getParameter('sys_id');
+
+	 data.userRole = null;
+	
+  // Start Task Action
+  if (input && input.action === 'startTask' && input.sys_id) {
+    var gr = new GlideRecord('x_1522458_automo_0_task');
+    if (gr.get(input.sys_id)) {
+      gr.setValue('state', 'in_progress');
+      gr.update();
+
+      var requestSysId = gr.getValue('request'); 
+      if (requestSysId) {
+        var requestGr = new GlideRecord('x_1522458_automo_0_service_request'); 
+        if (requestGr.get(requestSysId)) {
+          if (gr.getValue('insoection') == 1) {
+            requestGr.setValue('state', 7); 
+            requestGr.update();
+          } else {
+            requestGr.setValue('state', 2); 
+            requestGr.update();
+          }
+        }
+      }
+
+      data.success = true; 
+    } else {
+      data.success = false;
+      data.error = 'Task not found';
+    }
+    return;
+  }
+
+  
+  if (input && input.action === 'completeTask' && input.sys_id) {
+    var gr_c = new GlideRecord('x_1522458_automo_0_task');
+    if (gr_c.get(input.sys_id)) {
+      gr_c.setValue('state', 'completed');
+			
+      gr_c.update();
+      data.success = true;
+    } else {
+      data.success = false;
+      data.error = 'Task not found';
+    }
+    return;
+  }
+	
+	if (input && input.action === 'saveReport' && input.sys_id) {
+  var saveGr = new GlideRecord('x_1522458_automo_0_task');
+  if (saveGr.get(input.sys_id)) {
+    if (input.reportText) {
+      saveGr.setValue('inspection_report_attachment', input.reportText);
+      saveGr.update();
+      data.success = true;
+    } else {
+      data.success = false;
+      data.error = 'Report text is empty.';
+    }
+  } else {
+    data.success = false;
+    data.error = 'Task not found with the given sys_id.';
+  }
+  return;
+}
+
+
+  // Load the task details if sys_id exists
+  if (data.sys_id) {
+    var gr_task = new GlideRecord('x_1522458_automo_0_task');
+    if (gr_task.get(data.sys_id)) {
+      data.task = {
+        taskNumber: gr_task.getDisplayValue('number'),
+        workStation: gr_task.getDisplayValue('workstation'),
+        description: gr_task.getDisplayValue('description'),
+        state: gr_task.getDisplayValue('state'),
+        dueDate: gr_task.getDisplayValue('date'),
+        time: gr_task.getDisplayValue('available_times'),
+        sys_id: gr_task.getUniqueValue(),
+        isInspection: gr_task.getValue('insoection'),
+				report:gr_task.getValue('inspection_report_attachment'),
+				assigned_to: gr_task.getValue('assined_to'),
+      };
+			
+			 data.ticketConversation = $sp.getWidget('widget-ticket-conversation', {
+        sys_id: gr_task.getUniqueValue(),
+        table: gr_task.getTableName(),
+        title: gs.getMessage('Activity Stream'),
+        placeholder: gs.getMessage('Type your message here...'),
+        placeholderNoEntries: gs.getMessage('Start a conversation...'),
+        btnLabel: gs.getMessage('Send'),
+      });
+			
+			
+			 var currentUser = gr_task.getValue('assined_to');
+ if (currentUser) {
+	 			
+        var user_gr = new GlideRecord('sys_user');
+        user_gr.addEncodedQuery('roles=x_1522458_automo_0.Engine');
+        user_gr.query();
+
+        var isEngineUser = false;
+        while (user_gr.next()) {
+          if (user_gr.getUniqueValue() == currentUser) {
+            data.userRole = 'engine';
+            isEngineUser = true;
+						
+            break;
+          }
+        }
+
+        if (!isEngineUser) {
+          user_gr = new GlideRecord('sys_user');
+          user_gr.addEncodedQuery('roles=x_1522458_automo_0.body');
+          user_gr.query();
+
+          while (user_gr.next()) {
+            if (user_gr.getUniqueValue() == currentUser) {
+              data.userRole = 'body';
+              break;
+            }
+          }
+        }
+      }
+        
+    } else {
+      data.error = 'Task not found';
+    }
+  }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 11:45:18</sys_created_on>
+        <sys_id>f2046551832ad210cccd5d10feaad393</sys_id>
+        <sys_mod_count>840</sys_mod_count>
+        <sys_name>Task Form</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_f2046551832ad210cccd5d10feaad393</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 09:47:38</sys_updated_on>
+        <template><![CDATA[<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<body>
+  <div class="form-container">
+    <!-- Image Section -->
+    
+    <!-- Form Section -->
+    <div class="custom-form">
+      <div class="upper-container">
+          <div class="circle-icon">
+      <i class="fas fa-tools"></i>
+    </div>
+         <div class="image-container">
+        <img src="https://dev231407.service-now.com/x_1522458_automo_0.clouds.png" alt="Mechanic Sitting on Tires" class="mechanic-image" />
+    </div>
+      </div>
+    
+        <form>
+               <div class='number-state-work-section'>
+                  <div class='number-state-section'>
+              <div class="form-group" id="num">
+                <label for="taskNumber">Task Number</label>
+                <input type="text" class='text' id="taskNumber" ng-model="c.data.task.taskNumber" placeholder="Enter task number" readonly/>
+                <span class="error-message" ng-show="c.errors.taskNumber">{{c.errors.taskNumber}}</span>
+            </div>
+      
+            <div class="form-group" id='state'>
+                <label for="state">State </label>
+                <input type="text" class='text' id="state" ng-model="c.data.task.state" placeholder="Enter task state" readonly />
+                <span class="error-message" ng-show="c.errors.state">{{c.errors.state}}</span>
+            </div>
+            </div>
+                  <div class="form-group">
+                <label for="workStation">Work Station</label>
+                <input type="text" class='text' id="workStation" ng-model="c.data.task.workStation" placeholder="Enter task WorkStation" readonly />
+                <span class="error-message" ng-show="c.errors.taskNumber">{{c.errors.workStation}}</span>
+            </div>
+          </div>
+       
+                
+            <div class="date-time-section">
+              <div  class="form-group" id="Date">
+                 <label for="dueDate">Due Date </label>
+                <input type="text" class='text' id="dueDate" ng-model="c.data.task.dueDate" readonly />
+                <span class="error-message" ng-show="c.errors.dueDate">{{c.errors.dueDate}}</span>
+              </div>
+              <div  class="form-group">
+                <label for="time">Time </label>
+                <input type="text" class='text' id="time" ng-model="c.data.task.time" readonly />
+                <span class="error-message" ng-show="c.errors.time">{{c.errors.dueDate}}</span>
+              </div>
+            </div>
+         
+         
+               <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description </label>
+                <textarea id="description" class='textarea' rows="4" placeholder="Enter task description" ng-model="c.data.task.description" readonly></textarea>
+                <span class="error-message" ng-show="c.errors.description">{{c.errors.description}}</span>
+            </div>
+  
+          <div class='attach-toggle-section'>
+          
+              <!-- Report Attachment 
+            <div class="form-group">
+                <label for="report">Report Attachment <span class="star" ng-show="c.data.task.state === 'In Progress'">*</span></label>
+               <input type="file" id="report" ng-change="c.onFileChange()" ng-model="c.reportAttachment" ng-disabled="c.data.task.state !== 'In Progress'" ng-required="c.data.task.state == 'In Progress'"/>
+                <span class="error-message" ng-show="c.errors.reportAttachment && !c.reportAttachment">{{c.errors.reportAttachment}}</span>
+            </div>-->
+          </div>
+          
+
+<div class="dotted-container">
+  <button id="openDialogBtn" class='button_rep buttons' ng-disabled="c.data.task.state !== 'In Progress'">Write Report</button>
+</div>
+
+<div id="reportDialog" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h2>Fill Your Report</h2>
+
+    <div class="tabs-container">
+      <ul class="tabs">
+        <li ng-show="c.role === 'engine'" ng-class="{'active': c.activeTab_engine === 'general'}" ng-click="c.switchTab('general')">General Engine Issues</li>
+        <li  ng-show="c.role === 'engine'" ng-class="{'active': c.activeTab_engine === 'specific'}" ng-click="c.switchTab('specific')">Specific Components</li>
+        <li  ng-show="c.role === 'body'" ng-class="{'active': c.activeTab_body === 'exterior'}" ng-click="c.switchTab('exterior')">Exterior Issues</li>
+        <li  ng-show="c.role === 'body'" ng-class="{'active': c.activeTab_body === 'lights'}" ng-click="c.switchTab('lights')">Lights and Mirrors</li>
+        <li  ng-show="c.role === 'body'" ng-class="{'active': c.activeTab_body === 'interior'}" ng-click="c.switchTab('interior')">Interior and Safety Systems</li>
+      </ul>
+    </div>
+
+    <!-- General Engine Issues -->
+    <div ng-show="c.role === 'engine'">
+       <div ng-show="c.activeTab_engine === 'general'">
+      <h3>General Engine Issues</h3>
+      <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.generalIssues.wontStart" /> Engine won't start</label>
+            <label><input type="checkbox" ng-model="c.report.generalIssues.unusualNoises" /> Engine is making unusual noises </label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.generalIssues.overheating" /> Engine overheating</label>
+            <label><input type="checkbox" ng-model="c.report.generalIssues.excessiveSmoke" /> Excessive smoke from exhaust</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.generalIssues.oilLeaks" /> Oil leaks detected</label>
+            <label><input type="checkbox" ng-model="c.report.generalIssues.poorPerformance" /> Poor acceleration or performance</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.generalIssues.unstableIdling" /> Unstable idling (engine misfires or stalls)</label>
+            <label><input type="checkbox" ng-model="c.report.generalIssues.checkEngineLight" /> Check Engine light is on</label>
+          </div>
+
+      <textarea class="textarea" rows="4" placeholder="Additional details for General Engine Issues" ng-model="c.report.generalIssues.additionalDetails"></textarea>
+    </div>
+
+    <!-- Specific Components -->
+    <div ng-show="c.activeTab_engine === 'specific'">
+      <h3>Specific Components</h3>
+      <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.specificIssues.airIntake" /> Issues with the air intake system</label>
+            <label><input type="checkbox" ng-model="c.report.specificIssues.fuelInjectors" /> Malfunctioning fuel injectors</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.specificIssues.ignitionSystem" /> Faulty ignition system (spark plugs, coils)</label>
+            <label><input type="checkbox" ng-model="c.report.specificIssues.turbocharger" /> Turbocharger or supercharger issues</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.specificIssues.timingBelt" /> Damaged or worn timing belt/chain</label>
+            <label><input type="checkbox" ng-model="c.report.specificIssues.sensors" /> Malfunctioning sensors</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.specificIssues.transmission" /> Transmission problems</label>
+            <label><input type="checkbox" ng-model="c.report.specificIssues.batteryAlternator" /> Battery or alternator issues</label>
+          </div>
+
+      <textarea class="textarea" rows="4" placeholder="Additional details for Specific Components" ng-model="c.report.specificIssues.additionalDetails"></textarea>
+    </div>
+    </div>
+   
+ <div ng-show="c.role === 'body'">
+     <!-- Exterior Issues -->
+    <div ng-show="c.activeTab_body === 'exterior'">
+      <h3>Exterior Issues</h3>
+      <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.exterior.dentsScratches" /> Dents or scratches on body panels</label>
+            <label><input type="checkbox" ng-model="c.report.exterior.rust" /> Rust or corrosion detected</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.exterior.crackedGlass" /> Cracked or broken glass (windshield, windows)</label>
+            <label><input type="checkbox" ng-model="c.report.exterior.misalignedPanels" /> Misaligned body panels</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.exterior.paintIssues" /> Paint peeling or fading</label>
+            <label><input type="checkbox" ng-model="c.report.exterior.damagedBumpers" /> Damaged bumpers or fenders</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.exterior.doorHandlesLocks" /> Issues with door handles or locks</label>
+          </div>
+
+      <textarea class="textarea" rows="4" placeholder="Additional details for Exterior Issues" ng-model="c.report.exteriorIssues.additionalDetails"></textarea>
+    </div>
+
+    <!-- Lights and Mirrors -->
+    <div ng-show="c.activeTab_body === 'lights'">
+      <h3>Lights and Mirrors</h3>
+       <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.lights.headlights" /> Headlights not working or dim</label>
+            <label><input type="checkbox" ng-model="c.report.lights.brakeLights" /> Brake lights malfunctioning</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.lights.indicatorLights" /> Indicator lights not functioning</label>
+            <label><input type="checkbox" ng-model="c.report.lights.sideMirrors" /> Side mirrors damaged or loose</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.lights.interiorLights" /> Interior lights not functioning</label>
+          </div>
+
+      <textarea class="textarea" rows="4" placeholder="Additional details for Lights and Mirrors" ng-model="c.report.lightsAndMirrors.additionalDetails"></textarea>
+    </div>
+
+    <!-- Interior and Safety Systems -->
+    <div ng-show="c.activeTab_body === 'interior'">
+      <h3>Interior and Safety Systems</h3>
+       <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.interior.damagedSeats" /> Damaged or worn seats</label>
+            <label><input type="checkbox" ng-model="c.report.interior.faultySeatBelts" /> Faulty seat belts</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.interior.acHeatingIssues" /> Malfunctioning air conditioning or heating system</label>
+            <label><input type="checkbox" ng-model="c.report.interior.dashboardGauges" /> Dashboard gauges not functioning correctly</label>
+          </div>
+          <div class="checkbox-row">
+            <label><input type="checkbox" ng-model="c.report.interior.unusualNoises" /> Unusual noises or vibrations inside the car</label>
+          </div>
+
+      <textarea class="textarea" rows="4" placeholder="Additional details for Interior and Safety Systems" ng-model="c.report.interiorIssues.additionalDetails"></textarea>
+    </div>
+    </div>
+  
+
+    <button id="saveReportBtn" class="buttons" ng-click="c.saveReport(c.generateReportString())">Save Report</button>
+    <button id="closeDialogBtn" class="buttons">Close</button>
+  </div>
+</div>
+
+
+   <div class="activity-stream-container">
+          <sp-widget widget="c.data.ticketConversation"></sp-widget>
+        </div>
+          
+                  <div class="form-group  toggle-btn">
+    <label for="taskType" id='type'>Inspection Task</label>
+    <div class="toggle-container">
+        <div class="toggle-switch" readonly>
+            <input type="checkbox" id="taskTypeToggle" ng-checked="c.data.task.isInspection == 0" readonly />
+            <span class="slider"></span>
+        </div>
+    </div>
+      </div>
+       
+            <!-- Buttons -->
+            <div class="form-buttons">
+              <button type="button" id='start' ng-click="c.startTask()" class="start-button buttons" ng-disabled="c.data.task.state !== 'Scheduled'">Start</button>
+               <button type="button" id="complete" ng-click="c.completeTask()" class="complete-button buttons" ng-disabled="c.data.task.state !== 'In Progress'">Complete</button>
+            </div>
+        </form>
+    </div>
+
+  
+</div>
+
+</body>
+]]></template>
+    </sp_widget>
+</record_update>

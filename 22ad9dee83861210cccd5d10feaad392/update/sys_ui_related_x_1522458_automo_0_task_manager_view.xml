@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_1522458_automo_0_task" version="2" view="manager_view">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Task  - manager view" name="x_1522458_automo_0_task" related_list="NULL" sys_domain="global" view="41d3364c83d21210cccd5d10feaad3f5">66fdd7e0830b9610cccd5d10feaad36a</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 09:13:59</sys_created_on>
+            <sys_id>26fdd7e0830b9610cccd5d10feaad36c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 09:13:59</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Task  - manager view</calculated_name>
+            <filter/>
+            <name>x_1522458_automo_0_task</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-09 09:13:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>66fdd7e0830b9610cccd5d10feaad36a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Task  - manager view</sys_name>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_related_x_1522458_automo_0_task_manager_view</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-09 09:13:59</sys_updated_on>
+            <sys_user/>
+            <view display_value="manager view" name="manager_view">41d3364c83d21210cccd5d10feaad3f5</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

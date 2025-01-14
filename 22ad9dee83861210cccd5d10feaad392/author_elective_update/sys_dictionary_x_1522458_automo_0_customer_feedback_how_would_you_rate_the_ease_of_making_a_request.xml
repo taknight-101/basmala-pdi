@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="how_would_you_rate_the_ease_of_making_a_request" table="x_1522458_automo_0_customer_feedback">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>How would you rate the ease of making a request?</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>how_would_you_rate_the_ease_of_making_a_request</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Choice">choice</internal_type>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <name>x_1522458_automo_0_customer_feedback</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 14:36:26</sys_created_on>
+        <sys_id>14e7c92d83be5210cccd5d10feaad39b</sys_id>
+        <sys_name>How would you rate the ease of making a request?</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_how_would_you_rate_the_ease_of_making_a_request</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 15:03:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_dictionary_x_1522458_automo_0_customer_feedback_how_would_you_rate_the_ease_of_making_a_request</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="how_would_you_rate_the_ease_of_making_a_request" table="x_1522458_automo_0_customer_feedback"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>1</choice><choice_field/><choice_table/><column_label>How would you rate the ease of making a request?</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>how_would_you_rate_the_ease_of_making_a_request</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="Choice">choice</internal_type><mandatory>true</mandatory><max_length>40</max_length><name>x_1522458_automo_0_customer_feedback</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-30 14:36:26</sys_created_on><sys_id>14e7c92d83be5210cccd5d10feaad39b</sys_id><sys_name>How would you rate the ease of making a request?</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_how_would_you_rate_the_ease_of_making_a_request</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-30 15:03:41</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>-1018770355</payload_hash>
+        <record_name>Customer Feedback.How would you rate the ease of making a request?</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 15:03:41</sys_created_on>
+        <sys_id>9f1e496583fe5210cccd5d10feaad386</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19418181d930000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 15:03:41</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>571e496578fe5210933c8271192b4886</update_guid>
+        <update_guid_history>571e496578fe5210933c8271192b4886:-1018770355,21eb45a107fe521003c7f7f644ee63ee:-1687289086,01b9c5ed1bbe5210e1de6a2606355d58:-1018770355,d5e78d2dedbe52103d265a4d64901674:1534454478,2ce70d2d24be5210caf211184738200d:966581675</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 08:26:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>3d33fe033c71487492a53133f2b59c59</sys_id>
+        <sys_metadata>14e7c92d83be5210cccd5d10feaad39b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>How would you rate the ease of making a request?</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Customer Feedback">805b702d837e5210cccd5d10feaad384</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_how_would_you_rate_the_ease_of_making_a_request</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1522458_automo_0_customer_feedback_how_would_you_rate_the_ease_of_making_a_request">9f1e496583fe5210cccd5d10feaad386</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 08:26:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

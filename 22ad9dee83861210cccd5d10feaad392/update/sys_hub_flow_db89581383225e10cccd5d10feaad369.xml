@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1172000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Assign department to request after the customer choose the type of service</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>assign_department_to_request</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Service Request Record","reference":"x_1522458_automo_0_service_request","reference_display":"Service Request","type":"reference","base_type":"reference","usedInstances":{"027b67c9-f2e7-4561-a841-5e3b9a51e857":["record"],"1eefc1c9-fd98-4362-bfb5-db44063dbfc5":["record"]},"attributes":{}},{"name":"Created_1.current.type","label":"Trigger - Record Created➛Service Request Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":"x_1522458_automo_0_service_request","column_name":"type","choices":[{"label":"Engine","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Engine","value":"engine","parameters":{"name":"x_1522458_automo_0_service_request","dependent_values":[""]}},{"label":"Body","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Body","value":"body","parameters":{"name":"x_1522458_automo_0_service_request","dependent_values":[""]}},{"label":"Standard Service","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Standard Service","value":"standard_service","parameters":{"name":"x_1522458_automo_0_service_request","dependent_values":[""]}}],"usedInstances":{"640a09a1-9d3e-4fa2-ac94-01aeb03bd20f":["condition"],"e3277c84-5a69-4654-a72f-cca89788bb3d":["condition"]}}]</label_cache>
+        <master_snapshot>b6ec185783225e10cccd5d10feaad34d</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Assign department to request</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>83ec185783225e10cccd5d10feaad38d</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:27:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>db89581383225e10cccd5d10feaad369</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Assign department to request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_hub_flow_db89581383225e10cccd5d10feaad369</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:16</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=db89581383225e10cccd5d10feaad369"/>
+    <sys_variable_value action="delete_multiple" query="document_key=db89581383225e10cccd5d10feaad369"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1522458_automo_0_service_request">typeISNOTEMPTY<item endquery="false" field="type" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>83ec185783225e10cccd5d10feaad38d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:42:26</sys_updated_on>
+        <table>x_1522458_automo_0_service_request</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>db89581383225e10cccd5d10feaad369</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:47:16</sys_created_on>
+        <sys_id>790e54d783225e10cccd5d10feaad3ce</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:16</sys_updated_on>
+        <trigger display_value="">83ec185783225e10cccd5d10feaad38d</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=db89581383225e10cccd5d10feaad369^sys_idNOT IN790e54d783225e10cccd5d10feaad3ce"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=db89581383225e10cccd5d10feaad369"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=db89581383225e10cccd5d10feaad369^sys_idNOT INd389581383225e10cccd5d10feaad36c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>db89581383225e10cccd5d10feaad369</id>
+        <name>Assign department to request</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:27:42</sys_created_on>
+        <sys_id>d389581383225e10cccd5d10feaad36c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:27:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=d389581383225e10cccd5d10feaad36c"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=db89581383225e10cccd5d10feaad369^sys_idNOT IN27ccd05783225e10cccd5d10feaad3cb,e7ccd05783225e10cccd5d10feaad3c5"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Assign department to request">db89581383225e10cccd5d10feaad369</model>
+        <model_id>db89581383225e10cccd5d10feaad369</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_db89581383225e10cccd5d10feaad369</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:55</sys_created_on>
+        <sys_id>27ccd05783225e10cccd5d10feaad3cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:41:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=27ccd05783225e10cccd5d10feaad3cb"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Assign department to request">db89581383225e10cccd5d10feaad369</model>
+        <model_id>db89581383225e10cccd5d10feaad369</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_db89581383225e10cccd5d10feaad369</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:54</sys_created_on>
+        <sys_id>e7ccd05783225e10cccd5d10feaad3c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e7ccd05783225e10cccd5d10feaad3c5"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=db89581383225e10cccd5d10feaad369"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=db89581383225e10cccd5d10feaad369"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=db89581383225e10cccd5d10feaad369^sys_idNOT INa7cc545783225e10cccd5d10feaad358"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Assign department to request">db89581383225e10cccd5d10feaad369</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:55</sys_created_on>
+        <sys_id>a7cc545783225e10cccd5d10feaad358</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:42:24</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VZbW/iRhD+K5Y/tVIq+QUw8O2a5NRId8kJaKsqilZrexasmjVnr53QU/57Z/2GMXbOQNJC7guSd9cz88w+88yuuf+m+tQGXx2rM2r7oF6oHhcQcurP1ivAYSGHCadLObek3KUiCNfqWIQxXKhB6EKojvULNaF+DNN1dOPiS7g0fSN/Xc2n8fmJ6H3D6PWHhMYiWAZEIxGEiecACeFrDJHAxa4XrXy6/iN/Z5otUCblghUN0byQrr+pzsLz3RC4Or5/wPClf4c5dGSA5pi6aRiaZgx7uj0wbd1wTQqahibqsGvxigb0G7DwJIC7gK4Y9SNoSEwI1L3j/rpcscC8ZplZ0qfI+wetDzW5jgHG7kA25ywCRHq3El7As5EsoGwy8OMlv80ClWkCRmNfFGnCkTgC4sJKxia95a7ZdBE8TgpHHz2ewsgn/cChfvlEhQg9OxYQycwyz8cckywJURCHaZiT68u7yRX588Ps8rfrCZlcT2eTm8vZ9ZX6nOIhX2NpMYswj4VkcJ7Lvf3ogS93isdLG6O5UCMn9FbigyO8BPJwni827AxjjjZImfgdnmaZK1P4yUOijO8RQ5Ge1CTOs0+5yUnMlQC3CH8UJw4xOUIptp/dLOk8Tyr7UrAtTUpOlISGhCxJtI7IIrYJpm0+x1x5fBULYo2GI31AW/hnOVupSUsDTd+r6sOz3C3wwREVcrHfo+rTZy+KPD6vJKnEKLm3C7FEhyRVigxmUKPzwvqwVWn5oqIsNa1VhXbZk9RYUZOcDhqj64zZwAzNkqh1zbSZrllanzLX1DTHqGjMrvvWuESNzVVwL6lOPtJFdnptshOlBeN3KI969oooqxXbiXvJNnFzO4bc6FzdLk8wtJpKm3vJdMm4bPhqm3gvQXtldaduQvENt8DYRb07qPTjAjj2dCFk3e4v0xzrIX2HZk4qaiaJrcgEsSBUbgP+y81mnTIFVAqM86z0rKrdXUCjsVB5V6jtQCzqHUsi/RXHt5DKIm3Z8x+oidWKK9nO4gFNDHrD/oiZjoWYsW2xHthU7xl9OrIGJhvVmljNfXtgp9PGOopG0io/TQ2ka1EmjbVdtpJaSzqE9zUG5KbN7zTQHzcpR7XuosxaO/chwZ5HV2d+8IgcOKCh29T5ex4GMXd3dB5tKh5XNiuUn/Lc/nxekl7taMgBeBnv9orzQXlM49rwpyhOytcHtSyT6fYIeqDhdcvElmX3RyPboQZj1sACQ6+1rI3jxmhOp1F1qIikqaTaLjiNbEuaSLrHrev/D/AoAc8516jf2dzpq/FlwF1PZK20rsXFVKQeWKpOxXh5AUbjN9Pbu9n15y+zvzpU6GBAqQttmmSzSoVWwTSEIBpwvUmFam/9KTb7Knwwj5aBC/7Vxpy61QVkWh4pFxERAaGuSyoJ60i8DNvu99luX2bT0z8iDo+6+MtQgASs2jevAgUnFHSieEzJUYOr2GtFLAC1w0cVQYeK9H5mF8HqqWEXeXmcfte4M9Xduf7jcIrsvIAdfbOvldCxRyVwLdrvm1bz7X5UPyo1hfCdCE/n+LS3UCRNuvPivXY/u3WbjTfbCs+3N7vjRf4do36zg15DFKd/6tsuQN9L/wavtdi577lQzL2CEOWWko3g7C9BbDhy+rrVIkHDfqsE5c5fCkw0wP5PToey0+TMOa0/7F+LeA//AtdOZTAYIgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=db89581383225e10cccd5d10feaad369^sys_idNOT IN2fcc545783225e10cccd5d10feaad35e,67cc545783225e10cccd5d10feaad35c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign department to request">db89581383225e10cccd5d10feaad369</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>e3277c84-5a69-4654-a72f-cca89788bb3d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:55</sys_created_on>
+        <sys_id>2fcc545783225e10cccd5d10feaad35e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:41</sys_updated_on>
+        <ui_id>1eefc1c9-fd98-4362-bfb5-db44063dbfc5</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5WfoypOWlb6tlEhTWIgwcQLRdGNfQOWnA9sp9BV/e+7SZy0AsaKxMPQ8nY/fc71Pc7NhinJ5myCMuTH/EjEPI6jMIxmE54exSmPZAyInAWsgBwp06AojSR7BbpuHJvNiUFwKBM+FrUxWLjtluJS2UrD+tqnkUfcKy0pzuY3twGrwFBHh4bNN89Ch0LSkKKm1Mse03OMbl01tixFnROuRPXOM1+58JHR9wVFqKiBw8OA4ZPDQiIByUBbDFgOhQRXmjWbO1OTg0jLi0Kvh4x7VbiOaA5PVv2ikydhk5chMRN+CIP5E1KNi25IXShbgIMr6i5cbYaZlUqg7eYiMYNau5N9X5dwUTlVFl2Jaxr76lLXeXHeTYUNDfbupLaYSKwarg36jlp2dV8+XvZAT1XRjsXT1KUAPVjgnFFp7Ro4G4Ya2znnUFWquEsqU65UW0xQ8vGdJmOc6fKRzrTqrhiDaHCPabIwPiX/onVfg1ENiR/Uhoq3AbNre6LB2h0VmmPyUDdIOmKeQtJOoR1B0m5DUyyMqtxXOmqFHvg28IufTt/aMnG8W6q9nrvlf0r4NIom01kCtSvzMgkTi2ZFN5IYfKjRupdKuOoSRpdDwvuEcQDkXhjtjv2BgtfGC9/Zfu3ovAt4ZUw/TBmzz6YMT+XTS+NvggijN5/dvW1qNWD3xEAngXENy2UdhrHcLPvVX7L5kn0r5Xq02OWwYNmVtlEOMz5JM5jFk+g44qEQQk4lDzMEkLH80qYTV3rDD8x/5Sf0DyJ8n/YPuJ1e+6cKtbSvXFcvfMyJuMOku75n4vfB0bUPDr/GD3sB+FHYfp/sHfhv/pC3vwHyLnMSHAoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign department to request">db89581383225e10cccd5d10feaad369</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>640a09a1-9d3e-4fa2-ac94-01aeb03bd20f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:55</sys_created_on>
+        <sys_id>67cc545783225e10cccd5d10feaad35c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:41</sys_updated_on>
+        <ui_id>027b67c9-f2e7-4561-a841-5e3b9a51e857</ui_id>
+        <values>H4sIAAAAAAAA/+VV22rjMBD9laBnE3xJSpq3JdnCQreFdulLU8xEGqcC+VJJTpsN+fcdW7ITetsU+rBl/TZXnTOaI99umRRsykYowug0OuFJlCRxGMaTUbQ8SZZRLBJAjFjACsiRMjXyUguy16DqxrHdzjSCRZFGQ15rjYXd7SgupKkUbG58Gnn4vVSC4mx6exewCjR1tKjZdPssdCwkBUtUlHrVYXqO0W6qxhYlr3PClcrOee4r5z4y+DGnCBU1cKIwYPhksRBIQDJQBgOWQyHAlnrDplbX5CDS4rJQmz7jXhbWEc3hycjfdPIobPIyJGbcD6E3f8FS4dwNyYWyOVi4pu7c1rqfWSk5GjcXgRnUys4OfS7hsrKyLFyJbRr76lLVeXHhpsL6Bgd3UhtMBVYN1wa9o5Zd35ePVx3QM1m0Y/E0VclB9RZYq+Wytg2cLUOF7ZxzqCpZrNJKl2vZFhOUfLhSZAwzVT7SmUauiiHwBveQJgvDM/LPW/cNaNmQ+EltqHgXMLMxMwXG7KnQHNOHukHiiHkKaTuFdgRpuw1NMdeyst/oqDV64LvAL/5y/N6W8dP9Uh303C//UxqN43g0nqRQ2zIv0zA1qNd0I6nGhxqNfamEa5cwuOoTPiaMIyB3wmh37A0KXhsvfOeHtYMLF/DKGH+aMiZfTRmeypeXxt8EEcbvPrsH29RqwByIgU4CbRuWizoME7FddKu/YNMF+16sZIGD+T6LBQtX3MYTMY7CLINJMopP4yjknIuxIBcCiEREbTqxpVf8yPxXfkP/JMaP6f+IG+r0fyZRCfPKlXXix5yoW0zdFT57AHxwcOOD/e/x016B6CRsvy/2Fvw3f8m7P1yjZTEgCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=db89581383225e10cccd5d10feaad369"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=db89581383225e10cccd5d10feaad369^sys_idNOT IN23cc545783225e10cccd5d10feaad35e,abcc545783225e10cccd5d10feaad35a"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2bcc545783225e10cccd5d10feaad35d</block>
+        <comment/>
+        <connected_to>640a09a1-9d3e-4fa2-ac94-01aeb03bd20f</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Assign department to request">db89581383225e10cccd5d10feaad369</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:55</sys_created_on>
+        <sys_id>23cc545783225e10cccd5d10feaad35e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:14</sys_updated_on>
+        <ui_id>e3277c84-5a69-4654-a72f-cca89788bb3d</ui_id>
+        <values>H4sIAAAAAAAA/+VUTWvcMBD9K4vOxvijCe3eQkqg0DbQhFzaYMbSeFdUllxJ3s122f/eGX8kId3Q0EMuuVlvNPPeGz28F66PXR/DtTsLQa+sWH6/TYS2jNH3XlhoUSyFdFbpqJ2tBiARGzA9F+Kuw4UOi9qpHcFKh87A7uZ4Va61UR4nlg48zYroxXL/pMR9lYEaDQ25il7bFbVrRacmgyb/IHNZFqdlkWXF+3d5fVrWeaFKQCjo3tx4PotefB6Q5Fk3zEd4mJmcVywrzxKBdxGtQqJuwARMRAtWQXR+d494BHVpzQOw1jbSOMGX74L+TbOLkxO+2CB5lDgW5dppiZcdKxmRCLWZi870rf06CubNYgO9ifNmCekDVgo7Vsd0E3dztXbbbzPRhbaDk6lonARzf4JIfus+YuAXQIMtDapa6DraQtV5t9FDM2lp05WhQ9oYtyVSjkoKkoWntAxILwj/OMA34DW7+EJjqHmUWUPQshpixanwZOEwrKP61bOg0eBkpRq3QReC9LqLZ8SzwUn1Ifk7k4/iuN+f02tEVFWeyt7TDmLKj3s4/OizrFTHY/rCrleIb34svkeC+3xmi39klpf/wshmWfZGM6tDNWZv8jaQ/3dkbzmfI0MYA6JQ6kBCrhn7NP9tubCjl9byMbR1/idbeMAOfwDA94XVtwUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2fcc545783225e10cccd5d10feaad359</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Assign department to request">db89581383225e10cccd5d10feaad369</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:55</sys_created_on>
+        <sys_id>abcc545783225e10cccd5d10feaad35a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:14</sys_updated_on>
+        <ui_id>640a09a1-9d3e-4fa2-ac94-01aeb03bd20f</ui_id>
+        <values>H4sIAAAAAAAA/+VUTWvbQBD9K0ZnIfQRm8a3kBIotA00IZc2iNHuyF662lV3V3Zc4//eGX0kIbVpKLnlpn2zM++92Yf2ke1C2wV/ay+8VysTLb/fx5EyjNH3PjLQYLSMhDVSBWVN2QNxtAHdcSHsWpwpP0OzUoYLUvlWw+7uVF2slZYOR6YWHM0L6KLl/kWJO0sNFWoacxOcMitqV5JOdQp1di4yUeSLIk/T/MNZVi2KKstlAQgF3ZsaLyfhs889Ep90xHyE+4nJOsmysjSO8CGgkUjUNWiPcdSAkRCs2z0iDkFeG/0ErJUJNC7iyw9e/abZ+XzOF2skjwKHolhbJfC6ZSUDEqDSU9HqrjFfB8G8W6yh02HaLSGdx1Jiy+qYbuSub9Z2+20iulKmdzIWtRWgH08QyG/VBfT8AqixoUFlA21LWyhbZzeqbyYtTbLSdEhqbbdEynFJQLDwhJYByRXhH3v4DpxiF19oDDUPMivwSpR9tDgXjiwc+nWUvzoWNBgcrZTDNuiCF0614YJ4NjiqPsR/5/JZJPf7S3qNgLLMEtE52kFI+HEPhx9dmhbyVFRf3fcWET6HeT3P0vnxCJ8tjkX4SHhP5zb/R275AV4Z2zRN32lulS+H/I3eevL/ju09Z3Rg8ENAJArlScgtY5+mvy4XdvTSSjyHttb9ZAtP2OEPhAGwer8FAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=db89581383225e10cccd5d10feaad369"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=db89581383225e10cccd5d10feaad369"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_db89581383225e10cccd5d10feaad369^sys_idNOT IN27ccd05783225e10cccd5d10feaad3ca,2bccd05783225e10cccd5d10feaad3cd"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_db89581383225e10cccd5d10feaad369</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:55</sys_created_on>
+        <sys_id>27ccd05783225e10cccd5d10feaad3ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:41:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_db89581383225e10cccd5d10feaad369</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:41:55</sys_created_on>
+        <sys_id>2bccd05783225e10cccd5d10feaad3cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:41:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_db89581383225e10cccd5d10feaad369"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_db89581383225e10cccd5d10feaad369"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_db89581383225e10cccd5d10feaad369"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Assign department to request after the customer choose the type of service</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>assign_department_to_request</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Service Request Record","reference":"x_1522458_automo_0_service_request","reference_display":"Service Request","type":"reference","base_type":"reference","usedInstances":{"027b67c9-f2e7-4561-a841-5e3b9a51e857":["record"],"1eefc1c9-fd98-4362-bfb5-db44063dbfc5":["record"]},"attributes":{}},{"name":"Created_1.current.type","label":"Trigger - Record Created➛Service Request Record➛Type","reference":"","reference_display":"Type","type":"choice","base_type":"choice","parent_table_name":"x_1522458_automo_0_service_request","column_name":"type","choices":[{"label":"Engine","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Engine","value":"engine","parameters":{"name":"x_1522458_automo_0_service_request","dependent_values":[""]}},{"label":"Body","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Body","value":"body","parameters":{"name":"x_1522458_automo_0_service_request","dependent_values":[""]}},{"label":"Standard Service","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Standard Service","value":"standard_service","parameters":{"name":"x_1522458_automo_0_service_request","dependent_values":[""]}}],"usedInstances":{"640a09a1-9d3e-4fa2-ac94-01aeb03bd20f":["condition"],"e3277c84-5a69-4654-a72f-cca89788bb3d":["condition"]}}]</label_cache>
+        <master>true</master>
+        <name>Assign department to request</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Assign department to request">db89581383225e10cccd5d10feaad369</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b6ec185783225e10cccd5d10feaad34d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:15</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b6ec185783225e10cccd5d10feaad34d^sys_idNOT INbaec185783225e10cccd5d10feaad34e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b6ec185783225e10cccd5d10feaad34d</id>
+        <name>Assign department to request</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>baec185783225e10cccd5d10feaad34e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:42:25</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=baec185783225e10cccd5d10feaad34e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b6ec185783225e10cccd5d10feaad34d^sys_idNOT IN07ec185783225e10cccd5d10feaad35b,beec185783225e10cccd5d10feaad34f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Assign department to request">b6ec185783225e10cccd5d10feaad34d</model>
+        <model_id>b6ec185783225e10cccd5d10feaad34d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b6ec185783225e10cccd5d10feaad34d</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>07ec185783225e10cccd5d10feaad35b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=07ec185783225e10cccd5d10feaad35b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Assign department to request">b6ec185783225e10cccd5d10feaad34d</model>
+        <model_id>b6ec185783225e10cccd5d10feaad34d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b6ec185783225e10cccd5d10feaad34d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>beec185783225e10cccd5d10feaad34f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=beec185783225e10cccd5d10feaad34f"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=b6ec185783225e10cccd5d10feaad34d^sys_idNOT INc3ec185783225e10cccd5d10feaad383"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Assign department to request">b6ec185783225e10cccd5d10feaad34d</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>c3ec185783225e10cccd5d10feaad383</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:42:25</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VZbW/iRhD+K5Y/tVIq+QUw8O2a5NRId8kJaKsqilZrexasmjVnr53QU/57Z/2GMXbOQNJC7guSd9cz88w+88yuuf+m+tQGXx2rM2r7oF6oHhcQcurP1ivAYSGHCadLObek3KUiCNfqWIQxXKhB6EKojvULNaF+DNN1dOPiS7g0fSN/Xc2n8fmJ6H3D6PWHhMYiWAZEIxGEiecACeFrDJHAxa4XrXy6/iN/Z5otUCblghUN0byQrr+pzsLz3RC4Or5/wPClf4c5dGSA5pi6aRiaZgx7uj0wbd1wTQqahibqsGvxigb0G7DwJIC7gK4Y9SNoSEwI1L3j/rpcscC8ZplZ0qfI+wetDzW5jgHG7kA25ywCRHq3El7As5EsoGwy8OMlv80ClWkCRmNfFGnCkTgC4sJKxia95a7ZdBE8TgpHHz2ewsgn/cChfvlEhQg9OxYQycwyz8cckywJURCHaZiT68u7yRX588Ps8rfrCZlcT2eTm8vZ9ZX6nOIhX2NpMYswj4VkcJ7Lvf3ogS93isdLG6O5UCMn9FbigyO8BPJwni827AxjjjZImfgdnmaZK1P4yUOijO8RQ5Ge1CTOs0+5yUnMlQC3CH8UJw4xOUIptp/dLOk8Tyr7UrAtTUpOlISGhCxJtI7IIrYJpm0+x1x5fBULYo2GI31AW/hnOVupSUsDTd+r6sOz3C3wwREVcrHfo+rTZy+KPD6vJKnEKLm3C7FEhyRVigxmUKPzwvqwVWn5oqIsNa1VhXbZk9RYUZOcDhqj64zZwAzNkqh1zbSZrllanzLX1DTHqGjMrvvWuESNzVVwL6lOPtJFdnptshOlBeN3KI969oooqxXbiXvJNnFzO4bc6FzdLk8wtJpKm3vJdMm4bPhqm3gvQXtldaduQvENt8DYRb07qPTjAjj2dCFk3e4v0xzrIX2HZk4qaiaJrcgEsSBUbgP+y81mnTIFVAqM86z0rKrdXUCjsVB5V6jtQCzqHUsi/RXHt5DKIm3Z8x+oidWKK9nO4gFNDHrD/oiZjoWYsW2xHthU7xl9OrIGJhvVmljNfXtgp9PGOopG0io/TQ2ka1EmjbVdtpJaSzqE9zUG5KbN7zTQHzcpR7XuosxaO/chwZ5HV2d+8IgcOKCh29T5ex4GMXd3dB5tKh5XNiuUn/Lc/nxekl7taMgBeBnv9orzQXlM49rwpyhOytcHtSyT6fYIeqDhdcvElmX3RyPboQZj1sACQ6+1rI3jxmhOp1F1qIikqaTaLjiNbEuaSLrHrev/D/AoAc8516jf2dzpq/FlwF1PZK20rsXFVKQeWKpOxXh5AUbjN9Pbu9n15y+zvzpU6GBAqQttmmSzSoVWwTSEIBpwvUmFam/9KTb7Knwwj5aBC/7Vxpy61QVkWh4pFxERAaGuSyoJ60i8DNvu99luX2bT0z8iDo+6+MtQgASs2jevAgUnFHSieEzJUYOr2GtFLAC1w0cVQYeK9H5mF8HqqWEXeXmcfte4M9Xduf7jcIrsvIAdfbOvldCxRyVwLdrvm1bz7X5UPyo1hfCdCE/n+LS3UCRNuvPivXY/u3WbjTfbCs+3N7vjRf4do36zg15DFKd/6tsuQN9L/wavtdi577lQzL2CEOWWko3g7C9BbDhy+rrVIkHDfqsE5c5fCkw0wP5PToey0+TMOa0/7F+LeA//AtdOZTAYIgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=b6ec185783225e10cccd5d10feaad34d^sys_idNOT IN07ec185783225e10cccd5d10feaad382,0fec185783225e10cccd5d10feaad382"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign department to request">b6ec185783225e10cccd5d10feaad34d</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>640a09a1-9d3e-4fa2-ac94-01aeb03bd20f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>07ec185783225e10cccd5d10feaad382</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:42:25</sys_updated_on>
+        <ui_id>027b67c9-f2e7-4561-a841-5e3b9a51e857</ui_id>
+        <values>H4sIAAAAAAAA/+VV22rjMBD9laBnE3xJSpq3JdnCQreFdulLU8xEGqcC+VJJTpsN+fcdW7ITetsU+rBl/TZXnTOaI99umRRsykYowug0OuFJlCRxGMaTUbQ8SZZRLBJAjFjACsiRMjXyUguy16DqxrHdzjSCRZFGQ15rjYXd7SgupKkUbG58Gnn4vVSC4mx6exewCjR1tKjZdPssdCwkBUtUlHrVYXqO0W6qxhYlr3PClcrOee4r5z4y+DGnCBU1cKIwYPhksRBIQDJQBgOWQyHAlnrDplbX5CDS4rJQmz7jXhbWEc3hycjfdPIobPIyJGbcD6E3f8FS4dwNyYWyOVi4pu7c1rqfWSk5GjcXgRnUys4OfS7hsrKyLFyJbRr76lLVeXHhpsL6Bgd3UhtMBVYN1wa9o5Zd35ePVx3QM1m0Y/E0VclB9RZYq+Wytg2cLUOF7ZxzqCpZrNJKl2vZFhOUfLhSZAwzVT7SmUauiiHwBveQJgvDM/LPW/cNaNmQ+EltqHgXMLMxMwXG7KnQHNOHukHiiHkKaTuFdgRpuw1NMdeyst/oqDV64LvAL/5y/N6W8dP9Uh303C//UxqN43g0nqRQ2zIv0zA1qNd0I6nGhxqNfamEa5cwuOoTPiaMIyB3wmh37A0KXhsvfOeHtYMLF/DKGH+aMiZfTRmeypeXxt8EEcbvPrsH29RqwByIgU4CbRuWizoME7FddKu/YNMF+16sZIGD+T6LBQtX3MYTMY7CLINJMopP4yjknIuxIBcCiEREbTqxpVf8yPxXfkP/JMaP6f+IG+r0fyZRCfPKlXXix5yoW0zdFT57AHxwcOOD/e/x016B6CRsvy/2Fvw3f8m7P1yjZTEgCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign department to request">b6ec185783225e10cccd5d10feaad34d</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>e3277c84-5a69-4654-a72f-cca89788bb3d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>0fec185783225e10cccd5d10feaad382</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:15</sys_updated_on>
+        <ui_id>1eefc1c9-fd98-4362-bfb5-db44063dbfc5</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5WfoypOWlb6tlEhTWIgwcQLRdGNfQOWnA9sp9BV/e+7SZy0AsaKxMPQ8nY/fc71Pc7NhinJ5myCMuTH/EjEPI6jMIxmE54exSmPZAyInAWsgBwp06AojSR7BbpuHJvNiUFwKBM+FrUxWLjtluJS2UrD+tqnkUfcKy0pzuY3twGrwFBHh4bNN89Ch0LSkKKm1Mse03OMbl01tixFnROuRPXOM1+58JHR9wVFqKiBw8OA4ZPDQiIByUBbDFgOhQRXmjWbO1OTg0jLi0Kvh4x7VbiOaA5PVv2ikydhk5chMRN+CIP5E1KNi25IXShbgIMr6i5cbYaZlUqg7eYiMYNau5N9X5dwUTlVFl2Jaxr76lLXeXHeTYUNDfbupLaYSKwarg36jlp2dV8+XvZAT1XRjsXT1KUAPVjgnFFp7Ro4G4Ya2znnUFWquEsqU65UW0xQ8vGdJmOc6fKRzrTqrhiDaHCPabIwPiX/onVfg1ENiR/Uhoq3AbNre6LB2h0VmmPyUDdIOmKeQtJOoR1B0m5DUyyMqtxXOmqFHvg28IufTt/aMnG8W6q9nrvlf0r4NIom01kCtSvzMgkTi2ZFN5IYfKjRupdKuOoSRpdDwvuEcQDkXhjtjv2BgtfGC9/Zfu3ovAt4ZUw/TBmzz6YMT+XTS+NvggijN5/dvW1qNWD3xEAngXENy2UdhrHcLPvVX7L5kn0r5Xq02OWwYNmVtlEOMz5JM5jFk+g44qEQQk4lDzMEkLH80qYTV3rDD8x/5Sf0DyJ8n/YPuJ1e+6cKtbSvXFcvfMyJuMOku75n4vfB0bUPDr/GD3sB+FHYfp/sHfhv/pC3vwHyLnMSHAoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=b6ec185783225e10cccd5d10feaad34d^sys_idNOT IN0fec185783225e10cccd5d10feaad37f,43ec185783225e10cccd5d10feaad381"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2fcc545783225e10cccd5d10feaad359</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Assign department to request">b6ec185783225e10cccd5d10feaad34d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>0fec185783225e10cccd5d10feaad37f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:15</sys_updated_on>
+        <ui_id>640a09a1-9d3e-4fa2-ac94-01aeb03bd20f</ui_id>
+        <values>H4sIAAAAAAAA/+1V22obMRD9FaPnZdlLbBq/BZtAIW2gCXlpwzKWtLaoVtrqYsdd/O8drdYXUpsmkMe+rc5oZs4ZzWE7or1rvbOP+sZasVRk+v05IUIFDL87oqDhZEqoVkw4oVXVAwlZg/Qh4LYtHwk74mopVAgwYVsJ26dLcboSkhk+dGrBYD3HDZl2r0KCYXqdQZ1f05yWxaQssqz4dJUvJuUiL1gJHEosKGHBJV6d7SmO7nokucg9cELcOiPUcjjfDVUe9qA2LLDKs4TwF8cV48inBml5QhpQDJw22wNiOLB7JY/ASiiH5Ui4/GLFb2xYjMfhYs1RIuUxeDg+wkLyeZxdDNVzcIB0PHXeDNfpSgvKbRwQ4zV46WanWLxw3wa5McWFwkO2lr5RX+NUyKHA/qkQ8ZZXjLdBbaA/aKkfVnrzbc/0Vqh+MkNQagrycAKH81t4F/h0hEveYKGqgbbFqVat0WvRJyOXJl1KPKS11BtsGrYvBRqIpzhcSG8Rn/fwExgRVHzBMpgcaS7AClr1mxrWzKCEXULs1s4kWHsUiROufvlAMUoexFVxPiGFGtG6G+y85oOOXfL34p/sfNfN8L0dZ1WeUm9wKi4NO7Tb/fBZVrJLXnhz3vs8cg3jepxn4/MeuZqc88gZd7zTGMU/jBFe5I2+yLLsvzE+xBjCVnGdB2198w/0xXMwQex5mDUVFqn1z/R5/98IgS0umKCn0Eabn0HUEdv9AUHUfLyBBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2bcc545783225e10cccd5d10feaad35d</block>
+        <comment/>
+        <connected_to>640a09a1-9d3e-4fa2-ac94-01aeb03bd20f</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Assign department to request">b6ec185783225e10cccd5d10feaad34d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>43ec185783225e10cccd5d10feaad381</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:15</sys_updated_on>
+        <ui_id>e3277c84-5a69-4654-a72f-cca89788bb3d</ui_id>
+        <values>H4sIAAAAAAAA/+1V32vbMBD+V4KejbGdtWx5KwmFQbfCWvqyFXOW5ERMljz9SOqZ/O87WXYSuox1kMe9Wd/p7r7vdB/uifau9c4+6htrxVqRxdfnhAgVMPzuiYKGkwWhWjHhhFblACRkC9KHgOtaPhN2VmnWIcyEbSV0T+ejdCMkM3zs0oLBWo4bsuhfhQTD5DqDOv9AczovrudFlhXv3+XV9bzKCzYHDgUWlFBxiVeXE73Z3YAkf+QdGCFunRFqPZ7vxioPE6gNC6zyLCH8xXHFOPKpQVqekAYUA6dNd0AMB3av5BHYCOWwHAmXX6z4iQ2Lq6twseYokfIYPBwfoZJ8FScXQ/UKHCAdT50343W60YJyGwfEeA1euuUpFi/ct0FuTHGh8JitpW/U5zgVcigwPRQi3vKS8TaoDfRHLfXDRu++TExvhRomMwalpiAPJ3A4v8q7wKcnXPIGC5UNtC1OtWyN3oohGbk06VriIa2l3mHTsHkp0EA8xeFCeov4aoCfwIig4hOWweRIswIraDlsaVgygxL2CbGdXUqw9igSJ1z+8IFilDyKK+N8Qgo1onU32HnLRx375PelP9n3vl/iezvOyjyl3uBUXBp2aL//5rNszs774I1ZF/VHfs4fZ5zxj6Yo/mKK8Bpv9ESWZf9NcRFTCFvGVR61Dc0v6InnYIDY8zBrKixSG57p4/S/CIEOF0zQU2inzfcg6ojtfwGoi0axeQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_b6ec185783225e10cccd5d10feaad34d^sys_idNOT IN8bec185783225e10cccd5d10feaad358,c7ec185783225e10cccd5d10feaad378"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b6ec185783225e10cccd5d10feaad34d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>8bec185783225e10cccd5d10feaad358</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:42:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b6ec185783225e10cccd5d10feaad34d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:25</sys_created_on>
+        <sys_id>c7ec185783225e10cccd5d10feaad378</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:42:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b6ec185783225e10cccd5d10feaad34d"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>db89581383225e10cccd5d10feaad369</sys_id>
+        <latest_snapshot>b6ec185783225e10cccd5d10feaad34d</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch3-10-23-2024_11-01-2024_2230.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=db89581383225e10cccd5d10feaad369^sys_idNOT INc3ec185783225e10cccd5d10feaad38f"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"c3ec185783225e10cccd5d10feaad38f","name":"plan","plan_signature":null}}</plan>
+        <plan_id>db89581383225e10cccd5d10feaad369</plan_id>
+        <snapshot>c82e58d783225e10cccd5d10feaad368</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 11:42:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c3ec185783225e10cccd5d10feaad38f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 11:47:16</sys_updated_on>
+        <trigger display_value="">83ec185783225e10cccd5d10feaad38d</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=db89581383225e10cccd5d10feaad369"/>
+</record_update>

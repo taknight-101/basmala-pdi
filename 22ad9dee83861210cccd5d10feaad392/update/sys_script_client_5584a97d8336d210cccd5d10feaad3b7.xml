@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>rating</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Calculate AVG</name>
+        <order>100</order>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+
+   if ( isLoading || newValue == '') {
+
+      return;
+
+          }
+	
+	var GA = new GlideAjax('ProfileCalculateAVGRating');
+
+    GA.addParam('sysparm_name', 'CalcuateAvg');
+    GA.addParam('sysparm_technician_id', g_form.getValue('assined_to'));
+    GA.addParam('sysparm_thisTask', g_form.getValue('number'));
+	GA.addParam('sysparm_ratingNewValue', newValue);
+
+    GA.getXML(Parse);
+
+    function Parse(response) {
+        var myObj = response.responseXML.documentElement.getAttribute('answer');
+        //alert(myObj);
+    }
+	
+
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 11:25:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5584a97d8336d210cccd5d10feaad3b7</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Calculate AVG</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_client_5584a97d8336d210cccd5d10feaad3b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-01 05:46:44</sys_updated_on>
+        <table>x_1522458_automo_0_task</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

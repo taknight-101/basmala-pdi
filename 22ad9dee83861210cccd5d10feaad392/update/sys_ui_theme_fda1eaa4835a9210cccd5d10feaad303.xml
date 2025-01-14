@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_theme">
+    <sys_ui_theme action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_theme display_value="La Jolla">c92c1ee153002300dda1ddeeff7b125b</base_theme>
+        <css>#header-logo-image {&#13;
+    height: 600px !important;&#13;
+    width: auto !important; &#13;
+}</css>
+        <device>browser</device>
+        <name>Header_Img</name>
+        <sys_class_name>sys_ui_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-02 22:03:49</sys_created_on>
+        <sys_id>fda1eaa4835a9210cccd5d10feaad303</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Header_Img</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ui_theme_fda1eaa4835a9210cccd5d10feaad303</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-02 22:04:20</sys_updated_on>
+    </sys_ui_theme>
+</record_update>

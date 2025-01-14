@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css>div.container2.col-md-12{
+padding-left:0;
+padding-right:0;
+}
+
+main.body.padding-top.ng-scope{
+padding-top:0;
+}
+
+div.ng-scope.cb059f15183aad210cccd5d10feaad3d0 {
+  background-color: #f5f5f5 !important;
+}
+
+div.ng-scope.c30a4c6bf83621250cccd5d10feaad354{
+background: rgb(0,9,36);
+background: linear-gradient(90deg, rgba(0,9,36,1) 0%, rgba(3,64,120,1) 51%, rgba(18,130,162,1) 100%);
+}
+
+.cont{
+  margin-top:250px;
+  margin-right:0%;
+  margin-left:0%;
+  padding:0%;
+  width:100%;
+}
+.cont2{
+margin:0%;
+  padding:0%;
+  width:100%;
+}
+
+.full-page{
+min-height:500px;
+}
+
+</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <human_readable_url_structure/>
+        <id>asm_tasks_details</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>false</public>
+        <roles>x_1522458_automo_0.technician</roles>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 07:50:39</sys_created_on>
+        <sys_id>f371b5c5831e1610cccd5d10feaad3b1</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>asm_tasks_details</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_page_f371b5c5831e1610cccd5d10feaad3b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 09:35:57</sys_updated_on>
+        <title>Tasks Details</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=f371b5c5831e1610cccd5d10feaad3b1"/>
+</record_update>

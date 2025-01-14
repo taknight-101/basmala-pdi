@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $timeout) {
+    /* widget controller */
+    var c = this;
+	
+	  c.clearError = function(field) {
+        if (c.errors[field]) {
+            delete c.errors[field]; // Remove the error message for the given field
+        }
+    };
+
+    $timeout(function() {
+        // Select all the char-box fields and the text-box field
+        var charBoxes = document.querySelectorAll('.char-box');
+        var textBox = document.querySelector('.text-box');
+        var charBoxError = document.getElementById('charBoxError');
+        var textBoxError = document.getElementById('textBoxError');
+
+        if (!charBoxes || !textBox || !charBoxError || !textBoxError) {
+            console.error("Fields with .char-box or .text-box classes not found.");
+            return;
+        }
+
+        // Convert NodeList to an array
+        charBoxes = Array.prototype.slice.call(charBoxes);
+
+        // Validate Arabic characters in .char-box fields
+        charBoxes.forEach(function(input, index) {
+            input.addEventListener('input', function() {
+                var arabicRegex = /^[\u0621-\u064A\u0660-\u0669\s]+$/; // Arabic letters and numerals
+                if (!arabicRegex.test(input.value)) {
+                    charBoxError.style.display = 'inline'; // Show error message
+                    input.value = input.value.replace(/[^ا-ي٠-٩\s]/g, ''); // Remove non-Arabic characters
+                } else {
+                    charBoxError.style.display = 'none'; // Hide error message
+                }
+
+                // When a character is entered, move to the next field (right to left)
+                if (input.value.length === input.maxLength) {
+                    var nextIndex = index - 1; // Go backward to the next field
+                    if (nextIndex >= 0) {
+                        charBoxes[nextIndex].focus();
+                    } else if (index === 0) {
+                        // If it's the first char-box and filled, move to .text-box
+                        textBox.focus();
+                    }
+                }
+            });
+
+            // Handle backspace to go to the previous field
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace' && input.value === '') {
+                    var prevIndex = index + 1; // Go forward to the previous field
+                    if (prevIndex < charBoxes.length) {
+                        charBoxes[prevIndex].focus();
+                    }
+                }
+            });
+        });
+
+        // Validate numeric input in .text-box
+        textBox.addEventListener('input', function() {
+            var numberRegex = /^[0-9]+$/; // Only numbers
+            if (!numberRegex.test(textBox.value)) {
+                textBoxError.style.display = 'inline'; // Show error message
+                textBox.value = textBox.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+            } else {
+                textBoxError.style.display = 'none'; // Hide error message
+            }
+        });
+
+        // Modify .text-box logic: Do nothing after focusing on it
+        textBox.addEventListener('input', function() {
+            // Prevent redirection to other fields after reaching .text-box
+        });
+    },0);
+	 
+	c.errors = {};
+	
+	c.test = function(){
+		
+		
+		    c.errors = {};
+		
+		    // Validation: Check for empty fields
+        if (!c.selectedModel) {
+            c.errors.selectedModel = "This field is mandatory.";
+        }
+        if (!c.color) {
+            c.errors.color = "This field is mandatory.";
+        }
+        if (!c.text1 || !c.text3 || !c.text2 || !c.text4) {
+            c.errors.text4 = "This field is mandatory.";
+        }
+        // If any errors exist, stop submission
+        if (Object.keys(c.errors).length > 0) {
+            return; // Do not proceed further
+        }
+		    
+		    c.data.selectedModel = c.selectedModel;
+		    c.data.color = c.color;
+		    c.data.text4 = c.text4 +" "+ c.text2 +" "+ c.text3 +" "+ c.text1;
+		
+		    c.server.update().then(function () {
+            // Clear fields
+            c.selectedModel = "";
+            c.color = "";
+            c.text1 = "";
+            c.text2 = "";
+            c.text3 = "";
+            c.text4 = "";
+            // Clear errors
+            c.errors = {};
+
+            // Show success popup
+            document.getElementById("success-popup").style.display = "flex";
+        });
+		    
+		
+	};
+};   ]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(145deg, #a0a8b1, #7c8a99);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Form Container */
+.custom-form {
+    width: 60%;
+    margin: 30px auto;
+    background: linear-gradient(145deg, #f5f5f5, #e3ebf2);
+    padding: 30px;
+    border-radius: 15px;
+   box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.3), -12px -12px 24px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease;
+}
+
+/* Form Heading */
+.custom-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #444;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* License Plate */
+.license-plate {
+    display: flex; /* Use flexbox to place items side by side */
+    gap: 10px; /* Space between fields */
+}
+
+/* License Plate Input Fields */
+.text-box {
+    width: 50%; /* Make the text box 50% width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width:thin;
+    text-align:center;
+}
+select.vehicleModel, select.vehicleColor {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    outline: none;
+}
+
+select.vehicleModel:focus, select.vehicleColor:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+}
+input[type="text"].vehicleColor,
+select.vehicleModel,option,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    outline: none;
+   
+}
+input[type="text"].vehicleColor:focus,
+select.vehicleModel:focus,
+textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+}
+
+.char-box {
+    width: 16.5%; /* Each char box takes up 16.5% of the width */
+    padding: 9px;
+    font-size: 2rem;
+    border-radius: 10px;
+    display: inline-block;
+    text-align:center;
+    color:black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width: thin;
+    font-weight: 300;
+}
+
+/* Submit Button */
+button {
+    width: 25%;
+    padding: 12px;
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 35%;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #0056b3, #007bff);
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: red;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-form {
+        width: 90%; /* Make the form responsive on smaller screens */
+        padding: 20px;
+    }
+
+    .license-plate {
+        display: block; /* Stack the license plate fields on small screens */
+    }
+
+    .text-box,
+    .char-box {
+        width: 100%; /* Make each input full width on small screens */
+        margin-left: 0;
+    }
+
+    button {
+        width: 40%;
+        padding: 10px;
+        float:center;
+    }
+    .char-box {
+    width: 15.5%; /* Each char box takes up 16.5% of the width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    text-align:center;
+    color:black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width: thin;
+    }
+    .text-box {
+    width: 50%; /* Make the text box 50% width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width:thin;
+    text-align:center;
+    }
+}
+
+@media (max-width: 480px) {
+    label {
+        font-size: 1.2rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 1rem;
+    }
+    .char-box {
+    width: 13.5%; /* Each char box takes up 16.5% of the width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    text-align:center;
+    color:black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width: thin;
+    }
+    .text-box {
+    width: 50%; /* Make the text box 50% width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width:thin;
+    text-align:center;
+    }
+}
+
+.star{
+  color:red;
+}
+
+/* Success Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.popup-content i {
+    font-size: 5rem;
+    color: #28a745;
+    margin-bottom: 15px;
+    
+}
+
+
+.popup-content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.popup-content .close-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensures it takes up its own line */
+    margin: 0 auto; /* Centers horizontally */
+}
+
+.popup-content .close-btn:hover {
+    background-color: #218838;
+}
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>asm_create_vehicle_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Asm create Vehicle Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    // Define the model table name (replace with your actual table name if necessary)
+    data.model= [] ;
+
+    // GlideRecord query to fetch models
+    var gr = new GlideRecordSecure('x_1522458_automo_0_model');
+	  gr.addActiveQuery();
+    gr.query(); // Add conditions if necessary (e.g., gr.addQuery('active', true);)
+    
+    while (gr.next()) {
+       data.model.push({
+				    ID: gr.getDisplayValue("sys_id"),
+            model_id: gr.getValue('model_id'), // Replace with the field for model ID
+            commercialName: gr.getValue('commercial_name') 
+				    
+        });
+    }
+
+    // Pass the data to the client script (it will be available as `data.models`)
+     var gv = new GlideRecord("x_1522458_automo_0_vehicle");
+	   gv.initialize();
+	   if(input){
+		   gv.setValue("mode0" , input.selectedModel);
+		   gv.setValue("color" , input.color);
+	     gv.setValue("license_plat0", input.text4);
+	     gv.insert();
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 14:00:41</sys_created_on>
+        <sys_id>f903ca1183ead210cccd5d10feaad34c</sys_id>
+        <sys_mod_count>145</sys_mod_count>
+        <sys_name>Asm create Vehicle Form</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_f903ca1183ead210cccd5d10feaad34c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 12:26:33</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div class="custom-form">
+    <h2>Add  <span style="color:red;">Vehicle</span></h2>
+    <form>
+        <!-- Vehicle Model -->
+        <div class="form-group">
+            <label for="vehicleModel">Vehicle Model <span class="star">*</span></label>
+            <select class="vehicleModel" ng-model="c.selectedModel" ng-change="c.clearError('selectedModel')">
+                <option value="">-- Select Vehicle Model --</option>
+                <option ng-repeat="model in c.data.model" value="{{model.ID}}">
+                    {{model.commercialName}} {{model.model_id}} 
+                </option>
+            </select>
+            <span class="error-message" ng-show="c.errors.selectedModel">{{c.errors.selectedModel}}</span>
+        </div>
+
+        <!-- Vehicle Color -->
+        <div class="form-group">
+            <label for="vehicleColor">Vehicle Color <span class="star">*</span></label>
+            <select class="vehicleColor" ng-model="c.color" ng-change="c.clearError('color')">
+                <option value="">-- Select Vehicle Color --</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Silver">Silver</option>
+                <option value="Gray">Gray</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Orange">Orange</option>
+                <option value="Brown">Brown</option>
+            </select>
+            <span class="error-message" ng-show="c.errors.color">{{c.errors.color}}</span>
+        </div>
+
+        <!-- License Plate -->
+        <div class="form-group">
+            <label for="licensePlate">License Plate <span class="star">*</span></label>
+            <div class="license-plate">
+                <input type="text" class="text-box" placeholder="" maxlength="4" ng-model="c.text1" ng-change="c.clearError('text4')">
+                <input type="text" maxlength="1" class="char-box" placeholder="" ng-model="c.text2" ng-change="c.clearError('text4')">
+                <input type="text" maxlength="1" class="char-box" placeholder="" ng-model="c.text3" ng-change="c.clearError('text4')">
+                <input type="text" maxlength="1" class="char-box" placeholder="" ng-model="c.text4" ng-change="c.clearError('text4')">
+              
+            </div>
+              <span class="error-message" ng-show="c.errors.text4">{{c.errors.text4}}</span>
+            <!-- Error messages for input validation -->
+            <span class="error-message" id="charBoxError" style="display: none;">Please enter Arabic letters only.</span>
+            <span class="error-message" id="textBoxError" style="display: none;">Please enter numbers only.</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" ng-click="c.test()">Add Vehicle</button>
+    </form>
+</div>
+
+<!-- Popup Modal -->
+<div id="success-popup" class="popup">
+    <div class="popup-content">
+        <i class="fas fa-check-circle"></i>
+        <h2>Added Successfully</h2>
+        <p>Your Vehicle has been added successfully.</p>
+        <button class="close-btn" onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+    function closePopup() {
+        document.getElementById("success-popup").style.display = "none";
+        window.location.href = "https://dev231407.service-now.com/customer_portal?id=asm_my_vehicles";
+    }
+</script>
+</body>
+</html>]]></template>
+    </sp_widget>
+</record_update>

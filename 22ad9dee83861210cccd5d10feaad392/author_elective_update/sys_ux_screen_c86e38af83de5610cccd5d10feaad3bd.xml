@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <event_mappings/>
+        <macroponent display_value="Task Form">886e38af83de5610cccd5d10feaad3b9</macroponent>
+        <macroponent_config/>
+        <name>Request Form</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Task form">24746863835e5610cccd5d10feaad31b</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-11 22:31:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c86e38af83de5610cccd5d10feaad3bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Form</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_screen_c86e38af83de5610cccd5d10feaad3bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-11 22:31:22</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=c86e38af83de5610cccd5d10feaad3bd"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ux_screen_c86e38af83de5610cccd5d10feaad3bd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</app_config><description/><disable_auto_reflow>false</disable_auto_reflow><event_mappings/><macroponent display_value="Task Form">886e38af83de5610cccd5d10feaad3b9</macroponent><macroponent_config/><name>Request Form</name><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="Task form">24746863835e5610cccd5d10feaad31b</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-11 22:31:22</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c86e38af83de5610cccd5d10feaad3bd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Request Form</sys_name><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ux_screen_c86e38af83de5610cccd5d10feaad3bd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-11 22:31:22</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=c86e38af83de5610cccd5d10feaad3bd"/></record_update>]]></payload>
+        <payload_hash>-1598978036</payload_hash>
+        <record_name>Request Form</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-11 22:31:22</sys_created_on>
+        <sys_id>0c6e34ef83de5610cccd5d10feaad369</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193b7d927c60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-11 22:31:22</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>006e34ef9ade5610433bbb921e7be269</update_guid>
+        <update_guid_history>006e34ef9ade5610433bbb921e7be269:-1598978036</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-11 23:34:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>246c0a83843545e087079013f1f77900</sys_id>
+        <sys_metadata>c86e38af83de5610cccd5d10feaad3bd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Form</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_c86e38af83de5610cccd5d10feaad3bd</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_c86e38af83de5610cccd5d10feaad3bd">0c6e34ef83de5610cccd5d10feaad369</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-11 23:34:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

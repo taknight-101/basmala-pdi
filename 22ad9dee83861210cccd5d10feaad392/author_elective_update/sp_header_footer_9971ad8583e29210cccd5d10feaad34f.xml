@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Footer Container */&#13;
+.footer-container {&#13;
+  color: #fff; /* White text */&#13;
+  padding: 20px 10px;&#13;
+  text-align: center;&#13;
+  margin-top: 20px;&#13;
+ &#13;
+}&#13;
+.footer {&#13;
+  position: relative; &#13;
+  width: 100%;&#13;
+  background-color: black;&#13;
+  color: white;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+/* Logo Section */&#13;
+.footer-logos {&#13;
+  display: flex;&#13;
+  justify-content: center;&#13;
+  gap: 40px; /* Space between logos */&#13;
+  margin-bottom: 15px;&#13;
+}&#13;
+&#13;
+.footer-logo {&#13;
+  max-width: 100px; /* Adjust size of the logos */&#13;
+  height: 60px;&#13;
+  width: 70;&#13;
+}&#13;
+&#13;
+/* Contact Info Section */&#13;
+.footer-contact {&#13;
+  margin-top: 10px;&#13;
+  font-size: 14px;&#13;
+  line-height: 1.6;&#13;
+}&#13;
+&#13;
+.footer-contact p {&#13;
+  margin: 5px 0;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ASM Footer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>true</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 16:56:23</sys_created_on>
+        <sys_id>9971ad8583e29210cccd5d10feaad34f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ASM Footer</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_header_footer_9971ad8583e29210cccd5d10feaad34f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 16:56:23</sys_updated_on>
+        <template><![CDATA[<div class="footer">
+<div class="footer-container">
+  <div class="footer-logos">
+    <img src="https://pngimg.com/uploads/opel/opel_PNG11.png" alt="Opel" class="footer-logo">
+    <img src="https://logodownload.org/wp-content/uploads/2014/07/shell-logo-1.png" alt="Shell" class="footer-logo">
+    <img src="https://ulearn.tech/wp-content/uploads/2021/01/07-GM_logo_2021.png" alt="GM" class="footer-logo">
+    <img src="https://logos-world.net/wp-content/uploads/2020/08/Bosch-Symbol-700x394.png" alt="Bosch" class="footer-logo">
+  </div>
+  <div class="footer-contact">
+    <p><strong>Contact Us:</strong></p>
+    <p>Email: info@example.com</p>
+    <p>Phone: +123-456-7890</p>
+    <p>Location: 123 Service Street, Automotive City</p>
+  </div>
+</div>
+</div>
+
+]]></template>
+    </sp_header_footer>
+    <sys_es_latest_script action="DELETE">
+        <id>9971ad8583e29210cccd5d10feaad34f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 16:56:22</sys_created_on>
+        <sys_id>61a1ed8583e29210cccd5d10feaad394</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 16:56:22</sys_updated_on>
+        <table>sp_header_footer</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sp_header_footer_9971ad8583e29210cccd5d10feaad34f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_header_footer"&gt;&lt;sp_header_footer action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;/* Footer Container */&amp;#13;
+.footer-container {&amp;#13;
+  color: #fff; /* White text */&amp;#13;
+  padding: 20px 10px;&amp;#13;
+  text-align: center;&amp;#13;
+  margin-top: 20px;&amp;#13;
+ &amp;#13;
+}&amp;#13;
+.footer {&amp;#13;
+  position: relative; &amp;#13;
+  width: 100%;&amp;#13;
+  background-color: black;&amp;#13;
+  color: white;&amp;#13;
+  text-align: center;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Logo Section */&amp;#13;
+.footer-logos {&amp;#13;
+  display: flex;&amp;#13;
+  justify-content: center;&amp;#13;
+  gap: 40px; /* Space between logos */&amp;#13;
+  margin-bottom: 15px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.footer-logo {&amp;#13;
+  max-width: 100px; /* Adjust size of the logos */&amp;#13;
+  height: 60px;&amp;#13;
+  width: 70;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Contact Info Section */&amp;#13;
+.footer-contact {&amp;#13;
+  margin-top: 10px;&amp;#13;
+  font-size: 14px;&amp;#13;
+  line-height: 1.6;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.footer-contact p {&amp;#13;
+  margin: 5px 0;&amp;#13;
+}&amp;#13;
+&amp;#13;
+&amp;#13;
+&amp;#13;
+&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;ASM Footer&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;static&gt;true&lt;/static&gt;&lt;sys_class_name&gt;sp_header_footer&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 16:56:23&lt;/sys_created_on&gt;&lt;sys_id&gt;9971ad8583e29210cccd5d10feaad34f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;ASM Footer&lt;/sys_name&gt;&lt;sys_package display_value="Automotive Service Management" source="x_1522458_automo_0"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automotive Service Management"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_header_footer_9971ad8583e29210cccd5d10feaad34f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 16:56:23&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="footer"&gt;
+&lt;div class="footer-container"&gt;
+  &lt;div class="footer-logos"&gt;
+    &lt;img src="https://pngimg.com/uploads/opel/opel_PNG11.png" alt="Opel" class="footer-logo"&gt;
+    &lt;img src="https://logodownload.org/wp-content/uploads/2014/07/shell-logo-1.png" alt="Shell" class="footer-logo"&gt;
+    &lt;img src="https://ulearn.tech/wp-content/uploads/2021/01/07-GM_logo_2021.png" alt="GM" class="footer-logo"&gt;
+    &lt;img src="https://logos-world.net/wp-content/uploads/2020/08/Bosch-Symbol-700x394.png" alt="Bosch" class="footer-logo"&gt;
+  &lt;/div&gt;
+  &lt;div class="footer-contact"&gt;
+    &lt;p&gt;&lt;strong&gt;Contact Us:&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Email: info@example.com&lt;/p&gt;
+    &lt;p&gt;Phone: +123-456-7890&lt;/p&gt;
+    &lt;p&gt;Location: 123 Service Street, Automotive City&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+]]&gt;&lt;/template&gt;&lt;/sp_header_footer&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;9971ad8583e29210cccd5d10feaad34f&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 16:56:22&lt;/sys_created_on&gt;&lt;sys_id&gt;61a1ed8583e29210cccd5d10feaad394&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 16:56:22&lt;/sys_updated_on&gt;&lt;table&gt;sp_header_footer&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-363061111</payload_hash>
+        <record_name>ASM Footer</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 16:56:24</sys_created_on>
+        <sys_id>35a12d8583e29210cccd5d10feaad371</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193d06646da0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 16:56:24</sys_updated_on>
+        <type>Header | Footer</type>
+        <update_guid>39a12d8596e292106d9192e9922d8370</update_guid>
+        <update_guid_history>39a12d8596e292106d9192e9922d8370:-363061111</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="ASM Footer">5bb2614983e29210cccd5d10feaad309</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 17:01:08</sys_created_on>
+        <sys_db_object display_value="" name="sp_header_footer">sp_header_footer</sys_db_object>
+        <sys_id>198b7299b1fb4641ba2f8e6255eff759</sys_id>
+        <sys_metadata>9971ad8583e29210cccd5d10feaad34f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ASM Footer</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sp_header_footer_9971ad8583e29210cccd5d10feaad34f</sys_update_name>
+        <sys_update_version display_value="sp_header_footer_9971ad8583e29210cccd5d10feaad34f">35a12d8583e29210cccd5d10feaad371</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 17:01:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

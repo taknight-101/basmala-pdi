@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <event_mappings/>
+        <macroponent display_value="List Menu Template Page">23de0ac0838bd210cccd5d10feaad35f</macroponent>
+        <macroponent_config/>
+        <name>Default</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="test">dbde4640838bd210cccd5d10feaad3b2</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-07 14:11:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2fde0ac0838bd210cccd5d10feaad362</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_screen_2fde0ac0838bd210cccd5d10feaad362</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-07 14:11:23</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=2fde0ac0838bd210cccd5d10feaad362"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ux_screen_2fde0ac0838bd210cccd5d10feaad362</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</app_config><description/><disable_auto_reflow>false</disable_auto_reflow><event_mappings/><macroponent display_value="List Menu Template Page">23de0ac0838bd210cccd5d10feaad35f</macroponent><macroponent_config/><name>Default</name><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="test">dbde4640838bd210cccd5d10feaad3b2</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-07 14:11:23</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>2fde0ac0838bd210cccd5d10feaad362</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Default</sys_name><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ux_screen_2fde0ac0838bd210cccd5d10feaad362</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-07 14:11:23</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=2fde0ac0838bd210cccd5d10feaad362"/></record_update>]]></payload>
+        <payload_hash>-987280112</payload_hash>
+        <record_name>Default</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-07 14:11:23</sys_created_on>
+        <sys_id>6fde0ac0838bd210cccd5d10feaad365</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194411b1ec50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-07 14:11:23</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>23de0ac06d8bd210c3ab205c25b61d65</update_guid>
+        <update_guid_history>23de0ac06d8bd210c3ab205c25b61d65:-987280112</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-07 21:14:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>a2c1e7b733a047889ae02b705336c664</sys_id>
+        <sys_metadata>2fde0ac0838bd210cccd5d10feaad362</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_2fde0ac0838bd210cccd5d10feaad362</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_2fde0ac0838bd210cccd5d10feaad362">6fde0ac0838bd210cccd5d10feaad365</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-07 21:14:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

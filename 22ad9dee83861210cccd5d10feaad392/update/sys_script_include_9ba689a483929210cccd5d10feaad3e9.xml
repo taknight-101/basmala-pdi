@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1522458_automo_0.Available_Times</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>Available_Times</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var Available_Times = Class.create();
+Available_Times.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getAvailableSlots: function() {
+        var date = this.getParameter('sysparm_date');
+        var technician = this.getParameter('sysparm_technician');
+
+        //gs.info(date);
+        var startTimeHours = 9;
+        var endTimeHours = 17;
+        //var availableSlots = [];
+
+        if (!date) {
+            return JSON.stringify({
+                error: 'Date is missing'
+            });
+        }
+
+        // var user_gr = new GlideRecord('sys_user');
+        // // roles = x_1522458_automo_0.technician
+        // user_gr.addEncodedQuery('roles=x_1522458_automo_0.technician');
+        // user_gr.query();
+        // gs.info(user_gr.next());
+
+       // while (user_gr.next()) {
+            // var technician = user_gr.getUniqueValue();
+            // gs.info(technician);
+            // var technicianName = user_gr.getValue('name');
+            // gs.info(technicianName);
+
+           // availableSlots[technicianName] = [];
+
+            var assignedSlots = [];
+            var availableSlots = [];
+
+            var timeCard_gr = new GlideRecord('x_1522458_automo_0_time_card');
+            timeCard_gr.addQuery('assigned_to', technician);
+            timeCard_gr.addQuery('date', date);
+            timeCard_gr.query();
+
+            while (timeCard_gr.next()) {
+                var start = parseInt(timeCard_gr.getDisplayValue('from'), 10);
+                var end = parseInt(timeCard_gr.getDisplayValue('to'), 10);
+                // gs.info("start: " + start);
+                // gs.info("end: " + end);
+
+                for (var slot = start; slot < end; slot++) {
+                    // gs.info("assigned slots - start: " + slot);
+                    // gs.info("assigned slots - end: " + end);
+                    assignedSlots.push(slot);
+                }
+            }
+            //gs.info("Assigned slots: " + assignedSlots.join(', '));
+
+
+            var tempAvailableSlots = [];
+            for (var hour = startTimeHours; hour < endTimeHours; hour++) {
+                ///slotDuration => 1
+                if (!(assignedSlots.includes(hour))) {
+                    tempAvailableSlots.push(hour);
+                }
+            }
+            //gs.info("i am heeere"+JSON.stringify(tempAvailableSlots));
+            //gs.info("tempAvailableSlots: " + tempAvailableSlots.pop());
+
+            //10 11 14 16
+
+            for (var i = 0; i < tempAvailableSlots.length; i++) {
+                if (tempAvailableSlots[i] + 1 === tempAvailableSlots[i + 1]) {
+                    availableSlots.push([
+                        tempAvailableSlots[i] + ":00",
+                        tempAvailableSlots[i + 1] + ":00"
+                    ]);
+                } else {
+                    availableSlots.push([
+                        tempAvailableSlots[i] + ":00",
+                        (tempAvailableSlots[i] + 1) + ":00"
+                    ]);
+                }
+            }
+            // gs.info("pairedSlots: " + pairedSlots.pop());
+
+           // availableSlots = pairedSlots;
+        //}
+        return JSON.stringify(availableSlots);
+
+    },
+    type: 'Available_Times'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-02 16:47:30</sys_created_on>
+        <sys_id>9ba689a483929210cccd5d10feaad3e9</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>Available_Times</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_include_9ba689a483929210cccd5d10feaad3e9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 08:11:57</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9ba689a483929210cccd5d10feaad3e9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-02 16:47:29</sys_created_on>
+        <sys_id>c759d52c83d29210cccd5d10feaad39e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-02 16:47:29</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

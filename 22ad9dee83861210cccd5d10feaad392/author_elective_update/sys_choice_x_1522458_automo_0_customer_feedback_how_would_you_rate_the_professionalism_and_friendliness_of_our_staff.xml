@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="how_would_you_rate_the_professionalism_and_friendliness_of_our_staff" table="x_1522458_automo_0_customer_feedback" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>how_would_you_rate_the_professionalism_and_friendliness_of_our_staff</element>
+            <name>x_1522458_automo_0_customer_feedback</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:36:28</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>how_would_you_rate_the_professionalism_and_friendliness_of_our_staff</sys_name>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_choice_x_1522458_automo_0_customer_feedback_how_would_you_rate_the_professionalism_and_friendliness_of_our_staff</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:36:28</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_would_you_rate_the_professionalism_and_friendliness_of_our_staff</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Very Satisfied</label>
+            <language>en</language>
+            <name>x_1522458_automo_0_customer_feedback</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:36:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:36:28</sys_updated_on>
+            <value>very_satisfied</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_would_you_rate_the_professionalism_and_friendliness_of_our_staff</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Satisfied</label>
+            <language>en</language>
+            <name>x_1522458_automo_0_customer_feedback</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:36:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:36:28</sys_updated_on>
+            <value>satisfied</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_would_you_rate_the_professionalism_and_friendliness_of_our_staff</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Neutral</label>
+            <language>en</language>
+            <name>x_1522458_automo_0_customer_feedback</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:36:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:36:28</sys_updated_on>
+            <value>neutral</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_would_you_rate_the_professionalism_and_friendliness_of_our_staff</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Dissatisfied</label>
+            <language>en</language>
+            <name>x_1522458_automo_0_customer_feedback</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:36:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:36:28</sys_updated_on>
+            <value>dissatisfied</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_would_you_rate_the_professionalism_and_friendliness_of_our_staff</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Very Dissatisfied</label>
+            <language>en</language>
+            <name>x_1522458_automo_0_customer_feedback</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:36:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:36:28</sys_updated_on>
+            <value>very_dissatisfied</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>spare_parts_cost</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 17:27:03</sys_created_on>
+        <sys_id>b6fef7fb836e1250cccd5d10feaad309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>spare_parts_cost</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ui_policy_action_b6fef7fb836e1250cccd5d10feaad309</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 17:27:03</sys_updated_on>
+        <table>x_1522458_automo_0_offer</table>
+        <ui_policy display_value="make spare parts cost and total cost invisible if state== draft">3efeb7fb836e1250cccd5d10feaad363</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=b6fef7fb836e1250cccd5d10feaad309"/>
+</record_update>

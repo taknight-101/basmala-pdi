@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+  height:300px;
+  
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    padding: 5%;
+  margin-right:12%;
+  margin-bottom:12%;
+}
+
+.card-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  color: white;
+}
+
+.card-body p {
+    font-size: 2rem;
+    color: #D3D3D3;
+    line-height: 1.5;
+}
+
+.card-body p strong {
+    font-weight: bold;
+  	color: #ffffff;
+    
+}
+
+@media (max-width: 700px) {
+    .card {
+        padding: 15px;
+       margin-bottom:0%;
+      padding-top:10%;
+    }
+
+    .card-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-body p {
+        font-size: 1.5rem;
+    }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>asm_welcoming_technician</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Welcoming - Technician</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  if(!input){
+		data.firstname="";
+		var CurrentUserId = gs.getUserID();		
+		var grUser = new GlideRecordSecure('sys_user');
+		grUser.addActiveQuery();
+		grUser.addEncodedQuery("sys_id="+CurrentUserId);
+		grUser.query();
+		
+		while (grUser.next()){
+			data.firstname = grUser.getDisplayValue('first_name')
+		}
+		
+		
+	}
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 06:42:40</sys_created_on>
+        <sys_id>2dce949183a2d210cccd5d10feaad3ab</sys_id>
+        <sys_mod_count>74</sys_mod_count>
+        <sys_name>Welcoming - Technician</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_2dce949183a2d210cccd5d10feaad3ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 08:27:57</sys_updated_on>
+        <template><![CDATA[<div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Welcome, <span id="firstname">{{c.data.firstname}}</span>!</h1>
+            </div>
+            <div class="card-body">
+                <p>Stay on top of your responsibilities!</p>
+            </div>
+        </div>
+ </div>
+
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>2dce949183a2d210cccd5d10feaad3ab</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 11:33:13</sys_created_on>
+        <sys_id>a141e1dd83e6d210cccd5d10feaad3f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 11:33:13</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

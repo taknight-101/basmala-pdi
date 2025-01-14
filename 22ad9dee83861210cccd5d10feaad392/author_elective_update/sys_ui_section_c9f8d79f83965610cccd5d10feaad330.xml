@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Spare Parts" section_id="c9f8d79f83965610cccd5d10feaad330" sys_domain="global" table="x_1522458_automo_0_offer" version="3" view="offer_customer_view">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>12M.x_1522458_automo_0_offer.x_1522458_automo_0_part_request.offer</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-11 15:10:41</sys_created_on>
+            <sys_id>f08957df83965610cccd5d10feaad3e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Spare Parts" display_value="Spare Parts" name="x_1522458_automo_0_offer" sys_domain="global" view="0ce23fda831a1210cccd5d10feaad397">c9f8d79f83965610cccd5d10feaad330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-11 15:10:41</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Spare Parts</caption>
+            <header>false</header>
+            <name>x_1522458_automo_0_offer</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-11 15:08:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c9f8d79f83965610cccd5d10feaad330</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_1522458_automo_0_offer</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_c9f8d79f83965610cccd5d10feaad330</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-11 15:10:41</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="offer customer view" name="offer_customer_view">0ce23fda831a1210cccd5d10feaad397</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ui_section_c9f8d79f83965610cccd5d10feaad330</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Spare Parts" section_id="c9f8d79f83965610cccd5d10feaad330" sys_domain="global" table="x_1522458_automo_0_offer" version="3" view="offer_customer_view"><sys_ui_element action="INSERT_OR_UPDATE"><element>12M.x_1522458_automo_0_offer.x_1522458_automo_0_part_request.offer</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-11 15:10:41</sys_created_on><sys_id>f08957df83965610cccd5d10feaad3e0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Spare Parts" display_value="Spare Parts" name="x_1522458_automo_0_offer" sys_domain="global" view="0ce23fda831a1210cccd5d10feaad397">c9f8d79f83965610cccd5d10feaad330</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-11 15:10:41</sys_updated_on><sys_user/><type>list</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Spare Parts</caption><header>false</header><name>x_1522458_automo_0_offer</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-11 15:08:14</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c9f8d79f83965610cccd5d10feaad330</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_1522458_automo_0_offer</sys_name><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ui_section_c9f8d79f83965610cccd5d10feaad330</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-11 15:10:41</sys_updated_on><sys_user/><title>false</title><view display_value="offer customer view" name="offer_customer_view">0ce23fda831a1210cccd5d10feaad397</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-2055015296</payload_hash>
+        <record_name>Offer</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-11 15:10:41</sys_created_on>
+        <sys_id>b08957df83965610cccd5d10feaad3e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193b645b37e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-11 15:10:41</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>788957df26965610a67118445cc9b6e1</update_guid>
+        <update_guid_history>788957df26965610a67118445cc9b6e1:-2055015296,3c8957dfc7965610c857421cd6b6c5dc:-1919873575,15f8d79f70965610362431e3ea8e043a:-615848444</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 08:20:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>022231ccd05f443582ad8499d6919459</sys_id>
+        <sys_metadata>c9f8d79f83965610cccd5d10feaad330</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Spare Parts</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Offer">71f1675683d61210cccd5d10feaad377</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ui_section_c9f8d79f83965610cccd5d10feaad330</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_c9f8d79f83965610cccd5d10feaad330">b08957df83965610cccd5d10feaad3e2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 08:20:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

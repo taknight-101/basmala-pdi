@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Update Average Rating</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2024-12-31 14:43:09</run_start>
+        <run_time>1969-12-31 22:00:00</run_time>
+        <run_type>monthly</run_type>
+        <script><![CDATA[var grTechniainPro = new GlideRecord('x_1522458_automo_0_technician_profile');
+grTechniainPro.query();
+while (grTechniainPro.next()) {
+
+    var now = new GlideDate();
+
+    var firstDayOfMonth = new GlideDate();
+    firstDayOfMonth.setValue(now.getByFormat('yyyy-MM') + '-01');
+
+    var lastDayOfMonth = new GlideDate();
+    lastDayOfMonth.setValue(now.getByFormat('yyyy-MM') + '-31');
+
+    var grTasks = new GlideRecord('x_1522458_automo_0_task');
+    grTasks.addEncodedQuery('assined_to=' + grTechniainPro.technician);
+    grTasks.addQuery('state', 'closed_complete');
+    grTasks.addQuery('date', '>=', firstDayOfMonth);
+    grTasks.addQuery('date', '<=', lastDayOfMonth);
+    grTasks.query();
+
+    var Rating = [];
+
+    while (grTasks.next()) {
+        Rating.push(grTasks.getDisplayValue('rating'));
+    }
+
+    let output = '';
+    for (let i = 0; i < Rating.length; i++) {
+        output += Rating[i] + ' ';
+    }
+
+    Rating = Rating.map(Number);
+
+     var max = Math.max(...Rating);
+     Rating = Rating.map(value => value / 10);
+     var sum = Rating.reduce((acc, value) => acc + value, 0);
+     var AVG = sum / Rating.length;
+
+    grTechniainPro.setValue('average_rating', AVG);
+    grTechniainPro.setValue('feild_for_debugging', String(AVG));
+    grTechniainPro.update();
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 14:43:29</sys_created_on>
+        <sys_id>e4035679833ad210cccd5d10feaad30b</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_name>Update Average Rating</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sysauto_script_e4035679833ad210cccd5d10feaad30b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-02 09:14:39</sys_updated_on>
+        <time_zone>Africa/Cairo</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>e4035679833ad210cccd5d10feaad30b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 14:43:29</sys_created_on>
+        <sys_id>5113d279833ad210cccd5d10feaad3df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-31 14:43:29</sys_updated_on>
+        <table>sysauto_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

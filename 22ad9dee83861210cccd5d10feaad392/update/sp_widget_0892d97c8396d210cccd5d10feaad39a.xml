@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+  /* widget controller */
+  var c = this;
+
+  // Sort offers by Created date in descending order
+  c.data.Offers.sort(function (a, b) {
+    return new Date(b.Created) - new Date(a.Created);
+  });
+
+  // Initial state for filtered offers
+  c.filteredOffers = c.data.Offers;
+  c.waitingOffers = [];
+  c.acceptedOffers = [];
+  c.rejectedOffers = [];
+  c.archivedOffers = [];
+
+  // Filter offers based on state
+  c.waitingOffers = c.data.Offers.filter(function (offer) {
+    return offer.State === 'Waiting';
+  });
+
+  c.acceptedOffers = c.data.Offers.filter(function (offer) {
+    return offer.State === 'Accepted';
+  });
+
+  c.rejectedOffers = c.data.Offers.filter(function (offer) {
+    return offer.State === 'Rejected';
+  });
+
+  c.archivedOffers = c.data.Offers.filter(function (offer) {
+    return offer.State === 'Archived';
+  });
+
+  // Function to show all offers
+  c.FilterAll = function () {
+    c.filteredOffers = c.data.Offers;
+  };
+
+  // Function to filter by waiting state
+  c.FilterWaiting = function () {
+    c.filteredOffers = c.waitingOffers;
+  };
+
+  // Function to filter by accepted state
+  c.FilterAccepted = function () {
+    c.filteredOffers = c.acceptedOffers;
+  };
+
+  // Function to filter by rejected state
+  c.FilterRejected = function () {
+    c.filteredOffers = c.rejectedOffers;
+  };
+
+  // Function to filter by archived state
+  c.FilterArchived = function () {
+    c.filteredOffers = c.archivedOffers;
+  };
+
+  // Function to format date
+  c.formatDate = function (dateString) {
+    var datePart = dateString.split(" ")[0];
+    var dateArray = datePart.split("-");
+    var reversedDate = dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
+    return reversedDate;
+  };
+
+  // Function to get color based on state
+  c.getStateColor = function (state) {
+    if (state === 'Waiting') {
+      return 'orange';
+    } else if (state === 'Accepted') {
+      return 'green';
+    } else if (state === 'Rejected') {
+      return 'red';
+    } else if (state === 'Archived') {
+      return '#1282A2'; // Updated to a gray color for archived offers
+    }
+    return '';
+  };
+
+  // Redirect to offer details page
+  c.redirect = function (id) {
+    window.top.location = "customer_portal?id=asm_offer_details&sys_id=" + id;
+  };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+ /* Light background */
+    color: #333; /* Dark text for readability */
+    margin: 0;
+    padding: 0;
+}
+.pageheader{
+	display:flex;
+  justify-content: space-between;
+}
+.headerrr{
+padding-left: 12rem;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    padding-right: 12rem;
+}
+
+.filter-btn {
+    padding: 0px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+  height: 40px;
+}
+
+.filter-btn:hover {
+    transform: scale(1.05);
+}
+
+.filter-all {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.filter-waiting {
+    background-color: #ff9f00;
+    color: white;
+}
+
+.filter-accepted {
+    background-color: #4caf50;
+    color: white;
+}
+
+.filter-rejected {
+    background-color: #f44336;
+    color: white;
+}
+.filter-archive {
+    background-color: #1282A2;
+    color: white;
+}
+
+
+.offers-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.offer-cards {
+    display: flex;
+    flex-direction: column; /* Single column layout */
+    gap: 20px;
+    width: 100%;
+    max-width: 900px; /* Set a max width for better alignment */
+}
+
+.offer-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.offer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.offer-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.offer-status {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+.offer-description {
+    margin-top: 10px;
+}
+
+.offer-description p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+.no-offers-message {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  padding: 50px 20px;
+  margin-top: 50px;
+
+}
+
+@media (max-width: 768px) {
+    .filter-container {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .offer-card {
+        padding: 12px;
+    }
+}
+
+.no-data-message {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    font-weight: bold;
+    font-size: 24px; /* Increase the font size */
+    display: flex;
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center; /* Center the content horizontally */
+    justify-content: center;
+    gap: 10px; /* Add space between the icon and the text */
+    padding: 40px 0; /* Add padding for spacing */
+}
+
+.no-data-message i {
+    font-size: 40px; /* Make the icon larger */
+    color: #888; /* Keep the icon color consistent with the text */
+}
+
+.no-data-message p {
+    margin: 0;
+    font-size: 20px; /* Increase the text size */
+    color: #666; /* Adjust text color for better visibility */
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>asm_offer_card</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Offer card</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+	if(!input){
+		data.Offers=[];
+		var grOffers = new GlideRecordSecure('x_1522458_automo_0_offer');
+		grOffers.addActiveQuery();
+		grOffers.addEncodedQuery("request_number.opened_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe");
+		grOffers.query();
+		
+		while (grOffers.next()) { 
+			data.Offers.push({
+				RequestNumber: grOffers.getDisplayValue('request_number'),
+				Description: grOffers.getDisplayValue('description'),
+				Date: grOffers.getDisplayValue('date'),
+				Cost: grOffers.getDisplayValue('price'),
+				ID : grOffers.getDisplayValue('sys_id'),
+				State : grOffers.getDisplayValue('state'),
+				Created: grOffers.getDisplayValue('sys_created_on'),
+			});
+		}	
+	}
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-03 10:56:16</sys_created_on>
+        <sys_id>0892d97c8396d210cccd5d10feaad39a</sys_id>
+        <sys_mod_count>264</sys_mod_count>
+        <sys_name>Offer card</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_0892d97c8396d210cccd5d10feaad39a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-26 11:10:13</sys_updated_on>
+        <template><![CDATA[<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="pageheader">
+  <div class="headerrr">
+    <h1>My Offers</h1>
+  </div>
+  <div class="filter-container">
+    <button class="filter-btn filter-all" type="button" ng-click="c.FilterAll()">All</button>
+    <button class="filter-btn filter-waiting" type="button" ng-click="c.FilterWaiting()">Waiting</button>
+    <button class="filter-btn filter-accepted" type="button" ng-click="c.FilterAccepted()">Accepted</button>
+    <button class="filter-btn filter-rejected" type="button" ng-click="c.FilterRejected()">Rejected</button>
+    <button class="filter-btn filter-archive" type="button" ng-click="c.FilterArchived()">Archived</button>
+  </div>
+</div>
+
+<!-- Display when there are no offers -->
+<div ng-if="c.filteredOffers.length === 0" class="no-offers-message">
+    <div colspan="4" class="no-data-message">
+    <i class="fas fa-tasks"></i>
+    <p>No data available to display</p>
+	</div>
+</div>
+
+<!-- Offer Cards Section -->
+<div class="offers-container">
+  <div class="offer-cards" ng-if="c.filteredOffers.length > 0">
+    <div class="offer-card" ng-repeat="s in c.filteredOffers" ng-click="c.redirect(s.ID)">
+      <div class="offer-header">
+        <div class="offer-number">{{s.RequestNumber}}</div>
+        <div class="offer-status" ng-style="{'background-color': c.getStateColor(s.State)}">{{s.State}}</div>
+      </div>
+      <div class="offer-description">
+        <p>{{s.Description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

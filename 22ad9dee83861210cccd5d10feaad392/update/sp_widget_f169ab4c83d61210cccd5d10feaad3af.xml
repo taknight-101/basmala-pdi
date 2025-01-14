@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.hero {
+  height: 350px; 
+  margin-left: auto; 
+  margin-right: 20px; 
+  padding: 20px;
+  color: #cbced4;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left; /* Ensures all text inside is aligned to the right */
+  box-sizing: border-box; /* Ensures padding is included in the dimensions */
+}
+.content{
+  margin-top:190px;
+}
+.hero h1 {
+  font-size: 1.8rem; /* Size for "Welcome to EJ Motors" */
+  font-weight: bold; /* Bold font */
+  margin: 5px 0; /* Spacing between lines */
+}
+
+.hero h2 {
+  font-size: 2.8rem; /* Larger size for "CAR REPAIR &amp; SERVICES" */
+  font-weight: bold; /* Bold font */
+  margin: 10px 0; /* Spacing between lines */
+}
+
+.hero p {
+  font-size: 1.3rem; /* Smaller size for "deliver to driven quality" */
+  font-weight: normal; /* Normal font weight */
+  margin: 5px 0; /* Spacing between lines */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    width: 100%; /* Full width for smaller screens */
+    margin-right: 0; /* Remove right margin on small screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  .hero h1 {
+    font-size: 1.5rem; /* Adjust size for smaller screens */
+  }
+  .hero h2 {
+    font-size: 2rem; /* Adjust size for smaller screens */
+  }
+  .hero p {
+    font-size: 0.9rem; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.2rem; /* Further reduce size for mobile */
+  }
+  .hero h2 {
+    font-size: 1.5rem; /* Further reduce size for mobile */
+  }
+  .hero p {
+    font-size: 0.8rem; /* Further reduce size for mobile */
+  }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>static html widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 14:01:00</sys_created_on>
+        <sys_id>f169ab4c83d61210cccd5d10feaad3af</sys_id>
+        <sys_mod_count>102</sys_mod_count>
+        <sys_name>static html widget</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_f169ab4c83d61210cccd5d10feaad3af</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 12:40:23</sys_updated_on>
+        <template><![CDATA[<div class="hero">
+  <div class="content">
+  <h1>Welcome to EJ Motors</h1>
+  <h2>CAR REPAIRS & SERVICES</h2>
+  <p>Driven to Deliver Quality</p>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>f169ab4c83d61210cccd5d10feaad3af</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-01 14:00:59</sys_created_on>
+        <sys_id>1aa9ef4c83d61210cccd5d10feaad35d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-01 14:00:59</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

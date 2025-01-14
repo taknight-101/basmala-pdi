@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="bbe8ef5e83d61210cccd5d10feaad328" sys_domain="global" table="x_1522458_automo_0_offer" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-08 13:44:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4cf8ef5e83d61210cccd5d10feaad338</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1522458_automo_0_offer" name="x_1522458_automo_0_offer" sys_domain="global" view="f20af570839ad210cccd5d10feaad3f0">bbe8ef5e83d61210cccd5d10feaad328</sys_ui_form>
+            <sys_ui_section caption="Offer" display_value="Offer" name="x_1522458_automo_0_offer" sys_domain="global" view="f20af570839ad210cccd5d10feaad3f0">cec46f1a83d61210cccd5d10feaad3b6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-08 13:44:09</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1522458_automo_0_offer</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-08 13:44:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bbe8ef5e83d61210cccd5d10feaad328</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_offer</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_form_sections_bbe8ef5e83d61210cccd5d10feaad328</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-08 13:44:08</sys_updated_on>
+            <sys_user/>
+            <view display_value="offer manager view" name="offer_manager_view">f20af570839ad210cccd5d10feaad3f0</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

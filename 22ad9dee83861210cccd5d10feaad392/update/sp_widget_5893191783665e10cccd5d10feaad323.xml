@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.feedback-section {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.feedback-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  color:#001F54;
+  font-weight:bold;
+}
+
+.feedback-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f3f5f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: left; 
+}
+
+.client-info {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
+}
+
+.client-info img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px; 
+}
+
+.card p {
+    font-style: italic;
+    margin: 0; 
+}
+
+.card h4 {
+    margin: 0; 
+    font-weight: bold;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>feedback_-_technician</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>feedback - technician</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 15:41:10</sys_created_on>
+        <sys_id>5893191783665e10cccd5d10feaad323</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>feedback - technician</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_5893191783665e10cccd5d10feaad323</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 15:46:21</sys_updated_on>
+        <template><![CDATA[<section class="feedback-section">
+    <div class="container">
+        <h2>What Our Clients Have To Say...</h2>
+        <div class="feedback-cards">
+            <div class="card">
+                <div class="client-info">
+                    <img src="https://th.bing.com/th/id/OIP.nMdQ_VCIvfsX9k5fy-4vzQHaJ9?rs=1&pid=ImgDetMain" alt="Customer 1" class="customer-image">
+                    <h4>John Doe</h4>
+                </div>
+                <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text."</p>
+            </div>
+            <div class="card">
+                <div class="client-info">
+                    <img src="https://th.bing.com/th/id/OIP.nMdQ_VCIvfsX9k5fy-4vzQHaJ9?rs=1&pid=ImgDetMain" alt="Customer 2" class="customer-image">
+                    <h4>Jane Smith</h4>
+                </div>
+                <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it."</p>
+            </div>
+            <div class="card">
+                <div class="client-info">
+                    <img src="https://th.bing.com/th/id/OIP.nMdQ_VCIvfsX9k5fy-4vzQHaJ9?rs=1&pid=ImgDetMain" alt="Customer 3" class="customer-image">
+                    <h4>Mike Johnson</h4>
+                </div>
+                <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release."</p>
+            </div>
+        </div>
+    </div>
+</section>]]></template>
+    </sp_widget>
+</record_update>

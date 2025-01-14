@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3174a16a83c61210cccd5d10feaad30a" label="Vehicle" max_length="40" name="x_1522458_automo_0_vehicle" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default=" " label="Color" max_length="40" name="color" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Blue" sequence="4" value="4"/>
+                <element inactive_on_update="false" label="Charcoal Gray" sequence="8" value="8"/>
+                <element inactive_on_update="false" label="Orange" sequence="12" value="12"/>
+                <element inactive_on_update="false" label="White" sequence="0" value="0"/>
+                <element inactive_on_update="false" label="Copper Metallic" sequence="16" value="16"/>
+                <element inactive_on_update="false" label="Green" sequence="9" value="9"/>
+                <element inactive_on_update="false" label="Yellow" sequence="13" value="13"/>
+                <element inactive_on_update="false" label="Black" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="Turquoise" sequence="17" value="17"/>
+                <element inactive_on_update="false" label="Red" sequence="5" value="5"/>
+                <element inactive_on_update="false" label="Purple" sequence="14" value="14"/>
+                <element inactive_on_update="false" label="Gray" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Maroon" sequence="18" value="18"/>
+                <element inactive_on_update="false" label="Beige" sequence="6" value="6"/>
+                <element inactive_on_update="false" label="Brown" sequence="10" value="10"/>
+                <element inactive_on_update="false" label="Silver" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="Ivory" sequence="19" value="19"/>
+                <element inactive_on_update="false" label="Silver Metallic" sequence="7" value="7"/>
+                <element inactive_on_update="false" label="Tan" sequence="11" value="11"/>
+                <element inactive_on_update="false" label="Copper" sequence="15" value="15"/>
+            </choice>
+        </element>
+        <element label="VIN" max_length="40" name="vin" type="string"/>
+        <element display="true" label="Model" mandatory="true" max_length="32" name="mode0" reference="x_1522458_automo_0_model" type="reference"/>
+        <element label="license Plate" mandatory="true" max_length="40" name="license_plat0" type="string"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="bdcb83a85f220100a9ad2572f2b4773d" label="Owner" max_length="32" name="owner" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="mode0"/>
+        </index>
+        <index name="index2">
+            <element name="owner"/>
+        </index>
+    </element>
+</database>

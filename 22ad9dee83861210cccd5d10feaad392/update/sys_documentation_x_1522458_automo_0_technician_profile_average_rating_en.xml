@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="average_rating" label="Average Rating" language="en" table="x_1522458_automo_0_technician_profile">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>average_rating</element>
+            <help/>
+            <hint/>
+            <label>Average Rating</label>
+            <language>en</language>
+            <name>x_1522458_automo_0_technician_profile</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-31 06:31:21</sys_created_on>
+            <sys_mod_count>11</sys_mod_count>
+            <sys_name>Average Rating</sys_name>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_documentation_x_1522458_automo_0_technician_profile_average_rating_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-01 06:31:13</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

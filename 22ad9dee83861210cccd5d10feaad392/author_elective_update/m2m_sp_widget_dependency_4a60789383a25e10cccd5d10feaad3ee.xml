@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="DELETE">
+        <sp_dependency display_value="ReportingIncludes">d1b923de9f0222008252baac757fcfe4</sp_dependency>
+        <sp_widget display_value="Calendar">0260789383a25e10cccd5d10feaad3eb</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 13:07:33</sys_created_on>
+        <sys_id>4a60789383a25e10cccd5d10feaad3ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ReportingIncludes.Calendar</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_4a60789383a25e10cccd5d10feaad3ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 13:07:33</sys_updated_on>
+    </m2m_sp_widget_dependency>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>m2m_sp_widget_dependency_4a60789383a25e10cccd5d10feaad3ee</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency"><m2m_sp_widget_dependency action="INSERT_OR_UPDATE"><sp_dependency display_value="ReportingIncludes">d1b923de9f0222008252baac757fcfe4</sp_dependency><sp_widget display_value="Calendar">0260789383a25e10cccd5d10feaad3eb</sp_widget><sys_class_name>m2m_sp_widget_dependency</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-23 13:07:33</sys_created_on><sys_id>4a60789383a25e10cccd5d10feaad3ee</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ReportingIncludes.Calendar</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>m2m_sp_widget_dependency_4a60789383a25e10cccd5d10feaad3ee</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-23 13:07:33</sys_updated_on></m2m_sp_widget_dependency></record_update>]]></payload>
+        <payload_hash>-1652214837</payload_hash>
+        <record_name>ReportingIncludes.Calendar</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 13:07:33</sys_created_on>
+        <sys_id>0a60789383a25e10cccd5d10feaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193f3a149130000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 13:07:33</sys_updated_on>
+        <type>Widget Dependency</type>
+        <update_guid>0e60789350a25e10566ab7ee2d3045f0</update_guid>
+        <update_guid_history>0e60789350a25e10566ab7ee2d3045f0:-1652214837</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="ReportingIncludes.Calendar">19813c1783a25e10cccd5d10feaad3b3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 13:12:25</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_widget_dependency">m2m_sp_widget_dependency</sys_db_object>
+        <sys_id>299907934e9e44ac9580caafdff52eb9</sys_id>
+        <sys_metadata>4a60789383a25e10cccd5d10feaad3ee</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ReportingIncludes.Calendar</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>m2m_sp_widget_dependency_4a60789383a25e10cccd5d10feaad3ee</sys_update_name>
+        <sys_update_version display_value="m2m_sp_widget_dependency_4a60789383a25e10cccd5d10feaad3ee">0a60789383a25e10cccd5d10feaad3f1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 13:12:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

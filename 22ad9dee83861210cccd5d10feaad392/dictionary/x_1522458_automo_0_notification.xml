@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f64eb45683835210cccd5d10feaad35d" label="notification" max_length="40" name="x_1522458_automo_0_notification" type="collection">
+        <element label="receiver" max_length="32" name="receiver" reference="sys_user" type="reference"/>
+        <element label="request" max_length="32" name="request" reference="x_1522458_automo_0_service_request" type="reference"/>
+        <element label="seen" max_length="255" name="seen" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" label="type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Feedback" sequence="3" value="feedback"/>
+                <element inactive_on_update="false" label="Offer" sequence="1" value="offer"/>
+                <element inactive_on_update="false" label="Repair" sequence="2" value="repair"/>
+                <element inactive_on_update="false" label="Inspection" sequence="0" value="inspection"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="receiver"/>
+        </index>
+        <index name="index2">
+            <element name="request"/>
+        </index>
+    </element>
+</database>

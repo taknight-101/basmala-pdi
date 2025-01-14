@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved" table="x_1522458_automo_0_customer_feedback">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Were you satisfied with the explanation of the repair work and costs involved?</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Choice">choice</internal_type>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <name>x_1522458_automo_0_customer_feedback</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 14:36:27</sys_created_on>
+        <sys_id>d0e7c92d83be5210cccd5d10feaad3d2</sys_id>
+        <sys_name>Were you satisfied with the explanation of the repair work and costs involved?</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 15:03:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_dictionary_x_1522458_automo_0_customer_feedback_were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved" table="x_1522458_automo_0_customer_feedback"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>1</choice><choice_field/><choice_table/><column_label>Were you satisfied with the explanation of the repair work and costs involved?</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="Choice">choice</internal_type><mandatory>true</mandatory><max_length>40</max_length><name>x_1522458_automo_0_customer_feedback</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-30 14:36:27</sys_created_on><sys_id>d0e7c92d83be5210cccd5d10feaad3d2</sys_id><sys_name>Were you satisfied with the explanation of the repair work and costs involved?</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-30 15:03:41</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>81505453</payload_hash>
+        <record_name>Customer Feedback.Were you satisfied with the explanation of the repair work and costs involved?</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 15:03:41</sys_created_on>
+        <sys_id>671e496583fe5210cccd5d10feaad3ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19418181ef00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 15:03:41</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>2f1e4965a9fe52107408b0f9658554ad</update_guid>
+        <update_guid_history>2f1e4965a9fe52107408b0f9658554ad:81505453,e5eb85a188fe5210504a66b109afb25d:2144840176,89b9c5ed5dbe521003f145c86976d4bd:81505453,c1e74d2d90be5210ccb5b35bd71816c0:-1483031812,ace70d2d62be521002828b6eb37ef506:529480601</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 08:26:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>28ab142dc5db49b0ba3b494df7787064</sys_id>
+        <sys_metadata>d0e7c92d83be5210cccd5d10feaad3d2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Were you satisfied with the explanation of the repair work and costs involved?</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Customer Feedback">805b702d837e5210cccd5d10feaad384</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1522458_automo_0_customer_feedback_were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved">671e496583fe5210cccd5d10feaad3ae</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 08:26:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

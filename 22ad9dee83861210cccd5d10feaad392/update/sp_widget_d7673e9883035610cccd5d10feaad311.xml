@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+  var c = this;
+
+  // Button label text (you can change the label here)
+  c.buttonLabel = "Start Feedback Survey";
+
+  // Check if feedback exists and if the request is eligible
+  c.hasFeedback = c.data.hasFeedback || false;
+  c.isEligibleRequest = c.data.isEligibleRequest || false;
+
+  // Function to redirect to feedback page
+  c.redirectToFeedback = function () {
+    var feedbackUrl = 'https://dev231407.service-now.com/customer_portal?id=customer_feedback&sys_id=' + c.data.sys_id;
+    window.location.href = feedbackUrl;
+  };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+.feedback-button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+.feedback-card {
+    //position: absolute;
+    //top: 185px;
+    //right: 80px;
+ 		 margin-top:205px;
+ 
+    width: 200px;
+  	height:200px;
+    padding: 10px;
+    background: linear-gradient(145deg, #f4f9fc, #d9e7f4);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.feedback-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.feedback-card p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.feedback-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  	margin-top:20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-button:hover {
+    background-color: #0056b3;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>feedback_button</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>feedback button</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+  // Get the sys_id of the current request from the URL
+  var requestSysId = $sp.getParameter('sys_id');
+  data.sys_id = requestSysId;
+
+  data.hasFeedback = false; // Default to false
+  data.isEligibleRequest = false; // Default to false
+
+  if (requestSysId) {
+    // Check if feedback already exists for this request
+    var feedbackGR = new GlideRecord('x_1522458_automo_0_customer_feedback'); // Replace with your feedback table name
+    feedbackGR.addQuery('request', requestSysId); // Check if request field matches the current sys_id
+    feedbackGR.query();
+    data.hasFeedback = feedbackGR.hasNext(); // Set true if feedback record exists, otherwise false
+
+    // Check if the request state is 10
+    var requestGR = new GlideRecord('x_1522458_automo_0_service_request'); // Replace with your service request table name
+    if (requestGR.get(requestSysId)) {
+      data.isEligibleRequest = (requestGR.state == 3); // Check if the state is closed complete
+    }
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-08 11:47:04</sys_created_on>
+        <sys_id>d7673e9883035610cccd5d10feaad311</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_name>feedback button</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_d7673e9883035610cccd5d10feaad311</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 08:19:14</sys_updated_on>
+        <template><![CDATA[
+<div class="feedback-card"  ng-if="!c.hasFeedback && c.isEligibleRequest">
+    <h3>We Value Your Feedback</h3>
+    <p>Help us improve by sharing your experience.</p>
+    <button 
+    class="feedback-button" 
+    ng-click="c.redirectToFeedback()" 
+   
+  >
+    {{ c.buttonLabel }}
+  </button>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

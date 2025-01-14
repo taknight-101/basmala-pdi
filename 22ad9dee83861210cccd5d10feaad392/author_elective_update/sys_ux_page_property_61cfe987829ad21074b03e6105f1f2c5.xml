@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="DELETE">
+        <choices/>
+        <description>Header Configuration</description>
+        <name>chrome_header</name>
+        <page display_value="Customer Rep. workspace">2dcfe987599ad2100527b37b8a5dfaed</page>
+        <required_translations>[ {
+  "message" : "Configure workspace",
+  "comment" : ""
+}, {
+  "message" : "Display Preferences",
+  "comment" : ""
+}, {
+  "message" : "Notifications",
+  "comment" : ""
+}, {
+  "message" : "Settings",
+  "comment" : ""
+}, {
+  "message" : "Show Badge Count",
+  "comment" : ""
+}, {
+  "message" : "Show Banners",
+  "comment" : ""
+}, {
+  "message" : "Show ribbon",
+  "comment" : ""
+}, {
+  "message" : "Show sidebar",
+  "comment" : ""
+}, {
+  "message" : "UserMenu",
+  "comment" : ""
+}, {
+  "message" : "Wrap list text",
+  "comment" : ""
+} ]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-10 12:50:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>61cfe987829ad21074b03e6105f1f2c5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>chrome_header</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_page_property_61cfe987829ad21074b03e6105f1f2c5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-10 12:50:19</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_1522458_automo_0.2dcfe987599ad2100527b37b8a5dfaed.root.global.chrome_header</unique_name>
+        <value>{&#13;
+    "privatePage": {&#13;
+        "notificationsEnabled": true,&#13;
+        "searchEnabled": true,&#13;
+        "userPrefsEnabled": true,&#13;
+        "contextualConfigurationItems": {&#13;
+            "_roles": [&#13;
+                "workspace_admin"&#13;
+            ],&#13;
+            "enabled": true,&#13;
+            "position": 150&#13;
+        },&#13;
+        "globalTools": {&#13;
+            "collapsingMenuId": 0,&#13;
+            "primaryItems": [{&#13;
+                "label": "UserMenu",&#13;
+                "icon": "user",&#13;
+                "type": "menu",&#13;
+                "primaryDisplay": "icon",&#13;
+                "value": {&#13;
+                    "children": [{&#13;
+                            "_roles": [&#13;
+                                "workspace_admin"&#13;
+                            ],&#13;
+                            "label": {&#13;
+                                "message": "Configure workspace",&#13;
+                                "translatable": true&#13;
+                            },&#13;
+                            "type": "navigation",&#13;
+                            "position": 100,&#13;
+                            "primaryDisplay": "none",&#13;
+                            "value": {&#13;
+                                "type": "external",&#13;
+                                "opensWindow": "true",&#13;
+                                "value": {&#13;
+                                    "href": "/nav_to.do?uri=/sys_ux_app_config.do?sys_id=edcfe9874c9ad2101d47cae8e65db0ec"&#13;
+                                }&#13;
+                            }&#13;
+                        },&#13;
+                        {&#13;
+                            "label": {&#13;
+                                "message": "Settings",&#13;
+                                "translatable": true&#13;
+                            },&#13;
+                            "type": "menu",&#13;
+                            "position": 50,&#13;
+                            "value": {&#13;
+                                "children": [{&#13;
+                                        "label": {&#13;
+                                            "message": "Display Preferences",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "divider"&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Show ribbon",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.showRibbon"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Show sidebar",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.showAgentAssist"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Wrap list text",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.wrapListText"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Notifications",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "divider"&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Show Banners",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.notifications.showPopups"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Show Badge Count",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.notifications.showBadgeCount"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    }&#13;
+                                ]&#13;
+                            }&#13;
+                        }&#13;
+                    ]&#13;
+                }&#13;
+            }],&#13;
+            "secondaryItems": [&#13;
+&#13;
+            ]&#13;
+        }&#13;
+    },&#13;
+    "publicPage": {&#13;
+        "actionButtons": [&#13;
+&#13;
+        ]&#13;
+    }&#13;
+}</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="DELETE" query="documentkey=61cfe987829ad21074b03e6105f1f2c5"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ux_page_property_61cfe987829ad21074b03e6105f1f2c5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property"><sys_ux_page_property action="INSERT_OR_UPDATE"><choices/><description>Header Configuration</description><name>chrome_header</name><page display_value="Customer Rep. workspace">2dcfe987599ad2100527b37b8a5dfaed</page><required_translations>[ {
+  "message" : "Configure workspace",
+  "comment" : ""
+}, {
+  "message" : "Display Preferences",
+  "comment" : ""
+}, {
+  "message" : "Notifications",
+  "comment" : ""
+}, {
+  "message" : "Settings",
+  "comment" : ""
+}, {
+  "message" : "Show Badge Count",
+  "comment" : ""
+}, {
+  "message" : "Show Banners",
+  "comment" : ""
+}, {
+  "message" : "Show ribbon",
+  "comment" : ""
+}, {
+  "message" : "Show sidebar",
+  "comment" : ""
+}, {
+  "message" : "UserMenu",
+  "comment" : ""
+}, {
+  "message" : "Wrap list text",
+  "comment" : ""
+} ]</required_translations><route/><suffix/><sys_class_name>sys_ux_page_property</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-10 12:50:14</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>61cfe987829ad21074b03e6105f1f2c5</sys_id><sys_mod_count>1</sys_mod_count><sys_name>chrome_header</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ux_page_property_61cfe987829ad21074b03e6105f1f2c5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-10 12:50:19</sys_updated_on><type>json</type><unique_name>x_1522458_automo_0.2dcfe987599ad2100527b37b8a5dfaed.root.global.chrome_header</unique_name><value>{&#13;
+    "privatePage": {&#13;
+        "notificationsEnabled": true,&#13;
+        "searchEnabled": true,&#13;
+        "userPrefsEnabled": true,&#13;
+        "contextualConfigurationItems": {&#13;
+            "_roles": [&#13;
+                "workspace_admin"&#13;
+            ],&#13;
+            "enabled": true,&#13;
+            "position": 150&#13;
+        },&#13;
+        "globalTools": {&#13;
+            "collapsingMenuId": 0,&#13;
+            "primaryItems": [{&#13;
+                "label": "UserMenu",&#13;
+                "icon": "user",&#13;
+                "type": "menu",&#13;
+                "primaryDisplay": "icon",&#13;
+                "value": {&#13;
+                    "children": [{&#13;
+                            "_roles": [&#13;
+                                "workspace_admin"&#13;
+                            ],&#13;
+                            "label": {&#13;
+                                "message": "Configure workspace",&#13;
+                                "translatable": true&#13;
+                            },&#13;
+                            "type": "navigation",&#13;
+                            "position": 100,&#13;
+                            "primaryDisplay": "none",&#13;
+                            "value": {&#13;
+                                "type": "external",&#13;
+                                "opensWindow": "true",&#13;
+                                "value": {&#13;
+                                    "href": "/nav_to.do?uri=/sys_ux_app_config.do?sys_id=edcfe9874c9ad2101d47cae8e65db0ec"&#13;
+                                }&#13;
+                            }&#13;
+                        },&#13;
+                        {&#13;
+                            "label": {&#13;
+                                "message": "Settings",&#13;
+                                "translatable": true&#13;
+                            },&#13;
+                            "type": "menu",&#13;
+                            "position": 50,&#13;
+                            "value": {&#13;
+                                "children": [{&#13;
+                                        "label": {&#13;
+                                            "message": "Display Preferences",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "divider"&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Show ribbon",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.showRibbon"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Show sidebar",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.showAgentAssist"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Wrap list text",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.wrapListText"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Notifications",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "divider"&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Show Banners",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.notifications.showPopups"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    },&#13;
+                                    {&#13;
+                                        "label": {&#13;
+                                            "message": "Show Badge Count",&#13;
+                                            "translatable": true&#13;
+                                        },&#13;
+                                        "type": "toggle",&#13;
+                                        "value": {&#13;
+                                            "_meta": {&#13;
+                                                "_type": "userPreferences",&#13;
+                                                "_path": "userPrefName",&#13;
+                                                "_value": {&#13;
+                                                    "userPrefName": "workspace.notifications.showBadgeCount"&#13;
+                                                },&#13;
+                                                "_default": {&#13;
+                                                    "userPrefName": "true"&#13;
+                                                }&#13;
+                                            }&#13;
+                                        }&#13;
+                                    }&#13;
+                                ]&#13;
+                            }&#13;
+                        }&#13;
+                    ]&#13;
+                }&#13;
+            }],&#13;
+            "secondaryItems": [&#13;
+&#13;
+            ]&#13;
+        }&#13;
+    },&#13;
+    "publicPage": {&#13;
+        "actionButtons": [&#13;
+&#13;
+        ]&#13;
+    }&#13;
+}</value></sys_ux_page_property><sys_translated_text action="delete_multiple" query="documentkey=61cfe987829ad21074b03e6105f1f2c5"/></record_update>]]></payload>
+        <payload_hash>1926173518</payload_hash>
+        <record_name>chrome_header</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-10 12:50:19</sys_created_on>
+        <sys_id>4bcfad87839ad210cccd5d10feaad3aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193b09ed53d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-10 12:50:19</sys_updated_on>
+        <type>UX Page Property</type>
+        <update_guid>03cfad87779ad2100a94be528e474caa</update_guid>
+        <update_guid_history>03cfad87779ad2100a94be528e474caa:1926173518,87cfad87699ad2106a4396347bba0ca8:1773858590</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-10 12:58:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_property">sys_ux_page_property</sys_db_object>
+        <sys_id>0186172614a9477c803e145301ddda10</sys_id>
+        <sys_metadata>61cfe987829ad21074b03e6105f1f2c5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_header</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ux_page_property_61cfe987829ad21074b03e6105f1f2c5</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_property_61cfe987829ad21074b03e6105f1f2c5">4bcfad87839ad210cccd5d10feaad3aa</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-10 12:58:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

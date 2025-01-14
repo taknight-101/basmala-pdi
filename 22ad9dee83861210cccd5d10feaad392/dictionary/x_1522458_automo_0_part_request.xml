@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2a3680a6839a1210cccd5d10feaad342" label="Part Request" max_length="40" name="x_1522458_automo_0_part_request" text_index="true" type="collection">
+        <element label="Part" mandatory="true" max_length="32" name="part" reference="x_1522458_automo_0_parts" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element active="false" label="Request" mandatory="true" max_length="32" name="request" reference="x_1522458_automo_0_service_request" type="reference"/>
+        <element label="Amount" mandatory="true" max_length="40" name="amount" type="integer"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#13;&#10;&#9;var gr = new GlideRecord('x_1522458_automo_0_parts');&#13;&#10;&#9;gr.get(current.part);&#13;&#10;&#9;var unit_price =gr.price;&#13;&#10;&#9;var total=current.amount * unit_price;&#13;&#10;&#9;return total;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Cost" max_length="40" name="cost" read_only="true" type="integer" virtual="true"/>
+        <element label="offer" max_length="32" name="offer" read_only="true" reference="x_1522458_automo_0_offer" type="reference"/>
+        <index name="index">
+            <element name="offer"/>
+        </index>
+        <index name="index2">
+            <element name="part"/>
+        </index>
+        <index name="index3">
+            <element name="request"/>
+        </index>
+    </element>
+</database>

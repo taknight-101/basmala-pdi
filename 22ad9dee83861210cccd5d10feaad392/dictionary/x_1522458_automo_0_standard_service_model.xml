@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="57c920e1833e5210cccd5d10feaad39b" label="Standard Service Model" max_length="40" name="x_1522458_automo_0_standard_service_model" type="collection">
+        <element label="Model" max_length="32" name="model" reference="x_1522458_automo_0_model" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Parts" max_length="1024" name="parts" reference="x_1522458_automo_0_parts" type="glide_list"/>
+        <element label="Standard Service" max_length="32" name="standard_service" reference="x_1522458_automo_0_standard_services" type="reference"/>
+        <element label="Labor Cost" max_length="40" name="labor_cost" type="integer"/>
+        <index name="index">
+            <element name="standard_service"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="x_1522458_automo_0_workstation" section_id="593b3f90831e5210cccd5d10feaad3c2" sys_domain="global" table="x_1522458_automo_0_workstation" version="3" view="Service_Manager_View">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-02 09:57:09</sys_created_on>
+            <sys_id>587b73d0831e5210cccd5d10feaad331</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="x_1522458_automo_0_workstation" display_value="x_1522458_automo_0_workstation" name="x_1522458_automo_0_workstation" sys_domain="global" view="5d3b3f90831e5210cccd5d10feaad3bd">593b3f90831e5210cccd5d10feaad3c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-02 09:57:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>department</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-02 09:57:09</sys_created_on>
+            <sys_id>507b73d0831e5210cccd5d10feaad332</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="x_1522458_automo_0_workstation" display_value="x_1522458_automo_0_workstation" name="x_1522458_automo_0_workstation" sys_domain="global" view="5d3b3f90831e5210cccd5d10feaad3bd">593b3f90831e5210cccd5d10feaad3c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-02 09:57:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>id</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-02 09:57:09</sys_created_on>
+            <sys_id>587b73d0831e5210cccd5d10feaad332</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="x_1522458_automo_0_workstation" display_value="x_1522458_automo_0_workstation" name="x_1522458_automo_0_workstation" sys_domain="global" view="5d3b3f90831e5210cccd5d10feaad3bd">593b3f90831e5210cccd5d10feaad3c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-02 09:57:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-02 09:57:09</sys_created_on>
+            <sys_id>547b73d0831e5210cccd5d10feaad3c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="x_1522458_automo_0_workstation" display_value="x_1522458_automo_0_workstation" name="x_1522458_automo_0_workstation" sys_domain="global" view="5d3b3f90831e5210cccd5d10feaad3bd">593b3f90831e5210cccd5d10feaad3c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-02 09:57:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>x_1522458_automo_0_workstation</caption>
+            <header>false</header>
+            <name>x_1522458_automo_0_workstation</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-02 09:56:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>593b3f90831e5210cccd5d10feaad3c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_workstation</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_593b3f90831e5210cccd5d10feaad3c2</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-02 09:56:08</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Service Manager View" name="Service_Manager_View">5d3b3f90831e5210cccd5d10feaad3bd</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

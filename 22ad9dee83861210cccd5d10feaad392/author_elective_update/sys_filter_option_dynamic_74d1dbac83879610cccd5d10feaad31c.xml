@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_filter_option_dynamic">
+    <sys_filter_option_dynamic action="DELETE">
+        <active>true</active>
+        <available_for_default>false</available_for_default>
+        <available_for_filter>true</available_for_filter>
+        <available_for_ref_qual>false</available_for_ref_qual>
+        <field_type display_value="String">747127c1bf3320001875647fcf0739e0</field_type>
+        <label>Customer Statement</label>
+        <order/>
+        <roles/>
+        <script/>
+        <script_reference_id/>
+        <script_reference_table/>
+        <sys_class_name>sys_filter_option_dynamic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 08:26:59</sys_created_on>
+        <sys_id>74d1dbac83879610cccd5d10feaad31c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Customer Statement</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_filter_option_dynamic_74d1dbac83879610cccd5d10feaad31c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 08:38:57</sys_updated_on>
+        <table>x_1522458_automo_0_service_request</table>
+        <table_containing_filter/>
+    </sys_filter_option_dynamic>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_filter_option_dynamic_74d1dbac83879610cccd5d10feaad31c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_filter_option_dynamic"><sys_filter_option_dynamic action="INSERT_OR_UPDATE"><active>true</active><available_for_default>false</available_for_default><available_for_filter>true</available_for_filter><available_for_ref_qual>false</available_for_ref_qual><field_type display_value="String">747127c1bf3320001875647fcf0739e0</field_type><label>Customer Statement</label><order/><roles/><script/><script_reference_id/><script_reference_table/><sys_class_name>sys_filter_option_dynamic</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-09 08:26:59</sys_created_on><sys_id>74d1dbac83879610cccd5d10feaad31c</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Customer Statement</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_filter_option_dynamic_74d1dbac83879610cccd5d10feaad31c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-09 08:38:57</sys_updated_on><table>x_1522458_automo_0_service_request</table><table_containing_filter/></sys_filter_option_dynamic></record_update>]]></payload>
+        <payload_hash>-805969219</payload_hash>
+        <record_name>Customer Statement</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 08:38:57</sys_created_on>
+        <sys_id>d9f513a483c79610cccd5d10feaad383</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1944a377b900000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 08:38:57</sys_updated_on>
+        <type>Dynamic Filter Options</type>
+        <update_guid>91f513a490c79610c37155d5e7b7bf83</update_guid>
+        <update_guid_history>91f513a490c79610c37155d5e7b7bf83:-805969219,1843db205bc796101d3fc18cee8f3a9c:1568261035,8a335becb68796104c20f35dfb347f3a:-805969219</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 08:55:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_filter_option_dynamic">sys_filter_option_dynamic</sys_db_object>
+        <sys_id>1edf2cce0d0c413c83fe6a13c2507a44</sys_id>
+        <sys_metadata>74d1dbac83879610cccd5d10feaad31c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Customer Statement</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Service Request">0fc0796a830a1210cccd5d10feaad343</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_filter_option_dynamic_74d1dbac83879610cccd5d10feaad31c</sys_update_name>
+        <sys_update_version display_value="sys_filter_option_dynamic_74d1dbac83879610cccd5d10feaad31c">d9f513a483c79610cccd5d10feaad383</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 08:55:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{
+    "029f04e053610110ac9bddeeff7b1294": {
+        "activityLogs": "",
+        "detailsContext": "",
+        "fields": "",
+        "forcedViewName": "",
+        "inputActionLayoutId": "",
+        "inputExtraParams": "",
+        "inputQuery": "",
+        "inputSysId": "6e012d7e0da512104f349799ccc97383",
+        "inputTable": "task",
+        "isMappedToAppShell": true,
+        "requireExplicitEventMapping": false,
+        "screen": "",
+        "selectedTabIndex": "",
+        "shouldDisplayFormErrorsAsPageAlerts": false,
+        "shouldSuppressGlobalEvents": true,
+        "userPrefs": ""
+    },
+    "sysId": "0949b63283429210cccd5d10feaad37f"
+}</macroponent_config>
+        <screen display_value="Default">78d74bac83479610cccd5d10feaad324</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 07:37:12</sys_created_on>
+        <sys_id>70d74bac83479610cccd5d10feaad329</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_70d74bac83479610cccd5d10feaad329</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 07:38:32</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+  c.progress = c.progress || {};
+  c.percentage = 0;
+  
+    var total = 100; 
+
+    var currentProgress = (parseFloat(c.data.profileData[0].TotalPoints) ||0); 
+    c.percentage =currentProgress;
+  	console.log('print: '+currentProgress);
+	
+	  c.container = c.container || {};
+  
+  c.data.images = [
+    {
+      src: '/x_1522458_automo_0.beginner_1.png',
+      alt: 'First Image',
+			endInterval:50,
+      },
+    {
+      src: '/x_1522458_automo_0.intermediate_1.png',
+      alt: 'Second Image',
+			endInterval:100,
+    },
+		 {
+      src: '/x_1522458_automo_0.advanced_1.png',
+      alt: 'Third Image',
+			 endInterval:200,
+    },
+		 {
+      src: '/x_1522458_automo_0.master.png',
+      alt: 'Forth Image',
+			 endInterval:350,
+    },
+		 {
+      src: '/x_1522458_automo_0.expert.png',
+      alt: 'Fifth Image',
+			 endInterval:500,
+    },
+		
+  ];
+
+	  c.getCurrentLevel = function() {
+    switch(c.data.profileData[0].Level){
+			case 'Beginner':
+				return 0;
+			case 'Intermediate':
+				return 1;
+			case 'Advanced':
+				return 2;
+			case 'Master':
+				return 3;
+			case 'Expert':
+				return 4;
+		  default:
+				return 'level not found';
+		}
+  };
+};
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>html, body {
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden; 
+  width: 100%; 
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  display:flex;
+  flex-direction:column;
+}
+
+.progress-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.carousel-inner .img {
+  text-align: center;
+}
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: rgb(0,9,36);
+background: linear-gradient(90deg, rgba(0,9,20,1) 0%, rgba(3,64,100,1) 51%, rgba(18,130,140,1) 100%);
+  transition: width 0.5s ease;
+}
+
+.progress-percent {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.image-slider-container {
+  margin: 0;
+  text-align:center;
+   position: relative;
+  width: 90%;
+}
+
+.slider-image {
+  width: 50%;
+height:230px;
+  object-fit:contain;
+  margin-bottom:20px;
+}
+
+.progress-container {
+  text-align: center;
+  
+}
+
+.container{
+  margin-top:10%;
+  padding:0%;
+  max-width: 100%; 
+  overflow-x: hidden;
+ display:flex;
+  justify-content:center;
+  
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 60%;
+  margin:0px;
+}
+
+.progress-bar-fill {
+  background-color: #007bff;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.carousel-control{
+  background:none;
+}
+
+.carousel-control:click{
+  border:none;
+}
+.left ,.right{
+box-shadow:none !important;
+  border:none !important;
+   width: auto;
+}
+
+.carousel, .container, .image-slider-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.interval{
+display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.carousel-indicators .active{
+height:auto;
+}
+
+
+.progress-bar-fill {
+  transition: width 0.5s ease;
+}
+
+
+.inactive .progress-bar-fill {
+  background: gray !important; 
+}
+
+.inactive .progress-bar-fill {
+  background-color: gray;
+}
+
+.inactive .progress-bar-fill {
+  width: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>levels_component</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Levels component</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.profileData=[];
+		var gr_profile = new GlideRecordSecure('x_1522458_automo_0_technician_profile');
+	var technicianSysId = gs.getUserID();
+	gr_profile.addQuery('technician',technicianSysId);
+		gr_profile.query();
+		
+		while (gr_profile.next()) { 
+			data.profileData.push({
+				Level: gr_profile.getDisplayValue('level'),
+				TotalPoints: gr_profile.getDisplayValue('total_points'),
+			});
+		}	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-05 09:30:07</sys_created_on>
+        <sys_id>f74b3a5f83b21210cccd5d10feaad376</sys_id>
+        <sys_mod_count>262</sys_mod_count>
+        <sys_name>Levels component</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_f74b3a5f83b21210cccd5d10feaad376</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 12:00:17</sys_updated_on>
+        <template><![CDATA[<div class='container'>
+  <div class="image-slider-container">
+  <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li ng-repeat="image in c.data.images" data-target="#imageCarousel" data-slide-to="{{$index}}" ng-class="{'active': $index === 0}"></li>
+    </ol>
+
+   
+    <div class="carousel-inner">
+      <div class="item" ng-class="{'active': $index === c.getCurrentLevel()}" ng-repeat="image in c.data.images">
+          <div class="img" ng-class="{'inactive-image': $index > c.getCurrentLevel()}">
+            <img ng-src="{{image.src}}" alt="{{image.alt}}"
+                 class="slider-image"  ng-style="{'filter': $index > c.getCurrentLevel() ? 'grayscale(100%)' : 'none', 
+                            'opacity': $index > c.getCurrentLevel() ? '0.5' : '1'}">
+          </div>
+          <div class="progress-container">
+            <div class='interval'>
+               <div class="progress-bar-interval" style='margin-right:10px;'>0</div>
+      <div class="progress-bar" style='margin-right:10px;'>
+        <div class="progress-bar-fill" ng-style="{'width': $index < c.getCurrentLevel() ? 'image.endInterval' : $index === c.getCurrentLevel() ? c.percentage + '%' : 0, 'background': $index <= c.getCurrentLevel() ? 'linear-gradient(90deg, rgba(0,9,20,1) 0%, rgba(3,64,100,1) 51%, rgba(18,130,140,1) 100%)' : 'gray'}"></div>
+      </div>
+        <div class="progress-bar-interval">{{image.endInterval}}</div>
+            </div>
+            
+      <div class="progress-percent">{{ $index < c.getCurrentLevel() ? 100:$index === c.getCurrentLevel() ?c.percentage:0}}%</div>
+    </div>
+      </div>
+    </div>
+
+   
+    <a class="left carousel-control" href="#imageCarousel" role="button" data-slide="prev" >
+      <span class="glyphicon glyphicon-chevron-left" style="color:rgb(0,9,36)"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#imageCarousel" role="button" data-slide="next"  >
+      <span class="glyphicon glyphicon-chevron-right" style="color:rgb(0,9,36)"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>do_you_have_any_additional_comments_or_suggestions</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 16:38:49</sys_created_on>
+        <sys_id>0de3e9a183729210cccd5d10feaad38b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>do_you_have_any_additional_comments_or_suggestions</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ui_policy_action_0de3e9a183729210cccd5d10feaad38b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 16:38:49</sys_updated_on>
+        <table>x_1522458_automo_0_customer_feedback</table>
+        <ui_policy display_value="customer feedback&#10;make all read only when state == Done">45e3a9a183729210cccd5d10feaad3f6</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=0de3e9a183729210cccd5d10feaad38b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ui_policy_action_0de3e9a183729210cccd5d10feaad38b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>true</disabled><field>do_you_have_any_additional_comments_or_suggestions</field><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-30 16:38:49</sys_created_on><sys_id>0de3e9a183729210cccd5d10feaad38b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>do_you_have_any_additional_comments_or_suggestions</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ui_policy_action_0de3e9a183729210cccd5d10feaad38b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-30 16:38:49</sys_updated_on><table>x_1522458_automo_0_customer_feedback</table><ui_policy display_value="customer feedback&#10;make all read only when state == Done">45e3a9a183729210cccd5d10feaad3f6</ui_policy><value/><value_action>ignore</value_action><visible>ignore</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=0de3e9a183729210cccd5d10feaad38b"/></record_update>]]></payload>
+        <payload_hash>112813339</payload_hash>
+        <record_name>do_you_have_any_additional_comments_or_suggestions</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 16:38:49</sys_created_on>
+        <sys_id>09e3e9a183729210cccd5d10feaad38e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194186f38480000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 16:38:49</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>0de3e9a1f6729210bf38b8a33f96c88d</update_guid>
+        <update_guid_history>0de3e9a1f6729210bf38b8a33f96c88d:112813339</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 16:42:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>6766465323f247df930c8fe9093fe719</sys_id>
+        <sys_metadata>0de3e9a183729210cccd5d10feaad38b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>do_you_have_any_additional_comments_or_suggestions</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_0de3e9a183729210cccd5d10feaad38b</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_0de3e9a183729210cccd5d10feaad38b">09e3e9a183729210cccd5d10feaad38e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 16:42:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

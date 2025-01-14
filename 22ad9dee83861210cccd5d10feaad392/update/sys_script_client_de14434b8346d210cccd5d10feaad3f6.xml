@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>change view based on role</name>
+        <order>100</order>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   console.log('Script Runs!!!!!!!!!!!!!!!!!!!!!!!!!');
+   if (g_user.hasRoleExactly('x_1522458_automo_0.customer_rep')){
+		switchView('section','x_1522458_automo_0_service_request','Customer_Representative_View');
+
+		return;
+   }
+   else if (g_user.hasRoleExactly('x_1522458_automo_0.customer')){
+		switchView('section','x_1522458_automo_0_service_request','Customer_view');
+
+		return;
+   }
+   else{
+	return;
+   }
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-28 08:48:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de14434b8346d210cccd5d10feaad3f6</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>change view based on role</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_client_de14434b8346d210cccd5d10feaad3f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-01 07:45:15</sys_updated_on>
+        <table>x_1522458_automo_0_service_request</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

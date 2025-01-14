@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="805b702d837e5210cccd5d10feaad384" label="Customer Feedback" max_length="40" name="x_1522458_automo_0_customer_feedback" type="collection">
+        <element choice="3" label="Did the repair fully resolve the issue with your vehicle?" max_length="40" name="did_the_repair_fully_resolve_the_issue_with_your_vehicle" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes Completely" sequence="0" value="yes_completely"/>
+                <element inactive_on_update="false" label="Partially" sequence="1" value="partially"/>
+                <element inactive_on_update="false" label="No" sequence="2" value="no"/>
+            </choice>
+        </element>
+        <element choice="3" default="New" label="State" max_length="40" name="state" read_only="true" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="InProgress" sequence="1" value="InProgress"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Done" sequence="2" value="done"/>
+            </choice>
+        </element>
+        <element choice="1" label="How would you rate your overall experience with our service center?" max_length="40" name="how_would_you_rate_your_overall_experience_with_our_service_center" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Excellent" sequence="4" value="excellent"/>
+                <element inactive_on_update="false" label="Poor" sequence="0" value="poor"/>
+                <element inactive_on_update="false" label="Fair" sequence="1" value="fair"/>
+                <element inactive_on_update="false" label="Good" sequence="2" value="good"/>
+                <element inactive_on_update="false" label="Very Good" sequence="3" value="very_good"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element choice="3" label="Was the explanation of the repair work and costs clear and reasonable?" max_length="40" name="was_the_explanation_of_the_repair_work_and_costs_clear_and_reasonable" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not at All" sequence="0" value="not_at_all"/>
+                <element inactive_on_update="false" label="Very Clear" sequence="4" value="very_clear"/>
+                <element inactive_on_update="false" label="Somewhat Clear" sequence="1" value="somewhat_clear"/>
+                <element inactive_on_update="false" label="Neutral" sequence="2" value="neutral"/>
+                <element inactive_on_update="false" label="Clear" sequence="3" value="clear"/>
+            </choice>
+        </element>
+        <element label="additional_comments_or_suggestions" max_length="4000" name="additional_comments_or_suggestions" type="string"/>
+        <element choice="3" label="Would you recommend our service center to friends or family?" max_length="40" name="would_you_recommend_our_service_center_to_friends_or_family" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Definitely" sequence="0" value="definitely"/>
+                <element inactive_on_update="false" label="Definitely Not" sequence="4" value="definitely_not"/>
+                <element inactive_on_update="false" label="probably" sequence="1" value="probably"/>
+                <element inactive_on_update="false" label="Not Sure" sequence="2" value="not_sure"/>
+                <element inactive_on_update="false" label="Probably Not" sequence="3" value="probably_not"/>
+            </choice>
+        </element>
+        <element choice="1" label="How satisfied were you with the professionalism and friendliness of our staff?" max_length="40" name="how_satisfied_were_you_with_the_professionalism_and_friendliness_of_our_staff" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Satisfied" sequence="3" value="satisfied"/>
+                <element inactive_on_update="false" label="Very Unsatisfied" sequence="0" value="very_unsatisfied"/>
+                <element inactive_on_update="false" label="Very Satisfied" sequence="4" value="very_satisfied"/>
+                <element inactive_on_update="false" label="Unsatisfied" sequence="1" value="unsatisfied"/>
+                <element inactive_on_update="false" label="Neutral" sequence="2" value="neutral"/>
+            </choice>
+        </element>
+        <element label="Request" max_length="32" name="request" read_only="true" reference="x_1522458_automo_0_service_request" type="reference"/>
+        <index name="index">
+            <element name="request"/>
+        </index>
+    </element>
+</database>

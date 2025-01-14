@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function ($scope) {
+    var c = this;
+
+    // Watch for changes in `c.data.request.state`
+    $scope.$watch(function () {
+        return c.data.request && c.data.request.state;
+    }, function (newValue) {
+        if (newValue) {
+            var steps = document.querySelectorAll('.progress-bar-step');
+
+            // Reset all steps to default by removing any active, completed or incomplete classes
+            for (var i = 0; i < steps.length; i++) {
+                steps[i].classList.remove('active', 'completed', 'incomplete');
+                steps[i].querySelector('.step-icon').style.color = '';
+                steps[i].querySelector('span').style.color = '';
+                steps[i].querySelector('.step-icon').classList.remove('fa-check-circle', 'fa-times-circle');
+            }
+
+            // Handle the state transitions
+if (newValue === 'Under Inspection' || newValue === 'Waiting Inspection' || newValue === 'Inspected') {
+    steps[1].classList.add('active'); 
+    steps[4].classList.add('completed');
+    steps[4].querySelector('.step-icon').classList.add('fa-check-circle');
+    steps[4].querySelector('.step-icon').classList.add('fa-check-circle');
+    steps[4].querySelector('span').textContent = 'Service Complete';// Inspection Phase
+} else if (newValue === 'Waiting Approval' || newValue === 'Offer Approved') {
+    steps[2].classList.add('active');
+    steps[4].classList.add('completed');
+    steps[4].querySelector('.step-icon').classList.add('fa-check-circle');
+    steps[4].querySelector('.step-icon').classList.add('fa-check-circle');
+    steps[4].querySelector('span').textContent = 'Service Complete'; // Service Offer Phase
+} else if (newValue === 'Work in Progress') {
+    steps[3].classList.add('active'); 
+    steps[4].classList.add('completed');
+    steps[4].querySelector('.step-icon').classList.add('fa-check-circle');
+    steps[4].querySelector('.step-icon').classList.add('fa-check-circle'); // Default to grey color
+    steps[4].querySelector('span').textContent = 'Service Complete'; // Repairing Phase
+} else if (newValue === 'Closed Complete') {
+    
+    steps[4].classList.add('service-complete'); // Add a specific class for green styling
+    steps[4].querySelector('.step-icon').classList.add('fa-check-circle'); // Add checkmark icon
+    steps[4].querySelector('.step-icon').style.color = 'green'; // Explicitly set icon color to green
+    steps[4].querySelector('span').textContent = 'Service Complete'; 
+    steps[4].querySelector('span').style.color = 'green'; // Explicitly set text color to green
+
+} else if (newValue === 'Closed Incomplete') {
+    steps[4].classList.add('incomplete'); // Service Incomplete Phase
+    steps[4].querySelector('.step-icon').classList.add('fa-times-circle');
+    steps[4].querySelector('span').textContent = 'Service Incomplete'; // Update text
+} else {
+    steps[0].classList.add('active');
+    steps[4].classList.add('completed');
+    steps[4].querySelector('.step-icon').classList.add('fa-check-circle');
+    steps[4].querySelector('span').textContent = 'Service Complete'; // Default to Request Service phase
+}
+
+        }
+    });
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+.container {
+	font-family: 'Lato', sans-serif;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	display: table-cell;
+	height: 100px;
+	vertical-align: middle;
+}
+
+.nav {
+	margin-top: 40px;
+}
+
+.pull-right {
+	float: right;
+}
+
+a, a:active {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #999;
+}
+//progresssss baaarrrrr
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+ }
+/* General completed state (with grey color for Inspection, Offer, and Repairing phases) */
+.progress-bar-step.completed .step-icon,
+.progress-bar-step.completed span {
+    color: grey !important; /* Ensure grey color for the icons and text in these phases */
+}
+
+/* Green color for the "Service Complete" phase (Closed Complete) */
+.progress-bar-step.completed.service-complete .step-icon,
+.progress-bar-step.completed.service-complete span {
+    color: green !important;
+}
+
+/* Default icon for non-complete but grey state */
+.progress-bar-step.completed .step-icon {
+    font-size: 30px;
+    color: grey; /* Default grey color for Inspection, Offer, and Repairing phases */
+}
+
+/* Connector Lines */
+.progress-bar-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #9c9898;
+    z-index: 0;
+}
+
+
+
+        /* Progress Bar Section */
+        .progress-bar-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .progress-bar-step {
+            position: relative;
+            text-align: center;
+            width: 18%;
+            font-size: 18px;
+            color: #5e5d5d;
+        }
+
+        .progress-bar-step span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .progress-bar-step .step-icon {
+            font-size: 30px;
+            color: grey;
+            transition: color 0.3s ease;
+        }
+
+        .progress-bar-step.active .step-icon,
+        .progress-bar-step.completed .step-icon {
+            color: #007bff;
+        }
+
+
+.progress-bar-step.completed .step-icon {
+    color: green;
+}
+.progress-bar-step.incomplete .step-icon {
+    color: red;
+}
+
+/* Change the text color based on the state */
+.progress-bar-step span {
+    color: #5e5d5d;
+}
+
+/* Active text color */
+.progress-bar-step.active span {
+    color: blue;
+}
+
+/* Completed text color */
+.progress-bar-step.completed span {
+    color: green;
+}
+.progress-bar-step.incomplete .step-icon {
+    content: "\f057"; /* Use Font Awesome "exclamation-circle" icon */
+}
+/* Incomplete text color */
+.progress-bar-step.incomplete span {
+    color: red;
+}
+        /* Connector Lines */
+        .progress-bar-wrapper:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #9c9898;
+            z-index: 0;
+        }
+/* General Form Styling */
+/* Form Container */
+/* Container */
+
+.custom-form {
+    width: 70%; /* Adjusted to make the form narrower */
+    max-width: 800px; /* Maximum width set for larger screens */
+    margin: 20px auto;
+    background: linear-gradient(145deg, #f4f9fc, #d9e7f4);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+/* Form Title */
+.custom-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.custom-form .highlight {
+    color: #0056b3;
+}
+label i {
+    color: #42a5f5; /* Icon color */
+    font-size: 1.8rem;
+}
+.custom-form .alternate {
+    color: #007bff;
+}
+
+/* Form Layout: CSS Grid */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Full-width field for description */
+.full-width {
+    grid-column: 1 / -1; /* Spans both columns */
+}
+
+/* Labels */
+label {
+    font-size: 1.6rem; /* Larger labels */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/* Read-Only Fields */
+.read-only-field {
+    padding: 10px;
+    border-radius: 8px;
+    background: #f4f9fc;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.1), inset -2px -2px 6px rgba(255, 255, 255, 0.7);
+    font-size: 1.7rem;
+    color: #333;
+    word-break: break-word;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Multi-line Read-Only Fields */
+.read-only-field.multiline {
+    min-height: 100px;
+    line-height: 1.5;
+    overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.activity-stream-container{
+   grid-column: 1 / -1;
+}
+
+/* Responsive Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    .custom-form {
+        width: 90%; /* Slightly wider for smaller screens */
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+  
+
+}
+
+.activity-stream-container{
+    max-height: 407px;
+    overflow-y: auto;  
+    padding: 10px; 
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>request_details_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Request_details_form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[/*(function() {
+    data.sys_id = $sp.getParameter('sys_id'); // Get sys_id from URL parameters
+
+    if (data.sys_id) {
+        var gr = new GlideRecord('x_1522458_automo_0_service_request'); // Table name
+        if (gr.get(data.sys_id)) { // Fetch the record
+            data.request = {
+                number: gr.getDisplayValue('number'),
+                vehicle: gr.getDisplayValue('vehicle'),
+                type: gr.getDisplayValue('type'),
+                state: gr.getDisplayValue('state'),
+                description: gr.getDisplayValue('description')
+            };
+        } else {
+            data.error = "Request not found.";
+        }
+    } else {
+        data.error = "No request ID provided.";
+    }
+})();*/
+
+
+(function() {
+    data.sys_id = $sp.getParameter('sys_id'); // Get sys_id from URL parameters
+
+    if (data.sys_id) {
+        var gr = new GlideRecord('x_1522458_automo_0_service_request'); // Table name
+        if (gr.get(data.sys_id)) { // Fetch the service request record
+            data.request = {
+                number: gr.getDisplayValue('number'),
+                vehicle: gr.getDisplayValue('vehicle'),
+                type: gr.getDisplayValue('type'),
+                state: gr.getDisplayValue('state'),
+                description: gr.getDisplayValue('description'),
+							  insDate : gr.getDisplayValue("inspection_date"),
+							 sys_id: gr.getUniqueValue(),
+            };
+				
+data.ticketConversation = $sp.getWidget('widget-ticket-conversation', JSON.stringify({
+    sys_id: data.request.sys_id,
+    table: gr.getTableName(),
+    title: gs.getMessage('Activity Stream'),
+    placeholder: gs.getMessage('Type your message here...'),
+    placeholderNoEntries: gs.getMessage('Start a conversation...'),
+    btnLabel: gs.getMessage('Send'),
+	 
+}));
+				
+            // Fetch the related task record for the inspection date
+            var taskGr = new GlideRecord('x_1522458_automo_0_task'); // Task table
+            taskGr.addQuery('request', data.sys_id); // Match the request sys_id
+            taskGr.setLimit(1); // Limit to 1 record (assuming one task per request)
+            taskGr.query();
+            if (taskGr.next()) {
+                data.inspectionTime = taskGr.getValue('available_times'); // Fetch the available_times field
+            } else {
+                data.inspectionTime = null; // No related task found
+            }
+        } else {
+            data.error = "Request not found.";
+        }
+    } else {
+        data.error = "No request ID provided.";
+    }
+})();
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 10:07:38</sys_created_on>
+        <sys_id>8cbdc9dd8366d210cccd5d10feaad376</sys_id>
+        <sys_mod_count>246</sys_mod_count>
+        <sys_name>Request_details_form</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_8cbdc9dd8366d210cccd5d10feaad376</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 18:01:21</sys_updated_on>
+        <template><![CDATA[<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Progress Bar Section -->
+<div class="container">
+    <!-- Progress Bar -->
+    <div class="progress-bar-wrapper">
+        <div class="progress-bar-step completed">
+            <i class="fas fa-paper-plane step-icon"></i>
+            <span>Request Service</span>
+        </div>
+        <div class="progress-bar-step active">
+            <i class="fas fa-search step-icon"></i>
+            <span>Inspection Phase</span>
+        </div>
+        <div class="progress-bar-step">
+            <i class="fas fa-gift step-icon"></i>
+            <span>Service Offer</span>
+        </div>
+        <div class="progress-bar-step">
+            <i class="fas fa-tools step-icon"></i>
+            <span>Repairing Phase</span>
+        </div>
+        <div class="progress-bar-step">
+            <i class="fas fa-check-circle step-icon"></i>
+            <span>Service Complete</span>
+        </div>
+    </div>
+</div>
+
+<!-- Form Section -->
+<div class="custom-form">
+    <h2><span class="highlight">Request</span> <span class="alternate">Details</span></h2>
+    <form>
+        <div class="form-group">
+            <label><i class="fas fa-hashtag"></i> Request Number</label>
+            <div class="read-only-field">{{ data.request.number }}</div>
+        </div>
+        <div class="form-group">
+            <label><i class="fas fa-car"></i> Vehicle</label>
+            <div class="read-only-field">{{ data.request.vehicle }}</div>
+        </div>
+        <div class="form-group">
+            <label><i class="fas fa-list"></i>Type</label>
+            <div class="read-only-field">{{ data.request.type }}</div>
+        </div>
+        <div class="form-group">
+            <label><i class="fas fa-sync-alt"></i>Request State</label>
+            <div class="read-only-field">{{ data.request.state }}</div>
+        </div>
+        <div class="form-group" ng-if="['Waiting Inspection', 'Inspected', 'Under Inspection'].includes(data.request.state)">
+            <label><i class="fas fa-calendar-alt"></i>  Inspection Date</label>
+            <div class="read-only-field">{{ data.request.insDate}}</div>
+        </div>
+        <div class="form-group" ng-if="['Waiting Inspection', 'Inspected', 'Under Inspection'].includes(data.request.state)">
+            <label><i class="fas fa-clock"></i>Inspection Time</label>
+            <div class="read-only-field">{{ data.inspectionTime}}</div>
+        </div>
+        <div class="form-group full-width">
+            <label><i class="fas fa-align-left"></i> Description</label>
+            <div class="read-only-field multiline">{{ data.request.description }}</div>
+        </div>
+        <div class="activity-stream-container">
+            <sp-widget widget="c.data.ticketConversation"></sp-widget>
+        </div>
+    </form>
+</div>  
+]]></template>
+    </sp_widget>
+</record_update>

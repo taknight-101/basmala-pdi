@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="how_satisfied_were_you_with_the_quality_of_the_repair_work" table="x_1522458_automo_0_customer_feedback">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>How satisfied were you with the quality of the repair work?</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>how_satisfied_were_you_with_the_quality_of_the_repair_work</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Choice">choice</internal_type>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <name>x_1522458_automo_0_customer_feedback</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 14:36:26</sys_created_on>
+        <sys_id>d4e7c92d83be5210cccd5d10feaad3b4</sys_id>
+        <sys_name>How satisfied were you with the quality of the repair work?</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_how_satisfied_were_you_with_the_quality_of_the_repair_work</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 15:03:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_dictionary_x_1522458_automo_0_customer_feedback_how_satisfied_were_you_with_the_quality_of_the_repair_work</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="how_satisfied_were_you_with_the_quality_of_the_repair_work" table="x_1522458_automo_0_customer_feedback"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>1</choice><choice_field/><choice_table/><column_label>How satisfied were you with the quality of the repair work?</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>how_satisfied_were_you_with_the_quality_of_the_repair_work</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="Choice">choice</internal_type><mandatory>true</mandatory><max_length>40</max_length><name>x_1522458_automo_0_customer_feedback</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-30 14:36:26</sys_created_on><sys_id>d4e7c92d83be5210cccd5d10feaad3b4</sys_id><sys_name>How satisfied were you with the quality of the repair work?</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_how_satisfied_were_you_with_the_quality_of_the_repair_work</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-30 15:03:40</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>-1016052549</payload_hash>
+        <record_name>Customer Feedback.How satisfied were you with the quality of the repair work?</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 15:03:40</sys_created_on>
+        <sys_id>531e496583fe5210cccd5d10feaad354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19418181cba0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 15:03:40</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>1b1e4965b7fe52104bd7fcd33134af53</update_guid>
+        <update_guid_history>1b1e4965b7fe52104bd7fcd33134af53:-1016052549,99eb45a18afe52102f28b0876e726dc7:-974825100,41b9c5edf6be5210cbe524e42063463e:-1016052549,cde74d2d2cbe5210df285c5218ec8f47:155388008,a8e70d2d40be52106694de449b2c4c02:-298518229</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 08:26:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>74da47c5794549ab8f593bb007ae5c59</sys_id>
+        <sys_metadata>d4e7c92d83be5210cccd5d10feaad3b4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>How satisfied were you with the quality of the repair work?</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Customer Feedback">805b702d837e5210cccd5d10feaad384</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1522458_automo_0_customer_feedback_how_satisfied_were_you_with_the_quality_of_the_repair_work</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1522458_automo_0_customer_feedback_how_satisfied_were_you_with_the_quality_of_the_repair_work">531e496583fe5210cccd5d10feaad354</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 08:26:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

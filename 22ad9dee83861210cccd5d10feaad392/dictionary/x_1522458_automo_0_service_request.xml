@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="0fc0796a830a1210cccd5d10feaad343" extends="task" label="Service Request" max_length="40" name="x_1522458_automo_0_service_request" text_index="true" type="collection">
+        <element attributes="no_text_index=false" label="Additional Comments" max_length="10000000" name="add_info" type="journal_input"/>
+        <element label="Department" mandatory="true" max_length="32" name="department" reference="cmn_department" reference_qual="name=Body Department^ORname=Engine Department" reference_qual_condition="name=Body Department^ORname=Engine Department" type="reference"/>
+        <element choice="3" label="Available Times" max_length="40" name="available_times" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="10:00 - 11:00" sequence="0" value="00_11_00"/>
+            </choice>
+        </element>
+        <element label="Inspection Date" mandatory="true" max_length="40" name="inspection_date" type="glide_date"/>
+        <element choice="3" default="engine" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Engine" sequence="0" value="engine"/>
+                <element inactive_on_update="false" label="Standard Service" sequence="2" value="standard_service"/>
+                <element inactive_on_update="false" label="Body" sequence="1" value="body"/>
+            </choice>
+        </element>
+        <element label="Desired time" max_length="100" name="desired_time" type="string"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="90d1921e5f510100a9ad2572f2b477fe" label="Owned by" max_length="32" name="owned_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element label="standard" max_length="40" name="standard" type="boolean"/>
+        <element label="tasks Rated" max_length="40" name="tasks_rated" type="string"/>
+        <element label="Vehicle" mandatory="true" max_length="32" name="vehicle" read_only="true" reference="x_1522458_automo_0_vehicle" reference_qual="ownerDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ" reference_qual_condition="ownerDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ" type="reference"/>
+        <element label="has feedback" max_length="40" name="has_feedback" type="string"/>
+    </element>
+</database>

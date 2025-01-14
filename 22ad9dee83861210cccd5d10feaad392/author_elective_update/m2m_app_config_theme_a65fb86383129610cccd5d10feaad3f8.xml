@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="DELETE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-11 22:35:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a65fb86383129610cccd5d10feaad3f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>m2m_app_config_theme_a65fb86383129610cccd5d10feaad3f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-11 22:35:37</sys_updated_on>
+        <theme/>
+        <ux_app_configuration display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</ux_app_configuration>
+    </m2m_app_config_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>m2m_app_config_theme_a65fb86383129610cccd5d10feaad3f8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme"><m2m_app_config_theme action="INSERT_OR_UPDATE"><applicability/><order>0</order><sys_class_name>m2m_app_config_theme</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-11 22:35:37</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>a65fb86383129610cccd5d10feaad3f8</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>m2m_app_config_theme_a65fb86383129610cccd5d10feaad3f8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-11 22:35:37</sys_updated_on><theme/><ux_app_configuration display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</ux_app_configuration></m2m_app_config_theme></record_update>]]></payload>
+        <payload_hash>1344986189</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-11 22:35:37</sys_created_on>
+        <sys_id>ee5fbc6383129610cccd5d10feaad3dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193b7dd0e700000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-11 22:35:37</sys_updated_on>
+        <type>UX App Theme</type>
+        <update_guid>e25fb863c9129610012537edcec9a9fa</update_guid>
+        <update_guid_history>e25fb863c9129610012537edcec9a9fa:1344986189</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">a05c8da783529610cccd5d10feaad3ca</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-11 23:32:18</sys_created_on>
+        <sys_db_object display_value="" name="m2m_app_config_theme">m2m_app_config_theme</sys_db_object>
+        <sys_id>021fe58f5c334958be316c37c7d80859</sys_id>
+        <sys_metadata>a65fb86383129610cccd5d10feaad3f8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>m2m_app_config_theme_a65fb86383129610cccd5d10feaad3f8</sys_update_name>
+        <sys_update_version display_value="m2m_app_config_theme_a65fb86383129610cccd5d10feaad3f8">ee5fbc6383129610cccd5d10feaad3dd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-11 23:32:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

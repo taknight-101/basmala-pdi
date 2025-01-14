@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">d63e2aa583a25610cccd5d10feaad32b</macroponent>
+        <name>list_1/fixedQuery</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    var Final_query = "request.department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe";
+
+    var allInactive = Object.values(api.state.Task_States).every(state => state.active === false);
+
+    if (allInactive) {
+
+        console.log(' From filter: All inactive');
+        console.log(Final_query);
+
+        return Final_query;
+        
+    } else {
+
+        var Generated_Query = '';
+
+        console.log('From Filter : there is active');
+
+
+        Object.entries(api.state.Task_States).forEach(([key, value]) => {
+            if (value.active === true) {
+                Generated_Query += `^ORstate=${value.value}`;
+            }
+
+        });
+
+        if (Generated_Query.startsWith("^OR")) {
+            Generated_Query = "^" + Generated_Query.substring(3);
+        }
+        if (Generated_Query.endsWith("^")) {
+            Generated_Query = Generated_Query.slice(0, -1);
+        }
+        console.log(Generated_Query);
+
+        Final_query = Final_query + Generated_Query;
+
+        console.log(Final_query);
+        return Final_query;
+
+    }
+
+
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-18 13:34:33</sys_created_on>
+        <sys_id>8a538ba183265610cccd5d10feaad34c</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>list_1/fixedQuery</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_client_script_8a538ba183265610cccd5d10feaad34c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-18 15:38:10</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+</record_update>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="workstation" table="x_1522458_automo_0_service_task">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Workstation</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>workstation</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Reference">reference</internal_type>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <name>x_1522458_automo_0_service_task</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_1522458_automo_0_workstation">x_1522458_automo_0_workstation</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^active=true</reference_qual>
+        <reference_qual_condition table="x_1522458_automo_0_workstation">department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^active=true<item endquery="false" field="department.dept_head" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </reference_qual_condition>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-03 08:23:23</sys_created_on>
+        <sys_id>109f68fc83d2d210cccd5d10feaad3c4</sys_id>
+        <sys_name>Workstation</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_dictionary_x_1522458_automo_0_service_task_workstation</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-03 14:12:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_dictionary_x_1522458_automo_0_service_task_workstation</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="workstation" table="x_1522458_automo_0_service_task"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>Workstation</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>workstation</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="Reference">reference</internal_type><mandatory>true</mandatory><max_length>32</max_length><name>x_1522458_automo_0_service_task</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference display_value="" name="x_1522458_automo_0_workstation">x_1522458_automo_0_workstation</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual>department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^active=true</reference_qual><reference_qual_condition table="x_1522458_automo_0_workstation">department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^active=true<item endquery="false" field="department.dept_head" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/><item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/></reference_qual_condition><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-03 08:23:23</sys_created_on><sys_id>109f68fc83d2d210cccd5d10feaad3c4</sys_id><sys_name>Workstation</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_dictionary_x_1522458_automo_0_service_task_workstation</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-03 14:12:56</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>-697659158</payload_hash>
+        <record_name>Task Item.Workstation</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-03 14:12:56</sys_created_on>
+        <sys_id>7c9f7d78839ad210cccd5d10feaad3d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1938cddf4fb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-03 14:12:56</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>349f7d78a79ad2102539dfcf0409a2d6</update_guid>
+        <update_guid_history>349f7d78a79ad2102539dfcf0409a2d6:-697659158,754abd70109ad21035fea438aa02c19c:-1119813959,4a1a7970ff9ad2100266fda09f18028d:-697659158,06c9f170869ad2107171567c0250dc2d:-1851787504,f789bd30a89ad21062f4f6ce53365f95:-697659158,49597930a19ad2100b3fc153d67a363f:-1851787504,7e193530019ad2108e508c19aba3cb2c:-697659158,3397fd7cae5ad210cfe7d78b6db77715:-1851787504,a49fa8fc8dd2d2101cab684f3a34102f:-697659158,a49fa8fcecd2d210b9fdaf9c48001103:1848692773</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-05 09:36:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>114872beebba415482b2524a89c58ae4</sys_id>
+        <sys_metadata>109f68fc83d2d210cccd5d10feaad3c4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Workstation</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="">a74967d8839a5210cccd5d10feaad377</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1522458_automo_0_service_task_workstation</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1522458_automo_0_service_task_workstation">7c9f7d78839ad210cccd5d10feaad3d6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-05 09:36:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

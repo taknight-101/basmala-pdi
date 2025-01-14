@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="date_time" label="Date_Time" language="en" table="x_1522458_automo_0_time_card">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>date_time</element>
+            <help/>
+            <hint/>
+            <label>Date_Time</label>
+            <language>en</language>
+            <name>x_1522458_automo_0_time_card</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-24 19:40:11</sys_created_on>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_name>Date_Time</sys_name>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_documentation_x_1522458_automo_0_time_card_date_time_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-24 19:45:18</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

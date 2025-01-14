@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1522458_automo_0_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create Time Card Record</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+	gs.info("timeeeeeeeeeeee_caaaaard");
+    if (!current.getValue('date') || !current.getValue('assined_to') || !current.getValue('available_times')) {
+		//gs.info("value_2: "+current.getValue('assined_to'));
+        return;
+    }
+	// gs.info("available");
+
+    var timeSlot = current.getValue('available_times');
+	// gs.info("main time slot", timeSlot);
+    var timeParts = timeSlot.split(' - '); 
+	
+	// gs.info("timeParts- elem1:" + timeParts[0]);
+	// gs.info("timeParts- elem2:" + timeParts[1]);
+    if (timeParts.length !== 2) {
+        gs.error('Invalid time slot format.');
+        return;
+    }
+	// gs.info("timeeeeeeeeeeee");
+
+    var startTime = convertToUTC(current.getValue('date'), timeParts[0]); 
+    var endTime = convertToUTC(current.getValue('date'), timeParts[1]);   
+	// gs.info("startTime:" + startTime);
+	// gs.info("endTime:" + endTime);
+
+    if (!startTime || !endTime) {
+        gs.error('Failed to convert times to UTC.');
+        return;
+    }
+
+    var timeCardGr = new GlideRecord('x_1522458_automo_0_time_card'); 
+    timeCardGr.setValue('date', current.getValue('date'));
+    timeCardGr.setValue('task', current.getUniqueValue());
+    timeCardGr.setValue('assigned_to', current.getValue('assined_to'));
+    timeCardGr.setValue('from', startTime); 
+	timeCardGr.setValue('date_time', convertToLocalTime(current.getValue('date'), timeParts[0]));
+    timeCardGr.setValue('to', endTime);        
+    timeCardGr.insert();
+
+    function convertToUTC(dateValue, timeValue) {
+		// gs.info("inside conversions");
+        var dateTime = new GlideDateTime(dateValue + ' ' + timeValue); 
+		// gs.info(!dateTime.isValid());
+        if (!dateTime.isValid()) {
+            gs.error('Invalid date or time format.');
+            return null;
+        }
+		// gs.info("timeeeeeeeeeee dta:"+dateTime.getValue());
+        return dateTime.getValue(); 
+    }
+
+	function convertToLocalTime(dateValue, timeValue) {
+        var dateTime = new GlideDateTime(dateValue + ' ' + timeValue);
+        if (!dateTime.isValid()) {
+            gs.error('Invalid date or time format.');
+            return null;
+        }
+        dateTime.add(8 * 60 * 60 * 1000);
+        return dateTime.getValue(); 
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 14:42:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>257d434d83d25610cccd5d10feaad3b4</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>Create Time Card Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_257d434d83d25610cccd5d10feaad3b4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 20:13:04</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=257d434d83d25610cccd5d10feaad3b4"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>257d434d83d25610cccd5d10feaad3b4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 14:42:54</sys_created_on>
+        <sys_id>a100df8d83d25610cccd5d10feaad35e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 14:42:54</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

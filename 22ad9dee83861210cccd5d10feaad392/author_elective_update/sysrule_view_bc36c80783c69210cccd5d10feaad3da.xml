@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_view">
+    <sysrule_view action="DELETE">
+        <active>false</active>
+        <advanced>true</advanced>
+        <condition/>
+        <description/>
+        <device_type>browser</device_type>
+        <match_conditions>ALL</match_conditions>
+        <name>Customer Representative</name>
+        <order>100</order>
+        <overrides_user_preference>true</overrides_user_preference>
+        <script><![CDATA[(function overrideView(view, is_list) {
+
+	
+	answer = null;
+
+	if (gs.hasRole('x_1522458_automo_0.customer_rep')){
+		gs.info("REPPPPPPPPPP");
+		answer = "Customer_Representative_View";
+	}else{
+		answer = null;
+	}
+	gs.info(answer);
+})(view, is_list);]]></script>
+        <sys_class_name>sysrule_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-27 18:55:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bc36c80783c69210cccd5d10feaad3da</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Customer Representative</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sysrule_view_bc36c80783c69210cccd5d10feaad3da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-28 08:49:06</sys_updated_on>
+        <table>x_1522458_automo_0_service_request</table>
+        <view>Customer_Representative_View</view>
+    </sysrule_view>
+    <sys_es_latest_script action="DELETE">
+        <id>bc36c80783c69210cccd5d10feaad3da</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-27 19:10:30</sys_created_on>
+        <sys_id>5d2a800b83c69210cccd5d10feaad300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-27 19:10:30</sys_updated_on>
+        <table>sysrule_view</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sysrule_view_bc36c80783c69210cccd5d10feaad3da</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysrule_view"&gt;&lt;sysrule_view action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;condition/&gt;&lt;description/&gt;&lt;device_type&gt;browser&lt;/device_type&gt;&lt;match_conditions&gt;ALL&lt;/match_conditions&gt;&lt;name&gt;Customer Representative&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;overrides_user_preference&gt;true&lt;/overrides_user_preference&gt;&lt;script&gt;&lt;![CDATA[(function overrideView(view, is_list) {
+
+	
+	answer = null;
+
+	if (gs.hasRole('x_1522458_automo_0.customer_rep')){
+		gs.info("REPPPPPPPPPP");
+		answer = "Customer_Representative_View";
+	}else{
+		answer = null;
+	}
+	gs.info(answer);
+})(view, is_list);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sysrule_view&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-27 18:55:15&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;bc36c80783c69210cccd5d10feaad3da&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_name&gt;Customer Representative&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Automotive Service Management" source="x_1522458_automo_0"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automotive Service Management"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysrule_view_bc36c80783c69210cccd5d10feaad3da&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-28 08:49:06&lt;/sys_updated_on&gt;&lt;table&gt;x_1522458_automo_0_service_request&lt;/table&gt;&lt;view&gt;Customer_Representative_View&lt;/view&gt;&lt;/sysrule_view&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;bc36c80783c69210cccd5d10feaad3da&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-27 19:10:30&lt;/sys_created_on&gt;&lt;sys_id&gt;5d2a800b83c69210cccd5d10feaad300&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-27 19:10:30&lt;/sys_updated_on&gt;&lt;table&gt;sysrule_view&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-415713126</payload_hash>
+        <record_name>Customer Representative</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-28 08:49:06</sys_created_on>
+        <sys_id>a085c78b8346d210cccd5d10feaad368</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19371f5af390000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-28 08:49:06</sys_updated_on>
+        <type>View Rule</type>
+        <update_guid>6885c78bcc46d2106308cc32d288a167</update_guid>
+        <update_guid_history>6885c78bcc46d2106308cc32d288a167:-415713126,f1d24bc76246d210656faf24ee420ee7:566484219,7c020b877b46d2104fc6777e22fc474f:577156564,e544fec34506d210388eac78cb1251f3:126792163,cd3472c31406d210db386851e007e95e:934891040,5ca2f2434606d2105c403fbb986accf3:-1014726858,4522b203e006d210e495b8f73458f7f5:1219510647,23d5dc8b880a92103c438efcd6049a99:-1014726858,e7659c4b680a92104250fd8381773392:-1440286892,59b4d04b0d0a921035d9f036fdf9adb3:-2052934828,cce2dc47a70a92106eed459861fe666c:-1440286892,84d11cc3170a9210547a0e5caaec3868:-2052934828,9af0dc43c60a9210afc5582cfeaa182e:853266167,292a000bd4c69210937ad10b23056c50:-53821008,f1a6880782c69210cb93ef03ae56916a:1793205453</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-02 19:07:02</sys_created_on>
+        <sys_db_object display_value="" name="sysrule_view">sysrule_view</sys_db_object>
+        <sys_id>2b9db31a3c224798a8ace68ccdc563d9</sys_id>
+        <sys_metadata>bc36c80783c69210cccd5d10feaad3da</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Customer Representative</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Service Request">0fc0796a830a1210cccd5d10feaad343</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sysrule_view_bc36c80783c69210cccd5d10feaad3da</sys_update_name>
+        <sys_update_version display_value="sysrule_view_bc36c80783c69210cccd5d10feaad3da">a085c78b8346d210cccd5d10feaad368</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-02 19:07:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

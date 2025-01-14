@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <bundles/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[
+    {
+        "definition": {
+            "id": "66ee7d86e81f696c9f9be19d8424cc0d",
+            "type": "MACROPONENT"
+        },
+        "elementId": "list_1",
+        "elementLabel": "List 1",
+        "eventMappings": [
+            {
+                "eventMappingId": "cmffpcccjjkjaaddvhhddjiiffaijdiema",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#ROW_CLICKED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#ROW_CLICKED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "x_1522458_automo_0.NAV_ITEM_SELECTED_RELAY_2751df6c83879610cccd5d10feaad3f0",
+                            "payload": {
+                                "container": {
+                                    "external": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "fields": {
+                                        "container": {
+                                            "sysId": {
+                                                "binding": {
+                                                    "address": [
+                                                        "sys_id"
+                                                    ]
+                                                },
+                                                "type": "EVENT_PAYLOAD_BINDING"
+                                            },
+                                            "table": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "x_1522458_automo_0_service_request"
+                                            }
+                                        },
+                                        "type": "MAP_CONTAINER"
+                                    },
+                                    "multiInstField": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "navigationOptions": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "params": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "passiveNavigation": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "redirect": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "route": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "form"
+                                    },
+                                    "targetRoute": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            },
+                            "sysId": "11f153ac83879610cccd5d10feaad36d"
+                        },
+                        "operation": null,
+                        "targetId": "cmffpcccjjkjaaddviiddjiiffaaivrggto",
+                        "type": "EVENT"
+                    }
+                ]
+            }
+        ],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "preset": null,
+        "propertyValues": {
+            "actionConfigId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "allRecordsSelected": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "columnPreferenceKey": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "columns": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "daClientActionContract": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "error": {
+                "type": "JSON_LITERAL",
+                "value": {}
+            },
+            "exceptedRecords": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "fixedQuery": {
+                "type": "JSON_LITERAL",
+                "value": "state=3^department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^has_feedbackSTARTSWITHT"
+            },
+            "groupByField": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "headerSize": {
+                "type": "JSON_LITERAL",
+                "value": "md"
+            },
+            "headingLevel": {
+                "type": "JSON_LITERAL",
+                "value": 1
+            },
+            "hideCellFilter": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideCheckboxHover": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideColumnFiltering": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "hideColumnGrouping": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideColumnReorder": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideColumnResizing": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideColumnSorting": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideDeclarativeActions": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "hideDotwalk": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideDragDrop": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "hideEmptyStateImage": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideFilterPanel": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideFirstPage": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideHeader": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideHighlightContent": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideHighlightedValues": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideInlineEditing": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideLastPage": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideLastRefreshedText": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideLimitSelector": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideLinks": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideListSharing": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "hideMenuButton": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideNextPage": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideOptionToSaveAs": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hidePages": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hidePagination": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hidePanelAdvanced": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hidePanelConditionDelete": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hidePanelFooter": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hidePanelRestore": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hidePersonalization": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hidePreviousPage": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideQuickEdit": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideRange": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideRefreshButton": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideRowCount": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideRowSelector": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideSelectAll": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideTitle": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideTitleRowCount": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "hideUnnecessaryRowSelectors": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "highlightContent": {
+                "type": "JSON_LITERAL",
+                "value": {
+                    "color": "",
+                    "patterns": []
+                }
+            },
+            "highlightedValueConfigId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "isRefList": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "limit": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "listMenuOpen": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "listTitle": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Closed Complete Requests - Pending Task Rating"
+                }
+            },
+            "maxCharLimit": {
+                "type": "JSON_LITERAL",
+                "value": 4000
+            },
+            "maxColumns": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "menuSelection": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "nrlLandmark": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "overrideWordWrapUserPref": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "page": {
+                "type": "JSON_LITERAL",
+                "value": 1
+            },
+            "query": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "recordSelectedQuery": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "recordSelectedSysId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "recordSelectedTable": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "recordSelectedView": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "refreshRequested": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "selectedListId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "selectedRecords": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "x_1522458_automo_0_service_request"
+            },
+            "tiny": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "view": {
+                "type": "JSON_LITERAL",
+                "value": "Default"
+            },
+            "wordWrap": {
+                "type": "JSON_LITERAL",
+                "value": false
+            }
+        },
+        "slot": null,
+        "styles": null
+    }
+]</composition>
+        <da_relay_models/>
+        <data>[]</data>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <dispatched_events>11f153ac83879610cccd5d10feaad36d</dispatched_events>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
+        <form_factors>{}</form_factors>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{}</internal_event_mappings>
+        <layout>{
+    "default": {
+        "children": null,
+        "items": [
+            {
+                "element_id": "list_1",
+                "styles": {}
+            }
+        ],
+        "root": null,
+        "rules": null,
+        "styles": {
+            "flex-direction": "column"
+        },
+        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+        "type": "flex"
+    },
+    "version": "3.0.0"
+}</layout>
+        <macroponent_dependencies/>
+        <name>Default</name>
+        <output_prop_mapping/>
+        <props>[]</props>
+        <required_translations>[ {
+  "message" : "Closed Complete Requests - Pending Task Rating",
+  "comment" : ""
+} ]</required_translations>
+        <root_component/>
+        <root_component_config/>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_persistence_config/>
+        <state_properties/>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 08:18:54</sys_created_on>
+        <sys_id>2751df6c83879610cccd5d10feaad3f0</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_macroponent_2751df6c83879610cccd5d10feaad3f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 09:55:25</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=2751df6c83879610cccd5d10feaad3f0"/>
+</record_update>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1522458_automo_0_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Tasks per month</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    // Ensure the assigned_to field is populated
+    var technicianId = current.assined_to; // Corrected the typo in the field name
+
+    if (technicianId) {
+        // Get the current month and year
+        var now = new GlideDateTime();
+        var currentMonth = now.getMonthUTC() + 1; // Months are 0-based, so add 1
+        var currentYear = now.getYearUTC();
+
+        // Initialize a counter for tasks
+        var taskCount = 0;
+
+        // Query the Task table for tasks completed by this technician in the current month
+        var taskGr = new GlideRecord('x_1522458_automo_0_task'); // Replace with your Task table name
+        taskGr.addQuery('assined_to', technicianId);
+        taskGr.addQuery('state', 'closed_complete'); // Ensure this matches your state field value
+        taskGr.addQuery('date', 'STARTSWITH', currentYear + '-' + (currentMonth < 10 ? '0' + currentMonth : currentMonth));
+        taskGr.query();
+
+        // Count the number of tasks manually
+        while (taskGr.next()) {
+            taskCount++;
+        }
+
+        // Update the tasks_per_month field using setQuery
+        var technicianProfile = new GlideRecord('x_1522458_automo_0_technician_profile'); // Replace with your Technician Profile table name
+        technicianProfile.addQuery('sys_id', technicianId); // Use sys_id to find the specific technician
+        technicianProfile.query();
+
+        if (technicianProfile.next()) {
+            technicianProfile.setValue('tasks_per_month', 0); // Set the tasks_per_month field
+            technicianProfile.update(); // Save the record
+        }
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 13:07:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>676cf1b983b6d210cccd5d10feaad36a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Tasks per month</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_676cf1b983b6d210cccd5d10feaad36a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-31 13:41:56</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=676cf1b983b6d210cccd5d10feaad36a"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>676cf1b983b6d210cccd5d10feaad36a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 13:07:30</sys_created_on>
+        <sys_id>571d39f983b6d210cccd5d10feaad3a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-31 13:07:30</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

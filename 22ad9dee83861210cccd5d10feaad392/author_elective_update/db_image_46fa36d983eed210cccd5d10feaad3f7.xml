@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="DELETE">
+        <active>true</active>
+        <category>Service Portal</category>
+        <format>png</format>
+        <height>309</height>
+        <image>f06c7fd183261610cccd5d10feaad3f6</image>
+        <name>x_1522458_automo_0.wave.png</name>
+        <size_bytes>154042</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 18:05:29</sys_created_on>
+        <sys_id>46fa36d983eed210cccd5d10feaad3f7</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_1522458_automo_0.wave.png</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>db_image_46fa36d983eed210cccd5d10feaad3f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 22:50:55</sys_updated_on>
+        <thumbnail/>
+        <width>808</width>
+    </db_image>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>db_image_46fa36d983eed210cccd5d10feaad3f7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category>Service Portal</category><format>png</format><height>309</height><image>f06c7fd183261610cccd5d10feaad3f6</image><name>x_1522458_automo_0.wave.png</name><size_bytes>154042</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-17 18:05:29</sys_created_on><sys_id>46fa36d983eed210cccd5d10feaad3f7</sys_id><sys_mod_count>8</sys_mod_count><sys_name>x_1522458_automo_0.wave.png</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>db_image_46fa36d983eed210cccd5d10feaad3f7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-17 22:50:55</sys_updated_on><thumbnail/><width>808</width></db_image></record_update>]]></payload>
+        <payload_hash>-117762799</payload_hash>
+        <record_name>x_1522458_automo_0.wave.png</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 22:56:10</sys_created_on>
+        <sys_id>7d9d335983261610cccd5d10feaad34c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193d6d603920000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 22:56:10</sys_updated_on>
+        <type>Images</type>
+        <update_guid>f19d335992261610365cc8dd88c4224c</update_guid>
+        <update_guid_history>f19d335992261610365cc8dd88c4224c:-117762799,c16cff194a261610eb3fbbd558021284:-350745733,456c7fd1962616109f871d5ab7265ef9:1081823054,c9fbb719a5261610155216f9d34f37db:1377483551,41fbb319e42616108a6b874107b052db:479356230,89fbb31976261610d904b814c24b15d8:342930040,b01bbf95182616105c452aeb133da71a:-1611954701,1dda33d5242616107e7cfad17e05026f:-2077503835,89da33d5ae261610a76a6935c2c5196a:-569526334,01da33d5da261610926187e8cf8d6668:-509446284,d51bf6d904eed21069bd03aa59b62015:1072997751,d11bf6d9bceed2101c69bb9ae98dca10:1882609768,911bfe9968eed2101af4cb8872dffa60:585301018,670b32d9a4eed210bd52e9d83ca4a925:1248902169</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1522458_automo_0.wave.png">6a9d7b1983261610cccd5d10feaad3d7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 22:56:14</sys_created_on>
+        <sys_db_object display_value="" name="db_image">db_image</sys_db_object>
+        <sys_id>060c9616a9a94faaa76bde500f159984</sys_id>
+        <sys_metadata>46fa36d983eed210cccd5d10feaad3f7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1522458_automo_0.wave.png</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>db_image_46fa36d983eed210cccd5d10feaad3f7</sys_update_name>
+        <sys_update_version display_value="db_image_46fa36d983eed210cccd5d10feaad3f7">7d9d335983261610cccd5d10feaad34c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 22:56:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

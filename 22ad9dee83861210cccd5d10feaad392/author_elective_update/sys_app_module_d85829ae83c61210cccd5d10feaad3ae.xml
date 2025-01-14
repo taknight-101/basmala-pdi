@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="ASM">661861ae83c61210cccd5d10feaad379</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>SEPARATOR</link_type>
+        <map_page/>
+        <mobile_title>My Requests</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>1</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_1522458_automo_0.admin,x_1522458_automo_0.customer,x_1522458_automo_0.customer_rep,x_1522458_automo_0.inventory_manager,x_1522458_automo_0.technician,x_1522458_automo_0.service_manager</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-26 12:46:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d85829ae83c61210cccd5d10feaad3ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_app_module_d85829ae83c61210cccd5d10feaad3ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-26 12:46:03</sys_updated_on>
+        <timeline_page/>
+        <title>My Requests</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_app_module_d85829ae83c61210cccd5d10feaad3ae</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="ASM">661861ae83c61210cccd5d10feaad379</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><mobile_title>My Requests</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>1</order><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_1522458_automo_0.admin,x_1522458_automo_0.customer,x_1522458_automo_0.customer_rep,x_1522458_automo_0.inventory_manager,x_1522458_automo_0.technician,x_1522458_automo_0.service_manager</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-26 12:46:03</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d85829ae83c61210cccd5d10feaad3ae</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Requests</sys_name><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_app_module_d85829ae83c61210cccd5d10feaad3ae</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-26 12:46:03</sys_updated_on><timeline_page/><title>My Requests</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>845978638</payload_hash>
+        <record_name>My Requests</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-26 12:46:03</sys_created_on>
+        <sys_id>f788a5ae83c61210cccd5d10feaad3c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1936881e4060000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-26 12:46:03</sys_updated_on>
+        <type>Module</type>
+        <update_guid>fb88a5ae0ac61210a01fcacc106be4c6</update_guid>
+        <update_guid_history>fb88a5ae0ac61210a01fcacc106be4c6:845978638</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="My Requests">9a69adae83c61210cccd5d10feaad3bb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-26 12:49:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>24b02803a0c042e1b94fc60f780a23e1</sys_id>
+        <sys_metadata>d85829ae83c61210cccd5d10feaad3ae</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_app_module_d85829ae83c61210cccd5d10feaad3ae</sys_update_name>
+        <sys_update_version display_value="sys_app_module_d85829ae83c61210cccd5d10feaad3ae">f788a5ae83c61210cccd5d10feaad3c7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-26 12:49:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+    var c = this;
+
+    c.answers = {}; // Stores user input
+    c.errors = {};  // Stores validation errors
+    c.successMessage = null;
+    c.errorMessage = null;
+    c.submitted = false; // To track if the form has been submitted
+    
+	  c.answers.additionalComments="";
+    // Initialize data
+    c.questions = c.data.questions || []; // Populate questions passed from the server
+
+    // Submit Feedback Function
+    c.submitFeedback = function () {
+			 console.log('Submitted Answers:hi');
+        c.submitted = true; // Mark the form as submitted
+        var isValid = true;
+        c.errors = {}; // Reset errors
+
+        // Validate each question
+        c.questions.forEach(function (question) {
+            if (!c.answers[question.id]) {
+                c.errors[question.id] = 'This field is required.';
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            c.errorMessage = 'Please answer all required questions.';
+            c.successMessage = null;
+            return;
+        }
+
+        // Prepare payload for submission
+        var answers = {};
+
+        // Map answers to the corresponding question name
+        c.questions.forEach(function (question) {
+            var fieldName = question.name;
+            var answerValue = c.answers[question.id].toLowerCase().replace(/ /g, '_'); // Ensure the choice value is in lowercase
+            answers[fieldName] = answerValue; // Assign to the payload
+        });
+				 console.log('Submitted Answers;',c.data);
+        // Submit via server script (handled via the input object)
+        c.data.answers = answers;
+
+			c.data.additionalComments=  c.answers.additionalComments;
+			
+			
+			 console.log('Submitted Answers;',c.data);
+				document.getElementById("success-popup").style.display = "flex";
+			 c.server.update().then(function () {
+            // Clear fields
+           
+           
+
+            // Clear errors
+            c.errors = {};});
+					
+    };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.feedback-container {
+    width: 100%;
+    max-width: 1500px;
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: left;
+    color: #333;
+   // background-color: #dceefb;
+    padding: 10px;
+   // border-radius: 8px;
+  //  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+.question {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.question-label {
+    font-weight: bold;
+    flex-shrink: 0;
+    width: 45%; /* Fixed width to align labels */
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.mandatory {
+    color: red;
+    font-size: 1.2rem;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Consistent columns for alignment */
+    gap: 5px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  	
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333;
+    border-radius: 4px; /* Optional: Rounded corners */
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the checked state */
+input[type="radio"]:checked {
+    background-color: #a1a1a1;
+  
+}
+
+/* Add the checkmark on selection */
+input[type="radio"]:checked::after {
+    content: '✔'; /* Unicode for a checkmark */
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.text-input-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    max-width: 800px;
+    min-height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  	color:#000000;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    
+  	display:block;
+}
+
+.message-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-size: 1rem;
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+
+.popup-content i {
+    font-size: 5rem;
+    color:  #9999bf;/* Green color for success */
+    margin-bottom: 15px;
+  	display:none;
+}
+
+.popup-content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.popup-content .close-btn {
+    background-color:  #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensures it takes up its own line */
+    margin: 0 auto; /* Centers horizontally */
+}
+
+.popup-content .close-btn:hover {
+    background-color: #3399bf;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>customer_feedback</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>customer_feedback</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+    // Retrieve the sys_id dynamically (example: from a parameter or user session)
+    var sys_id = $sp.getParameter('sys_id');
+		gs.info("iss "+ sys_id);
+    if (!sys_id) {
+        gs.error('Missing sys_id. Unable to process.');
+        data.errorMessage = 'The sys_id parameter is missing.';
+        return;
+    }
+
+    // Pass the sys_id to the client
+    data.sys_id = sys_id;
+		data.answers={};
+    // Prepare the questions to send to the client
+data.questions = [
+	{
+        id: 1,
+        label: 'How would you rate your overall experience with our service center?',
+        name: 'how_would_you_rate_your_overall_experience_with_our_service_center',
+        options: ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent']
+    },
+  
+    {
+        id: 2,
+        label: 'How satisfied were you with the professionalism and friendliness of our staff?',
+        name: 'how_satisfied_were_you_with_the_professionalism_and_friendliness_of_our_staff',
+        options: ['Very Unsatisfied', 'Unsatisfied', 'Neutral', 'Satisfied', 'Very Satisfied']
+    },
+    {
+        id: 3,
+        label: 'Was the explanation of the repair work and costs clear and reasonable?',
+        name: 'was_the_explanation_of_the_repair_work_and_costs_clear_and_reasonable',
+        options: ['Not at All', 'Somewhat Clear', 'Neutral', 'Clear', 'Very Clear']
+    },
+     
+	 {
+        id: 4,
+        label: 'Did the repair fully resolve the issue with your vehicle?',
+        name: 'did_the_repair_fully_resolve_the_issue_with_your_vehicle',
+        options: ['Yes, Completely', 'Partially', 'No']
+    },
+    {
+        id: 5,
+        label: 'Would you recommend our service center to friends or family?',
+        name: 'would_you_recommend_our_service_center_to_friends_or_family',
+        options: ['Definitely', 'Probably', 'Not Sure', 'Probably Not', 'Definitely Not']
+    }
+	
+	
+];
+
+	 var feedbackGR = new GlideRecord('x_1522458_automo_0_customer_feedback');
+            feedbackGR.initialize();
+
+            // Add the sys_id to the feedback record
+            feedbackGR.setValue('request', sys_id);
+	
+    // Save feedback when data is sent from the client
+    if (input) {
+        try {
+					 gs.warn('iss This is an informational message from the server script'+ JSON.stringify(input.answers));
+           
+
+            // Map the answers from the client to the feedback record
+            for (var field in input.answers) {
+                if (feedbackGR.isValidField(field)) {
+                    feedbackGR.setValue(field, input.answers[field]);
+                } else {
+                    gs.warn('iss Invalid field in answers: ' + field);
+                }
+            }
+
+            // Insert the record into the database
+					 
+					 feedbackGR.setValue('additional_comments_or_suggestions',input.additionalComments );
+					
+					
+            var recordSysId = feedbackGR.insert();
+					
+            if (recordSysId) {
+                gs.info('Feedback record created successfully. Sys ID: ' + recordSysId);
+                data.success = true;
+								data.answers={};
+								data.sys_id="";
+            } else {
+                gs.error('iss Failed to insert feedback record');
+                data.success = false;
+                data.errorMessage = 'Failed to save feedback record.';
+								
+            }
+        } catch (e) {
+            gs.error('iss Error processing feedback: ' + e.message);
+            data.success = false;
+            data.errorMessage = 'An error occurred while processing feedback: ' + e.message;
+        }
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-07 07:04:24</sys_created_on>
+        <sys_id>302da0448383d210cccd5d10feaad30f</sys_id>
+        <sys_mod_count>236</sys_mod_count>
+        <sys_name>customer_feedback</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_302da0448383d210cccd5d10feaad30f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 10:00:38</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="feedback-container">
+        <div class="header-container">
+            <h1> Service Feedback</h1>
+            <button type="button" class="submit-button" ng-click="c.submitFeedback()">Submit Feedback</button>
+        </div>
+        <form name="feedbackForm">
+            <!-- Questions -->  
+            <div style="display: flex; flex-direction: column; margin-bottom: 15px;" ng-repeat="question in c.questions">
+              	<div>
+                  
+              
+              	<div class="question">
+                    <label class="question-label">
+                        {{question.label}} <span class="mandatory">*</span>
+                    </label>
+                    <div class="options">
+                        <label class="option" ng-repeat="option in question.options">
+                            <input type="radio" name="{{question.name}}" value="{{option}}" ng-model="c.answers[question.id]" ng-required="true" />
+                            <span>{{option}}</span>
+                        </label>
+                    </div>
+                  </div>
+                    <!-- Display error message only if the question is not answered and has been touched -->
+                    <div class="error-message" ng-if="c.submitted && c.errors[question.id]">
+                        {{c.errors[question.id]}}
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Additional Comments -->
+            <div class="text-input-container">
+                <label class="question-label" for="additionalComments">Would you like to share any additional comments or suggestions?</label>
+                <textarea id="additionalComments" ng-model="c.answers.additionalComments" maxlength="250"></textarea>
+            </div>
+
+
+            <!-- Success/Error Messages -->
+            <div class="message-container">
+                <p class="success-message" ng-if="c.successMessage">{{c.successMessage}}</p>
+             
+            </div>
+        </form>
+      
+        </div>
+      <div id="success-popup" class="popup">
+    <div class="popup-content">
+        <i class="fas fa-check-circle"></i>
+        <h2>Your Feedback Submitted Successfully</h2>
+        <p>We appreciate your feedback and always trying to be better.</p>
+        <button class="close-btn"  onclick="closePopup()" ng-click="c.error()">OK</button>
+    </div>
+</div> 	
+      
+      
+       <script>
+          // Toggle info popup
+        function toggleInfo() {
+            var infoPopup = document.getElementById("success-popup");
+            infoPopup.style.display = infoPopup.style.display === "block" ? "none" : "block";
+        }
+        function closePopup() {
+            document.getElementById("success-popup").style.display = "none";
+            window.location.href = "https://dev231407.service-now.com/customer_portal?id=customer_homepage"; 
+        }
+    </script>
+  
+</body>
+</html>
+]]></template>
+    </sp_widget>
+</record_update>

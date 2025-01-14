@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 18:00:00</entered_time>
+        <max_drift/>
+        <name>Update Technician Tasks Per Month</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>31</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2024-12-31 22:54:51</run_start>
+        <run_time>1970-01-01 16:00:00</run_time>
+        <run_type>monthly</run_type>
+        <script><![CDATA[// Get the first and last day of the current month
+var now = new GlideDate();
+var firstDayOfMonth = new GlideDate();
+firstDayOfMonth.setValue(now.getByFormat('yyyy-MM') + '-01'); // Start of the month
+
+var lastDayOfMonth = new GlideDate();
+lastDayOfMonth.setValue(now.getByFormat('yyyy-MM') + '-31'); // End of the month
+
+// Step 1: Loop through all technicians and calculate inspection/repair tasks
+var technicianProfileGr = new GlideRecord('x_1522458_automo_0_technician_profile'); // Technician Profile table
+technicianProfileGr.query();
+
+var maxTaskSum = 0; // Variable to track the maximum sum value for any technician
+
+while (technicianProfileGr.next()) {
+    var technicianId = technicianProfileGr.technician; // Technician ID
+    var inspectionTasks = 0;
+    var repairTasks = 0;
+
+    // Query tasks assigned to the technician and completed in the current month
+    var taskGr = new GlideRecord('x_1522458_automo_0_task'); // Task table
+    taskGr.addQuery('assined_to', technicianId);
+    taskGr.addQuery('state', 'closed_complete'); // Ensure this matches the state for "completed" tasks
+    taskGr.addQuery('date', '>=', firstDayOfMonth); // From the first day of the month
+    taskGr.addQuery('date', '<=', lastDayOfMonth); // To the last day of the month
+    taskGr.query();
+
+    // Count the tasks based on the `inspection` field
+    while (taskGr.next()) {
+        if (taskGr.insoection == true) {
+            inspectionTasks++;
+        } else {
+            repairTasks++;
+        }
+    }
+
+    // Calculate the sum of [#inspection_tasks + 2 * #repair_tasks]
+    var taskSum = inspectionTasks + (2 * repairTasks);
+
+    // Update tasks_per_month for this technician
+    technicianProfileGr.tasks_per_month = taskSum;
+    technicianProfileGr.update();
+
+    // Track the maximum task sum across all technicians
+    if (taskSum > maxTaskSum) {
+        maxTaskSum = taskSum;
+    }
+}
+
+// Step 2: Calculate monthly_score for each technician
+technicianProfileGr.initialize(); // Reset the GlideRecord
+technicianProfileGr.query();
+
+while (technicianProfileGr.next()) {
+    var averageRating = technicianProfileGr.average_rating; // Technician's average rating (ensure this field exists)
+    var taskSum = technicianProfileGr.tasks_per_month; // Sum of tasks calculated earlier
+
+    // Calculate the monthly_score only if maxTaskSum is greater than 0
+    if (maxTaskSum > 0) {
+        var monthlyScore = averageRating * (taskSum / maxTaskSum);
+        // Round to 3 decimal places
+        monthlyScore = parseFloat(monthlyScore.toFixed(3));
+        technicianProfileGr.monthly_score = monthlyScore;
+    } else {
+        technicianProfileGr.monthly_score = 0; // No tasks completed by anyone
+    }
+
+    // Update the Technician Profile
+    technicianProfileGr.update();
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 22:55:52</sys_created_on>
+        <sys_id>878380ca83321610cccd5d10feaad34e</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Update Technician Tasks Per Month</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sysauto_script_878380ca83321610cccd5d10feaad34e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-05 12:56:03</sys_updated_on>
+        <time_zone>Africa/Cairo</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>878380ca83321610cccd5d10feaad34e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 22:55:52</sys_created_on>
+        <sys_id>71c3004e83321610cccd5d10feaad368</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-31 22:55:52</sys_updated_on>
+        <table>sysauto_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

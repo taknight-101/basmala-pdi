@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <bundles>[
+    {
+        "definitionId": "69785d8f4725211030576848946d43e3",
+        "instanceId": "recordlist_1",
+        "useByReference": false
+    }
+]</bundles>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[
+    {
+        "bundleLink": {
+            "bundleInstanceId": "recordlist_1",
+            "elementType": "member"
+        },
+        "conditionals": null,
+        "definition": {
+            "id": "61c315e9ccb8970546c30f3e2da41a32",
+            "type": "MACROPONENT_VIEWPORT"
+        },
+        "elementId": "list_viewport_modal",
+        "elementLabel": "List Viewport Modal",
+        "eventMappings": [],
+        "extensionPoints": [
+            {
+                "controllerElementId": "list_controller",
+                "name": "List page modals",
+                "sysId": "33d76156b7312110a2cb18075e11a9d8"
+            }
+        ],
+        "isHidden": null,
+        "overrides": null,
+        "preset": {
+            "controllerElementId": "list_controller",
+            "disabledEventTargetIds": [],
+            "id": "431df4d94fc3e404af2a7a1604dd08d6"
+        },
+        "propertyValues": {
+            "disableDismiss": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "size": {
+                "type": "JSON_LITERAL",
+                "value": "md"
+            }
+        },
+        "slot": null,
+        "styles": null
+    }
+]</composition>
+        <da_relay_models/>
+        <data>[
+    {
+        "definition": {
+            "id": "327c31f0ccdc6110f877401c3a727a7b",
+            "type": "GRAPHQL"
+        },
+        "elementId": "record_list_data_fetch_1",
+        "elementLabel": "Record List Data Fetch 1",
+        "eventMappings": [],
+        "inputValues": {
+            "actionConfigId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "allowSharing": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "columnLimit": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "columns": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "configurationId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "enableLiveList": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "fixedQuery": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "highlightedValueConfigId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "ignoreColumnPreferences": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "ignoreTotalRecordCount": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "isDeclarativeActionsRequired": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "limit": {
+                "type": "JSON_LITERAL",
+                "value": 10
+            },
+            "listId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "listInstanceId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "menuLoaded": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "offset": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "pageId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "parentRecordSysId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "parentTable": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "query": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "recordCountLimit": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "relatedListName": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "runHighlightedValuesQuery": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "source": {
+                "type": "JSON_LITERAL",
+                "value": "list"
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "x_1522458_automo_0_task"
+            },
+            "tiny": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "view": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    },
+    {
+        "bundleLinks": [
+            {
+                "bundleInstanceId": "recordlist_1",
+                "elementType": "controller"
+            }
+        ],
+        "def": {
+            "sysId": "5865e308432021105571609dc7b8f23b",
+            "type": "CONTROLLER"
+        },
+        "definition": {
+            "id": "5865e308432021105571609dc7b8f23b",
+            "type": "CONTROLLER"
+        },
+        "dependencies": {},
+        "elementId": "list_controller",
+        "elementLabel": "List Controller",
+        "eventMappings": [
+            {
+                "eventMappingId": "clkubblwubaaccgffddbhhplggtlhhiiay",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_now_list_common.LIST_CTRL#ADD_NOTIFICATIONS_REQUESTED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_now_list_common.LIST_CTRL#ADD_NOTIFICATIONS_REQUESTED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "bundleLinks": [
+                            {
+                                "bundleInstanceId": "recordlist_1",
+                                "elementType": "eventMappingTarget"
+                            }
+                        ],
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf_page.NOW_UXF_PAGE#ADD_NOTIFICATIONS",
+                            "payload": {
+                                "container": {
+                                    "items": {
+                                        "binding": {
+                                            "address": [
+                                                "items"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            },
+                            "sysId": null
+                        },
+                        "operation": null,
+                        "targetId": "clkubblwucaaccgggddbhhpvtfmthffdd",
+                        "type": "EVENT"
+                    }
+                ]
+            },
+            {
+                "eventMappingId": "clkwayluyaacchzddbhhqwnbbmqowii",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_now_list_common.LIST_CTRL#CLEAR_NOTIFICATIONS_REQUESTED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_now_list_common.LIST_CTRL#CLEAR_NOTIFICATIONS_REQUESTED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "bundleLinks": [
+                            {
+                                "bundleInstanceId": "recordlist_1",
+                                "elementType": "eventMappingTarget"
+                            }
+                        ],
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf_page.NOW_UXF_PAGE#CLEAR_NOTIFICATIONS",
+                            "payload": {}
+                        },
+                        "operation": null,
+                        "targetId": "clkwayluyaacciaaddbhhqggntpcgpbb",
+                        "type": "EVENT"
+                    }
+                ]
+            },
+            {
+                "eventMappingId": "clmtghpyffaabbcjjddbhhvbbqzjjoywp",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_now_list_common.LIST_CTRL#REFERENCE_LINK_CLICKED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_now_list_common.LIST_CTRL#REFERENCE_LINK_CLICKED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "bundleLinks": [
+                            {
+                                "bundleInstanceId": "recordlist_1",
+                                "elementType": "eventMappingTarget"
+                            }
+                        ],
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": {
+                            "dataBrokerId": "5865e308432021105571609dc7b8f23b",
+                            "operationName": "LIST_CTRL#NAV_ITEM_SELECTED",
+                            "parentResourceId": "list_controller",
+                            "payload": {
+                                "container": {
+                                    "nativeEvent": {
+                                        "binding": {
+                                            "address": [
+                                                "nativeEvent"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "route": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "record"
+                                    },
+                                    "row": {
+                                        "binding": {
+                                            "address": [
+                                                "row"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "sys_id": {
+                                        "binding": {
+                                            "address": [
+                                                "sys_id"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "table": {
+                                        "binding": {
+                                            "address": [
+                                                "table"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            }
+                        },
+                        "targetId": "clmtghpyggaabbcaddbhhvmkgiijjjjddl",
+                        "type": "DATABROKER_OP"
+                    }
+                ]
+            },
+            {
+                "eventMappingId": "clnbbnjjoffiiaaccnpddbhhsffirbbcmbbf",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_now_list_common.LIST_CTRL#CREATE_NEW_RECORD",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_now_list_common.LIST_CTRL#CREATE_NEW_RECORD",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "bundleLinks": [
+                            {
+                                "bundleInstanceId": "recordlist_1",
+                                "elementType": "eventMappingTarget"
+                            }
+                        ],
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": {
+                            "dataBrokerId": "5865e308432021105571609dc7b8f23b",
+                            "operationName": "LIST_CTRL#NAV_ITEM_SELECTED",
+                            "parentResourceId": "list_controller",
+                            "payload": {
+                                "container": {
+                                    "external": {
+                                        "binding": {
+                                            "address": [
+                                                "external"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "fields": {
+                                        "binding": {
+                                            "address": [
+                                                "fields"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "multiInstField": "sysId",
+                                    "params": {
+                                        "binding": {
+                                            "address": [
+                                                "params"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "passiveNavigation": {
+                                        "binding": {
+                                            "address": [
+                                                "passiveNavigation"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "redirect": {
+                                        "binding": {
+                                            "address": [
+                                                "redirect"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "route": {
+                                        "binding": {
+                                            "address": [
+                                                "route"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    },
+                                    "title": {
+                                        "binding": {
+                                            "address": [
+                                                "title"
+                                            ]
+                                        },
+                                        "type": "EVENT_PAYLOAD_BINDING"
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            }
+                        },
+                        "targetId": "clnbbnjjoffiiaaccnqddbhhscehheaddve",
+                        "type": "DATABROKER_OP"
+                    }
+                ]
+            }
+        ],
+        "inputValues": {
+            "actionConfigId": {
+                "binding": {
+                    "address": [
+                        "actionConfigId"
+                    ],
+                    "category": "app"
+                },
+                "type": "CONTEXT_BINDING"
+            },
+            "allRecordsSelected": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "columnFilteringPopoverDisplay": {
+                "type": "JSON_LITERAL",
+                "value": "allowBoth"
+            },
+            "columnLimit": {
+                "type": "JSON_LITERAL",
+                "value": 5
+            },
+            "columnPreferenceKey": {
+                "type": "JSON_LITERAL"
+            },
+            "columns": {
+                "type": "JSON_LITERAL",
+                "value": "number,assined_to,state,insoection,short_description"
+            },
+            "currentPage": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "enableCellFiltering": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableColumnSorting": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableDeclarativeActions": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableDotWalk": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableLiveList": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "enableQuickEdit": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "enableReferenceLinks": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "fetchHighlightedValues": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "filter": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "fixedFilter": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "groupBy": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "highlightedValueConfigId": {
+                "binding": {
+                    "address": [
+                        "highlightedValueConfigId"
+                    ],
+                    "category": "app"
+                },
+                "type": "CONTEXT_BINDING"
+            },
+            "listId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "listMenuConfigurationId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "listTitle": {
+                "type": "JSON_LITERAL",
+                "value": "MY Department Tasks"
+            },
+            "listType": {
+                "type": "JSON_LITERAL",
+                "value": "simple"
+            },
+            "onlyEnableSelectionWhenRequiredByActions": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "parentRecordSysId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "parentTable": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "relatedListName": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "rowLimit": {
+                "type": "JSON_LITERAL"
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "x_1522458_automo_0_task"
+            },
+            "transformScriptArgs": {
+                "type": "JSON_LITERAL"
+            },
+            "transformScriptSysId": {
+                "type": "JSON_LITERAL"
+            },
+            "view": {
+                "type": "JSON_LITERAL"
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "1d9f8db04340311017b739603ab8f259",
+            "type": "CONTROLLER"
+        },
+        "dependencies": {},
+        "elementId": "data_manager_policy_form_1",
+        "elementLabel": "Data Manager Policy Form 1",
+        "eventMappings": [],
+        "inputValues": {
+            "policySysId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "ts": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "5199a2ac1bdc2110c4776287b04bcbc9",
+            "type": "CLIENT_STATE"
+        },
+        "elementId": "record_list_csdb_1",
+        "elementLabel": "Record List CSDB 1",
+        "eventMappings": [],
+        "inputValues": {
+            "actionConfigId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "allRecordsSelected": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "columnLimit": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "columnPreferenceKey": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "columns": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "currentPage": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "enableViewAllLink": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "exceptedRecords": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "featureFlags": {
+                "type": "JSON_LITERAL",
+                "value": {
+                    "enableCellFiltering": true,
+                    "enableColumnFiltering": true,
+                    "enableColumnGrouping": true,
+                    "enableColumnResizing": true,
+                    "enableColumnSorting": true,
+                    "enableDeclarativeActions": true,
+                    "enableEmptyStateImage": true,
+                    "enableHighlightContent": false,
+                    "enableLinks": true,
+                    "enableQuickEdit": true,
+                    "enableReferenceLinks": true,
+                    "enableRowDragDrop": false,
+                    "enableRowSelector": true,
+                    "enableSelectAll": true,
+                    "enableTitleWrap": false,
+                    "fetchHighlightedValues": false,
+                    "highlightContent": {},
+                    "maxCharacters": 4000,
+                    "onlyEnableSelectionWhenRequiredByActions": true,
+                    "showColumnPersonalization": true,
+                    "showFilterButton": true,
+                    "showFirstPage": true,
+                    "showHeader": true,
+                    "showLastPage": true,
+                    "showNextPage": true,
+                    "showPages": true,
+                    "showPagination": true,
+                    "showPreviousPage": true,
+                    "showRange": true,
+                    "showRecordCountBadge": true,
+                    "showRefreshButton": true,
+                    "showRowCount": true,
+                    "showRowsPerPageSelector": true,
+                    "showSubtitle": true,
+                    "showTitle": true,
+                    "wrapCellContent": "useLineBreaksUserPref"
+                }
+            },
+            "fixedQuery": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "highlightedValueConfigId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "listId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "listMenuConfigurationId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "listTitle": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "listType": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "parentRecordSysId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "parentTable": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "query": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "recordCountLimit": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "relatedListName": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "rowLimit": {
+                "type": "JSON_LITERAL",
+                "value": 10
+            },
+            "rowLimitOptions": {
+                "type": "JSON_LITERAL",
+                "value": "[10,20,50,100]"
+            },
+            "runHighlightedValuesQuery": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "selectedRecords": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "source": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "x_1522458_automo_0_task"
+            },
+            "tinyId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "transformScriptArgs": {
+                "type": "JSON_LITERAL",
+                "value": {}
+            },
+            "transformScriptSysId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "view": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    }
+]</data>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <dispatched_events/>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
+        <form_factors>{}</form_factors>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{}</internal_event_mappings>
+        <layout>{
+    "default": {
+        "children": null,
+        "items": [],
+        "root": null,
+        "rules": null,
+        "styles": {
+            "flex-direction": "column"
+        },
+        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+        "type": "flex"
+    },
+    "version": "3.0.0"
+}</layout>
+        <macroponent_dependencies/>
+        <name>Default</name>
+        <output_prop_mapping/>
+        <props>[
+    {
+        "defaultValue": "",
+        "description": null,
+        "disabled": false,
+        "fieldType": "string",
+        "label": "taskTable",
+        "mandatory": false,
+        "name": "taskTable",
+        "readOnly": true,
+        "selectable": false,
+        "typeMetadata": null,
+        "valueType": "string"
+    }
+]</props>
+        <required_translations>[ ]</required_translations>
+        <root_component/>
+        <root_component_config/>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_persistence_config/>
+        <state_properties/>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 13:30:59</sys_created_on>
+        <sys_id>b4a278c983ee5210cccd5d10feaad355</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_macroponent_b4a278c983ee5210cccd5d10feaad355</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 08:58:25</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=b4a278c983ee5210cccd5d10feaad355"/>
+</record_update>

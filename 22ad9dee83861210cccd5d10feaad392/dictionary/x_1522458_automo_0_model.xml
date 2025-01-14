@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="52b3212a83c61210cccd5d10feaad366" label="Model" max_length="40" name="x_1522458_automo_0_model" type="collection">
+        <element label="Model ID" mandatory="true" max_length="40" name="model_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element display="true" label="Commercial Name" mandatory="true" max_length="40" name="commercial_name" type="string"/>
+    </element>
+</database>

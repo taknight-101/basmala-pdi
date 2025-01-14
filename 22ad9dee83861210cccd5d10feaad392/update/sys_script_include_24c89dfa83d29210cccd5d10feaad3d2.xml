@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1522458_automo_0.SendUIActionUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Update service request Record when the send is clicked&#13;
+state == waiting approval&#13;
+call from "send" UI action</description>
+        <mobile_callable>false</mobile_callable>
+        <name>SendUIActionUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var SendUIActionUtils = Class.create();
+SendUIActionUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	updateRequestRecord: function(){
+
+		var RequestID = this.getParameter('sysparm_request_id');
+
+		// var grRequest = new GlideRecordSecure("x_1522458_automo_0_service_request");
+		// grRequest.addEncodedQuery("sys_id="+RequestID);
+		// grRequest.query();
+
+		// while (grRequest.next()){
+			
+		// 	grRequest.description ='descriptionnnnnnn';
+		// 	grRequest.update();
+		// }
+
+		gs.addInfoMessage(RequestID);
+	},
+
+    type: 'SendUIActionUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 16:43:04</sys_created_on>
+        <sys_id>24c89dfa83d29210cccd5d10feaad3d2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>SendUIActionUtils</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_include_24c89dfa83d29210cccd5d10feaad3d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 17:01:28</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>24c89dfa83d29210cccd5d10feaad3d2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 16:43:04</sys_created_on>
+        <sys_id>6e7b197e83d29210cccd5d10feaad307</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 16:43:04</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

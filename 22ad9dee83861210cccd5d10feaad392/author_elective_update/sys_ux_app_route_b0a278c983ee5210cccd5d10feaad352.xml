@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</app_config>
+        <description/>
+        <extension_point/>
+        <fields>taskTable</fields>
+        <icon/>
+        <name>Tasks</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>tasks</route_type>
+        <screen_type display_value="Tasks">3ca278c983ee5210cccd5d10feaad34e</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 13:30:59</sys_created_on>
+        <sys_id>b0a278c983ee5210cccd5d10feaad352</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tasks</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_app_route_b0a278c983ee5210cccd5d10feaad352</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 13:30:59</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=b0a278c983ee5210cccd5d10feaad352"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ux_app_route_b0a278c983ee5210cccd5d10feaad352</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</app_config><description/><extension_point/><fields>taskTable</fields><icon/><name>Tasks</name><optional_parameters/><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>tasks</route_type><screen_type display_value="Tasks">3ca278c983ee5210cccd5d10feaad34e</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-16 13:30:59</sys_created_on><sys_id>b0a278c983ee5210cccd5d10feaad352</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Tasks</sys_name><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ux_app_route_b0a278c983ee5210cccd5d10feaad352</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-16 13:30:59</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=b0a278c983ee5210cccd5d10feaad352"/></record_update>]]></payload>
+        <payload_hash>1674100483</payload_hash>
+        <record_name>Tasks</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 13:30:59</sys_created_on>
+        <sys_id>fca278c983ee5210cccd5d10feaad354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193cfaa36f40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 13:30:59</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>b0a278c91cee5210889b673fa4893254</update_guid>
+        <update_guid_history>b0a278c91cee5210889b673fa4893254:1674100483</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-18 07:34:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>0854e53991554ec89b75fbdc46aa6640</sys_id>
+        <sys_metadata>b0a278c983ee5210cccd5d10feaad352</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tasks</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_b0a278c983ee5210cccd5d10feaad352</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_b0a278c983ee5210cccd5d10feaad352">fca278c983ee5210cccd5d10feaad354</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-18 07:34:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

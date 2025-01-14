@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="bd99d3a083a61210cccd5d10feaad39d" sys_domain="global" table="x_1522458_automo_0_task" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-15 12:23:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7999d3a083a61210cccd5d10feaad3a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1522458_automo_0_task" name="x_1522458_automo_0_task" sys_domain="global" view="8dc6b93c835ad210cccd5d10feaad378">bd99d3a083a61210cccd5d10feaad39d</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_task" sys_domain="global" view="8dc6b93c835ad210cccd5d10feaad378">7d99d3a083a61210cccd5d10feaad39a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-15 12:23:26</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-15 12:23:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f599d3a083a61210cccd5d10feaad3a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1522458_automo_0_task" name="x_1522458_automo_0_task" sys_domain="global" view="8dc6b93c835ad210cccd5d10feaad378">bd99d3a083a61210cccd5d10feaad39d</sys_ui_form>
+            <sys_ui_section caption="Inspection Report" display_value="Inspection Report" name="x_1522458_automo_0_task" sys_domain="global" view="8dc6b93c835ad210cccd5d10feaad378">f999d3a083a61210cccd5d10feaad39c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-15 12:23:26</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 10:50:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>691490a583ba5210cccd5d10feaad30e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1522458_automo_0_task" name="x_1522458_automo_0_task" sys_domain="global" view="8dc6b93c835ad210cccd5d10feaad378">bd99d3a083a61210cccd5d10feaad39d</sys_ui_form>
+            <sys_ui_section caption="Additionl Info" display_value="Additionl Info" name="x_1522458_automo_0_task" sys_domain="global" view="8dc6b93c835ad210cccd5d10feaad378">ed1450a583ba5210cccd5d10feaad39b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 10:50:09</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1522458_automo_0_task</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-15 12:23:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bd99d3a083a61210cccd5d10feaad39d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_task</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_form_sections_bd99d3a083a61210cccd5d10feaad39d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-15 12:23:26</sys_updated_on>
+            <sys_user/>
+            <view display_value="Technician View" name="Technician_View">8dc6b93c835ad210cccd5d10feaad378</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

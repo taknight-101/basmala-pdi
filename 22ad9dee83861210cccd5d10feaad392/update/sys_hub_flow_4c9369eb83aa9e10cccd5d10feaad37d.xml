@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,timeFromCreateToActivate=399000,viewActivatedIn=diagramming</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description>Accept or Reject an offer based on the action in offer action table</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>accept_or_reject_an_offer</internal_name>
+        <label_cache>[{"name":"Created_1.current.offer","label":"Trigger - Record Created➛Offer Actions [Nour] Record➛Offer","reference":"x_1522458_automo_0_offer","reference_display":"Offer","type":"reference","base_type":"reference","parent_table_name":"x_1522458_automo_0_offer_actions_nour","column_name":"offer","usedInstances":{"358f6a4b-54c6-4c1e-8b2d-5e2a016ef057":["record"],"3e2393b9-9b48-4ad1-a6de-e42133ff2cac":["record"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Offer Actions [Nour] Record","reference":"x_1522458_automo_0_offer_actions_nour","reference_display":"Offer Actions [Nour]","type":"reference","base_type":"reference","usedInstances":{"358f6a4b-54c6-4c1e-8b2d-5e2a016ef057":["record"]},"attributes":{}},{"name":"Created_1.current.action","label":"Trigger - Record Created➛Offer Actions [Nour] Record➛Action","reference":"","reference_display":"Action","type":"boolean","base_type":"boolean","parent_table_name":"x_1522458_automo_0_offer_actions_nour","column_name":"action","usedInstances":{"93a8085e-ea5e-4d8d-9ec5-aa4b4d52341c":["condition"],"9c86e36b-3a2e-48f5-9a17-e6ef8a555107":["condition"]}}]</label_cache>
+        <master_snapshot>7d156d6f83aa9e10cccd5d10feaad354</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Accept or Reject an offer</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>71156d6f83aa9e10cccd5d10feaad387</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:29:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4c9369eb83aa9e10cccd5d10feaad37d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Accept or Reject an offer</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_hub_flow_4c9369eb83aa9e10cccd5d10feaad37d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 13:42:21</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1522458_automo_0_offer_actions_nour">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>71156d6f83aa9e10cccd5d10feaad387</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <table>x_1522458_automo_0_offer_actions_nour</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>4c9369eb83aa9e10cccd5d10feaad37d</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>3d156d6f83aa9e10cccd5d10feaad387</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 13:42:21</sys_updated_on>
+        <trigger display_value="">71156d6f83aa9e10cccd5d10feaad387</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=4c9369eb83aa9e10cccd5d10feaad37d^sys_idNOT IN3d156d6f83aa9e10cccd5d10feaad387"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4c9369eb83aa9e10cccd5d10feaad37d^sys_idNOT INc89369eb83aa9e10cccd5d10feaad37e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4c9369eb83aa9e10cccd5d10feaad37d</id>
+        <name>Accept or Reject an offer</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:29:33</sys_created_on>
+        <sys_id>c89369eb83aa9e10cccd5d10feaad37e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:29:33</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c89369eb83aa9e10cccd5d10feaad37e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4c9369eb83aa9e10cccd5d10feaad37d^sys_idNOT IN0184ad2f83aa9e10cccd5d10feaad3a2,4584ad2f83aa9e10cccd5d10feaad3a6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Accept or Reject an offer">4c9369eb83aa9e10cccd5d10feaad37d</model>
+        <model_id>4c9369eb83aa9e10cccd5d10feaad37d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4c9369eb83aa9e10cccd5d10feaad37d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:42</sys_created_on>
+        <sys_id>0184ad2f83aa9e10cccd5d10feaad3a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:33:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0184ad2f83aa9e10cccd5d10feaad3a2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Accept or Reject an offer">4c9369eb83aa9e10cccd5d10feaad37d</model>
+        <model_id>4c9369eb83aa9e10cccd5d10feaad37d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4c9369eb83aa9e10cccd5d10feaad37d</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:42</sys_created_on>
+        <sys_id>4584ad2f83aa9e10cccd5d10feaad3a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:33:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4584ad2f83aa9e10cccd5d10feaad3a6"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=4c9369eb83aa9e10cccd5d10feaad37d^sys_idNOT IN0184ad2f83aa9e10cccd5d10feaad3d3"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">4c9369eb83aa9e10cccd5d10feaad37d</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:42</sys_created_on>
+        <sys_id>0184ad2f83aa9e10cccd5d10feaad3d3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:12</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VZTW/jNhD9K4JOLZAC+rAtK7dtkkUDbJPWcdtDkBKUNLSF0pQrUUrcRf57h5Zky7KUyHbS2tnLAiap4bzHN2/I7P1XnVMPuH6uj6nHQT/TQyEhFpSPF3PAYamGiaAzNTejIqAyihf6uYxTONOjOIBYPzfP9IzyFO4WyXWAH+HS5RfF53oxjb+fiNm3rF5/SGgqo1lEDBIxBjGhvgwjkRARpTGuD8Jkzuni9+KzW7VG+5Sv0e5vcNEDrprTGLeRKoWvuj8NeRCD0M/vHxCGysNnPnUtMHzbtC3LMKxhz/QGtmdagU3BMDBEHX4tb9nAwho0PEkQAeBWjPIEGgiKgQa3gi9WK6bIb87QjD4l4T8YfWiodQgQhA/5nD+NQh9u5wpvPpInlE9GPJ2JmzxRxRUwmnJZcoUjaQIkgLnKTe1WbM3uptHjqNzocyiWMIpJHvmUr35RKePQSyUkilkWcuSY5CQkyP0yzdHVxe3okvzxaXzx09WIjK7uxqPri/HVpf68xEP+TlXEPMMiF5LDeV4d8OcQuDopkc48UAef+HE4l+qkMyjSeT5bqzROBcYgK+K39Jozt6LwS5ggAfeIoaRnGRLn2Zci5CgVWoRHhP9ofhojOVIrj59dz+ikIJX9UqptSUohlIzGhMxIskjINPUI0jaZIFehmKeSOO7QNQe0RX+Ov0HNskQw9L2uPzyr0wIOvqyIi/2WVH/9HCZJKCYVklYYlfa2Ia7QoUi1ksEcanJaWB82Kq1YVJalYbS60bZ6spoqar7TwWNMkzEPmGU4CrVp2B4zDcfoUxbYhuFbFY/Z3r41L1lTcxXcS65TjHSxnV6b7STLguEdyqPOXplltWI7aS/bFG4Rx1IHXbjbxRGmVnNpeyebXikuH77cFN5L0N7Y3WmQUfwiKDF2ce8OLv04BUESkFLV7e42LbAelt/QfJOKmylha4ogFsXaTSR+uF6v0+4AnQLzPCk/q3p3F9AYLNY+FGovktN6x1JIf8TxDaSqSFvO/BtqYrXiyjZZ3KOJQW/Yd5ntO4gZ2xbrgUfNntWnrjOwmVtrYrXt2xM7njbW0TSyVvtpaiBdizJrrO1VK6m1pH10X1NAEdp+pYF+u6Qc1LrLMmvt3PskexpdnfHoETWwR0P3qP/XJI5SEWz5PMbUQqGtV2jfFdx+f1qWXu1oqAF4Ge/mitNBeUjjWuunLE4qFnu1LJuZngs9MPC5ZWPL8vqu6/nUYswZOGCZtZa13rgxm+NpVB0qImsqqbYHTqPasiaR7vDq+v8TPMjAC801+nc+d/xufBGJIJR5K617cTmV6HuWql8JXh7Fn1e/bhdqPvharQ4GlAbQ5k4eq9RqFVZDMrIB4bvUqvHef5TN/z68t6JmUQD8ch1O3+gHipZHKmRCZERoEJAKYR0lmGPb4a2P+OKDHvxqYyARq/bLy0jDCQ030UKmFRgh0LyFJqeAnsHRPXBDTe1+Yg/A6m1hG/nqGv2hceduu/Xsx+ElstMCdvCLvlZCh16RIHBov287za96t35FakrhlQyP59q0s1FkTb7z4nt2t7j1mI0v2orONw+74wP+A6N+twteQxbHf9vbLECuuudWi53wMIBy7g2MqIiUrQ1ndwtiQ9fvm06LBQ37rRZUbP5SYrIB9n9yF1SdplDOcf1H/VsJ7+FfJT7A9BgiAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4c9369eb83aa9e10cccd5d10feaad37d^sys_idNOT IN0984ad2f83aa9e10cccd5d10feaad3e5,8184ad2f83aa9e10cccd5d10feaad3e3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">4c9369eb83aa9e10cccd5d10feaad37d</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>9c86e36b-3a2e-48f5-9a17-e6ef8a555107</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:43</sys_created_on>
+        <sys_id>0984ad2f83aa9e10cccd5d10feaad3e5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>customer.example</sys_updated_by>
+        <sys_updated_on>2024-12-24 13:40:07</sys_updated_on>
+        <ui_id>3e2393b9-9b48-4ad1-a6de-e42133ff2cac</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K5WfoyjhS5S3CYQ0qSsSnXjpqsixb8CTE2e2Q2GI/77rxAEEXUelvqDx5vvlcw/nxM87IjgZkR7wKL6PB6wbd7udKOoMe3E66KZxh3cpQEwCUtAcsFIDU5rjeU1l5QK73VgDtcCTOGSV1lDYUGUZ6P0eq7gwpaTbhS/GCFsJybGKjJ5fAlJSjXMtaDLanaWuBSZpChJL5y2yc6R2W7ozV6zKEV0i2uCD75z4zN3XCWawycGJo4DAxkLBAYFkVBoISE4LTq3SWzKyusIArs5nhdweKlaisM2iOd0Y8Rtv7kWuDhmBgnkSDsfvNJUwaUhqUtmEWvqE05mt9IEzJRiYhhcOGa2kHZ/GmoJZaYUqmhbrBvtuJau8eGxYIYcBJ/9JZSDhULpdHfpmtexppV7nLdCpKGpa/JpSMSoPJ2qtFmllHZwdAQk1zzktS1Esk1KrtaibEUoeLiUewkyqV7zTiGURUuZwh8gsDacYn9ThBdXCLfENx2DzPiBma8aSGnNcBXlMflUOSbOYXyGpWagpSGo1uGamRWm/4FVr8MD3gZd/2n9PZez+KKqTmUcLbJK43+n0+sOEVlblKomS2gGX+p/58MdMcAW81gS1nv4C1/vgIvZw2nv32CS8C/qf5oLhrbnAr3LzNviX+KPOu5/YEzXVejcnwjcWP/w/qijq8jn8BIavwKXm3y76mAOuwNg6YCpAcvMG6Fb+kCM6C0mzxJkFfPJu4ZOHx+DTfBAPovp3Y274b96Elz+mHa3HFAkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">4c9369eb83aa9e10cccd5d10feaad37d</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>93a8085e-ea5e-4d8d-9ec5-aa4b4d52341c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:42</sys_created_on>
+        <sys_id>8184ad2f83aa9e10cccd5d10feaad3e3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>customer.example</sys_updated_by>
+        <sys_updated_on>2024-12-24 13:40:07</sys_updated_on>
+        <ui_id>358f6a4b-54c6-4c1e-8b2d-5e2a016ef057</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPKErChyhvFQhpUlekduKlqyJj34AlJ85sh8IQ/33XiQkRdB2V+oLGm++Xzz2cE7/sieBkTPrAw+guGrJe1OvFYRiP+tFy2FtGMe9RgIh0SU4zwEoNTGmO5w2VpQvs9xMN1AJPooCVWkNuA5WmoA8HrOLCFJLuFr4YI2wtJMcqMn557ZKCapxrQZPx/ix1LTBJlyCx9OmI7Byp3RXuzBUrM0SXiGPwwXdOfabzbYoZbHJworBLYGsh54BAUioNdElGc06t0jsytrrEAK7O57ncNRVrkdt60YxujfiNN/dDV4eMQM48Cc3xB11KmNYk1al0Si19xunMlrrhTAkGpuaFQ0pLaSftWF0wL6xQed1i3WDfrWSZ5Y81K6QZ0PpPSgMJh8Lt6tDXq6XPa/X2dAQ6E3lFi19TKkZlc6LWarEsrYOzJyCh4jmjRSHyVVJotRFVM0LJgpXEQ5BK9YZ3GrHKA8oc7gCZpcEM49MqvKBauCW+4xhsPnSJ2ZmJpMacVkEek1+lQ1Iv5ldIKhYqCpJKDa6ZaVHYe7xqAx74oevlvxx8pDJ2dxJVa+bJAtskGsRxfzBKaGlVppIwqRxwqf+5D3/OBFfAO5qg0tNf4HofXMQe2r2dxzrhXTD4MheMbs0FfpWbt8G/xB/GH35iW2qq9G5awjcWP/w/yzDs8XvGoMBX4FLz7xd9zgFXYDw6YCZAcvMO6KP8IUN0FpJ6iTML+GRn4ZPNY/BlPoiGYfW7MTf8N2/C6x/HpTHvFAkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4c9369eb83aa9e10cccd5d10feaad37d^sys_idNOT IN0984ad2f83aa9e10cccd5d10feaad3e1,0d84ad2f83aa9e10cccd5d10feaad3e4"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c984ad2f83aa9e10cccd5d10feaad3e0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">4c9369eb83aa9e10cccd5d10feaad37d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:42</sys_created_on>
+        <sys_id>0984ad2f83aa9e10cccd5d10feaad3e1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:12</sys_updated_on>
+        <ui_id>93a8085e-ea5e-4d8d-9ec5-aa4b4d52341c</ui_id>
+        <values>H4sIAAAAAAAA/+VUXWvbMBT9K0HPxvijDmveSkdhsK2wlr5sxVxL14mYLHmSnDQL+e+7suy2bCktY297Cda5V/ecc3XIgZnB94N3t+bCObnWbPX1PmFSB4y+D0xDh2zFuNFCeml0PQIJ24IaQgF4QBffhiwrRfxdeDuEFiFdr2B/93on30glLE7sPVji8GjZ6vBbye97rBU0qGjgjbdSr+m6FHRqM2jzc57zsliWRZYV787yZlk2eSFKQCipb754OZtZfByR5EWXgY9wNzMZK4KsPEsYPnjUAom6BeUwYR1oAd7Y/SNiEcS1Vk/ARmpP41hofnDyJ80uqio0tkgeOcYi3xjJ8boPSiLioVFz0aih05+j4LBlbGFQft4yIYPDWmAf1AW6ibu92Zjdl5noSurRyVRUhoN6PIEnv83g0YUXQIUdDao76HvaQt1bs5XjZdLSpWtFh7RVZkekIUJpfOiUlgHpFeHvR/gOrAwuPtEYuhxlNuAkr8e40bgxDcdxHfWPIQiKBicrddwGNThuZe8viGeLk+pj8mdWn8X0cLik1/Ao6jzlg6Ud+Enn8RizeDq0b773LyJ8DlVb5Vl1OsJny1MRPhHel3NbvJLb4OWNsc2y7D/NrXR1zN/kbST/69jeh4xGBhcDIpBLR0JuA/Zh/icOhT29tOTPoZ2x34OFJ+z4C0PTUj3TBQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0584ad2f83aa9e10cccd5d10feaad3e4</block>
+        <comment/>
+        <connected_to>93a8085e-ea5e-4d8d-9ec5-aa4b4d52341c</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">4c9369eb83aa9e10cccd5d10feaad37d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:42</sys_created_on>
+        <sys_id>0d84ad2f83aa9e10cccd5d10feaad3e4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:12</sys_updated_on>
+        <ui_id>9c86e36b-3a2e-48f5-9a17-e6ef8a555107</ui_id>
+        <values>H4sIAAAAAAAA/+VUTWvcMBD9K4vOxvijCe3eQkqg0DbQhFzaYGRpvCsqS64k72Zr/N87Y9lJSLN06aGXXhbrzcebN/PYgdk+dH3wt/bCe7UxbP31PmHKEIbfAzO8BbZmwhqpgrKmmoCE7bjuKcAFoatvfZaVMv6uGq495UjlO80Pdyekiq3S0sHM33GHLAEcWw8vQuHQQaV5DRo73gSnzAbLlcRXk/EmfydyURbnZZFlxds3eX1e1nkhSw68wLyl8HKRs/o4IclRncSHuF+YrJM0Vp4lDB4CGAlIPalIWMuN5MG6wyPigMtro5+ArTIB2zFKfvDqJ/Yuzs4osQHUKCAGxdYqAdcdTRKRwGu9BK3uW/M5Dkxrhob3OixrRqT3UEnoaDqim7mbm63df1mIrpSZlMxBbQXXjy8eUG/dB/B0AdDQYqOq5V2HW6g6Z3dqKsZZ2nSj8ZE22u6RlEyUxkunuAyeXiH+foLvuFOk4hO2weI4Zs29EtVkOGwXHEoYp3VUP3oaKAqcpVRxG5jghVNduECeHcxTj8nvbn1m1GG4xGsEkFWeit7hDsI85zhGMx6x7emF/8DE+WsmfsW+x51b/MG5dIITjZtl2X/qXOWr6MBZW3TA3xr3nlwaGXw0iAShPA5yS9iH5d+YAge8tBLPob1130nCEzb+AgOzxCLXBQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_4c9369eb83aa9e10cccd5d10feaad37d^sys_idNOT IN4584ad2f83aa9e10cccd5d10feaad3a5,4984ad2f83aa9e10cccd5d10feaad3a8"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4c9369eb83aa9e10cccd5d10feaad37d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:42</sys_created_on>
+        <sys_id>4584ad2f83aa9e10cccd5d10feaad3a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:33:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4c9369eb83aa9e10cccd5d10feaad37d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:33:42</sys_created_on>
+        <sys_id>4984ad2f83aa9e10cccd5d10feaad3a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:33:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4c9369eb83aa9e10cccd5d10feaad37d"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=diagramming</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description>Accept or Reject an offer based on the action in offer action table</description>
+        <flow_priority/>
+        <internal_name>accept_or_reject_an_offer</internal_name>
+        <label_cache>[{"name":"Created_1.current.offer","label":"Trigger - Record Created➛Offer Actions [Nour] Record➛Offer","reference":"x_1522458_automo_0_offer","reference_display":"Offer","type":"reference","base_type":"reference","parent_table_name":"x_1522458_automo_0_offer_actions_nour","column_name":"offer","usedInstances":{"358f6a4b-54c6-4c1e-8b2d-5e2a016ef057":["record"],"3e2393b9-9b48-4ad1-a6de-e42133ff2cac":["record"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Offer Actions [Nour] Record","reference":"x_1522458_automo_0_offer_actions_nour","reference_display":"Offer Actions [Nour]","type":"reference","base_type":"reference","usedInstances":{"358f6a4b-54c6-4c1e-8b2d-5e2a016ef057":["record"]},"attributes":{}},{"name":"Created_1.current.action","label":"Trigger - Record Created➛Offer Actions [Nour] Record➛Action","reference":"","reference_display":"Action","type":"boolean","base_type":"boolean","parent_table_name":"x_1522458_automo_0_offer_actions_nour","column_name":"action","usedInstances":{"93a8085e-ea5e-4d8d-9ec5-aa4b4d52341c":["condition"],"9c86e36b-3a2e-48f5-9a17-e6ef8a555107":["condition"]}}]</label_cache>
+        <master>true</master>
+        <name>Accept or Reject an offer</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Accept or Reject an offer">4c9369eb83aa9e10cccd5d10feaad37d</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7d156d6f83aa9e10cccd5d10feaad354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:12</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7d156d6f83aa9e10cccd5d10feaad354^sys_idNOT IN39156d6f83aa9e10cccd5d10feaad355"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7d156d6f83aa9e10cccd5d10feaad354</id>
+        <name>Accept or Reject an offer</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:12</sys_created_on>
+        <sys_id>39156d6f83aa9e10cccd5d10feaad355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=39156d6f83aa9e10cccd5d10feaad355"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7d156d6f83aa9e10cccd5d10feaad354^sys_idNOT IN31156d6f83aa9e10cccd5d10feaad362,b9156d6f83aa9e10cccd5d10feaad356"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Accept or Reject an offer">7d156d6f83aa9e10cccd5d10feaad354</model>
+        <model_id>7d156d6f83aa9e10cccd5d10feaad354</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7d156d6f83aa9e10cccd5d10feaad354</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>31156d6f83aa9e10cccd5d10feaad362</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=31156d6f83aa9e10cccd5d10feaad362"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Accept or Reject an offer">7d156d6f83aa9e10cccd5d10feaad354</model>
+        <model_id>7d156d6f83aa9e10cccd5d10feaad354</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7d156d6f83aa9e10cccd5d10feaad354</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:12</sys_created_on>
+        <sys_id>b9156d6f83aa9e10cccd5d10feaad356</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b9156d6f83aa9e10cccd5d10feaad356"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=7d156d6f83aa9e10cccd5d10feaad354^sys_idNOT INf5156d6f83aa9e10cccd5d10feaad37d"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">7d156d6f83aa9e10cccd5d10feaad354</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>f5156d6f83aa9e10cccd5d10feaad37d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VZTW/jNhD9K4JOLZAC+rAtK7dtkkUDbJPWcdtDkBKUNLSF0pQrUUrcRf57h5Zky7KUyHbS2tnLAiap4bzHN2/I7P1XnVMPuH6uj6nHQT/TQyEhFpSPF3PAYamGiaAzNTejIqAyihf6uYxTONOjOIBYPzfP9IzyFO4WyXWAH+HS5RfF53oxjb+fiNm3rF5/SGgqo1lEDBIxBjGhvgwjkRARpTGuD8Jkzuni9+KzW7VG+5Sv0e5vcNEDrprTGLeRKoWvuj8NeRCD0M/vHxCGysNnPnUtMHzbtC3LMKxhz/QGtmdagU3BMDBEHX4tb9nAwho0PEkQAeBWjPIEGgiKgQa3gi9WK6bIb87QjD4l4T8YfWiodQgQhA/5nD+NQh9u5wpvPpInlE9GPJ2JmzxRxRUwmnJZcoUjaQIkgLnKTe1WbM3uptHjqNzocyiWMIpJHvmUr35RKePQSyUkilkWcuSY5CQkyP0yzdHVxe3okvzxaXzx09WIjK7uxqPri/HVpf68xEP+TlXEPMMiF5LDeV4d8OcQuDopkc48UAef+HE4l+qkMyjSeT5bqzROBcYgK+K39Jozt6LwS5ggAfeIoaRnGRLn2Zci5CgVWoRHhP9ofhojOVIrj59dz+ikIJX9UqptSUohlIzGhMxIskjINPUI0jaZIFehmKeSOO7QNQe0RX+Ov0HNskQw9L2uPzyr0wIOvqyIi/2WVH/9HCZJKCYVklYYlfa2Ia7QoUi1ksEcanJaWB82Kq1YVJalYbS60bZ6spoqar7TwWNMkzEPmGU4CrVp2B4zDcfoUxbYhuFbFY/Z3r41L1lTcxXcS65TjHSxnV6b7STLguEdyqPOXplltWI7aS/bFG4Rx1IHXbjbxRGmVnNpeyebXikuH77cFN5L0N7Y3WmQUfwiKDF2ce8OLv04BUESkFLV7e42LbAelt/QfJOKmylha4ogFsXaTSR+uF6v0+4AnQLzPCk/q3p3F9AYLNY+FGovktN6x1JIf8TxDaSqSFvO/BtqYrXiyjZZ3KOJQW/Yd5ntO4gZ2xbrgUfNntWnrjOwmVtrYrXt2xM7njbW0TSyVvtpaiBdizJrrO1VK6m1pH10X1NAEdp+pYF+u6Qc1LrLMmvt3PskexpdnfHoETWwR0P3qP/XJI5SEWz5PMbUQqGtV2jfFdx+f1qWXu1oqAF4Ge/mitNBeUjjWuunLE4qFnu1LJuZngs9MPC5ZWPL8vqu6/nUYswZOGCZtZa13rgxm+NpVB0qImsqqbYHTqPasiaR7vDq+v8TPMjAC801+nc+d/xufBGJIJR5K617cTmV6HuWql8JXh7Fn1e/bhdqPvharQ4GlAbQ5k4eq9RqFVZDMrIB4bvUqvHef5TN/z68t6JmUQD8ch1O3+gHipZHKmRCZERoEJAKYR0lmGPb4a2P+OKDHvxqYyARq/bLy0jDCQ030UKmFRgh0LyFJqeAnsHRPXBDTe1+Yg/A6m1hG/nqGv2hceduu/Xsx+ElstMCdvCLvlZCh16RIHBov287za96t35FakrhlQyP59q0s1FkTb7z4nt2t7j1mI0v2orONw+74wP+A6N+twteQxbHf9vbLECuuudWi53wMIBy7g2MqIiUrQ1ndwtiQ9fvm06LBQ37rRZUbP5SYrIB9n9yF1SdplDOcf1H/VsJ7+FfJT7A9BgiAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7d156d6f83aa9e10cccd5d10feaad354^sys_idNOT IN31156d6f83aa9e10cccd5d10feaad37d,39156d6f83aa9e10cccd5d10feaad37c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">7d156d6f83aa9e10cccd5d10feaad354</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>9c86e36b-3a2e-48f5-9a17-e6ef8a555107</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>31156d6f83aa9e10cccd5d10feaad37d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <ui_id>3e2393b9-9b48-4ad1-a6de-e42133ff2cac</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K5WfoyjhS5S3CYQ0qSsSnXjpqsixb8CTE2e2Q2GI/77rxAEEXUelvqDx5vvlcw/nxM87IjgZkR7wKL6PB6wbd7udKOoMe3E66KZxh3cpQEwCUtAcsFIDU5rjeU1l5QK73VgDtcCTOGSV1lDYUGUZ6P0eq7gwpaTbhS/GCFsJybGKjJ5fAlJSjXMtaDLanaWuBSZpChJL5y2yc6R2W7ozV6zKEV0i2uCD75z4zN3XCWawycGJo4DAxkLBAYFkVBoISE4LTq3SWzKyusIArs5nhdweKlaisM2iOd0Y8Rtv7kWuDhmBgnkSDsfvNJUwaUhqUtmEWvqE05mt9IEzJRiYhhcOGa2kHZ/GmoJZaYUqmhbrBvtuJau8eGxYIYcBJ/9JZSDhULpdHfpmtexppV7nLdCpKGpa/JpSMSoPJ2qtFmllHZwdAQk1zzktS1Esk1KrtaibEUoeLiUewkyqV7zTiGURUuZwh8gsDacYn9ThBdXCLfENx2DzPiBma8aSGnNcBXlMflUOSbOYXyGpWagpSGo1uGamRWm/4FVr8MD3gZd/2n9PZez+KKqTmUcLbJK43+n0+sOEVlblKomS2gGX+p/58MdMcAW81gS1nv4C1/vgIvZw2nv32CS8C/qf5oLhrbnAr3LzNviX+KPOu5/YEzXVejcnwjcWP/w/qijq8jn8BIavwKXm3y76mAOuwNg6YCpAcvMG6Fb+kCM6C0mzxJkFfPJu4ZOHx+DTfBAPovp3Y274b96Elz+mHa3HFAkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">7d156d6f83aa9e10cccd5d10feaad354</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>93a8085e-ea5e-4d8d-9ec5-aa4b4d52341c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>39156d6f83aa9e10cccd5d10feaad37c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <ui_id>358f6a4b-54c6-4c1e-8b2d-5e2a016ef057</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPKErChyhvFQhpUlekduKlqyJj34AlJ85sh8IQ/33XiQkRdB2V+oLGm++Xzz2cE7/sieBkTPrAw+guGrJe1OvFYRiP+tFy2FtGMe9RgIh0SU4zwEoNTGmO5w2VpQvs9xMN1AJPooCVWkNuA5WmoA8HrOLCFJLuFr4YI2wtJMcqMn557ZKCapxrQZPx/ix1LTBJlyCx9OmI7Byp3RXuzBUrM0SXiGPwwXdOfabzbYoZbHJworBLYGsh54BAUioNdElGc06t0jsytrrEAK7O57ncNRVrkdt60YxujfiNN/dDV4eMQM48Cc3xB11KmNYk1al0Si19xunMlrrhTAkGpuaFQ0pLaSftWF0wL6xQed1i3WDfrWSZ5Y81K6QZ0PpPSgMJh8Lt6tDXq6XPa/X2dAQ6E3lFi19TKkZlc6LWarEsrYOzJyCh4jmjRSHyVVJotRFVM0LJgpXEQ5BK9YZ3GrHKA8oc7gCZpcEM49MqvKBauCW+4xhsPnSJ2ZmJpMacVkEek1+lQ1Iv5ldIKhYqCpJKDa6ZaVHYe7xqAx74oevlvxx8pDJ2dxJVa+bJAtskGsRxfzBKaGlVppIwqRxwqf+5D3/OBFfAO5qg0tNf4HofXMQe2r2dxzrhXTD4MheMbs0FfpWbt8G/xB/GH35iW2qq9G5awjcWP/w/yzDs8XvGoMBX4FLz7xd9zgFXYDw6YCZAcvMO6KP8IUN0FpJ6iTML+GRn4ZPNY/BlPoiGYfW7MTf8N2/C6x/HpTHvFAkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=7d156d6f83aa9e10cccd5d10feaad354^sys_idNOT IN31156d6f83aa9e10cccd5d10feaad37a,75156d6f83aa9e10cccd5d10feaad37b"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c984ad2f83aa9e10cccd5d10feaad3e0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">7d156d6f83aa9e10cccd5d10feaad354</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>31156d6f83aa9e10cccd5d10feaad37a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <ui_id>93a8085e-ea5e-4d8d-9ec5-aa4b4d52341c</ui_id>
+        <values>H4sIAAAAAAAA/+1V22obMRD9FaPnZdlLbBq/BZtAIW2gCXlpwzIraWNRrbTVxY67+N87Wq0vpC5JII99MdaZ0cw5ozlsT7R3nXf2Xl9ZK54UmX9/TIhQAcP/PVHQcjInVCsmnNCqGoCErEH6EAAa0MkPn2Uli78TZ3xIYcJ2ErYPr2fSlZDM8LF7BwZ7OG7IvH8REgwLNRk0+SXNaVnMyiLLik8XeT0r67xgJXAosaCEmktMXexpT24GJPmnHrftAm6dEeppPN+MVe72oDYssMqzhPBnxxXjyKcBaXlCWlAMnDbbA2I4sFslj8BKKIflSEh+tuI3Niym05DYcJRIeQwejvdQS76MU4yhZgkOkI6nzpsxna60oNzGATHegJducYrFhNsuyI1XXCg83tbSt+prnAo5FNg/GiLe8orxLqgN9Ectzd1Kb77tmV4LNUxmDEpNQR5O4HB+tXeBT0+45C0WqlroOpxq1Rm9FsNl5NKmTxIPaSP1BpuGjUzj3qQ4XEivEV8O8AMYEVR8wTJ4OdKswQpaDduL5Ybl2iXEbu1CgrVHkTjh6pcPFKPkUVwV5xOuUCM6d4Wd13zUsUv+NsOJD/p+ge/tOKvylHqDU3Ej890uLvt5V7z53vs8cgnTZppn0/MeuZid88gZd7zTGMUrxghS3uiLLMv+G+NDjCFsFdd51DY0/0BfPAYTxJ6HWVNhkdrwTJ/335IQ2OKCCXoKbbT5GUQdsd0fvTuaLpUGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0584ad2f83aa9e10cccd5d10feaad3e4</block>
+        <comment/>
+        <connected_to>93a8085e-ea5e-4d8d-9ec5-aa4b4d52341c</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Accept or Reject an offer">7d156d6f83aa9e10cccd5d10feaad354</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>75156d6f83aa9e10cccd5d10feaad37b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <ui_id>9c86e36b-3a2e-48f5-9a17-e6ef8a555107</ui_id>
+        <values>H4sIAAAAAAAA/+1VTYvbMBD9K0FnY2ynu7S5LQkLhW0Xuste2sWMJTkRlSVXH8mmJv+9I0v5oN2lKeTYS4jejGbmPc3DA9He9d7ZR31jrVgqMvv6nBGhAob/B6Kg42RGqFZMOKFVPQIZWYP0IQA0oJNvviimLP5OWpA25DBhewnbpzNS6UpIZnjq34PBLo4bMht+CwmGldoC2vIDLem0up5WRVG9f1c219OmrNgUOFRYUELDJabO94NP7kYke5OR2/YBt84ItUznu1TlYQ9qw8JUZZER/uK4YhznGUlkpAPFwGmzPSCGA7tX8gishHJYjoTkFyt+YsPq6iokthwpUh6Dh+MjNJIvoowx1C7AAY7jqfMmpdOVFpTbKBDjLXjp5qdYTLjvA914xYXC6baWvlOfoyrkUGD/aoh4y2vG+8A2jJ+4tA8rvfmyn/RWqFGZFJSagjycwKF+jXdhnoFwyTssVHfQ96hq3Ru9FuNlnKXLlxIPeSv1BpuGnczj4uQoLuS3iC9G+AmMCCw+YRm8HMdswApaj/uL5VAmTnYZsVs7l2DtkSQqXP/wYcRIOZGroz7hCjWidzfYec0Tj132px1OnDAMc3xvx1ld5tQbVMWlyXe7uO1v+OL8ixd1SfmaS17xxz9ao/qLNcKbnOmMoij+W+Mi1hC2jguduMWFupwznoMNYs+D1lRYHG18po/770kIbHHBBD2FNtp8D6SO2O4X2CzxSpkGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_7d156d6f83aa9e10cccd5d10feaad354^sys_idNOT IN75156d6f83aa9e10cccd5d10feaad366,b5156d6f83aa9e10cccd5d10feaad35f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d156d6f83aa9e10cccd5d10feaad354</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>75156d6f83aa9e10cccd5d10feaad366</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d156d6f83aa9e10cccd5d10feaad354</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_id>b5156d6f83aa9e10cccd5d10feaad35f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7d156d6f83aa9e10cccd5d10feaad354"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>4c9369eb83aa9e10cccd5d10feaad37d</sys_id>
+        <latest_snapshot>7d156d6f83aa9e10cccd5d10feaad354</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch3-10-23-2024_11-01-2024_2230.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=4c9369eb83aa9e10cccd5d10feaad37d^sys_idNOT INfd156d6f83aa9e10cccd5d10feaad388"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"fd156d6f83aa9e10cccd5d10feaad388","name":"plan","plan_signature":null}}</plan>
+        <plan_id>4c9369eb83aa9e10cccd5d10feaad37d</plan_id>
+        <snapshot>fc718a2f836e9e10cccd5d10feaad3c5</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 11:36:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fd156d6f83aa9e10cccd5d10feaad388</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 11:36:13</sys_updated_on>
+        <trigger display_value="">71156d6f83aa9e10cccd5d10feaad387</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=4c9369eb83aa9e10cccd5d10feaad37d"/>
+</record_update>

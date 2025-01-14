@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.technician-section {
+  padding: 60px 0px;
+  background-color: #ffffff; /* Light grey background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.content {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.highlight-bar {
+  width: 90px;
+  height: 4px;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333; /* Dark text */
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cta {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #007bff; /* Blue for emphasis */
+  margin-top: 10px;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>inspired_section</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Inspired Section</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 15:10:13</sys_created_on>
+        <sys_id>fe7c05db83265e10cccd5d10feaad3f9</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Inspired Section</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_fe7c05db83265e10cccd5d10feaad3f9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 11:45:32</sys_updated_on>
+        <template><![CDATA[<section class="technician-section">
+  <div class="container">
+    <div class="content">
+      <div class="highlight-bar"></div>
+      <h2 class="heading">Driven to Deliver, Inspired to Excel!</h2>
+      <p class="description">
+        Your dedication transforms challenges into solutions, and every task you complete builds trust and excellence. Together, we set the standard for quality, precision, and teamwork. Stay focused, stay motivated – because every job you do matters, and every success is yours to own.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+]]></template>
+    </sp_widget>
+</record_update>

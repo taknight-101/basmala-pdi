@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="564683d383565610cccd5d10feaad306" label="label" max_length="40" name="REL:f8dd2e9383d25610cccd5d10feaad351" type="collection">
+        <element attributes="encode_utf8=false" label="part request" max_length="32" name="x_1522458_automo_0_part_request" reference="x_1522458_automo_0_part_request" type="reference"/>
+    </element>
+</database>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4b1fd4fd83be9210cccd5d10feaad3f6" label="Technician Profile" max_length="40" name="x_1522458_automo_0_technician_profile" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Tasks Per Month" max_length="40" name="tasks_per_month" read_only="true" type="integer"/>
+        <element label="Feild For Debugging" max_length="40000" name="feild_for_debugging" read_only="true" type="string"/>
+        <element label="Average Rating" max_length="40" name="average_rating" read_only="true" type="float"/>
+        <element label="Technician" max_length="32" name="technician" read_only="true" reference="sys_user" reference_qual="roles=x_1522458_automo_0.technician" reference_qual_condition="roles=x_1522458_automo_0.technician" type="reference"/>
+        <element label="Level" max_length="40" name="level" read_only="true" type="string"/>
+        <element label="Department" max_length="32" name="department" read_only="true" reference="cmn_department" type="reference"/>
+        <element label="Total Points" max_length="40" name="total_points" type="float"/>
+        <element label="Monthly Score" max_length="40" name="monthly_score" read_only="true" type="float"/>
+        <index name="index">
+            <element name="department"/>
+        </index>
+        <index name="index2">
+            <element name="technician"/>
+        </index>
+    </element>
+</database>

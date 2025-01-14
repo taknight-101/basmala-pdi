@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
+    <sys_ux_data_broker_transform action="INSERT_OR_UPDATE">
+        <acl_failure_result/>
+        <api_name>x_1522458_automo_0.ServiceRequestData</api_name>
+        <batch_exclude>false</batch_exclude>
+        <description/>
+        <mutates_server_data>false</mutates_server_data>
+        <name>ServiceRequestData</name>
+        <output_schema/>
+        <private>false</private>
+        <props/>
+        <required_translations>[ ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[(function () {
+    // Query the table
+    var gr = new GlideRecord('x_1522458_automo_0_service_request');
+    gr.query();
+
+    // Create an array to hold the data
+    var data = [];
+    while (gr.next()) {
+        data.push({
+            number: gr.getValue('number'),
+            vehicle: gr.getValue('vehicle'),
+            state: gr.getValue('state'),
+            updated: gr.getValue('sys_updated_on')
+        });
+    }
+
+    return data;
+})();
+]]></script>
+        <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-05 19:52:44</sys_created_on>
+        <sys_id>7499c1ab837e1210cccd5d10feaad3ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ServiceRequestData</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_data_broker_transform_7499c1ab837e1210cccd5d10feaad3ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-05 19:52:44</sys_updated_on>
+    </sys_ux_data_broker_transform>
+    <sys_translated_text action="delete_multiple" query="documentkey=7499c1ab837e1210cccd5d10feaad3ba"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>7499c1ab837e1210cccd5d10feaad3ba</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-05 19:52:43</sys_created_on>
+        <sys_id>08d9456f837e1210cccd5d10feaad3b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-05 19:52:43</sys_updated_on>
+        <table>sys_ux_data_broker_transform</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

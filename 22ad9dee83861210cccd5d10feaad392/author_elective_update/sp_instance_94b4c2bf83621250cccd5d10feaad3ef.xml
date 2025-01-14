@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b1a486ff83621250cccd5d10feaad32a</sp_column>
+        <sp_widget display_value="Footer widget">614ea704831a1210cccd5d10feaad3a8</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 08:32:46</sys_created_on>
+        <sys_id>94b4c2bf83621250cccd5d10feaad3ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_instance_94b4c2bf83621250cccd5d10feaad3ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 08:32:46</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=94b4c2bf83621250cccd5d10feaad3ef"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sp_instance_94b4c2bf83621250cccd5d10feaad3ef</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">b1a486ff83621250cccd5d10feaad32a</sp_column><sp_widget display_value="Footer widget">614ea704831a1210cccd5d10feaad3a8</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-25 08:32:46</sys_created_on><sys_id>94b4c2bf83621250cccd5d10feaad3ef</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sp_instance_94b4c2bf83621250cccd5d10feaad3ef</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-25 08:32:46</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=94b4c2bf83621250cccd5d10feaad3ef"/></record_update>]]></payload>
+        <payload_hash>-517074064</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 08:32:46</sys_created_on>
+        <sys_id>18b4c2bf83621250cccd5d10feaad3f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193fcf26d820000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 08:32:46</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>1cb4c2bf5b621250591e39788c9c17f1</update_guid>
+        <update_guid_history>1cb4c2bf5b621250591e39788c9c17f1:-517074064</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">7db40abf83621250cccd5d10feaad375</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 08:32:52</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>2128fbb9518c455e8b58576c3f3e5b71</sys_id>
+        <sys_metadata>94b4c2bf83621250cccd5d10feaad3ef</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sp_instance_94b4c2bf83621250cccd5d10feaad3ef</sys_update_name>
+        <sys_update_version display_value="sp_instance_94b4c2bf83621250cccd5d10feaad3ef">18b4c2bf83621250cccd5d10feaad3f2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 08:32:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

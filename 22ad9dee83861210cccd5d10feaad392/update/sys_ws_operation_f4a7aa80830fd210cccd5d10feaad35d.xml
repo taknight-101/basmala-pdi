@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Save Feedback</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    try {
+        // Retrieve sys_id from the query parameter
+        var requestSysId = request.queryParams.sys_id;
+
+        // Validate if sys_id exists
+        if (!requestSysId) {
+            response.setStatus(400);
+            response.setBody({ status: 'error', message: 'Missing sys_id in the request URL.' });
+            return;
+        }
+
+        // Parse the request body for answers
+        var requestBody = request.body.data;
+        if (!requestBody || !requestBody.answers) {
+            response.setStatus(400);
+            response.setBody({ status: 'error', message: 'Missing or invalid answers in the request body.' });
+            return;
+        }
+
+        var answers = requestBody.answers;
+
+        // Create a new record in the customer feedback table
+        var feedbackGR = new GlideRecord('x_1522458_automo_0_customer_feedback');
+        feedbackGR.initialize();
+        feedbackGR.setValue('request', requestSysId);
+
+        for (var field in answers) {
+            if (feedbackGR.isValidField(field)) {
+                feedbackGR.setValue(field, answers[field]);
+            }
+        }
+
+        var recordSysId = feedbackGR.insert();
+        if (recordSysId) {
+            response.setStatus(201);
+            response.setBody({ status: 'success', sys_id: recordSysId });
+        } else {
+            response.setStatus(500);
+            response.setBody({ status: 'error', message: 'Failed to save feedback record.' });
+        }
+    } catch (e) {
+        response.setStatus(500);
+        response.setBody({ status: 'error', message: 'An error occurred: ' + e.message });
+    }
+})(request, response);
+]]></operation_script>
+        <operation_uri>/api/x_1522458_automo_0/sp_savefeedback</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-07 16:01:42</sys_created_on>
+        <sys_id>f4a7aa80830fd210cccd5d10feaad35d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Save Feedback</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ws_operation_f4a7aa80830fd210cccd5d10feaad35d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-07 21:32:32</sys_updated_on>
+        <web_service_definition display_value="Save Feedback">dd27ee40830fd210cccd5d10feaad31e</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>f4a7aa80830fd210cccd5d10feaad35d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-07 16:01:42</sys_created_on>
+        <sys_id>9318ae4c83cbd210cccd5d10feaad371</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-07 16:01:42</sys_updated_on>
+        <table>sys_ws_operation</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

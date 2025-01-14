@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Inspection Report" section_id="7e8606ba83d69210cccd5d10feaad38e" sys_domain="global" table="x_1522458_automo_0_task" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>inspection_report_attachment</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-17 15:48:42</sys_created_on>
+            <sys_id>4ccb9a95836ed210cccd5d10feaad374</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Report" display_value="Inspection Report" name="x_1522458_automo_0_task" sys_domain="global" view="Default view">7e8606ba83d69210cccd5d10feaad38e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-17 15:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Inspection Report</caption>
+            <header>false</header>
+            <name>x_1522458_automo_0_task</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-09 19:51:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7e8606ba83d69210cccd5d10feaad38e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_task</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_7e8606ba83d69210cccd5d10feaad38e</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-09 19:51:13</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ui_section_7e8606ba83d69210cccd5d10feaad38e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Inspection Report" section_id="7e8606ba83d69210cccd5d10feaad38e" sys_domain="global" table="x_1522458_automo_0_task" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>inspection_report_attachment</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-17 15:48:42</sys_created_on><sys_id>4ccb9a95836ed210cccd5d10feaad374</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Inspection Report" display_value="Inspection Report" name="x_1522458_automo_0_task" sys_domain="global" view="Default view">7e8606ba83d69210cccd5d10feaad38e</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-17 15:48:42</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Inspection Report</caption><header>false</header><name>x_1522458_automo_0_task</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-09 19:51:13</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7e8606ba83d69210cccd5d10feaad38e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1522458_automo_0_task</sys_name><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ui_section_7e8606ba83d69210cccd5d10feaad38e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-09 19:51:13</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>33533966</payload_hash>
+        <record_name>Task </record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 15:48:42</sys_created_on>
+        <sys_id>d0cb9a95836ed210cccd5d10feaad390</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193d54eab550000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 15:48:42</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>88cb9a954a6ed21066ffbdf1c7da4f8f</update_guid>
+        <update_guid_history>88cb9a954a6ed21066ffbdf1c7da4f8f:33533966,061a5a91106ed210e6401fe27f7d5f94:-578178829,58bec636121a9210e0da9a035ed6991b:33533966,b68646ba9ed692103d4c0afda1861211:1030453230</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 20:38:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>0a654635ac4b49ecae649c91c376dfd9</sys_id>
+        <sys_metadata>7e8606ba83d69210cccd5d10feaad38e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Inspection Report</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Task ">e8d5d70983165610cccd5d10feaad35e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ui_section_7e8606ba83d69210cccd5d10feaad38e</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_7e8606ba83d69210cccd5d10feaad38e">d0cb9a95836ed210cccd5d10feaad390</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 20:38:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

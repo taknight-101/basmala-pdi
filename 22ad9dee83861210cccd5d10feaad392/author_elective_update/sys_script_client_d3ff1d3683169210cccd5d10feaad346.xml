@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Test</name>
+        <order>100</order>
+        <script><![CDATA[function onSubmit() {
+	
+   var GA = GlideAjax('SendUIActionUtils');
+	GA.addParam('sysparm_name', 'updateRequestRecord');
+	GA.addParam('sysparm_request_id', ":)))))))))");
+
+	GA.getXML(Parse);
+
+	function Parse(response) {
+		var myObj = response.responseXML.documentElement.getAttribute('answer');
+		alert(myObj);
+	}
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 17:03:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d3ff1d3683169210cccd5d10feaad346</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_client_d3ff1d3683169210cccd5d10feaad346</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 17:06:44</sys_updated_on>
+        <table>x_1522458_automo_0_offer</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_script_client_d3ff1d3683169210cccd5d10feaad346</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Test&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+	
+   var GA = GlideAjax('SendUIActionUtils');
+	GA.addParam('sysparm_name', 'updateRequestRecord');
+	GA.addParam('sysparm_request_id', ":)))))))))");
+
+	GA.getXML(Parse);
+
+	function Parse(response) {
+		var myObj = response.responseXML.documentElement.getAttribute('answer');
+		alert(myObj);
+	}
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-09 17:03:36&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;d3ff1d3683169210cccd5d10feaad346&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Test&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Automotive Service Management" source="x_1522458_automo_0"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automotive Service Management"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_d3ff1d3683169210cccd5d10feaad346&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-09 17:06:44&lt;/sys_updated_on&gt;&lt;table&gt;x_1522458_automo_0_offer&lt;/table&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-214616960</payload_hash>
+        <record_name>Test</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 17:06:44</sys_created_on>
+        <sys_id>91e021b683169210cccd5d10feaad3b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193ac6339bf0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 17:06:44</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>59e021b673169210a3939a643e89beb3</update_guid>
+        <update_guid_history>59e021b673169210a3939a643e89beb3:-214616960,9380a176b8169210202ac7a5a0a5df23:1634799059,dd60a5365b169210e8ae4df86bf2a192:-214616960,2720a53670169210f9147a16f22779c3:681644458</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 17:07:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>91c36a2d68c647da9d6a898a429231a9</sys_id>
+        <sys_metadata>d3ff1d3683169210cccd5d10feaad346</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Offer">71f1675683d61210cccd5d10feaad377</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_script_client_d3ff1d3683169210cccd5d10feaad346</sys_update_name>
+        <sys_update_version display_value="sys_script_client_d3ff1d3683169210cccd5d10feaad346">91e021b683169210cccd5d10feaad3b4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 17:07:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

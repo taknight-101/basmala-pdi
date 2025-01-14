@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+
+	/*c.navigate = function () {
+    top.window.location = "/customer_portal?id=asm_request_service%20&table=x_1522458_automo_0_service_request&view=Customer_view";
+  };*/
+	
+	c.myStates = ['Submitted','Work in Progress',
+						 'Closed Complete','Closed Incomplete',
+						 'Under Inspection','New',
+						 'Waiting Inspection','Inspected',
+						 'Waiting Approval','Service Complete',
+						 'Offer Approved'];
+
+    c.filterState = '';
+
+  c.filteredRequests = function() {
+    if (c.filterState) {
+      return c.data.requests.filter(function(request) {
+        return request.State === c.filterState;
+      });
+    }
+    return c.data.requests;
+  };
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.Container{
+  position: relative;
+  padding-bottom:70px;
+}
+.tableContainer {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  display: block;
+}
+
+label {
+  margin: 10px 0;
+}
+
+select {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+
+.filter-container label {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.filter-container select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.filter-container select:hover {
+  cursor: pointer;
+}
+
+
+#new {
+  font-weight: bold;
+  margin-left: 10px; 
+  padding: 8px 15px;
+  background-color: #034078; 
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#new:hover {
+  background-color: #001F54; 
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h3{
+  color:  #034078; 
+   
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+
+thead {
+  background-color: #034078; 
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: center;
+  vertical-align: middle; 
+}
+
+th:first-child {
+  border-top-left-radius: 8px;
+}
+
+th:last-child {
+  border-top-right-radius: 8px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+tbody tr:hover {
+  background-color: #F9FAFC; 
+}
+
+a {
+  color: #4A90E2; 
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.status {
+  font-weight: bold;
+  padding: 6px 8px;
+  border-radius: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.status.pending { 
+  background-color: #FFCA28; 
+}
+.status.submitted { 
+  background-color: #42A5F5; 
+} 
+.status.work-in-progress {
+  background-color: #66BB6A; 
+} 
+.status.closed-complete { 
+  background-color: #4CAF50; 
+} 
+.status.closed-incomplete { 
+  background-color: #E57373;
+} 
+.status.under-inspection {
+  background-color: #FFD54F;
+} 
+.status.new { 
+  background-color: #29B6F6; 
+} 
+.status.waiting-inspection { 
+  background-color: #FFB74D; 
+} 
+.status.inspected { 
+  background-color: #AB47BC; 
+} 
+.status.waiting-approval {
+  background-color: #FF7043; 
+} 
+.status.service-complete {
+  background-color: #388E3C; 
+} 
+.status.offer-approved {
+  background-color: #5C6BC0; 
+}
+
+
+
+tbody td {
+  border-radius: 0;
+}
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>all_tasks</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>All Tasks</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+	/*if(!input){
+		data.tasks=[];
+		var grTasks = new GlideRecordSecure('x_1522458_automo_0_task');
+		grTasks.addActiveQuery();
+		grTasks.addEncodedQuery("opened_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe");
+		grTasks.query();
+		
+		while (grTasks.next()) { 
+			data.tasks.push({
+				taskNumber: grTasks.getDisplayValue('number'),
+				date: grTasks.getDisplayValue('type'),
+				state: grTasks.getDisplayValue('state'),
+				Creator: grTasks.getDisplayValue('opened_by'),
+				ID : grTasks.getDisplayValue('sys_id')
+			});
+		}	
+	}
+})();*/
+
+
+
+(function() {
+    var cur_userSysId = gs.getUserID();
+    data.tasks = [];
+    
+    var gr_tasks = new GlideRecordSecure('x_1522458_automo_0_task'); 
+	gr_tasks.addQuery('assined_to', userSysId);
+    gr_tasks.addQuery('active', true);
+    gr_tasks.orderByDesc('sys_created_on');
+    gr_tasks.query();
+
+    while (gr_tasks.next()) {
+         data.tasks.push({
+            sys_id: gr.getValue('sys_id'),
+            taskNumber: gr.getValue('number'),
+            state: gr.getDisplayValue('state'),
+            assigned_to: gr.getDisplayValue('assined_to'),
+           date:gr.getDisplayValue('date'),
+            created_on: gr.getDisplayValue('sys_created_on')
+        });
+    }
+
+})();
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-18 08:10:59</sys_created_on>
+        <sys_id>419cf52583ae1610cccd5d10feaad313</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>All Tasks</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_419cf52583ae1610cccd5d10feaad313</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-18 08:53:32</sys_updated_on>
+        <template><![CDATA[<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<div class="Container">
+<div class="tableContainer">
+  
+<div class="header-container">
+<h3>My Taks</h3>
+<div class="filter-container">
+    <label for="stateFilter">Filter by State:</label>
+    <select id="stateFilter" class="state-dropdown" ng-model="c.filterState">
+      <option value="">All States</option>
+      <option ng-repeat="state in c.myStates" value="{{state}}">
+        {{state}}
+      </option>
+    </select>
+  
+    <button id='new' ng-click='c.navigate()'>
+    New
+  </button>
+  </div>
+  </div>
+
+<table>
+  <thead>
+    <tr class="headRow">
+      <th>Task Number</th>
+      <th>State</th>
+      <th>Due Date</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr ng-if="!c.filteredRequests().length">
+          <td colspan="3" style="text-align: center; font-style: italic; color: #888;font-weight:bold;font-size:17px">
+            <i class="fas fa-tasks"></i>
+            No data available to display
+          </td>
+        </tr>
+    <tr class="item"
+        ng-repeat="s in data.tasks">
+      <td>
+        <a href = "customer_portal?id=asm_request_details&sys_id={{s.ID}}">
+          {{s.tasktNumber}}
+        </a>
+      </td>
+      <td> 
+        <span class="status {{s.State.toLowerCase().replace(' ', '-') }}">
+            {{s.state}}
+         </span>
+      </td>
+       <td>{{s.date}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>

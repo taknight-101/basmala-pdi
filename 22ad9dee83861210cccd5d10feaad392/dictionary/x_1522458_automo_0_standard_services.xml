@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e6d301e083929210cccd5d10feaad355" label="standard services" max_length="40" name="x_1522458_automo_0_standard_services" text_index="true" type="collection">
+        <element label="Title" max_length="40" name="title" type="string"/>
+        <element label="image" max_length="40" name="image" type="user_image"/>
+        <element label="Department" max_length="32" name="department" reference="cmn_department" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="3" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Engine" sequence="0" value="engine"/>
+                <element inactive_on_update="false" label="Body" sequence="1" value="body"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="200" name="description" type="string"/>
+        <index name="index">
+            <element name="department"/>
+        </index>
+    </element>
+</database>

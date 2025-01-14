@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+c.openChat= function open() {
+  document.getElementById('chat-container').classList.remove('hidden');
+}
+
+c.closeChat=function close() {
+  document.getElementById('chat-container').classList.add('hidden');
+}
+
+c.sendMessage=function send() {
+  var input = document.getElementById('chat-input');
+  var message = input.value.trim();
+  if (message) {
+    var chatBody = document.getElementById('chat-body');
+    var new_m = document.createElement('p');
+    new_m.textContent = message;
+    chatBody.appendChild(new_m);
+    input.value = '';
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.chatbot-button {
+  background-color: #FF8833;  
+  color:#ffffff;
+  border: none;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: fixed; 
+  bottom: 20px;
+  right: 30px;
+  z-index: 9999; 
+}
+.chatbot-button:hover {
+  background-color:#FF7043;
+}
+
+.Container{
+  position: relative;
+  padding-bottom:70px;
+  width: 100%;
+}
+
+#chat-container{
+  position: fixed; 
+  bottom: 90px;
+  right: 30px;
+  width: 400px; 
+  z-index: 9999; 
+}
+
+.chat-header {
+  background-color: #FFB74D;
+  color: #ffffff;
+  font-weight:bold;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.chat-body {
+  height: 300px;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom:10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.chat-footer input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.chat-footer button {
+  background-color: #FFB74D;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight:bold;
+}
+.chat-footer button:hover {
+  background-color: #cc4e20;
+}
+.hidden {
+  display: none;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>chatbot_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Chatbot Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 17:24:06</sys_created_on>
+        <sys_id>6bf7a98d83e29210cccd5d10feaad3a1</sys_id>
+        <sys_mod_count>73</sys_mod_count>
+        <sys_name>Chatbot Widget</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_6bf7a98d83e29210cccd5d10feaad3a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 14:33:36</sys_updated_on>
+        <template><![CDATA[ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+
+  <div id="chat-container" class="chat-container hidden">
+    <div class="chat-header">
+      <span>Chat</span>
+      <button ng-click="c.closeChat()" style='color:#000000;border:none'>&times;</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <p>Welcome! How can I help you?</p>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button ng-click="c.sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+
+<div class="Container">
+<div class="chatbot-button" ng-click="c.openChat()">
+   <i class="fas fa-robot"></i>
+</div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

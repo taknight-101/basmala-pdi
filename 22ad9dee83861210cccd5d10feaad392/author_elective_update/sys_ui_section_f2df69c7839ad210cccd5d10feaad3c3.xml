@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="" section_id="f2df69c7839ad210cccd5d10feaad3c3" sys_domain="global" table="x_1522458_automo_0_standard_services" version="3" view="workspace-customer-rep-workspace-0">
+        <sys_ui_section action="DELETE">
+            <caption/>
+            <header>false</header>
+            <name>x_1522458_automo_0_standard_services</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-10 12:50:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f2df69c7839ad210cccd5d10feaad3c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_standard_services</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_f2df69c7839ad210cccd5d10feaad3c3</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-10 12:50:35</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Workspace Customer Rep workspace 0" name="workspace-customer-rep-workspace-0">69cfe987089ad210b304afdac1d1dbcc</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ui_section_f2df69c7839ad210cccd5d10feaad3c3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="f2df69c7839ad210cccd5d10feaad3c3" sys_domain="global" table="x_1522458_automo_0_standard_services" version="3" view="workspace-customer-rep-workspace-0"><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_1522458_automo_0_standard_services</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-10 12:50:35</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f2df69c7839ad210cccd5d10feaad3c3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1522458_automo_0_standard_services</sys_name><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ui_section_f2df69c7839ad210cccd5d10feaad3c3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-10 12:50:35</sys_updated_on><sys_user/><title>true</title><view display_value="Workspace Customer Rep workspace 0" name="workspace-customer-rep-workspace-0">69cfe987089ad210b304afdac1d1dbcc</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>1627943309</payload_hash>
+        <record_name>standard services</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-10 12:50:35</sys_created_on>
+        <sys_id>36dfa9c7839ad210cccd5d10feaad31d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193b09f121a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-10 12:50:35</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>badfa9c79a9ad210941922b9d340b21c</update_guid>
+        <update_guid_history>badfa9c79a9ad210941922b9d340b21c:1627943309</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-12 06:42:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>297cf038727e444997c04f6c8880bc61</sys_id>
+        <sys_metadata>f2df69c7839ad210cccd5d10feaad3c3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1522458_automo_0_standard_services</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="standard services">e6d301e083929210cccd5d10feaad355</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ui_section_f2df69c7839ad210cccd5d10feaad3c3</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_f2df69c7839ad210cccd5d10feaad3c3">36dfa9c7839ad210cccd5d10feaad31d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-12 06:42:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

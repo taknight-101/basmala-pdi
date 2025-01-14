@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1522458_automo_0_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Tracking level points</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var inspection_weight = 1;
+    var repair_weight = 2;
+    var level_threshold = {
+        Beginner: 50,
+        Intermediate: 100,
+        Advanced: 200,
+        Master: 350,
+        Expert: 500
+    };
+
+    if (!current.getValue('assined_to') || !current.getValue('rating')) {
+        return;
+    }
+
+    var technician = current.getValue('assined_to');
+
+    var profile_gr = new GlideRecord('x_1522458_automo_0_technician_profile');
+    profile_gr.addQuery('technician', technician);
+    profile_gr.query();
+
+    if (profile_gr.next()) {
+        var technicianLevel = profile_gr.getValue('level');
+        var totalPoints = 0.0;
+
+        if (!technicianLevel) {
+            var tasks_gr = new GlideRecord('x_1522458_automo_0_task');
+            tasks_gr.addQuery('state', 'closed_complete');
+            tasks_gr.addQuery('assined_to', technician);
+            tasks_gr.query();
+
+            while (tasks_gr.next()) {
+                var taskRating = parseFloat(tasks_gr.getValue('rating'))  || 0;
+                if (tasks_gr.getValue('insoection')== true) {
+                    totalPoints += inspection_weight * (taskRating / 10.0);
+                } else {
+                    totalPoints += repair_weight * (taskRating / 10.0);
+                }
+            }
+
+            var newLevel = '';
+            for (var level in level_threshold) {
+                if (totalPoints >= level_threshold[level]) {
+                    newLevel = level;
+                } else {
+                    break;
+                }
+            }
+			if(newLevel === ''){
+				newLevel=Object.keys(level_threshold)[0];
+			}
+
+            if (newLevel) {
+                profile_gr.setValue('total_points', totalPoints >= level_threshold[newLevel] ? totalPoints - level_threshold[newLevel] : totalPoints);
+                profile_gr.setValue('level', newLevel);
+            }
+
+            profile_gr.update();
+            gs.info('Updated technician ' + technician + ' with points: ' + totalPoints + ' and level: ' + newLevel);
+
+        } else {
+            gs.info('Technician ' + technician + ' already has a level: ' + technicianLevel);
+
+            var currentLevelThreshold = level_threshold[technicianLevel] || 0;
+			gs.info('currentLevelThreshold: '+currentLevelThreshold);
+			var total_points_case2=profile_gr.getValue('total_points');
+			gs.info('total_points_case2: '+total_points_case2);
+
+            var tasks_Gr = new GlideRecord('x_1522458_automo_0_task');
+            tasks_Gr.addQuery('state', 'closed_complete');
+            tasks_Gr.addQuery('assined_to', technician);
+            tasks_Gr.query();
+
+			total_points_case2=0.0;
+            while (tasks_Gr.next()) {
+                var taskRate = parseFloat(tasks_Gr.getValue('rating'))  || 0;
+				gs.info('taskRate: '+taskRate);
+                if (tasks_Gr.getValue('insoection')== true) {
+                    total_points_case2 += inspection_weight * (taskRate / 10.0);
+					//gs.info('total_points_case2_ins: '+total_points_case2);
+                } else {
+                    total_points_case2 += repair_weight * (taskRate / 10.0);
+					//gs.info('total_points_case2_rep: '+total_points_case2);
+                }
+            }
+			gs.info('total_points_case2_afterrr: '+total_points_case2);
+				switch(technicianLevel){
+					case Object.keys(level_threshold)[1]:
+					total_points_case2 -=level_threshold.Beginner;
+					break;
+					case Object.keys(level_threshold)[2]:
+					total_points_case2 -=level_threshold.Intermediate;
+					break;
+					case Object.keys(level_threshold)[3]:
+					total_points_case2 -=level_threshold.Advanced;
+					break;
+					case Object.keys(level_threshold)[4]:
+					total_points_case2 -=level_threshold.Master;
+					break;
+					default:
+					break;
+				}
+			
+            if (total_points_case2 >= currentLevelThreshold) {
+                var remainingPoints = total_points_case2 - currentLevelThreshold;
+				switch(technicianLevel){
+					case Object.keys(level_threshold)[0]:
+					profile_gr.setValue('level', Object.keys(level_threshold)[1]);
+					break;
+					case Object.keys(level_threshold)[1]:
+					profile_gr.setValue('level', Object.keys(level_threshold)[2]);
+					break;
+					case Object.keys(level_threshold)[2]:
+					profile_gr.setValue('level', Object.keys(level_threshold)[3]);
+					break;
+					case Object.keys(level_threshold)[3]:
+					profile_gr.setValue('level', Object.keys(level_threshold)[4]);
+					break;
+					default:
+					profile_gr.setValue('level', Object.keys(level_threshold)[4]);
+					break;
+				}
+
+                for (var lev in level_threshold) {
+                    if (remainingPoints >= level_threshold[lev]) {
+                        profile_gr.setValue('level', lev);
+                        remainingPoints -= level_threshold[lev];
+                    } else {
+                        break;
+                    }
+                }
+
+                profile_gr.setValue('total_points', remainingPoints);
+            } else {
+                profile_gr.setValue('total_points', total_points_case2);
+            }
+
+            profile_gr.update();
+            gs.info('Updated technician ' + technician + ' with points: ' + totalPoints + ' and level: ' + profile_gr.getValue('level'));
+        }
+    } else {
+        gs.error('Technician: ' + technician + ' not found in the profile table.');
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 14:01:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2f3e3d3d83b6d210cccd5d10feaad37d</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name>Tracking level points</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_2f3e3d3d83b6d210cccd5d10feaad37d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-06 15:57:13</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=2f3e3d3d83b6d210cccd5d10feaad37d"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>2f3e3d3d83b6d210cccd5d10feaad37d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 14:01:17</sys_created_on>
+        <sys_id>0f690a3d83f6d210cccd5d10feaad3b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-31 14:01:17</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

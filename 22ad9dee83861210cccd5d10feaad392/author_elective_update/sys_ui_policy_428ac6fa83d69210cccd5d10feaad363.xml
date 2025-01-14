@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions table="x_1522458_automo_0_task">stateLIKEin progress^EQ<item display_value="in progress" endquery="false" field="state" goto="false" newquery="false" operator="LIKE" or="false" value="in progress"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+    (function executeRule(current, gForm) {
+    // Get the current state of the task
+    var state = gForm.getValue('state');
+
+    // Check if the state is "In Progress" (adjust the value if it's numeric or has another label)
+    if (state == 'in progress') {
+        gForm.setSectionDisplay('Inspection Report', true); // Show the section
+    } else {
+        gForm.setSectionDisplay('Inspection Report', false); // Hide the section
+    }
+   })(current, g_form);
+}]]></script_true>
+        <set_values/>
+        <short_description>Show the Inspection Report section when the state is In Progress.</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 20:13:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>428ac6fa83d69210cccd5d10feaad363</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Show the Inspection Report section when the state is In Progress.</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ui_policy_428ac6fa83d69210cccd5d10feaad363</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 20:13:53</sys_updated_on>
+        <table>x_1522458_automo_0_task</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_es_latest_script action="DELETE">
+        <id>428ac6fa83d69210cccd5d10feaad363</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 20:13:52</sys_created_on>
+        <sys_id>e6bb42be83d69210cccd5d10feaad385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 20:13:52</sys_updated_on>
+        <table>sys_ui_policy</table>
+        <use_es_latest>false</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ui_policy_428ac6fa83d69210cccd5d10feaad363</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions table="x_1522458_automo_0_task"&gt;stateLIKEin progress^EQ&lt;item display_value="in progress" endquery="false" field="state" goto="false" newquery="false" operator="LIKE" or="false" value="in progress"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/conditions&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;true&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+    (function executeRule(current, gForm) {
+    // Get the current state of the task
+    var state = gForm.getValue('state');
+
+    // Check if the state is "In Progress" (adjust the value if it's numeric or has another label)
+    if (state == 'in progress') {
+        gForm.setSectionDisplay('Inspection Report', true); // Show the section
+    } else {
+        gForm.setSectionDisplay('Inspection Report', false); // Hide the section
+    }
+   })(current, g_form);
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Show the Inspection Report section when the state is In Progress.&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-09 20:13:53&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;428ac6fa83d69210cccd5d10feaad363&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Show the Inspection Report section when the state is In Progress.&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Automotive Service Management" source="x_1522458_automo_0"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automotive Service Management"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_428ac6fa83d69210cccd5d10feaad363&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-09 20:13:53&lt;/sys_updated_on&gt;&lt;table&gt;x_1522458_automo_0_task&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;428ac6fa83d69210cccd5d10feaad363&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-09 20:13:52&lt;/sys_created_on&gt;&lt;sys_id&gt;e6bb42be83d69210cccd5d10feaad385&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-09 20:13:52&lt;/sys_updated_on&gt;&lt;table&gt;sys_ui_policy&lt;/table&gt;&lt;use_es_latest&gt;false&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1869764485</payload_hash>
+        <record_name>Show the Inspection Report section when the state is In Progress.</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 20:13:53</sys_created_on>
+        <sys_id>72bb0e32831a9210cccd5d10feaad380</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193ad0e929d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 20:13:53</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>76bb0e32a41a9210c498f40fc7218a7f</update_guid>
+        <update_guid_history>76bb0e32a41a9210c498f40fc7218a7f:1869764485</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-09 20:18:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>486eda893efd4d0b9711181845d6e0e9</sys_id>
+        <sys_metadata>428ac6fa83d69210cccd5d10feaad363</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Show the Inspection Report section when the state is In Progress.</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="Task ">e8d5d70983165610cccd5d10feaad35e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_428ac6fa83d69210cccd5d10feaad363</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_428ac6fa83d69210cccd5d10feaad363">72bb0e32831a9210cccd5d10feaad380</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-09 20:18:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+.footer {
+ background: rgb(0,9,36);
+background: linear-gradient(90deg, rgba(0,9,36,1) 0%, rgba(3,64,120,1) 51%, rgba(18,130,162,1) 100%);
+  color: #fff; 
+  padding: 20px 0;
+  text-align: center;
+  
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.footer-item {
+  padding:30px;
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.footer-item i {
+  font-size: 2em;
+  color: orange;
+}
+
+.footer-item h4 {
+  font-size: 1.2em;
+}
+
+.footer-item p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>asm_footer_technician</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Footer - Technician</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 10:21:12</sys_created_on>
+        <sys_id>f2c0dd9583a6d210cccd5d10feaad3bb</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Footer - Technician</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_f2c0dd9583a6d210cccd5d10feaad3bb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 09:46:12</sys_updated_on>
+        <template><![CDATA[
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <h4>Location</h4>
+      <p>123 Service Street,<br>Automotive City</p>
+    </div>
+    <div class="footer-item">
+      <i class="fas fa-clock"></i>
+      <h4>Working Hours</h4>
+      <p>10:00 AM – 08:30 PM<br>Monday – saturday</p>
+    </div>
+    <div class="footer-item">
+      <i class="fas fa-phone-alt"></i>
+      <h4>Phone Number</h4>
+      <p>123-456-7890<br>123-456-7891/89</p>
+    </div>
+  </div>
+</footer>
+]]></template>
+    </sp_widget>
+</record_update>

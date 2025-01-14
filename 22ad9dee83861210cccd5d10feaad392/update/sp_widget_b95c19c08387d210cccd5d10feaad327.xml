@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+  /* Widget Controller */
+  var c = this;
+
+  // The data from the server script is automatically available in `c.data.technicians`
+  c.technicians = c.data.technicians;
+
+  // Get the Sys ID of the impersonated user
+  c.currentUserId = c.data.currentUserId;
+
+  // Mark the impersonated technician
+  c.technicians.forEach(function (tech) {
+    tech.isImpersonated = tech.sys_id === c.currentUserId; // Highlight if the technician is the impersonated user
+  });
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Widget Container Styling */
+.technician-ranking-widget {
+  font-family: 'Poppins', sans-serif;
+  background-color: #dee7ef; /* Light background */
+  padding: 10px 15px;
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 
+              0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced 3D shadow */
+  width: 110%;
+  max-width: 800px; /* Increased width for a larger container */
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  max-height: 400px;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Header Styling */
+.header h3 {
+  color: #1a237e;  /* Dark Blue */
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 22px; /* Increased font size */
+  font-weight: 700; /* Bold weight */
+  padding-left: 8px;
+  border-left: 4px solid #1a237e;  /* Dark blue border */
+  margin-left: 6px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif; /* Use the same font family */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight text shadow for emphasis */
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 8px;
+  max-height: 300px; /* Set your desired height */
+  overflow-y: scroll; /* Allow vertical scrolling */
+  scrollbar-width: none; /* For Firefox, hide scrollbar */
+}
+
+/* Hide scrollbar for Webkit-based browsers (Chrome, Safari, etc.) */
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Technician Card Styling */
+/* Default Technician Card Styling */
+.technician-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  min-height: 80px;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Highlighted Technician Card */
+.highlighted-technician {
+  background-color: #1a237e; /* Dark blue background */
+  color: #e3f2fd; /* Light blue text */
+  transform: scale(1.02); /* Slight emphasis */
+  box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3); /* Stronger shadow */
+}
+
+/* Update text colors for the highlighted card */
+
+.highlighted-technician .name,
+.highlighted-technician .score {
+  color: #e3f2fd; /* Light blue for text */
+}
+
+
+
+/* Rank Styling */
+.rank {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a237e;  /* Dark blue */
+  margin-right: 12px;
+  min-width: 35px;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 50%;
+  text-transform: uppercase;
+}
+
+/* Profile Image Styling */
+.profile {
+  margin-right: 12px;
+}
+
+.profile-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  object-fit: cover;
+}
+
+/* Details Section */
+.details {
+  display: flex;
+  flex-direction: row;  /* Row layout for Name and Points */
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 12px;
+}
+
+.name {
+  font-size: 17px;
+  font-weight: 600;  /* Made technician name bold */
+  color: #333;
+  margin-right: 15px;  /* Space between name and score */
+}
+
+.score {
+  font-size: 16px;  /* Increased font size */
+  font-weight: 600;
+  color: #1a237e;  /* Dark blue color for points */
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-left: 12px;  /* Space between score and other details */
+  width: fit-content;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .technician-ranking-widget {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+
+  .cards-container {
+    padding: 0 6px;
+  }
+
+  .technician-card {
+    flex-direction: row;  /* Row layout on small screens */
+    align-items: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rank {
+    margin-right: 8px;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .profile-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;  /* Horizontal layout */
+    justify-content: space-between;
+    margin-left: 12px;
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 12px;
+    font-weight: 700;  /* Made technician name bold */
+    color: #333;
+  }
+
+  .score {
+    font-size: 14px;  /* Increased font size for smaller screens */
+    margin-top: 3px;
+    padding: 4px 6px;
+  }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>asm_ranking_technician</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>ASM_Ranking_technician</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+  data.technicians = [];
+
+  // Get the Sys ID of the impersonated user
+  data.currentUserId = gs.getUserID();
+
+  // Query the technician profile table
+  var grTechnicianProfile = new GlideRecord('x_1522458_automo_0_technician_profile');
+  grTechnicianProfile.orderByDesc('monthly_score'); // Sort by monthly score in descending order
+  grTechnicianProfile.query();
+
+  var instanceUrl = gs.getProperty('glide.servlet.uri'); // Get the base URL dynamically
+
+  while (grTechnicianProfile.next()) {
+    // Get the referenced user record
+    var userSysId = grTechnicianProfile.getValue('technician');
+    var grUser = new GlideRecord('sys_user');
+    if (grUser.get(userSysId)) {
+      // Get the photo Sys ID from the user record
+      var imageSysId = grUser.getValue('photo');
+      var imageUrl = getImageUrl(imageSysId); // Get image URL using the helper function
+
+      // Push the technician data into the array
+      data.technicians.push({
+        sys_id: userSysId, // Include Sys ID for comparison
+        profile_image: imageUrl || '/no_image_available.png', // Fallback image if no photo is found
+        first_name: grUser.getValue('first_name'),
+        last_name: grUser.getValue('last_name'),
+        monthly_score: grTechnicianProfile.getValue('monthly_score'),
+      });
+    }
+  }
+
+  // Function to get image URL from the sys_attachment table based on Sys ID
+  function getImageUrl(imageSysId) {
+    if (!imageSysId) return ''; // Return empty string if no image Sys ID
+
+    var attachmentGr = new GlideRecord('sys_attachment');
+    attachmentGr.addQuery('sys_id', imageSysId);
+    attachmentGr.query();
+
+    if (attachmentGr.next()) {
+      return instanceUrl + '/sys_attachment.do?sys_id=' + attachmentGr.sys_id; // Construct full image URL
+    }
+    return ''; // Return empty if no image is found
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-07 10:30:38</sys_created_on>
+        <sys_id>b95c19c08387d210cccd5d10feaad327</sys_id>
+        <sys_mod_count>73</sys_mod_count>
+        <sys_name>ASM_Ranking_technician</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_b95c19c08387d210cccd5d10feaad327</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-08 15:58:57</sys_updated_on>
+        <template><![CDATA[<div class="technician-ranking-widget">
+  <div class="header">
+    <h3>Technician Monthly Ranking</h3>
+  </div>
+  <div class="cards-container">
+    <div 
+      class="technician-card" 
+      ng-repeat="tech in c.technicians" 
+      ng-class="{'highlighted-technician': tech.isImpersonated}"
+    >
+      <!-- Rank -->
+      <div class="rank">{{$index + 1}}</div>
+      <!-- Profile Image -->
+      <div class="profile">
+        <img class="profile-image" ng-src="{{tech.profile_image}}" alt="{{tech.first_name}} {{tech.last_name}}" />
+      </div>
+      <!-- Name and Monthly Score -->
+      <div class="details">
+        <div class="name">{{tech.first_name}} {{tech.last_name}}</div>
+        <div class="score">{{tech.monthly_score}} / 1</div>
+      </div>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

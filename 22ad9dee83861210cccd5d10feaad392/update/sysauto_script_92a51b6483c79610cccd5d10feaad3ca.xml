@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>set feedback</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-01-09 08:37:39</run_start>
+        <run_time>1969-12-31 22:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var grRequestsClosed = new GlideRecord('x_1522458_automo_0_service_request');
+grRequestsClosed.addEncodedQuery("state=3");
+grRequestsClosed.query();
+grRequestsClosed.setValue("description", "Test Scheduled job START");
+grRequestsClosed.update();
+
+while (grRequestsClosed.next()) {
+    var grFeedBack = new GlideRecord('x_1522458_automo_0_customer_feedback');
+    grFeedBack.addEncodedQuery("request=" + grRequestsClosed.getDisplayValue('sys_id'));
+
+    grFeedBack.query();
+
+    if (grFeedBack.getRowCount() === 0) {
+        grRequestsClosed.setValue ("feedback", true);
+		grRequestsClosed.setValue("description", "Test Scheduled job FEEDBACK");
+		grRequestsClosed.update();
+        }else{
+		grRequestsClosed.setValue ("feedback", false);
+		grRequestsClosed.setValue("description", "Test Scheduled job NOFEEDBACK");
+		grRequestsClosed.update();
+		}
+		
+    }
+
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 08:40:46</sys_created_on>
+        <sys_id>92a51b6483c79610cccd5d10feaad3ca</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>set feedback</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sysauto_script_92a51b6483c79610cccd5d10feaad3ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 08:47:58</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>92a51b6483c79610cccd5d10feaad3ca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 08:40:45</sys_created_on>
+        <sys_id>7356dfa483c79610cccd5d10feaad391</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 08:40:45</sys_updated_on>
+        <table>sysauto_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

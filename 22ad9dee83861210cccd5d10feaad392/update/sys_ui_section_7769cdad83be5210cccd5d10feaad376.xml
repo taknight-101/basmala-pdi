@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Offer and Communication:" section_id="7769cdad83be5210cccd5d10feaad376" sys_domain="global" table="x_1522458_automo_0_customer_feedback" version="3" view="Customer_Feedback_View">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>how_clear_was_the_service_offer_provided_to_you</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:43:14</sys_created_on>
+            <sys_id>8c7901ed83be5210cccd5d10feaad322</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer and Communication:" display_value="Offer and Communication:" name="x_1522458_automo_0_customer_feedback" sys_domain="global" view="4c28056d83be5210cccd5d10feaad352">7769cdad83be5210cccd5d10feaad376</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:43:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>were_you_satisfied_with_the_explanation_of_the_repair_work_and_costs_involved</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:43:14</sys_created_on>
+            <sys_id>847901ed83be5210cccd5d10feaad323</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer and Communication:" display_value="Offer and Communication:" name="x_1522458_automo_0_customer_feedback" sys_domain="global" view="4c28056d83be5210cccd5d10feaad352">7769cdad83be5210cccd5d10feaad376</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:43:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>did_you_feel_the_service_offer_was_reasonable_and_fair</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:43:14</sys_created_on>
+            <sys_id>8c7901ed83be5210cccd5d10feaad323</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Offer and Communication:" display_value="Offer and Communication:" name="x_1522458_automo_0_customer_feedback" sys_domain="global" view="4c28056d83be5210cccd5d10feaad352">7769cdad83be5210cccd5d10feaad376</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:43:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Offer and Communication:</caption>
+            <header>false</header>
+            <name>x_1522458_automo_0_customer_feedback</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-30 14:43:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7769cdad83be5210cccd5d10feaad376</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_customer_feedback</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_7769cdad83be5210cccd5d10feaad376</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-30 14:43:13</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Customer Feedback View" name="Customer_Feedback_View">4c28056d83be5210cccd5d10feaad352</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

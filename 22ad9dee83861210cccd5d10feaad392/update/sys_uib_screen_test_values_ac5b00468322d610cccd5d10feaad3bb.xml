@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{
+    "table": "x_1522458_automo_0_service_request",
+    "sysId": "0cd4af4283b25610cccd5d10feaad3f0",
+    "query": "",
+    "extraParams": "",
+    "views": "",
+    "selectedTab": "",
+    "029f04e053610110ac9bddeeff7b1294": {
+        "activityLogs": null,
+        "detailsContext": null,
+        "fields": null,
+        "forcedViewName": null,
+        "inputExtraParams": null,
+        "inputQuery": null,
+        "inputSysId": "a8cf44bc830f9610cccd5d10feaad3f4",
+        "inputTable": "x_1522458_automo_0_task",
+        "isMappedToAppShell": true,
+        "screen": null,
+        "shouldSuppressGlobalEvents": true,
+        "userPrefs": null,
+        "view": "manager_view"
+    },
+    "1d9f8db04340311017b739603ab8f259": {
+        "policySysId": "",
+        "ts": ""
+    },
+    "5865e308432021105571609dc7b8f23b": {
+        "allRecordsSelected": false,
+        "columnFilteringPopoverDisplay": "allowBoth",
+        "columnLimit": 0,
+        "columns": "number,state,sys_created_by",
+        "currentPage": 0,
+        "enableCellFiltering": true,
+        "enableColumnSorting": true,
+        "enableDeclarativeActions": true,
+        "enableDotWalk": true,
+        "enableLiveList": false,
+        "enableQuickEdit": false,
+        "enableReferenceLinks": true,
+        "fetchHighlightedValues": true,
+        "filter": "",
+        "fixedFilter": "department=3d510ffa83429210cccd5d10feaad3d1",
+        "groupBy": "",
+        "listId": null,
+        "listMenuConfigurationId": null,
+        "listTitle": "Waiting Inspection Requests",
+        "listType": "simple",
+        "onlyEnableSelectionWhenRequiredByActions": true,
+        "parentRecordSysId": null,
+        "parentTable": null,
+        "relatedListName": null,
+        "table": "x_1522458_automo_0_service_request",
+        "view": "41d3364c83d21210cccd5d10feaad3f5"
+    },
+    "fdcde28377221110960ced43ba5a99e7": {
+        "ciClass": null,
+        "ciSysid": null,
+        "connectionId": null,
+        "levels": null,
+        "timestamp": null
+    },
+    "7cb6eb2e77321510960ced43ba5a9904": {
+        "perfLogging": null,
+        "reloadTimestamp": null
+    },
+    "request": "b699e79b83b61210cccd5d10feaad393"
+}</macroponent_config>
+        <screen display_value="Default">a05b00468322d610cccd5d10feaad3ab</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-19 13:13:07</sys_created_on>
+        <sys_id>ac5b00468322d610cccd5d10feaad3bb</sys_id>
+        <sys_mod_count>65</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_ac5b00468322d610cccd5d10feaad3bb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 19:27:39</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>

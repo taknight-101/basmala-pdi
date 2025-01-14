@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="e8d5d70983165610cccd5d10feaad35e" label="Task " max_length="40" name="x_1522458_automo_0_task" text_index="true" type="collection">
+        <element choice="1" default="new" label="State" max_length="40" name="state" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Closed Complete" sequence="4" value="closed_complete"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Scheduled" sequence="1" value="scheduled"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="in_progress"/>
+                <element inactive_on_update="false" label="Done" sequence="3" value="completed"/>
+            </choice>
+        </element>
+        <element label="Assigned To" mandatory="true" max_length="32" name="assined_to" reference="sys_user" reference_qual="roles!=x_1522458_automo_0.service_manager^department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe" reference_qual_condition="roles!=x_1522458_automo_0.service_manager^department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe" type="reference"/>
+        <element default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" max_length="40" name="number" read_only="true" type="string" use_dynamic_default="true"/>
+        <element label="Customer Statement" max_length="4000" name="customer_statement" read_only="true" type="string"/>
+        <element label="Short Description" mandatory="true" max_length="40" name="short_description" type="string"/>
+        <element label="Assignment Group" max_length="32" name="assignment_group" reference="sys_user_group" type="reference"/>
+        <element choice="1" label="Rating" max_length="40" name="rating" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="1" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="6" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="10" sequence="9" value="10"/>
+                <element inactive_on_update="false" label="3" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="7" sequence="6" value="7"/>
+                <element inactive_on_update="false" label="2" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="4" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="8" sequence="7" value="8"/>
+                <element inactive_on_update="false" label="5" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="9" sequence="8" value="9"/>
+            </choice>
+        </element>
+        <element label="From" mandatory="true" max_length="40" name="from" type="glide_utc_time"/>
+        <element label="Department" max_length="32" name="department" reference="cmn_department" type="reference"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element label="Date" mandatory="true" max_length="40" name="date" type="glide_date"/>
+        <element label="Inspection" max_length="40" name="insoection" read_only="true" type="boolean"/>
+        <element choice="1" label="Available Times" mandatory="true" max_length="40" name="available_times" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="10:00 - 11:00" sequence="0" value="00_11_00"/>
+            </choice>
+        </element>
+        <element label="Workstation" mandatory="true" max_length="32" name="workstation" reference="x_1522458_automo_0_workstation" reference_qual="department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^active=true" reference_qual_condition="department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^active=true" type="reference"/>
+        <element label="Request" mandatory="true" max_length="32" name="request" read_only="true" reference="x_1522458_automo_0_service_request" reference_qual="department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ" reference_qual_condition="department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ" type="reference"/>
+        <element label="New File Attachment" max_length="40" name="u_file_attachment_1" type="file_attachment"/>
+        <element label="To" mandatory="true" max_length="40" name="to" type="glide_utc_time"/>
+        <element label="Report Uploaded" max_length="40" name="report_uploaded" type="string"/>
+        <element label="Inspection Report" max_length="400" name="inspection_report_attachment" read_only="true" type="string"/>
+        <element label="Additional Comments" max_length="40" name="additional_comments" type="journal_input"/>
+        <element function_definition="glidefunction:length(insoection)" function_field="true" label="inspection tasks" max_length="40" name="rpt_inspection_tasks" read_only="true" type="boolean"/>
+        <index name="index">
+            <element name="assignment_group"/>
+        </index>
+        <index name="index2">
+            <element name="assined_to"/>
+        </index>
+        <index name="index3">
+            <element name="department"/>
+        </index>
+        <index name="index4">
+            <element name="request"/>
+        </index>
+        <index name="index5">
+            <element name="workstation"/>
+        </index>
+    </element>
+</database>

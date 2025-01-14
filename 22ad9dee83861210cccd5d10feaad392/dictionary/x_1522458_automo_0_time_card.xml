@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="calendar_elements=task;" db_object_id="a66063dc835a5210cccd5d10feaad35d" label="Time Card" max_length="40" name="x_1522458_automo_0_time_card" read_only="true" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="From" mandatory="true" max_length="40" name="from" read_only="true" type="glide_utc_time"/>
+        <element label="To" mandatory="true" max_length="40" name="to" read_only="true" type="glide_utc_time"/>
+        <element label="Task" mandatory="true" max_length="32" name="task" read_only="true" reference="x_1522458_automo_0_task" type="reference"/>
+        <element label="Date_Time" max_length="40" name="date_time" read_only="true" type="glide_date_time"/>
+        <element label="Assigned to" mandatory="true" max_length="32" name="assigned_to" read_only="true" reference="sys_user" type="reference"/>
+        <element label="Date" mandatory="true" max_length="40" name="date" read_only="true" type="glide_date"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>

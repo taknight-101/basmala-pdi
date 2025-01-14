@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function ($scope) {
+  /* widget controller */
+  var c = this;
+
+  if ($scope.data.vehicle.license_plate) {
+    var licensePlate = $scope.data.vehicle.license_plate.trim(); // Ensure no extra spaces
+    console.log("Original License Plate:", licensePlate);
+
+    // Split the license plate into parts
+    var parts = licensePlate.split(' '); // Split by spaces
+    console.log("Split Parts:", parts);
+
+    // Extract numbers (last part)
+    var numbers = parts.pop(); // Get the last part as numbers
+    console.log("Numbers:", numbers);
+
+    // Extract letters (remaining parts, reverse order for right-to-left display)
+    var letters = parts.reverse(); // Reverse to fit Arabic right-to-left order
+    console.log("Letters:", letters);
+
+    // Ensure letters array has exactly 3 elements
+    while (letters.length < 3) {
+      letters.push(""); // Add empty strings if fewer than 3 letters
+    }
+
+    $scope.licensePlate = {
+      number: numbers, // Last part (numbers)
+      letters: letters  // Reversed letters
+    };
+
+    console.log("Formatted License Plate Data:", $scope.licensePlate);
+  } else {
+    $scope.licensePlate = {
+      number: "",
+      letters: ["", "", ""]
+    };
+  }
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+
+/* General Form Styling */
+/* Form Container */
+/* Container */
+
+.custom-form {
+    width: 60%;
+    margin: 30px auto;
+   background: linear-gradient(145deg, #f5f5f5, #e3ebf2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.3), -12px -12px 24px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease;
+    height:500px;
+}
+/* Form Title */
+.custom-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.custom-form .highlight {
+    color: #0056b3;
+}
+
+.custom-form .alternate {
+    color: #007bff;
+}
+
+/* Form Layout: CSS Grid */
+form {
+    display: grid;
+   
+    gap: 20px; /* Space between grid items */
+}
+
+/* Full-width field for description */
+.full-width {
+    grid-column: 1 / -1; /* Spans both columns */
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #444;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Read-Only Fields */
+.read-only-field {
+    padding: 10px;
+    border-radius: 8px;
+    background: #f4f9fc;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.1), inset -2px -2px 6px rgba(255, 255, 255, 0.7);
+    font-size: 1.7rem;
+    color: #333;
+    word-break: break-word;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Multi-line Read-Only Fields */
+.read-only-field.multiline {
+    min-height: 100px;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+/* Responsive Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    .custom-form {
+        width: 90%; /* Slightly wider for smaller screens */
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+     .char-box {
+    width: 15.5%; /* Each char box takes up 16.5% of the width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    text-align:center;
+    color:black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width: thin;
+    }
+    .text-box {
+    width: 50%; /* Make the text box 50% width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width:thin;
+    text-align:center;
+    }
+}
+
+.char-box {
+    width: 16.5%; /* Each char box takes up 16.5% of the width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    text-align:center;
+    color:black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width: thin;
+}
+.text-box {
+    width: 50%; /* Make the text box 50% width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width:thin;
+    text-align:center;
+}
+.license-plate {
+    display: flex; /* Use flexbox to place items side by side */
+    gap: 10px; /* Space between fields */
+}
+@media (max-width: 480px) {
+    label {
+        font-size: 1.2rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 1rem;
+    }
+    .char-box {
+    width: 13.5%; /* Each char box takes up 16.5% of the width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    text-align:center;
+    color:black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width: thin;
+    }
+    .text-box {
+    width: 50%; /* Make the text box 50% width */
+    padding: 9px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    background: #f4f9fc;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    outline: none;
+    border-width:thin;
+    text-align:center;
+    }
+}
+
+.details{color:red;}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>asm_vehicle_details_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>ASM_vehicle_details_form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    data.sys_id = $sp.getParameter('sys_id'); // Get sys_id from URL parameters
+
+    if (data.sys_id) {
+        var gr = new GlideRecord('x_1522458_automo_0_vehicle'); // Table name
+        if (gr.get(data.sys_id)) { // Fetch the record
+            data.vehicle = {
+                model: gr.getDisplayValue('mode0'),
+                color: gr.getDisplayValue('color'),
+                license_plate: gr.getDisplayValue('license_plat0'),
+            };
+        } else {
+            data.error = "Vehicle not found.";
+        }
+    } else {
+        data.error = "No vehicle ID provided.";
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-18 16:08:59</sys_created_on>
+        <sys_id>4bf9a36983e65610cccd5d10feaad394</sys_id>
+        <sys_mod_count>99</sys_mod_count>
+        <sys_name>ASM_vehicle_details_form</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_4bf9a36983e65610cccd5d10feaad394</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-19 09:16:11</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+<div class="custom-form">
+  <h2><span>Vehicle</span><span class="details"> Details</span></h2>
+    <form>
+        <!-- Vehicle Model -->
+        <div class="form-group">
+            <label for="vehicleModel">Vehicle Model</label>
+            <div class="read-only-field">{{ data.vehicle.model }}</div>
+        </div>
+
+        <!-- Vehicle Color -->
+        <div class="form-group">
+           <label>Vehicle Color</label>
+           <div class="read-only-field">{{data.vehicle.color }}</div>
+        </div>
+
+        <!-- License Plate -->
+        <div class="form-group">
+            <label for="licensePlate">License Plate</label>
+           <div class="license-plate">
+            <!-- The last 4 characters (numbers) -->
+            <input type="text" class="text-box" placeholder="" maxlength="4" ng-model="licensePlate.number" readonly>
+    
+            <!-- The 3 Arabic letters (split into char-boxes from right to left) -->
+            <input type="text" class="char-box" placeholder="" maxlength="1" ng-model="licensePlate.letters[0]" readonly>
+            <input type="text" class="char-box" placeholder="" maxlength="1" ng-model="licensePlate.letters[1]" readonly>
+            <input type="text" class="char-box" placeholder="" maxlength="1" ng-model="licensePlate.letters[2]" readonly>
+        </div>
+           
+       </div>
+    </form>
+</div>
+
+
+
+</body>
+</html>]]></template>
+    </sp_widget>
+</record_update>

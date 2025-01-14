@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function() {
+	/* widget controller */
+	var c = this;
+	
+	c.formatDate = function (dateString) {
+		var datePart = dateString.split(" ")[0];
+		var dateArray = datePart.split("-");
+		var reversedDate = dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
+		return reversedDate;
+	};
+
+	c.toggleRequestParts = function() {
+		var section = document.getElementById("request-part-section");
+		var button = document.getElementById("toggle-button");
+
+		// Toggle visibility of the request part section
+		if (section.style.display === "none" || section.style.display === "") {
+			section.style.display = "block";
+			button.style.display = "none";
+
+		} else {
+			section.style.display = "none";
+			button.textContent = "Show More"; // Change button text to "Show More"
+		}
+	}
+
+
+	var urlParams = new URLSearchParams(window.location.search);
+
+	// Extract the 'sys_id' parameter
+	var sysId = urlParams.get('sys_id');
+
+	c.data.sys_id = sysId;
+	
+	c.server.update();
+
+
+
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fefcfb; /* Light background */
+  padding: 20px;
+  color: #0a1128; /* Dark color for text */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+  margin-top: 50px;
+}
+
+.container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #001f54; /* Dark blue header */
+  font-weight: bold;
+}
+
+.offer-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out; /* Smooth transition for the layout */
+}
+
+.column {
+  width: 45%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #034078; /* Lighter blue for labels */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #034078; /* Input text color */
+  transition: all 0.3s ease-in-out;
+}
+
+input[readonly] {
+  background-color: #e9e9e9;
+  color: #0a1128;
+}
+
+input[type="text"]:focus {
+  border-color: #1282a2; /* Focus border color */
+  background-color: #e6f7ff; /* Light blue background on focus */
+  box-shadow: 0 0 4px rgba(19, 130, 162, 0.4); /* Subtle glow effect on focus */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.show-more-btn {
+  width: 20%;
+  padding: 10px;
+  background-color: #1282a2; /* Blue button */
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #034078; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.show-more-btn:active {
+  transform: translateY(0); /* Button returns to normal when clicked */
+}
+
+.request-part-section {
+  display: none;
+  margin-top: 20px;
+  background-color: #f9f9f9; /* Light background for the section */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  color: #0a1128; /* Dark text color */
+}
+
+th {
+  background-color: #1282A2; /* Dark blue for headers */
+  color: white;
+  text-align: center;
+}
+
+td {
+  background-color: #fefcfb; /* Light background for table rows */
+}
+
+tr:nth-child(even) td {
+  background-color: #e9f0f9; /* Light blue alternating rows */
+}
+
+tr:hover td {
+  background-color: #d1e8f6; /* Hover effect on rows */
+  transition: background-color 0.3s ease;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>asm_offer_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Offer Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	if(input){
+
+		data.Offers = [];
+    var grOffers = new GlideRecordSecure("x_1522458_automo_0_offer");
+    grOffers.addActiveQuery();
+    grOffers.addEncodedQuery("sys_id="+input.sys_id);
+    grOffers.query();
+		
+		
+		data.PartRequests = []
+		var grPartReq = new GlideRecordSecure('x_1522458_automo_0_part_request');
+		grPartReq.addActiveQuery();
+    grPartReq.addEncodedQuery("offer.sys_id="+input.sys_id);
+		grPartReq.query();
+		
+		
+		while(grPartReq.next()){
+			data.PartRequests.push({
+				PartNumber: grPartReq.getDisplayValue("number"),
+            OfferNumber: grPartReq.getDisplayValue("offer"),
+            part: grPartReq.getDisplayValue("part"),
+            amount: grPartReq.getDisplayValue("amount"),
+            Cost: grPartReq.getDisplayValue("cost")
+			});
+		}
+		
+		while (grOffers.next()){
+			data.Offers.push({
+				Number: grOffers.getDisplayValue("number"),
+        RequestNumber: grOffers.getDisplayValue("request_number"),
+        SparePartsCost: grOffers.getDisplayValue("spare_parts_cost"),
+        Date: grOffers.getDisplayValue("date"),
+        LaborCost: grOffers.getDisplayValue("labor_cost"),
+				TotalCost: grOffers.getDisplayValue("price"),
+        Description: grOffers.getDisplayValue("description"),
+        State: grOffers.getDisplayValue("state"),
+        ID: grOffers.getDisplayValue("sys_id"),
+				requestParts: data.PartRequests
+			});
+		}
+		
+
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 13:10:33</sys_created_on>
+        <sys_id>7baa3daf832e9e10cccd5d10feaad34a</sys_id>
+        <sys_mod_count>82</sys_mod_count>
+        <sys_name>Offer Form</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_7baa3daf832e9e10cccd5d10feaad34a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-26 12:02:56</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header>
+        <h1>Offer Details</h1>
+      </header>
+
+      <!-- Offer Data Section -->
+      <div class="Bigcontainer" ng-repeat="s in c.data.Offers"  >
+        <section class="offer-data">
+        <div class="column">
+          <label for="number">Number:</label>
+          <input type="text" id="number" ng-model="s.Number" readonly>
+
+          <label for="spare-parts-cost">Spare Parts Cost:</label>
+          <input type="text" id="spare-parts-cost" ng-model="s.SparePartsCost" readonly>
+
+          <label for="labor-cost">Labor Cost:</label>
+          <input type="text" id="labor-cost" ng-model="s.LaborCost" readonly>
+
+          <label for="total-cost">Total Cost:</label>
+          <input type="text" id="total-cost" ng-model="s.TotalCost" readonly>
+        </div>
+
+        <div class="column">
+          <label for="request-number">Request Number:</label>
+          <input type="text" id="request-number" ng-model="s.RequestNumber" readonly>
+
+          <label for="date">Date:</label>
+          <input type="text" id="date" ng-model="c.formatDate(s.Date)" readonly>
+
+          <label for="state">State:</label>
+          <input type="text" id="state" ng-model="s.State" readonly>
+        </div>
+          
+      </section>
+        
+        <div>
+          <label for="description">Description:</label>
+          <input type="text" id="description" ng-model="s.Description" readonly>
+        </div>
+
+      <!-- Show More Button -->
+      <div class="buttonContainer" ng-if="c.data.PartRequests.length > 0">
+        <button id="toggle-button" class="show-more-btn" ng-click="c.toggleRequestParts()" >Show More</button>
+      </div>
+
+      <!-- Request Part Section (Hidden by Default) -->
+      <section class="request-part-section" id="request-part-section" 
+               >
+        <h2>Requested Parts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Part</th>
+              <th>Amount</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody ng-repeat="r in s.requestParts"> 
+            <tr>
+              <td>{{r.PartNumber}}</td>
+              <td>{{r.part}}</td>
+              <td>{{r.amount}}</td>
+              <td>{{r.Cost}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+      </div>
+
+    
+  </body>
+</html>
+]]></template>
+    </sp_widget>
+</record_update>

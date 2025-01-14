@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="" section_id="005927d8839a5210cccd5d10feaad33b" sys_domain="global" table="x_1522458_automo_0_service_task" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>56b24bcd83925610cccd5d10feaad3b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>5eb24bcd83925610cccd5d10feaad3b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_group</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>56b24bcd83925610cccd5d10feaad3b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>from</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>5eb24bcd83925610cccd5d10feaad3b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cmdb_ci</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>56b24bcd83925610cccd5d10feaad3ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>5eb24bcd83925610cccd5d10feaad3ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>56b24bcd83925610cccd5d10feaad3bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>5eb24bcd83925610cccd5d10feaad3bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>56b24bcd83925610cccd5d10feaad3bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>5eb24bcd83925610cccd5d10feaad3bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>to</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+            <sys_id>56b24bcd83925610cccd5d10feaad3bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption/>
+            <header>false</header>
+            <name>x_1522458_automo_0_service_task</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-02 08:37:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>005927d8839a5210cccd5d10feaad33b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1522458_automo_0_service_task</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+            <sys_update_name>sys_ui_section_005927d8839a5210cccd5d10feaad33b</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-02 08:37:57</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_ui_section_005927d8839a5210cccd5d10feaad33b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="005927d8839a5210cccd5d10feaad33b" sys_domain="global" table="x_1522458_automo_0_service_task" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>number</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>56b24bcd83925610cccd5d10feaad3b8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>assigned_to</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>5eb24bcd83925610cccd5d10feaad3b8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>assignment_group</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>56b24bcd83925610cccd5d10feaad3b9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>from</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>5eb24bcd83925610cccd5d10feaad3b9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>cmdb_ci</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>56b24bcd83925610cccd5d10feaad3ba</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>active</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>5eb24bcd83925610cccd5d10feaad3ba</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>56b24bcd83925610cccd5d10feaad3bb</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>priority</element><position>7</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>5eb24bcd83925610cccd5d10feaad3bb</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>state</element><position>8</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>56b24bcd83925610cccd5d10feaad3bc</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>date</element><position>9</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>5eb24bcd83925610cccd5d10feaad3bc</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>to</element><position>10</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-04 13:44:47</sys_created_on><sys_id>56b24bcd83925610cccd5d10feaad3bd</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_service_task" sys_domain="global" view="Default view">005927d8839a5210cccd5d10feaad33b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-04 13:44:47</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_1522458_automo_0_service_task</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-02 08:37:57</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>005927d8839a5210cccd5d10feaad33b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1522458_automo_0_service_task</sys_name><sys_overrides/><sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package><sys_policy/><sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope><sys_update_name>sys_ui_section_005927d8839a5210cccd5d10feaad33b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-02 08:37:57</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-1180296230</payload_hash>
+        <record_name>Task Item</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 13:44:47</sys_created_on>
+        <sys_id>96b24bcd83925610cccd5d10feaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19391ea8b660000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 13:44:47</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>5eb24bcd849256107bc62f498b2721cb</update_guid>
+        <update_guid_history>5eb24bcd849256107bc62f498b2721cb:-1180296230,709247cdbc92561042473295ca7ff2fb:-1937104343,84044a3067dad21082a6c35d3fa04dba:950064791,834cabdcae9a521058e2075f0fe6abb1:-2131238926,034cabdc9c9a52106048465a16dae57c:492758279</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-05 09:36:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>0ea91863508747849e9fed75cf4be3c1</sys_id>
+        <sys_metadata>005927d8839a5210cccd5d10feaad33b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1522458_automo_0_service_task</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent display_value="">a74967d8839a5210cccd5d10feaad377</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_ui_section_005927d8839a5210cccd5d10feaad33b</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_005927d8839a5210cccd5d10feaad33b">96b24bcd83925610cccd5d10feaad3cc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-05 09:36:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

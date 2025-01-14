@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1522458_automo_0.Calendar_Validation</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>Calendar_Validation</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var Calendar_Validation = Class.create();
+Calendar_Validation.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getDisabledDays: function() {
+        var inputDate = new GlideDate();
+        inputDate.setValue(this.getParameter('sysparm_date'));
+        var today = new GlideDate();
+		//gs.addInfoMessage(today);
+
+        if (inputDate < today) {
+            return 'true';
+        }
+
+        var dayOfWeek = inputDate.getDayOfWeekLocalTime();
+       // gs.addInfoMessage('dayOfWeek'+dayOfWeek);
+        if (dayOfWeek === 6) {
+            return 'true';
+        }
+
+        return 'false';
+    },
+    type: 'Calendar_Validation'
+});
+
+//var test = new Calendar_Validation();
+//gs.info(test.getDisabledDays());]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-02 14:04:46</sys_created_on>
+        <sys_id>f2f3706c83129210cccd5d10feaad360</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Calendar_Validation</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_script_include_f2f3706c83129210cccd5d10feaad360</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 09:59:53</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>f2f3706c83129210cccd5d10feaad360</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-02 14:04:46</sys_created_on>
+        <sys_id>5b14f46c83129210cccd5d10feaad3ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-02 14:04:46</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</application>
+        <file_path/>
+        <instance_id>702ae02e1bbebd14c84543f4bd4bcb1e</instance_id>
+        <instance_name>dev231407</instance_name>
+        <name>sys_script_include_f2f3706c83129210cccd5d10feaad360</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1522458_automo_0.Calendar_Validation&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;Calendar_Validation&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var Calendar_Validation = Class.create();
+Calendar_Validation.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getDisabledDays: function() {
+        var inputDate = new GlideDate();
+        inputDate.setValue(this.getParameter('sysparm_date'));
+        var today = new GlideDate();
+		//gs.addInfoMessage(today);
+
+        if (inputDate &lt; today) {
+            return 'true';
+        }
+
+        var dayOfWeek = inputDate.getDayOfWeekLocalTime();
+       // gs.addInfoMessage('dayOfWeek'+dayOfWeek);
+        if (dayOfWeek === 6) {
+            return 'true';
+        }
+
+        return 'false';
+    },
+    type: 'Calendar_Validation'
+});
+
+//var test = new Calendar_Validation();
+//gs.info(test.getDisabledDays());]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-02 14:04:46&lt;/sys_created_on&gt;&lt;sys_id&gt;f2f3706c83129210cccd5d10feaad360&lt;/sys_id&gt;&lt;sys_mod_count&gt;31&lt;/sys_mod_count&gt;&lt;sys_name&gt;Calendar_Validation&lt;/sys_name&gt;&lt;sys_package display_value="Automotive Service Management" source="x_1522458_automo_0"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Automotive Service Management"&gt;22ad9dee83861210cccd5d10feaad392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_f2f3706c83129210cccd5d10feaad360&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-04 09:59:53&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;f2f3706c83129210cccd5d10feaad360&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-02 14:04:46&lt;/sys_created_on&gt;&lt;sys_id&gt;5b14f46c83129210cccd5d10feaad3ea&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-02 14:04:46&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1114221408</payload_hash>
+        <record_name>Calendar_Validation</record_name>
+        <reverted_from/>
+        <source>aead9dee83861210cccd5d10feaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 09:59:53</sys_created_on>
+        <sys_id>bb3f828d839e1610cccd5d10feaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193911ca5220000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 09:59:53</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>733f828dfa9e161003373334484740a3</update_guid>
+        <update_guid_history>733f828dfa9e161003373334484740a3:-1114221408,d10f424d009e1610d9e8edc52e0fb77e:135354721,1ece464d0a9e16104cde325e59433c15:459187093,a8ae424dd09e161079716ded3c3f928a:135354721,1c6e824dc99e1610838db2c62172198a:-821079551,20fd460d459e161066f568446ae16249:2004968272,fdad820d719e16105198d409f895b88d:-164582473,8e8dcec9199e161078b1095fa422117c:1032196951,8c5d8ac9d19e161088fedb583d99e2e0:1919860814,083d46c9989e16100f12df426c1bd543:-1296062926,0c0d06c9069e161082ab0d4a8356911e:-131833833,f4dc02c9a19e1610793d11a6fbbe362f:-949369990,7dac0e89eb9e1610bd8f5f2cf39efc4e:-2027419006,727c4689689e161040437443ec1d8b0b:758851567,af4c4ec50b9e1610b6e58f4a806892a5:569253961,f01c0289a89e1610e9fec6fbabb6a3be:339695197,a7bbc649ae9e1610dc50e24ce9fad7b2:-1544255190,159915aca7d2921096e9cfe5ba8a5db4:873767448,4f8609a46b9292101e62b46daf82db00:-570507487,6c85056477929210134ffb53d358f0d1:-1801006105,966bb0e4a1529210808b33beb1f5b628:1901357505,211bf8a470529210707a2b4defccb729:2092659846,7ddab464cd529210abe7e77f358c1586:-1615441495,ab0ab0641f529210f814a545c06655a2:-448395614,3a99b8247f52921083a868c2cfdc8ca3:-1484898398,cb69fce062529210393b91aa28f6d63f:-1044805603,e35834e0db5292108e2a4ea6f2eaa213:-1371418834,864870e0855292104b9f5c22fbf4beb1:-1509012404,e5287c608d5292109e95fe9d4666ec67:742382475,ccb7b4a01a5292104a62f181e02dcbda:1159653675,d4963ceca512921026e9667b9fef5ce4:-755207316,fb14f86c9f129210299918919d83c6bb:-879842934</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-04 15:41:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>53ccbc50afbe4bebaa8bc122d67ce011</sys_id>
+        <sys_metadata>f2f3706c83129210cccd5d10feaad360</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Calendar_Validation</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_scope_delete display_value="">9571d9cb539442f5ab274da799a4f499</sys_scope_delete>
+        <sys_update_name>sys_script_include_f2f3706c83129210cccd5d10feaad360</sys_update_name>
+        <sys_update_version display_value="sys_script_include_f2f3706c83129210cccd5d10feaad360">bb3f828d839e1610cccd5d10feaad3a3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-04 15:41:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
