@@ -6459,6 +6459,7 @@
                                                                     "root": null,
                                                                     "rules": null,
                                                                     "styles": {
+                                                                        "background": "rgb(var(--now-color--neutral-0))",
                                                                         "flex-direction": "column",
                                                                         "height": "100%",
                                                                         "position": "relative",
@@ -6558,6 +6559,7 @@
                                                                         {
                                                                             "element_id": "attachment",
                                                                             "styles": {
+                                                                                "background": "rgb(var(--now-color--neutral-0))",
                                                                                 "height": "100%",
                                                                                 "position": "relative",
                                                                                 "width": "40%"
@@ -6686,6 +6688,7 @@
                                                                         {
                                                                             "element_id": "form_templates",
                                                                             "styles": {
+                                                                                "background": "rgb(var(--now-color--neutral-0))",
                                                                                 "height": "100%",
                                                                                 "margin-left": "var(--now-scalable-space--lg)",
                                                                                 "margin-right": "var(--now-scalable-space--lg)",
@@ -6911,6 +6914,7 @@
                                                                     "root": null,
                                                                     "rules": null,
                                                                     "styles": {
+                                                                        "background": "rgb(var(--now-color--neutral-0))",
                                                                         "display": "flex",
                                                                         "flex-direction": "column",
                                                                         "height": "100%",
@@ -6979,7 +6983,7 @@
                                                                     "eventMappings": [],
                                                                     "isHidden": {
                                                                         "type": "JSON_LITERAL",
-                                                                        "value": null
+                                                                        "value": true
                                                                     },
                                                                     "preset": null,
                                                                     "propertyValues": {
@@ -7058,6 +7062,1150 @@
                                                                     },
                                                                     "slot": null,
                                                                     "styles": null
+                                                                },
+                                                                {
+                                                                    "definition": {
+                                                                        "id": "d356d14b6e293a3020a244b63d278d8f",
+                                                                        "type": "MACROPONENT"
+                                                                    },
+                                                                    "elementId": "grid_container_3",
+                                                                    "elementLabel": "Grid Container 3",
+                                                                    "eventMappings": [],
+                                                                    "overrides": {
+                                                                        "composition": [
+                                                                            {
+                                                                                "definition": {
+                                                                                    "id": "d356d14b6e293a3020a244b63d278d8f",
+                                                                                    "type": "MACROPONENT"
+                                                                                },
+                                                                                "elementId": "container_1",
+                                                                                "elementLabel": "Container 1",
+                                                                                "eventMappings": [],
+                                                                                "overrides": {
+                                                                                    "composition": [
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_3",
+                                                                                            "elementLabel": "Q1",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "type": "TRANSLATION_LITERAL",
+                                                                                                    "value": {
+                                                                                                        "code": null,
+                                                                                                        "comment": "",
+                                                                                                        "message": "How would you rate your overall experience with our service center?"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        },
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_4",
+                                                                                            "elementLabel": "A1",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "tag": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "h3"
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "look_up_a_single_record_customer_feedback",
+                                                                                                            "result",
+                                                                                                            "how_would_you_rate_your_overall_experience_with_our_service_center",
+                                                                                                            "displayValue"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "DATA_OUTPUT_BINDING"
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        }
+                                                                                    ],
+                                                                                    "layout": {
+                                                                                        "default": {
+                                                                                            "children": null,
+                                                                                            "items": [
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_3",
+                                                                                                    "styles": {}
+                                                                                                },
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_4",
+                                                                                                    "styles": {
+                                                                                                        "background": "#90E0EF",
+                                                                                                        "border-color": "#90E0EF",
+                                                                                                        "border-radius": "20px",
+                                                                                                        "border-style": "solid",
+                                                                                                        "border-width": "var(--now-static-space--xs)",
+                                                                                                        "max-width": "fit-content",
+                                                                                                        "padding": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-bottom": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-left": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-right": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-top": "var(--now-scalable-space--xs)",
+                                                                                                        "text-align": "center"
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "root": null,
+                                                                                            "rules": null,
+                                                                                            "styles": {
+                                                                                                "align-items": "center",
+                                                                                                "display": "flex",
+                                                                                                "flex-direction": "row",
+                                                                                                "gap": "var(--now-scalable-space--lg)",
+                                                                                                "width": "100%"
+                                                                                            },
+                                                                                            "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                                            "type": "flex"
+                                                                                        },
+                                                                                        "version": "3.0.0"
+                                                                                    }
+                                                                                },
+                                                                                "preset": {
+                                                                                    "controllerElementId": "record",
+                                                                                    "disabledEventTargetIds": [],
+                                                                                    "id": "9aeb8ba90de3e59686276ced85f01329"
+                                                                                },
+                                                                                "propertyValues": {
+                                                                                    "ariaRegionHeadingLevel": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "1"
+                                                                                    },
+                                                                                    "ariaRegionName": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "ariaRole": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "hideEmptyStateUi": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": true
+                                                                                    },
+                                                                                    "includeAriaHeading": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": false
+                                                                                    },
+                                                                                    "slotWrapperBehavior": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "fullheight"
+                                                                                    },
+                                                                                    "type": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "section"
+                                                                                    }
+                                                                                },
+                                                                                "slot": null,
+                                                                                "styles": null
+                                                                            },
+                                                                            {
+                                                                                "definition": {
+                                                                                    "id": "d356d14b6e293a3020a244b63d278d8f",
+                                                                                    "type": "MACROPONENT"
+                                                                                },
+                                                                                "elementId": "container_2",
+                                                                                "elementLabel": "Container 2",
+                                                                                "eventMappings": [],
+                                                                                "isHidden": {
+                                                                                    "type": "JSON_LITERAL",
+                                                                                    "value": null
+                                                                                },
+                                                                                "overrides": {
+                                                                                    "composition": [
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_5",
+                                                                                            "elementLabel": "Q2",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "type": "TRANSLATION_LITERAL",
+                                                                                                    "value": {
+                                                                                                        "code": null,
+                                                                                                        "comment": "",
+                                                                                                        "message": "How satisfied were you with the professionalism and friendliness of our staff?"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        },
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_6",
+                                                                                            "elementLabel": "A2",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "tag": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "h3"
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "look_up_a_single_record_customer_feedback",
+                                                                                                            "result",
+                                                                                                            "how_satisfied_were_you_with_the_professionalism_and_friendliness_of_our_staff",
+                                                                                                            "displayValue"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "DATA_OUTPUT_BINDING"
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        }
+                                                                                    ],
+                                                                                    "layout": {
+                                                                                        "default": {
+                                                                                            "children": null,
+                                                                                            "items": [
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_5",
+                                                                                                    "styles": {}
+                                                                                                },
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_6",
+                                                                                                    "styles": {
+                                                                                                        "background-color": "#90E0EF",
+                                                                                                        "border-color": "#90E0EF",
+                                                                                                        "border-radius": "20px",
+                                                                                                        "border-style": "solid",
+                                                                                                        "border-width": "var(--now-static-space--xs)",
+                                                                                                        "max-width": "fit-content",
+                                                                                                        "padding": "var(--now-scalable-space--xxs)",
+                                                                                                        "padding-bottom": "var(--now-scalable-space--xxs)",
+                                                                                                        "padding-left": "var(--now-scalable-space--xxs)",
+                                                                                                        "padding-right": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-top": "var(--now-scalable-space--xs)",
+                                                                                                        "text-align": "center"
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "root": null,
+                                                                                            "rules": null,
+                                                                                            "styles": {
+                                                                                                "align-items": "center",
+                                                                                                "flex-direction": "row",
+                                                                                                "gap": "var(--now-scalable-space--lg)",
+                                                                                                "justify-content": "flex-start",
+                                                                                                "width": "100%"
+                                                                                            },
+                                                                                            "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                                            "type": "flex"
+                                                                                        },
+                                                                                        "version": "3.0.0"
+                                                                                    }
+                                                                                },
+                                                                                "preset": {
+                                                                                    "controllerElementId": "record",
+                                                                                    "disabledEventTargetIds": [],
+                                                                                    "id": "9aeb8ba90de3e59686276ced85f01329"
+                                                                                },
+                                                                                "propertyValues": {
+                                                                                    "ariaRegionHeadingLevel": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "1"
+                                                                                    },
+                                                                                    "ariaRegionName": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "ariaRole": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "hideEmptyStateUi": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": true
+                                                                                    },
+                                                                                    "includeAriaHeading": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": false
+                                                                                    },
+                                                                                    "slotWrapperBehavior": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "fullheight"
+                                                                                    },
+                                                                                    "type": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "section"
+                                                                                    }
+                                                                                },
+                                                                                "slot": null,
+                                                                                "styles": null
+                                                                            },
+                                                                            {
+                                                                                "definition": {
+                                                                                    "id": "d356d14b6e293a3020a244b63d278d8f",
+                                                                                    "type": "MACROPONENT"
+                                                                                },
+                                                                                "elementId": "container_3",
+                                                                                "elementLabel": "Container 3",
+                                                                                "eventMappings": [],
+                                                                                "isHidden": {
+                                                                                    "type": "JSON_LITERAL",
+                                                                                    "value": null
+                                                                                },
+                                                                                "overrides": {
+                                                                                    "composition": [
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_7",
+                                                                                            "elementLabel": "Q3",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "type": "TRANSLATION_LITERAL",
+                                                                                                    "value": {
+                                                                                                        "code": null,
+                                                                                                        "comment": "",
+                                                                                                        "message": "Was the explanation of the repair work and costs clear and reasonable?"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        },
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_9",
+                                                                                            "elementLabel": "A3",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "tag": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "h3"
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "look_up_a_single_record_customer_feedback",
+                                                                                                            "result",
+                                                                                                            "was_the_explanation_of_the_repair_work_and_costs_clear_and_reasonable",
+                                                                                                            "displayValue"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "DATA_OUTPUT_BINDING"
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        }
+                                                                                    ],
+                                                                                    "layout": {
+                                                                                        "default": {
+                                                                                            "children": null,
+                                                                                            "items": [
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_7",
+                                                                                                    "styles": {}
+                                                                                                },
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_9",
+                                                                                                    "styles": {
+                                                                                                        "background": "#90E0EF",
+                                                                                                        "border-color": "#90E0EF",
+                                                                                                        "border-radius": "20px",
+                                                                                                        "border-style": "solid",
+                                                                                                        "border-width": "var(--now-static-space--xs)",
+                                                                                                        "max-width": "fit-content",
+                                                                                                        "padding": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-bottom": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-left": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-right": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-top": "var(--now-scalable-space--xs)",
+                                                                                                        "text-align": "center"
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "root": null,
+                                                                                            "rules": null,
+                                                                                            "styles": {
+                                                                                                "align-items": "center",
+                                                                                                "flex-direction": "row",
+                                                                                                "gap": "var(--now-scalable-space--lg)",
+                                                                                                "justify-content": "flex-start",
+                                                                                                "width": "100%"
+                                                                                            },
+                                                                                            "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                                            "type": "flex"
+                                                                                        },
+                                                                                        "version": "3.0.0"
+                                                                                    }
+                                                                                },
+                                                                                "preset": {
+                                                                                    "controllerElementId": "record",
+                                                                                    "disabledEventTargetIds": [],
+                                                                                    "id": "9aeb8ba90de3e59686276ced85f01329"
+                                                                                },
+                                                                                "propertyValues": {
+                                                                                    "ariaRegionHeadingLevel": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "1"
+                                                                                    },
+                                                                                    "ariaRegionName": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "ariaRole": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "hideEmptyStateUi": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": true
+                                                                                    },
+                                                                                    "includeAriaHeading": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": false
+                                                                                    },
+                                                                                    "slotWrapperBehavior": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "fullheight"
+                                                                                    },
+                                                                                    "type": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "section"
+                                                                                    }
+                                                                                },
+                                                                                "slot": null,
+                                                                                "styles": null
+                                                                            },
+                                                                            {
+                                                                                "definition": {
+                                                                                    "id": "d356d14b6e293a3020a244b63d278d8f",
+                                                                                    "type": "MACROPONENT"
+                                                                                },
+                                                                                "elementId": "container_4",
+                                                                                "elementLabel": "Container 4",
+                                                                                "eventMappings": [],
+                                                                                "isHidden": {
+                                                                                    "type": "JSON_LITERAL",
+                                                                                    "value": null
+                                                                                },
+                                                                                "overrides": {
+                                                                                    "composition": [
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_8",
+                                                                                            "elementLabel": "Q4",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "type": "TRANSLATION_LITERAL",
+                                                                                                    "value": {
+                                                                                                        "code": null,
+                                                                                                        "comment": "",
+                                                                                                        "message": "Did the repair fully resolve the issue with your vehicle?"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        },
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_10",
+                                                                                            "elementLabel": "A4",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "tag": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "h3"
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "look_up_a_single_record_customer_feedback",
+                                                                                                            "result",
+                                                                                                            "did_the_repair_fully_resolve_the_issue_with_your_vehicle",
+                                                                                                            "displayValue"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "DATA_OUTPUT_BINDING"
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        }
+                                                                                    ],
+                                                                                    "layout": {
+                                                                                        "default": {
+                                                                                            "children": null,
+                                                                                            "items": [
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_8",
+                                                                                                    "styles": {}
+                                                                                                },
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_10",
+                                                                                                    "styles": {
+                                                                                                        "background": "#90E0EF",
+                                                                                                        "border-color": "#90E0EF",
+                                                                                                        "border-radius": "20px",
+                                                                                                        "border-style": "solid",
+                                                                                                        "border-width": "var(--now-static-space--xs)",
+                                                                                                        "max-width": "fit-content",
+                                                                                                        "padding": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-bottom": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-left": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-right": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-top": "var(--now-scalable-space--xs)",
+                                                                                                        "text-align": "center"
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "root": null,
+                                                                                            "rules": null,
+                                                                                            "styles": {
+                                                                                                "align-items": "center",
+                                                                                                "flex-direction": "row",
+                                                                                                "gap": "var(--now-scalable-space--xl)",
+                                                                                                "width": "100%"
+                                                                                            },
+                                                                                            "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                                            "type": "flex"
+                                                                                        },
+                                                                                        "version": "3.0.0"
+                                                                                    }
+                                                                                },
+                                                                                "preset": {
+                                                                                    "controllerElementId": "record",
+                                                                                    "disabledEventTargetIds": [],
+                                                                                    "id": "9aeb8ba90de3e59686276ced85f01329"
+                                                                                },
+                                                                                "propertyValues": {
+                                                                                    "ariaRegionHeadingLevel": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "1"
+                                                                                    },
+                                                                                    "ariaRegionName": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "ariaRole": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "hideEmptyStateUi": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": true
+                                                                                    },
+                                                                                    "includeAriaHeading": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": false
+                                                                                    },
+                                                                                    "slotWrapperBehavior": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "fullheight"
+                                                                                    },
+                                                                                    "type": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "section"
+                                                                                    }
+                                                                                },
+                                                                                "slot": null,
+                                                                                "styles": null
+                                                                            },
+                                                                            {
+                                                                                "definition": {
+                                                                                    "id": "d356d14b6e293a3020a244b63d278d8f",
+                                                                                    "type": "MACROPONENT"
+                                                                                },
+                                                                                "elementId": "container_5",
+                                                                                "elementLabel": "Container 5",
+                                                                                "eventMappings": [],
+                                                                                "isHidden": {
+                                                                                    "type": "JSON_LITERAL",
+                                                                                    "value": null
+                                                                                },
+                                                                                "overrides": {
+                                                                                    "composition": [
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_11",
+                                                                                            "elementLabel": "Q5",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "type": "TRANSLATION_LITERAL",
+                                                                                                    "value": {
+                                                                                                        "code": null,
+                                                                                                        "comment": "",
+                                                                                                        "message": "Would you recommend our service center to friends or family?"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        },
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "stylized_text_12",
+                                                                                            "elementLabel": "A5",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "tag": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "h3"
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "look_up_a_single_record_customer_feedback",
+                                                                                                            "result",
+                                                                                                            "would_you_recommend_our_service_center_to_friends_or_family",
+                                                                                                            "displayValue"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "DATA_OUTPUT_BINDING"
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        }
+                                                                                    ],
+                                                                                    "layout": {
+                                                                                        "default": {
+                                                                                            "children": null,
+                                                                                            "items": [
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_11",
+                                                                                                    "styles": {}
+                                                                                                },
+                                                                                                {
+                                                                                                    "element_id": "stylized_text_12",
+                                                                                                    "styles": {
+                                                                                                        "background": "#90E0EF",
+                                                                                                        "border-color": "#90E0EF",
+                                                                                                        "border-radius": "20px",
+                                                                                                        "border-style": "solid",
+                                                                                                        "border-width": "var(--now-static-space--xs)",
+                                                                                                        "max-width": "fit-content",
+                                                                                                        "padding": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-bottom": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-left": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-right": "var(--now-scalable-space--xs)",
+                                                                                                        "padding-top": "var(--now-scalable-space--xs)",
+                                                                                                        "text-align": "center"
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "root": null,
+                                                                                            "rules": null,
+                                                                                            "styles": {
+                                                                                                "align-items": "center",
+                                                                                                "flex-direction": "row",
+                                                                                                "gap": "var(--now-scalable-space--lg)",
+                                                                                                "justify-content": "flex-start",
+                                                                                                "width": "100%"
+                                                                                            },
+                                                                                            "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                                            "type": "flex"
+                                                                                        },
+                                                                                        "version": "3.0.0"
+                                                                                    }
+                                                                                },
+                                                                                "preset": {
+                                                                                    "controllerElementId": "record",
+                                                                                    "disabledEventTargetIds": [],
+                                                                                    "id": "9aeb8ba90de3e59686276ced85f01329"
+                                                                                },
+                                                                                "propertyValues": {
+                                                                                    "ariaRegionHeadingLevel": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "1"
+                                                                                    },
+                                                                                    "ariaRegionName": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "ariaRole": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "hideEmptyStateUi": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": true
+                                                                                    },
+                                                                                    "includeAriaHeading": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": false
+                                                                                    },
+                                                                                    "slotWrapperBehavior": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "fullheight"
+                                                                                    },
+                                                                                    "type": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "section"
+                                                                                    }
+                                                                                },
+                                                                                "slot": null,
+                                                                                "styles": null
+                                                                            },
+                                                                            {
+                                                                                "definition": {
+                                                                                    "id": "d356d14b6e293a3020a244b63d278d8f",
+                                                                                    "type": "MACROPONENT"
+                                                                                },
+                                                                                "elementId": "container_6",
+                                                                                "elementLabel": "Container 6",
+                                                                                "eventMappings": [],
+                                                                                "isHidden": {
+                                                                                    "type": "JSON_LITERAL",
+                                                                                    "value": null
+                                                                                },
+                                                                                "overrides": {
+                                                                                    "composition": [
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "additional_comments",
+                                                                                            "elementLabel": "Additional Comments",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "type": "TRANSLATION_LITERAL",
+                                                                                                    "value": {
+                                                                                                        "code": null,
+                                                                                                        "comment": "",
+                                                                                                        "message": "Additional Comments or Suggestions"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        },
+                                                                                        {
+                                                                                            "definition": {
+                                                                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                                                                "type": "MACROPONENT"
+                                                                                            },
+                                                                                            "elementId": "additional_comments_content",
+                                                                                            "elementLabel": "Additional Comments_content",
+                                                                                            "eventMappings": [],
+                                                                                            "isHidden": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": null
+                                                                                            },
+                                                                                            "preset": {
+                                                                                                "controllerElementId": "record",
+                                                                                                "disabledEventTargetIds": [],
+                                                                                                "id": "9586ab8504f82b150ece43f8152c4f25"
+                                                                                            },
+                                                                                            "propertyValues": {
+                                                                                                "configAria": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": {}
+                                                                                                },
+                                                                                                "css": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "* {text-overflow: ellipsis; margin: 0px; font-size: 1rem; color: RGB(var(--now-color_text--secondary,var(--now-color--neutral-12,66,80,81)));}"
+                                                                                                },
+                                                                                                "text": {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "look_up_a_single_record_customer_feedback",
+                                                                                                            "result",
+                                                                                                            "additional_comments_or_suggestions",
+                                                                                                            "displayValue"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "DATA_OUTPUT_BINDING"
+                                                                                                }
+                                                                                            },
+                                                                                            "slot": null,
+                                                                                            "styles": null
+                                                                                        }
+                                                                                    ],
+                                                                                    "layout": {
+                                                                                        "default": {
+                                                                                            "children": null,
+                                                                                            "items": [
+                                                                                                {
+                                                                                                    "element_id": "additional_comments",
+                                                                                                    "styles": {}
+                                                                                                },
+                                                                                                {
+                                                                                                    "element_id": "additional_comments_content",
+                                                                                                    "styles": {
+                                                                                                        "background": "rgb(var(--now-color--neutral-0))",
+                                                                                                        "border-color": "rgb(var(--now-color--neutral-0))",
+                                                                                                        "border-radius": "var(--now-static-border-radius--lg)",
+                                                                                                        "border-style": "solid",
+                                                                                                        "border-width": "var(--now-static-space--xxs)",
+                                                                                                        "max-height": "fit-content",
+                                                                                                        "max-width": "500px",
+                                                                                                        "overflow": "visible",
+                                                                                                        "overflow-wrap": "break-word",
+                                                                                                        "padding": "var(--now-scalable-space--sm)",
+                                                                                                        "padding-bottom": "var(--now-scalable-space--sm)",
+                                                                                                        "padding-left": "var(--now-scalable-space--sm)",
+                                                                                                        "padding-right": "var(--now-scalable-space--sm)",
+                                                                                                        "padding-top": "var(--now-scalable-space--sm)",
+                                                                                                        "white-space": "normal",
+                                                                                                        "word-break": "break-word"
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "root": null,
+                                                                                            "rules": null,
+                                                                                            "styles": {
+                                                                                                "align-items": "flex-start",
+                                                                                                "flex-direction": "column",
+                                                                                                "gap": "var(--now-scalable-space--lg)",
+                                                                                                "justify-content": "space-around",
+                                                                                                "width": "100%"
+                                                                                            },
+                                                                                            "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                                            "type": "flex"
+                                                                                        },
+                                                                                        "version": "3.0.0"
+                                                                                    }
+                                                                                },
+                                                                                "preset": {
+                                                                                    "controllerElementId": "record",
+                                                                                    "disabledEventTargetIds": [],
+                                                                                    "id": "9aeb8ba90de3e59686276ced85f01329"
+                                                                                },
+                                                                                "propertyValues": {
+                                                                                    "ariaRegionHeadingLevel": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "1"
+                                                                                    },
+                                                                                    "ariaRegionName": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "ariaRole": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ""
+                                                                                    },
+                                                                                    "hideEmptyStateUi": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": true
+                                                                                    },
+                                                                                    "includeAriaHeading": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": false
+                                                                                    },
+                                                                                    "slotWrapperBehavior": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "fullheight"
+                                                                                    },
+                                                                                    "type": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "section"
+                                                                                    }
+                                                                                },
+                                                                                "slot": null,
+                                                                                "styles": null
+                                                                            }
+                                                                        ],
+                                                                        "layout": {
+                                                                            "default": {
+                                                                                "children": null,
+                                                                                "items": [
+                                                                                    {
+                                                                                        "element_id": "container_1",
+                                                                                        "styles": {
+                                                                                            "background-color": "#caf0f8",
+                                                                                            "border-radius": "25px",
+                                                                                            "max-width": "fit-content",
+                                                                                            "padding": "10px 30px 10px 30px"
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "element_id": "container_2",
+                                                                                        "styles": {
+                                                                                            "background-color": "#caf0f8",
+                                                                                            "border-radius": "25px",
+                                                                                            "max-width": "fit-content",
+                                                                                            "padding": "10px 30px 10px 30px"
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "element_id": "container_3",
+                                                                                        "styles": {
+                                                                                            "background-color": "#caf0f8",
+                                                                                            "border-radius": "25px",
+                                                                                            "max-width": "fit-content",
+                                                                                            "padding": "10px 30px 10px 30px"
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "element_id": "container_4",
+                                                                                        "styles": {
+                                                                                            "background-color": "#caf0f8",
+                                                                                            "border-radius": "25px",
+                                                                                            "max-width": "fit-content",
+                                                                                            "padding": "10px 30px 10px 30px"
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "element_id": "container_5",
+                                                                                        "styles": {
+                                                                                            "background-color": "#caf0f8",
+                                                                                            "border-radius": "25px",
+                                                                                            "max-width": "fit-content",
+                                                                                            "padding": "10px 30px 10px 30px"
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "element_id": "container_6",
+                                                                                        "styles": {
+                                                                                            "background-color": "#caf0f8",
+                                                                                            "border-radius": "25px",
+                                                                                            "max-width": "600px",
+                                                                                            "padding": "10px 30px 10px 30px"
+                                                                                        }
+                                                                                    }
+                                                                                ],
+                                                                                "root": null,
+                                                                                "rules": null,
+                                                                                "styles": {
+                                                                                    "align-items": "center",
+                                                                                    "display": "grid",
+                                                                                    "gap": "0px",
+                                                                                    "grid-auto-columns": "1fr",
+                                                                                    "grid-auto-flow": "row",
+                                                                                    "grid-auto-rows": "1fr",
+                                                                                    "grid-template-columns": "1fr",
+                                                                                    "grid-template-rows": "1fr 1fr 1fr 1fr 1fr",
+                                                                                    "margin-bottom": "var(--now-scalable-space--lg)",
+                                                                                    "margin-left": "var(--now-scalable-space--lg)",
+                                                                                    "margin-right": "var(--now-scalable-space--lg)",
+                                                                                    "margin-top": "0",
+                                                                                    "width": "100%"
+                                                                                },
+                                                                                "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                                "type": "grid"
+                                                                            },
+                                                                            "version": "3.0.0"
+                                                                        }
+                                                                    },
+                                                                    "preset": {
+                                                                        "controllerElementId": "record",
+                                                                        "disabledEventTargetIds": [],
+                                                                        "id": "9aeb8ba90de3e59686276ced85f01329"
+                                                                    },
+                                                                    "propertyValues": {
+                                                                        "ariaRegionHeadingLevel": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "1"
+                                                                        },
+                                                                        "ariaRegionName": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": ""
+                                                                        },
+                                                                        "ariaRole": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": ""
+                                                                        },
+                                                                        "hideEmptyStateUi": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": true
+                                                                        },
+                                                                        "includeAriaHeading": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "slotWrapperBehavior": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "fullheight"
+                                                                        },
+                                                                        "type": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "section"
+                                                                        }
+                                                                    },
+                                                                    "slot": null,
+                                                                    "styles": null
                                                                 }
                                                             ],
                                                             "layout": {
@@ -7067,12 +8215,27 @@
                                                                         {
                                                                             "element_id": "data_set_1",
                                                                             "styles": {}
+                                                                        },
+                                                                        {
+                                                                            "element_id": "grid_container_3",
+                                                                            "styles": {
+                                                                                "background": "rgb(var(--now-color--neutral-0))",
+                                                                                "border-color": "RGB(var(--now-color--neutral-5))",
+                                                                                "border-style": "hidden",
+                                                                                "border-width": "var(--now-static-space--xxs)",
+                                                                                "gap": "0px"
+                                                                            }
                                                                         }
                                                                     ],
                                                                     "root": null,
                                                                     "rules": null,
                                                                     "styles": {
+                                                                        "background": "rgb(var(--now-color--neutral-0))",
+                                                                        "border-color": "RGB(var(--now-color--neutral-5))",
+                                                                        "border-style": "hidden",
+                                                                        "border-width": "var(--now-static-space--xxs)",
                                                                         "flex-direction": "column",
+                                                                        "input-rlfqxlz0mb2-101616": "",
                                                                         "min-height": "300px",
                                                                         "min-width": "",
                                                                         "width": "100%"
@@ -7218,10 +8381,15 @@
                                             },
                                             "slot": "right",
                                             "styles": {
+                                                "background": "rgb(var(--now-color--neutral-0))",
+                                                "border-color": "rgb(var(--now-color--neutral-0))",
+                                                "border-radius": "var(--now-static-border-radius--0)",
                                                 "border-right-color": "RGB(var(--now-window--border-color,var(--now-color_divider--secondary,var(--now-color--neutral-5))))",
+                                                "border-style": "dotted",
                                                 "border-top": "1px solid RGB(var(--now-color--divider-secondary, var(--now-color--neutral-3)))",
+                                                "border-width": "1px",
                                                 "height": "",
-                                                "margin-top": "calc(2rem * var(--now-scale-space--xl, 1))",
+                                                "margin-top": "calc( 2rem * var(--now-scale-space--xl, 1))",
                                                 "min-width": "",
                                                 "overflow": "hidden",
                                                 "width": "100%"
@@ -8443,6 +9611,22 @@
                         },
                         "targetId": "cmffpsggbvdaabbzkddjiiiiffjaamsxccm",
                         "type": "DATABROKER_OP"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "dbd6eaab8322de10cccd5d10feaad396"
+                        },
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": null,
+                        "targetId": "cmffwhyggptaaccaaaddjiiffziirddwujf",
+                        "type": "CLIENT_SCRIPT"
                     }
                 ]
             }
@@ -8901,6 +10085,42 @@
             }
         },
         "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "9664d48053461010cbc2ddeeff7b128e",
+            "type": "COMPOSITE"
+        },
+        "elementId": "look_up_a_single_record_customer_feedback",
+        "elementLabel": "Look up a single record customer Feedback",
+        "eventMappings": [],
+        "inputValues": {
+            "recordId": {
+                "binding": {
+                    "address": [
+                        "customerFeedbacksysId'"
+                    ]
+                },
+                "type": "STATE_BINDING"
+            },
+            "returnFieldMetadata": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "returnFields": {
+                "type": "JSON_LITERAL",
+                "value": "did_the_repair_fully_resolve_the_issue_with_your_vehicle,how_satisfied_were_you_with_the_professionalism_and_friendliness_of_our_staff,how_would_you_rate_your_overall_experience_with_our_service_center,was_the_explanation_of_the_repair_work_and_costs_clear_and_reasonable,would_you_recommend_our_service_center_to_friends_or_family,additional_comments_or_suggestions"
+            },
+            "returnTableMetadata": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "x_1522458_automo_0_customer_feedback"
+            }
+        },
+        "readEvaluationMode": "EAGER"
     }
 ]</data>
         <description/>
@@ -9195,6 +10415,9 @@
   "message" : "Add Part",
   "comment" : ""
 }, {
+  "message" : "Additional Comments or Suggestions",
+  "comment" : ""
+}, {
   "message" : "Agent assist",
   "comment" : ""
 }, {
@@ -9228,6 +10451,9 @@
   "message" : "Details",
   "comment" : ""
 }, {
+  "message" : "Did the repair fully resolve the issue with your vehicle?",
+  "comment" : ""
+}, {
   "message" : "Editable record form and list of record activities",
   "comment" : ""
 }, {
@@ -9238,6 +10464,12 @@
   "comment" : ""
 }, {
   "message" : "Enter a label",
+  "comment" : ""
+}, {
+  "message" : "How satisfied were you with the professionalism and friendliness of our staff?",
+  "comment" : ""
+}, {
+  "message" : "How would you rate your overall experience with our service center?",
   "comment" : ""
 }, {
   "message" : "List of record activities and input fields for posting work notes or comments",
@@ -9262,6 +10494,12 @@
   "comment" : ""
 }, {
   "message" : "View Offer",
+  "comment" : ""
+}, {
+  "message" : "Was the explanation of the repair work and costs clear and reasonable?",
+  "comment" : ""
+}, {
+  "message" : "Would you recommend our service center to friends or family?",
   "comment" : ""
 }, {
   "message" : "Yes",
@@ -9308,20 +10546,27 @@
         "name": "refreshTimeStamp",
         "shape": "",
         "valueType": "string"
+    },
+    {
+        "id": "",
+        "initialValue": null,
+        "name": "customerFeedbacksysId'",
+        "shape": "",
+        "valueType": "string"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-19 13:13:06</sys_created_on>
         <sys_id>505b00468322d610cccd5d10feaad39d</sys_id>
-        <sys_mod_count>277</sys_mod_count>
+        <sys_mod_count>278</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sys_ux_macroponent_505b00468322d610cccd5d10feaad39d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-13 20:03:31</sys_updated_on>
+        <sys_updated_on>2025-01-15 10:44:57</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=505b00468322d610cccd5d10feaad39d"/>
 </record_update>
