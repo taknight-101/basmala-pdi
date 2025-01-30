@@ -2,6 +2,7 @@
     <element db_object_id="8601ade783aa9e10cccd5d10feaad324" label="Offer Actions [Nour]" max_length="40" name="x_1522458_automo_0_offer_actions_nour" type="collection">
         <element label="Offer" max_length="32" name="offer" reference="x_1522458_automo_0_offer" type="reference"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Obj" max_length="40" name="obj" type="script"/>
         <element label="Action" max_length="40" name="action" type="boolean"/>
         <index name="index">
             <element name="offer"/>

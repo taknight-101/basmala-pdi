@@ -719,11 +719,11 @@
                                                                         },
                                                                         "css": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": "* { \r\n    color: aliceblue;\r\n}"
+                                                                            "value": "* { \r\n    color: aliceblue;\r\n    font-size: 8px;\r\n}"
                                                                         },
                                                                         "tag": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": "h2"
+                                                                            "value": "h3"
                                                                         },
                                                                         "text": {
                                                                             "type": "TRANSLATION_LITERAL",
@@ -844,7 +844,7 @@
                                                                         },
                                                                         "tag": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": "h2"
+                                                                            "value": "h3"
                                                                         },
                                                                         "text": {
                                                                             "type": "TRANSLATION_LITERAL",
@@ -967,7 +967,7 @@
                                                                         },
                                                                         "tag": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": "h2"
+                                                                            "value": "h3"
                                                                         },
                                                                         "text": {
                                                                             "type": "TRANSLATION_LITERAL",
@@ -1082,7 +1082,7 @@
                                                         "rules": null,
                                                         "styles": {
                                                             "box-sizing": "border-box",
-                                                            "grid-template-columns": "31.998167760302543fr 35.99447377845617fr 31.99735846124128fr",
+                                                            "grid-template-columns": "32.997644667198315fr 33.99508923873332fr 32.99726609406835fr",
                                                             "grid-template-rows": "1fr",
                                                             "width": "auto"
                                                         },
@@ -1149,17 +1149,17 @@
                                                                 {
                                                                     "columnNumber": 1,
                                                                     "unit": "%",
-                                                                    "width": 31.998167760302543
+                                                                    "width": 32.997644667198315
                                                                 },
                                                                 {
                                                                     "columnNumber": 2,
                                                                     "unit": "%",
-                                                                    "width": 35.99447377845617
+                                                                    "width": 33.99508923873332
                                                                 },
                                                                 {
                                                                     "columnNumber": 3,
                                                                     "unit": "%",
-                                                                    "width": 31.99735846124128
+                                                                    "width": 32.99726609406835
                                                                 }
                                                             ],
                                                             "id": "UIB_COLUMN_SECTION_SINGLE_COLUMN_SECTION",
@@ -1494,7 +1494,7 @@
                                                                                     },
                                                                                     "tag": {
                                                                                         "type": "JSON_LITERAL",
-                                                                                        "value": "h2"
+                                                                                        "value": "h3"
                                                                                     },
                                                                                     "text": {
                                                                                         "binding": {
@@ -1627,7 +1627,7 @@
                                                                                     },
                                                                                     "tag": {
                                                                                         "type": "JSON_LITERAL",
-                                                                                        "value": "h2"
+                                                                                        "value": "h3"
                                                                                     },
                                                                                     "text": {
                                                                                         "binding": {
@@ -1871,6 +1871,186 @@
                                             },
                                             "slot": null,
                                             "styles": null
+                                        },
+                                        {
+                                            "definition": {
+                                                "id": "63ea66b3c5a122819f729b7254789c34",
+                                                "type": "MACROPONENT"
+                                            },
+                                            "elementId": "pagination_control_1",
+                                            "elementLabel": "Pagination control 1",
+                                            "eventMappings": [
+                                                {
+                                                    "eventMappingId": "cmffxugbquaaccmwddffiiffcaaddggeejmjj",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "sn_pagination_cont.NOW_PAGINATION_CONTROL#SELECTED_PAGE_SET",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "sn_pagination_cont.NOW_PAGINATION_CONTROL#SELECTED_PAGE_SET",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": {
+                                                                "payload": {
+                                                                    "type": "JSON_LITERAL",
+                                                                    "value": {}
+                                                                },
+                                                                "sysId": "9ab592e2834f9210cccd5d10feaad3ec"
+                                                            },
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": null,
+                                                            "operation": null,
+                                                            "targetId": "cmffxugbquaaccmxddffiiffpvtfftddnee",
+                                                            "type": "CLIENT_SCRIPT"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "eventMappingId": "cmffxugzckaaccnaaddffiifftjjcnimggw",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "sn_pagination_cont.NOW_PAGINATION_CONTROL#SELECTED_PAGE_SIZE_SET",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "sn_pagination_cont.NOW_PAGINATION_CONTROL#SELECTED_PAGE_SIZE_SET",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": null,
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": {
+                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                "payload": {
+                                                                    "container": {
+                                                                        "propName": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "pageLimit"
+                                                                        },
+                                                                        "value": {
+                                                                            "binding": {
+                                                                                "address": [
+                                                                                    "value"
+                                                                                ]
+                                                                            },
+                                                                            "type": "EVENT_PAYLOAD_BINDING"
+                                                                        }
+                                                                    },
+                                                                    "type": "MAP_CONTAINER"
+                                                                },
+                                                                "sysId": "32408b42ff7a10109046e490703bf176"
+                                                            },
+                                                            "operation": null,
+                                                            "targetId": "cmffxugzckaaccnbbddffiiffjjiiuaxhhdl",
+                                                            "type": "EVENT"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": false
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "configAria": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideGoToFirst": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideGoToLast": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideGoToNext": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideGoToPrevious": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hidePageNumbers": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hidePageSizeControl": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideRange": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "manageSelectedPage": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "manageSelectedPageSize": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "pageSizeLabel": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "pageSizes": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": [
+                                                        10,
+                                                        20,
+                                                        50,
+                                                        100
+                                                    ]
+                                                },
+                                                "pagesOverride": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "rangeLabel": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "selectedPage": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "0"
+                                                },
+                                                "selectedPageSize": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "pageLimit"
+                                                        ]
+                                                    },
+                                                    "type": "STATE_BINDING"
+                                                },
+                                                "total": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "totalRecords"
+                                                        ]
+                                                    },
+                                                    "type": "STATE_BINDING"
+                                                },
+                                                "visiblePages": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": ""
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
                                         }
                                     ],
                                     "layout": {
@@ -1892,6 +2072,10 @@
                                                 },
                                                 {
                                                     "element_id": "repeater_1",
+                                                    "styles": {}
+                                                },
+                                                {
+                                                    "element_id": "pagination_control_1",
                                                     "styles": {}
                                                 }
                                             ],
@@ -2115,7 +2299,7 @@
                                                                     "elementLabel": "Waiting Inspection",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmffpccqsodaaffngddffiiffggiibbccuqxq",
+                                                                            "eventMappingId": "cmffxxraaddccaaddwoddffiiffjddccuoaco",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2129,51 +2313,19 @@
                                                                             "targets": [
                                                                                 {
                                                                                     "broker": null,
-                                                                                    "clientScript": null,
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": {
-                                                                                        "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                                                                                        "payload": {
-                                                                                            "container": {
-                                                                                                "propName": {
-                                                                                                    "binding": {
-                                                                                                        "address": [
-                                                                                                            "query"
-                                                                                                        ]
-                                                                                                    },
-                                                                                                    "type": "STATE_BINDING"
-                                                                                                },
-                                                                                                "value": {
-                                                                                                    "type": "JSON_LITERAL",
-                                                                                                    "value": "department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^state=5"
-                                                                                                }
-                                                                                            },
-                                                                                            "type": "MAP_CONTAINER"
-                                                                                        },
-                                                                                        "sysId": "32408b42ff7a10109046e490703bf176"
-                                                                                    },
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffpccqsodaaffnhddffiiffqwrbjjlka",
-                                                                                    "type": "EVENT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": null,
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": {
-                                                                                        "dataBrokerId": "b997a84053021010cbc2ddeeff7b1228",
-                                                                                        "operationName": "REFRESH",
-                                                                                        "parentResourceId": "look_up_multiple_records_1",
+                                                                                    "clientScript": {
                                                                                         "payload": {
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
-                                                                                        }
+                                                                                        },
+                                                                                        "sysId": "48a8432e8343d210cccd5d10feaad364"
                                                                                     },
-                                                                                    "targetId": "cmffpccwptfaaffpddddffiifftkldicbd",
-                                                                                    "type": "DATABROKER_OP"
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmffxxraaddccaaddwpddffiiffmffhfdnie",
+                                                                                    "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
                                                                         }
@@ -2226,7 +2378,7 @@
                                                                         },
                                                                         "name": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": "WaitingInspection"
+                                                                            "value": "5"
                                                                         },
                                                                         "readonly": {
                                                                             "type": "JSON_LITERAL",
@@ -2253,7 +2405,7 @@
                                                                     "elementLabel": "Under Inspection",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmeesihffpqaaccyiddjiiffkkyddlaafw",
+                                                                            "eventMappingId": "cmffxpvbbrpaaccjjbbddffiiffqwddnjjxbbii",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2272,13 +2424,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "c33529d1832ad210cccd5d10feaad362"
+                                                                                        "sysId": "5ab592e2834f9210cccd5d10feaad3ec"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesihffpraaccyjddjiiffleegglxcciix",
+                                                                                    "targetId": "cmffxpvbbrpaaccjjccddffiiffbfisshly",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 },
                                                                                 {
@@ -2288,13 +2440,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "ebe0ca1d83aad210cccd5d10feaad359"
+                                                                                        "sysId": "48a8432e8343d210cccd5d10feaad364"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesjcclsiaabbyqddjiiffznozeffpj",
+                                                                                    "targetId": "cmffxxsiiavaaddwwddffiifffuhggffaanj",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -2375,7 +2527,7 @@
                                                                     "elementLabel": "Inspected",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmeesimjjuoaacczddddjiiffnzywuddi",
+                                                                            "eventMappingId": "cmffxpvfbyaaccjjaddffiiffhstuiddddd",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2394,13 +2546,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "073529d1832ad210cccd5d10feaad362"
+                                                                                        "sysId": "5ab592e2834f9210cccd5d10feaad3ec"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesimjjuoaacczeeddjiiffjjbbscslzcc",
+                                                                                    "targetId": "cmffxpvfbyaaccjjbddffiiffeeggoqavtm",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 },
                                                                                 {
@@ -2410,13 +2562,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "ebe0ca1d83aad210cccd5d10feaad359"
+                                                                                        "sysId": "48a8432e8343d210cccd5d10feaad364"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesjccyhhoaabbysddjiiffddpbzeeenp",
+                                                                                    "targetId": "cmffxxskqjjaaddwxddffiiffggffytreefaa",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -2840,7 +2992,7 @@
                                                                     "elementLabel": "Waiting Approval",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmeesinhcraacczoddjiiffiiddaddffccpee",
+                                                                            "eventMappingId": "cmffxqaagggmaaccanddffiiffccgmfhffggt",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2859,13 +3011,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "473529d1832ad210cccd5d10feaad362"
+                                                                                        "sysId": "5ab592e2834f9210cccd5d10feaad3ec"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesinhcraacczpddjiiffsjiimdbgr",
+                                                                                    "targetId": "cmffxqaagggmaaccaoddffiiffmhhbbsgghhkm",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 },
                                                                                 {
@@ -2875,13 +3027,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "ebe0ca1d83aad210cccd5d10feaad359"
+                                                                                        "sysId": "48a8432e8343d210cccd5d10feaad364"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesjddhhjjffaabbyvddjiiffqkbjjpiiqj",
+                                                                                    "targetId": "cmffxxsssxaaddwzddffiiffbsnvniifn",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -2962,7 +3114,7 @@
                                                                     "elementLabel": "Offer Approved",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmeesiohxzaaddaajjddjiiffmzjjgbqnv",
+                                                                            "eventMappingId": "cmffxqaaxldaaccarddffiiffgqvywgiil",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2981,13 +3133,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "873529d1832ad210cccd5d10feaad362"
+                                                                                        "sysId": "5ab592e2834f9210cccd5d10feaad3ec"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesiohxzaaddaaaddjiiffggrddapipa",
+                                                                                    "targetId": "cmffxqaaxldaaccasddffiiffccjecdccdo",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 },
                                                                                 {
@@ -2997,13 +3149,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "ebe0ca1d83aad210cccd5d10feaad359"
+                                                                                        "sysId": "48a8432e8343d210cccd5d10feaad364"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesjddfaabaabbyzddjiiffxlaaffxkidd",
+                                                                                    "targetId": "cmffxxtddaaxaaddxbbddffiiffbhhvzkffhhh",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -3415,7 +3567,7 @@
                                                                     "elementLabel": "Checkbox 1",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmeesirjjqgaaddaayddjiiffwmhohrddn",
+                                                                            "eventMappingId": "cmffxqbbaqsaaccavddffiiffzfftrdggil",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -3434,13 +3586,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "c73529d1832ad210cccd5d10feaad362"
+                                                                                        "sysId": "5ab592e2834f9210cccd5d10feaad3ec"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesirjjqgaaddaazddjiiffbbsgxqnphh",
+                                                                                    "targetId": "cmffxqbbaqsaaccawddffiiffdccbbbjbbtx",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 },
                                                                                 {
@@ -3450,13 +3602,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "ebe0ca1d83aad210cccd5d10feaad359"
+                                                                                        "sysId": "48a8432e8343d210cccd5d10feaad364"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmeesjddnqjjaabbzeeddjiiffdztpxeggcc",
+                                                                                    "targetId": "cmffxxtcddwaaddxddddffiiffiyjjlaassz",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -3920,21 +4072,30 @@
             "encodedQuery": {
                 "binding": {
                     "address": [
-                        "query"
+                        "Default1"
                     ]
                 },
                 "type": "STATE_BINDING"
             },
             "limit": {
-                "type": "JSON_LITERAL",
-                "value": "100000"
+                "binding": {
+                    "address": [
+                        "pageLimit"
+                    ]
+                },
+                "type": "STATE_BINDING"
             },
             "offset": {
-                "type": "JSON_LITERAL",
-                "value": null
+                "binding": {
+                    "address": [
+                        "pageOffset"
+                    ]
+                },
+                "type": "STATE_BINDING"
             },
             "orderBy": {
-                "type": "JSON_LITERAL"
+                "type": "JSON_LITERAL",
+                "value": "sys_created_on"
             },
             "queryCategory": {
                 "type": "JSON_LITERAL",
@@ -3950,7 +4111,7 @@
             },
             "sortType": {
                 "type": "JSON_LITERAL",
-                "value": "asc"
+                "value": "desc"
             },
             "table": {
                 "type": "JSON_LITERAL",
@@ -4086,6 +4247,112 @@
             }
         },
         "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "546cccd25310101024e5ddeeff7b123b",
+            "type": "GRAPHQL"
+        },
+        "elementId": "requests_count",
+        "elementLabel": "Requests Count",
+        "eventMappings": [
+            {
+                "eventMappingId": "cmffxviiddggjaaccqlddffiiffxbwdnwtz",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_uxf.DATA_FETCH_SUCCEEDED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_uxf.DATA_FETCH_SUCCEEDED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "container": {
+                                    "propName": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "totalRecords"
+                                    },
+                                    "value": {
+                                        "binding": {
+                                            "address": [
+                                                "requests_count",
+                                                "output",
+                                                "data",
+                                                "GlideAggregate_Query",
+                                                "0",
+                                                "count"
+                                            ]
+                                        },
+                                        "type": "DATA_OUTPUT_BINDING"
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "cmffxviiddggjaaccqmddffiiffiiqeeujfbee",
+                        "type": "EVENT"
+                    }
+                ]
+            }
+        ],
+        "inputValues": {
+            "avgField": {
+                "type": "JSON_LITERAL"
+            },
+            "encodedQuery": {
+                "binding": {
+                    "address": [
+                        "Default1"
+                    ]
+                },
+                "type": "STATE_BINDING"
+            },
+            "groupBy": {
+                "type": "JSON_LITERAL"
+            },
+            "having": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "maxField": {
+                "type": "JSON_LITERAL"
+            },
+            "minField": {
+                "type": "JSON_LITERAL"
+            },
+            "orderBy": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "queryCategory": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "returnRowCount": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "sumField": {
+                "type": "JSON_LITERAL"
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "x_1522458_automo_0_service_request"
+            }
+        },
+        "readEvaluationMode": "EAGER"
     }
 ]</data>
         <description/>
@@ -4205,87 +4472,69 @@
         <state_persistence_config/>
         <state_properties>[
     {
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": "department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^stateIN5,7,6,8,10,2"
+        },
+        "name": "Default1",
+        "shape": "",
+        "valueType": "string"
+    },
+    {
+        "fieldType": "number",
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": 10
+        },
+        "name": "pageLimit",
+        "shape": "",
+        "valueType": "number"
+    },
+    {
+        "fieldType": "number",
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": 0
+        },
+        "name": "pageOffset",
+        "shape": "",
+        "valueType": "number"
+    },
+    {
+        "fieldType": "number",
+        "id": "",
+        "initialValue": null,
+        "name": "totalRecords",
+        "shape": "",
+        "valueType": "number"
+    },
+    {
         "fieldType": "json",
         "id": "",
         "initialValue": {
             "type": "JSON_LITERAL",
-            "value": {
-                "ClosedComplete": {
-                    "active": false,
-                    "value": 3
-                },
-                "ClosedIncomplete": {
-                    "active": false,
-                    "value": 4
-                },
-                "Inspected": {
-                    "active": false,
-                    "value": 6
-                },
-                "OfferApproved": {
-                    "active": false,
-                    "value": 10
-                },
-                "ServiceComplete": {
-                    "active": false,
-                    "value": 9
-                },
-                "UnderInspection": {
-                    "active": false,
-                    "value": 7
-                },
-                "WaitingApproval": {
-                    "active": false,
-                    "value": 8
-                },
-                "WaitingInspection": {
-                    "active": false,
-                    "value": 5
-                },
-                "WorkinProgress": {
-                    "active": false,
-                    "value": 2
-                }
-            }
+            "value": []
         },
-        "name": "Selected_State",
+        "name": "state",
         "shape": "",
         "valueType": "json"
-    },
-    {
-        "id": "",
-        "initialValue": {
-            "type": "JSON_LITERAL",
-            "value": "department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^state!=3^ORstate!=4"
-        },
-        "name": "list_Filter",
-        "shape": "",
-        "valueType": "string"
-    },
-    {
-        "fieldType": "string",
-        "id": "",
-        "initialValue": {
-            "type": "JSON_LITERAL",
-            "value": "department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe"
-        },
-        "name": "query",
-        "shape": "",
-        "valueType": "string"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-16 11:41:08</sys_created_on>
         <sys_id>c4895cc9836e5210cccd5d10feaad3fd</sys_id>
-        <sys_mod_count>257</sys_mod_count>
+        <sys_mod_count>286</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sys_ux_macroponent_c4895cc9836e5210cccd5d10feaad3fd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-09 08:48:30</sys_updated_on>
+        <sys_updated_on>2025-01-15 15:32:49</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c4895cc9836e5210cccd5d10feaad3fd"/>
 </record_update>

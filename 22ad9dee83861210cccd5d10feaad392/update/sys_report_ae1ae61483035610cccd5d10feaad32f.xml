@@ -28,7 +28,7 @@
         <chart_title_y_position>0</chart_title_y_position>
         <chart_width>600</chart_width>
         <color display_value="Default Color">de699435d7033100b4964ebfae610331</color>
-        <color_palette display_value="Assist Utilization History">f08a294943300210c25373e60db8f245</color_palette>
+        <color_palette display_value="Blues dark to light (3)">467fc319d7100200b96d45a3ce610342</color_palette>
         <colors/>
         <column/>
         <compute_percent>aggregate</compute_percent>
@@ -110,16 +110,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-08 10:48:52</sys_created_on>
         <sys_id>ae1ae61483035610cccd5d10feaad32f</sys_id>
-        <sys_mod_count>15</sys_mod_count>
-        <sys_name>Is Inspection/Repair chart</sys_name>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Is Inspection</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sys_report_ae1ae61483035610cccd5d10feaad32f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-13 10:45:17</sys_updated_on>
+        <sys_updated_on>2025-01-28 10:10:53</sys_updated_on>
         <table>x_1522458_automo_0_task</table>
-        <title>Is Inspection/Repair chart</title>
+        <title>Is Inspection</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>

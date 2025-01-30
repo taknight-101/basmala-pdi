@@ -80,6 +80,10 @@
         var offset = -currentIndex * 100; // Moves by one full width of an item
         document.querySelector('.carousel').style.transform = 'translateX(' + offset + '%)';
     };
+	
+	c.redirectToAllOffers = function(){
+		top.window.location = "/customer_portal?id=asm_my_offer";
+	}
 };
 ]]></client_script>
         <controller_as>c</controller_as>
@@ -497,14 +501,14 @@ th{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-18 16:58:29</sys_created_on>
         <sys_id>00553329832a5610cccd5d10feaad35f</sys_id>
-        <sys_mod_count>229</sys_mod_count>
+        <sys_mod_count>230</sys_mod_count>
         <sys_name>Current Offers</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sp_widget_00553329832a5610cccd5d10feaad35f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-25 21:58:41</sys_updated_on>
+        <sys_updated_on>2025-01-16 07:35:45</sys_updated_on>
         <template><![CDATA[<!DOCTYPE html>
 <html lang="en">
 <head>

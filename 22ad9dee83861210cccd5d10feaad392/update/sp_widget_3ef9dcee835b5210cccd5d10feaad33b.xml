@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+	/* widget controller */
+	var c = this;
+	
+	var months = [
+		"Jan",
+		"Feb",
+		"Mar",
+		"Apr",
+		"May",
+		"Jun",
+		"Jul",
+		"Aug",
+		"Sep",
+		"Oct",
+		"Nov",
+		"Dec",
+	];
+
+	var DefaultFelter = "last 12 month";
+
+	c.getFilterOptions = function (Data) {
+		var filterOptions = [];
+
+		var firstYear = new Date(Data[0].year, 0).getFullYear();
+		var lastYear = new Date(Data[Data.length - 1].year, 0).getFullYear();
+
+		var allYears = [];
+		for (var year = firstYear; year <= lastYear; year++) {
+			allYears.push(year);
+		}
+
+		filterOptions.push("last 12 month");
+
+		for (var i = 0; i < allYears.length; i++) {
+			filterOptions.push(allYears[i]);
+		}
+
+		return filterOptions;  };
+
+
+	c.GetLastTwelveMonths = function (Data) {
+		// Get the current month and year
+		var currentMonth = Number(new Date().getMonth());
+		var currentYear = new Date().getFullYear();
+
+		// Filter the data
+		var filterdData = [];
+		for (var i = currentMonth - 1; i > currentMonth - 12 - 1; i--) {
+			if (i < 0) {
+				var m = months[Number(i) + 12];
+				var y = currentYear - 1;
+
+				//console.log(m,y)
+
+				var filtered = Data.filter(function (item) {
+					return item.year === y.toString() && item.label === m;
+				});
+
+				filterdData = filterdData.concat(filtered);
+			} else {
+				var mm = months[i];
+				var yy = currentYear;
+
+				//console.log(mm,yy)
+
+				var filtered = Data.filter(function (item) {
+					return item.year === yy.toString() && item.label === mm;
+				});
+
+				filterdData = filterdData.concat(filtered);
+			}
+		}
+
+		// Sort the data
+		filterdData.sort(function (a, b) {
+			var monthIndexA = months.indexOf(a.label);
+			var monthIndexB = months.indexOf(b.label);
+
+			return monthIndexA - monthIndexB;
+		});
+
+		filterdData.sort(function (a, b) {
+			return a.year - b.year;
+		});
+
+		return filterdData;
+	};
+
+
+	c.GetDataByMonth = function (F, Data) {
+		return Data.filter(function (item) {
+			return item.year === F.toString();
+		});
+	};
+
+	c.FilterTheData = function (F, Data){
+		if (F === "last 12 month") {
+			return c.GetLastTwelveMonths(Data);
+		} else {
+			return c.GetDataByMonth(F, Data);
+		}
+	}
+	
+	c.data.CurrentData = [];
+	c.data.CurrentData = c.GetLastTwelveMonths(c.data.DataFromServer);
+	
+	c.ChangeFilter = function(F){
+		c.data.CurrentData = [];
+		c.data.CurrentData = c.FilterTheData(F,c.data.DataFromServer);
+		console.log(c.data.CurrentData);
+	}
+	
+
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.container{
+
+  padding: 20px;
+  padding-bottom: 3rem;
+  /* border-radius: 2.5rem; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: white;
+  width: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  padding-top: 10px;
+}
+
+
+.simple-bar-chart{
+  --line-count: 10;
+  --line-color: currentcolor;
+  --line-opacity: 0.25;
+  --item-gap: 2%;
+  --item-default-color: #060606;
+
+  height: 10rem;
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--item-gap);
+  align-items: end;
+  padding-inline: var(--item-gap);
+  --padding-block: 1.5rem; /*space for labels*/
+  padding-block: var(--padding-block);
+  position: relative;
+  isolation: isolate;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  height: 26rem;
+}
+
+.simple-bar-chart::after{
+  content: "";
+  position: absolute;
+  inset: var(--padding-block) 0;
+  z-index: -1;
+  --line-width: 1px;
+  --line-spacing: calc(100% / var(--line-count));
+  background-image: repeating-linear-gradient(to top, transparent 0 calc(var(--line-spacing) - var(--line-width)), var(--line-color) 0 var(--line-spacing));
+  box-shadow: 0 var(--line-width) 0 var(--line-color);
+  opacity: var(--line-opacity);
+}
+.simple-bar-chart &gt; .item{
+  height: calc(1% * var(--val));
+  background-color: var(--clr, var(--item-default-color));
+  position: relative;
+  animation: item-height 1s ease forwards
+}
+@keyframes item-height { from { height: 0 } }
+
+.simple-bar-chart &gt; .item &gt; * { position: absolute; text-align: center }
+.simple-bar-chart &gt; .item &gt; .label { inset: 100% 0 auto 0;
+  margin-top: 25px;
+  transform: rotate(270deg);
+  font-size: small;
+  font-weight: bold;
+  color: #0A1128;}
+.simple-bar-chart &gt; .item &gt; .value { inset: auto 0 100% 0;
+  font-size: xx-small;}
+
+
+
+
+
+
+
+.filter-buttons{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.filter-button{
+  background: #467ba1;
+  border: none;
+  margin-left: 5px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+p{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
+  color: #717171;
+  font-size: 1.8rem;
+}
+
+
+
+
+
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>asm_charts</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Charts</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  
+	if(!input){
+		
+		var Performance = [];
+		var CurrentUserId = gs.getUserID();
+		
+		var grPerformance = new GlideRecordSecure('x_1522458_automo_0_technician_profile');
+		grPerformance.addEncodedQuery("technician.sys_id=" + CurrentUserId);
+		grPerformance.query();
+		
+		while (grPerformance.next()) { 
+			Performance.push({
+				History: grPerformance.getDisplayValue('performance_history'),
+			});
+		}
+		
+		data.DataFromServer = [...JSON.parse(Performance[0].History).data];
+				
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 10:21:13</sys_created_on>
+        <sys_id>3ef9dcee835b5210cccd5d10feaad33b</sys_id>
+        <sys_mod_count>95</sys_mod_count>
+        <sys_name>Charts</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_3ef9dcee835b5210cccd5d10feaad33b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 10:30:37</sys_updated_on>
+        <template><![CDATA[<div class="container">
+
+  <p class="header-container">Performance History</p>
+
+  <div class="filter-buttons">
+    <button
+            class="filter-button"
+            ng-repeat='s in c.getFilterOptions(c.data.DataFromServer)'
+            ng-click="c.ChangeFilter(s)"
+            > {{s}}</button>
+  </div>
+
+  <div class="simple-bar-chart">
+
+    <div class="item"
+         ng-repeat='s in c.data.CurrentData'
+         style="--clr: rgb(158, 202, 225); --val: {{100*s.value}}">
+      <div class="label"
+           [ngStyle]="{ color: black }">
+        {{s.label}}</div>
+      <div class="value">{{s.value * 100}}%</div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+]]></template>
+    </sp_widget>
+</record_update>

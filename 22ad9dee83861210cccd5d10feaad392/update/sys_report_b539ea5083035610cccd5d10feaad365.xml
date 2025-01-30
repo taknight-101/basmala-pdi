@@ -28,7 +28,7 @@
         <chart_title_y_position>0</chart_title_y_position>
         <chart_width>600</chart_width>
         <color display_value="Default Color">de699435d7033100b4964ebfae610331</color>
-        <color_palette display_value="Assist Utilization History">f08a294943300210c25373e60db8f245</color_palette>
+        <color_palette display_value="Blues dark to light (3)">467fc319d7100200b96d45a3ce610342</color_palette>
         <colors>#06038D</colors>
         <column/>
         <compute_percent>aggregate</compute_percent>
@@ -108,16 +108,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-08 10:45:00</sys_created_on>
         <sys_id>b539ea5083035610cccd5d10feaad365</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_name>score/month</sys_name>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Score Per Month</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sys_report_b539ea5083035610cccd5d10feaad365</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-13 10:48:16</sys_updated_on>
+        <sys_updated_on>2025-01-15 17:32:39</sys_updated_on>
         <table>x_1522458_automo_0_technician_profile</table>
-        <title>score/month</title>
+        <title>Score Per Month</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>

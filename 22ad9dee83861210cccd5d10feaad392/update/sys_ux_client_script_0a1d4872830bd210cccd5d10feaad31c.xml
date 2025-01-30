@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">505b00468322d610cccd5d10feaad39d</macroponent>
+        <name>New client script 2</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({ api, event, helpers, imports }) {
+    try {
+        // Access the data returned by the data resource
+        const response = api.data.look_up_multiple_records_customer_feedback;
+
+        // Log the entire proxy object for inspection
+        console.log('Data resource response (Proxy):', response);
+
+        // Resolve the proxy and extract the raw data if possible
+        const resolvedResponse = response?.[Symbol.toPrimitive]?.('object') || response;
+
+        // Log the resolved data to verify the structure
+        console.log('Resolved data:', resolvedResponse);
+
+        // Ensure the results array exists and is properly resolved
+        if (resolvedResponse && Array.isArray(resolvedResponse.results) && resolvedResponse.results.length > 0) {
+            const firstResult = resolvedResponse.results[0];
+
+            // Check for displayValue in the first result object or its _row_data
+            let displayValue;
+            if (firstResult?.displayValue) {
+                displayValue = firstResult.displayValue;
+            } else if (firstResult?._row_data?.displayValue) {
+                displayValue = firstResult._row_data.displayValue;
+            }
+
+            if (displayValue) {
+                // Set the client state parameter if a valid displayValue exists
+                api.setState('leftPanelMinWidth', { minRatio: 63.5});
+                console.log('Set leftPanelMinWidth to {"minRatio": 70, "maxRatio":}');
+            } else {
+                console.warn('No valid displayValue found.');
+            }
+        } else {
+            console.warn('No valid records found in the data resource response.');
+        }
+    } catch (error) {
+        console.error('Error processing data resource response:', error);
+    }
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-15 19:09:44</sys_created_on>
+        <sys_id>0a1d4872830bd210cccd5d10feaad31c</sys_id>
+        <sys_mod_count>63</sys_mod_count>
+        <sys_name>New client script 2</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_client_script_0a1d4872830bd210cccd5d10feaad31c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 10:53:09</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

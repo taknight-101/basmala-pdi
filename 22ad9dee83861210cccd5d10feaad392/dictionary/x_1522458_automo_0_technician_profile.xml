@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="4b1fd4fd83be9210cccd5d10feaad3f6" label="Technician Profile" max_length="40" name="x_1522458_automo_0_technician_profile" type="collection">
+        <element default="{&quot;data&quot;: []}" label="Performance History" max_length="50000" name="performance_history" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Tasks Per Month" max_length="40" name="tasks_per_month" read_only="true" type="integer"/>
         <element label="Feild For Debugging" max_length="40000" name="feild_for_debugging" read_only="true" type="string"/>

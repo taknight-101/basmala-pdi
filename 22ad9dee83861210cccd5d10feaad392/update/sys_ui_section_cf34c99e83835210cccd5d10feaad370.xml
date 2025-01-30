@@ -4,13 +4,13 @@
             <element>sender</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-14 08:32:12</sys_created_on>
-            <sys_id>0b548d9e83835210cccd5d10feaad375</sys_id>
+            <sys_created_on>2025-01-19 11:45:56</sys_created_on>
+            <sys_id>35a0237f83071210cccd5d10feaad33d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="x_1522458_automo_0_chating" display_value="x_1522458_automo_0_chating" name="x_1522458_automo_0_chating" sys_domain="global" view="4334899e83835210cccd5d10feaad38d">cf34c99e83835210cccd5d10feaad370</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-14 08:32:12</sys_updated_on>
+            <sys_updated_on>2025-01-19 11:45:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,55 +18,69 @@
             <element>receiver</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-14 08:32:12</sys_created_on>
-            <sys_id>03548d9e83835210cccd5d10feaad376</sys_id>
+            <sys_created_on>2025-01-19 11:45:56</sys_created_on>
+            <sys_id>71a0237f83071210cccd5d10feaad33e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="x_1522458_automo_0_chating" display_value="x_1522458_automo_0_chating" name="x_1522458_automo_0_chating" sys_domain="global" view="4334899e83835210cccd5d10feaad38d">cf34c99e83835210cccd5d10feaad370</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-14 08:32:12</sys_updated_on>
+            <sys_updated_on>2025-01-19 11:45:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>seen</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-19 11:45:56</sys_created_on>
+            <sys_id>79a0237f83071210cccd5d10feaad33e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="x_1522458_automo_0_chating" display_value="x_1522458_automo_0_chating" name="x_1522458_automo_0_chating" sys_domain="global" view="4334899e83835210cccd5d10feaad38d">cf34c99e83835210cccd5d10feaad370</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-19 11:45:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-14 08:32:12</sys_created_on>
-            <sys_id>0b548d9e83835210cccd5d10feaad376</sys_id>
+            <sys_created_on>2025-01-19 11:45:56</sys_created_on>
+            <sys_id>71a0237f83071210cccd5d10feaad33f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="x_1522458_automo_0_chating" display_value="x_1522458_automo_0_chating" name="x_1522458_automo_0_chating" sys_domain="global" view="4334899e83835210cccd5d10feaad38d">cf34c99e83835210cccd5d10feaad370</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-14 08:32:12</sys_updated_on>
+            <sys_updated_on>2025-01-19 11:45:56</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>message</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-14 08:32:12</sys_created_on>
-            <sys_id>03548d9e83835210cccd5d10feaad377</sys_id>
+            <sys_created_on>2025-01-19 11:45:56</sys_created_on>
+            <sys_id>79a0237f83071210cccd5d10feaad33f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="x_1522458_automo_0_chating" display_value="x_1522458_automo_0_chating" name="x_1522458_automo_0_chating" sys_domain="global" view="4334899e83835210cccd5d10feaad38d">cf34c99e83835210cccd5d10feaad370</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-14 08:32:12</sys_updated_on>
+            <sys_updated_on>2025-01-19 11:45:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>date</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-14 08:32:12</sys_created_on>
-            <sys_id>0b548d9e83835210cccd5d10feaad377</sys_id>
+            <sys_created_on>2025-01-19 11:45:56</sys_created_on>
+            <sys_id>71a0237f83071210cccd5d10feaad340</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="x_1522458_automo_0_chating" display_value="x_1522458_automo_0_chating" name="x_1522458_automo_0_chating" sys_domain="global" view="4334899e83835210cccd5d10feaad38d">cf34c99e83835210cccd5d10feaad370</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-14 08:32:12</sys_updated_on>
+            <sys_updated_on>2025-01-19 11:45:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

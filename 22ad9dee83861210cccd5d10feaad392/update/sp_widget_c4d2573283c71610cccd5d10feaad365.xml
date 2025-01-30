@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+    var c = this;
+
+    c.answers = {}; // Stores user input
+    c.errors = {};  // Stores validation errors
+    c.successMessage = null;
+    c.errorMessage = null;
+    c.submitted = false; // To track if the form has been submitted
+    
+	  c.answers.additionalComments="";
+    // Initialize data
+    c.questions = c.data.questions || []; // Populate questions passed from the server
+
+    // Submit Feedback Function
+    c.submitFeedback = function () {
+			 console.log('Submitted Answers:hi');
+        c.submitted = true; // Mark the form as submitted
+        var isValid = true;
+        c.errors = {}; // Reset errors
+
+        // Validate each question
+        c.questions.forEach(function (question) {
+            if (!c.answers[question.id]) {
+                c.errors[question.id] = 'This field is required.';
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            c.errorMessage = 'Please answer all required questions.';
+            c.successMessage = null;
+            return;
+        }
+
+        // Prepare payload for submission
+        var answers = {};
+
+        // Map answers to the corresponding question name
+        c.questions.forEach(function (question) {
+            var fieldName = question.name;
+            var answerValue = c.answers[question.id].toLowerCase().replace(/ /g, '_'); // Ensure the choice value is in lowercase
+            answers[fieldName] = answerValue; // Assign to the payload
+        });
+				 console.log('Submitted Answers;',c.data);
+        // Submit via server script (handled via the input object)
+        c.data.answers = answers;
+
+			c.data.additionalComments=  c.answers.additionalComments;
+			
+			
+			 console.log('Submitted Answers;',c.data);
+				document.getElementById("success-popup").style.display = "flex";
+			 c.server.update().then(function () {
+            // Clear fields
+           
+           
+
+            // Clear errors
+            c.errors = {};});
+					
+    };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+ 
+  
+  
+}
+.thebody{
+   margin: 0px;
+    padding:0px;
+
+    display: flex;
+  flex-direction:row;
+    justify-content: center;
+   align-items: center;
+    min-height: 100vh;
+ 		 align-self:center;
+		background-color:#ffffff;
+ 		padding-left:230px;
+ 
+}
+
+/* Feedback Container */
+.feedback-container {
+    background: linear-gradient(145deg, #f4f9fc, #d9e7f4);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   
+  width:700px;
+    display: flex;
+  
+    flex-direction: column;
+   align-items: center;
+  //align-self:right;
+  justify-content:center;
+
+}
+
+.header-container h1 {
+    font-size: 38px;
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+/* Questions Container */
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between the cards */
+    width: 100%;
+}
+
+/* Question Cards */
+.question-card {
+    background: #FEFEFE;
+    //border: 1px solid #0077B6;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0.2, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.question-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.question-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.mandatory {
+    color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+/* Options */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+  	
+  	
+}
+
+.text-input-container {
+    margin-top: 30px; /* Add space above this section */
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    max-width: 700px;
+    min-height: 50px; /* Initial minimum height */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none; /* Disable manual resizing */
+    background: #fefEfe;
+    overflow-y: hidden; /* Prevent scrollbars while resizing */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    transition: height 0.2s ease-in-out; /* Smooth height adjustment */
+}
+
+
+
+/* Submit Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  	width:100%;
+    padding: 12px 24px;
+    font-size: 24px;
+    border-radius: 6px;
+   	align-self: center; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005b88;
+    transform: scale(1.05);
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content i {
+    font-size: 5rem;
+    color: #0077B6;
+    margin-bottom: 15px;
+}
+
+.popup-content h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    background-color: #0077B6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #005b88;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>customer_feedback_v2</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>customer Feedback V2</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+    // Retrieve the sys_id dynamically (example: from a parameter or user session)
+    var sys_id = $sp.getParameter('sys_id');
+		gs.info("iss "+ sys_id);
+    if (!sys_id) {
+        gs.error('Missing sys_id. Unable to process.');
+        data.errorMessage = 'The sys_id parameter is missing.';
+        return;
+    }
+
+    // Pass the sys_id to the client
+    data.sys_id = sys_id;
+		data.answers={};
+    // Prepare the questions to send to the client
+data.questions = [
+	{
+        id: 1,
+        label: 'How would you rate your overall experience with our service center?',
+        name: 'how_would_you_rate_your_overall_experience_with_our_service_center',
+        options: ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent']
+    },
+  
+    {
+        id: 2,
+        label: 'How satisfied were you with the professionalism and friendliness of our staff?',
+        name: 'how_satisfied_were_you_with_the_professionalism_and_friendliness_of_our_staff',
+        options: ['Very Unsatisfied', 'Unsatisfied', 'Neutral', 'Satisfied', 'Very Satisfied']
+    },
+    {
+        id: 3,
+        label: 'Was the explanation of the repair work and costs clear and reasonable?',
+        name: 'was_the_explanation_of_the_repair_work_and_costs_clear_and_reasonable',
+        options: ['Not at All', 'Somewhat Clear', 'Neutral', 'Clear', 'Very Clear']
+    },
+     
+	 {
+        id: 4,
+        label: 'Did the repair fully resolve the issue with your vehicle?',
+        name: 'did_the_repair_fully_resolve_the_issue_with_your_vehicle',
+        options: ['Yes, Completely', 'Partially', 'No']
+    },
+    {
+        id: 5,
+        label: 'Would you recommend our service center to friends or family?',
+        name: 'would_you_recommend_our_service_center_to_friends_or_family',
+        options: ['Definitely', 'Probably', 'Not Sure', 'Probably Not', 'Definitely Not']
+    }
+	
+	
+];
+
+	 var feedbackGR = new GlideRecord('x_1522458_automo_0_customer_feedback');
+            feedbackGR.initialize();
+
+            // Add the sys_id to the feedback record
+            feedbackGR.setValue('request', sys_id);
+	
+    // Save feedback when data is sent from the client
+    if (input) {
+        try {
+					 gs.warn('iss This is an informational message from the server script'+ JSON.stringify(input.answers));
+           
+
+            // Map the answers from the client to the feedback record
+            for (var field in input.answers) {
+                if (feedbackGR.isValidField(field)) {
+                    feedbackGR.setValue(field, input.answers[field]);
+                } else {
+                    gs.warn('iss Invalid field in answers: ' + field);
+                }
+            }
+
+            // Insert the record into the database
+					 
+					 feedbackGR.setValue('additional_comments_or_suggestions',input.additionalComments );
+					
+					
+            var recordSysId = feedbackGR.insert();
+					
+            if (recordSysId) {
+                gs.info('Feedback record created successfully. Sys ID: ' + recordSysId);
+                data.success = true;
+								data.answers={};
+								data.sys_id="";
+            } else {
+                gs.error('iss Failed to insert feedback record');
+                data.success = false;
+                data.errorMessage = 'Failed to save feedback record.';
+								
+            }
+        } catch (e) {
+            gs.error('iss Error processing feedback: ' + e.message);
+            data.success = false;
+            data.errorMessage = 'An error occurred while processing feedback: ' + e.message;
+        }
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 08:11:33</sys_created_on>
+        <sys_id>c4d2573283c71610cccd5d10feaad365</sys_id>
+        <sys_mod_count>115</sys_mod_count>
+        <sys_name>customer Feedback V2</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_c4d2573283c71610cccd5d10feaad365</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 12:57:21</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="thebody">
+  
+    <div class="feedback-container">
+        <div class="header-container">
+            <h1>Service Feedback</h1>
+        </div>
+        <form name="feedbackForm">
+            <!-- Questions -->
+            <div class="questions-container">
+                <div class="question-card" ng-repeat="question in c.questions">
+                    <label class="question-label">
+                        {{question.label}} <span class="mandatory">*</span>
+                    </label>
+                    <div class="options">
+                        <label class="option" ng-repeat="option in question.options">
+                            <input type="radio" name="{{question.name}}" value="{{option}}" ng-model="c.answers[question.id]" ng-required="true" />
+                            <span>{{option}}</span>
+                        </label>
+                    </div>
+                    <div class="error-message" ng-if="c.submitted && c.errors[question.id]">
+                        This field is required.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Comments -->
+           <div class="text-input-container">
+            <label class="question-label" for="additionalComments">
+                Additional Comments or Suggestions (Optional)
+            </label>
+            <textarea id="additionalComments" ng-model="c.answers.additionalComments" maxlength="4000" placeholder="Type your thoughts here..." oninput="autoResize(this)"></textarea>
+        </div>
+
+
+
+            <!-- Submit Button -->
+            <div class="button-container">
+                <button type="button" class="submit-button" ng-click="c.submitFeedback()">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="success-popup" class="popup">
+        <div class="popup-content">
+            
+            <h2>Your Feedback Submitted Successfully</h2>
+            <p>We appreciate your feedback and are always striving to improve.</p>
+            <button class="close-btn" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+          
+  </div>
+
+    <script>
+        function submitFeedback() {
+            const popup = document.getElementById("success-popup");
+            popup.style.display = "flex";
+        }
+
+        function closePopup() {
+            const popup = document.getElementById("success-popup");
+            popup.style.display = "none";
+            window.location.href = "https://dev231407.service-now.com/customer_portal?id=customer_homepage";
+        }
+   
+    // Function to dynamically adjust textarea height as content grows
+    function autoResize(textarea) {
+        textarea.style.height = "auto"; // Reset height to calculate new height
+        textarea.style.height = textarea.scrollHeight + "px"; // Set to content height
+    }
+
+
+    </script>
+
+</body>
+</html>
+]]></template>
+    </sp_widget>
+</record_update>

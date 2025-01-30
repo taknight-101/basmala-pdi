@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="a353c91e83835210cccd5d10feaad34a" label="chating" max_length="40" name="x_1522458_automo_0_chating" type="collection">
         <element label="Sender" max_length="32" name="sender" reference="sys_user" type="reference"/>
+        <element choice="1" label="seen" max_length="40" name="seen" type="boolean">
+            <choice/>
+        </element>
         <element label="Receiver" max_length="32" name="receiver" reference="sys_user" type="reference"/>
-        <element label="Message" max_length="40" name="message" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="date" max_length="40" name="date" type="glide_date_time"/>
+        <element label="Message" max_length="2000" name="message" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
+        <element label="sound" max_length="40" name="sound" type="audio"/>
         <index name="index">
             <element name="receiver"/>
         </index>

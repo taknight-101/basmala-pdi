@@ -287,12 +287,26 @@ input[type="date"]:focus {
     color: #333;
     margin-bottom: 10px;
 }
-
+.cost-sectiontotal{ 
+    margin-top: 10px;
+    background-color:#dfeded;
+    padding: 15px;
+    border-radius: 8px;
+}
 .cost-section p {
     font-size: 18px;
     color: #333;
 }
-
+.cost-sectiontotal p {
+    font-size: 18px;
+    color: #333;
+}
+.cost-sectiontotal h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
 /* Button Section */
 .form-submit-container {
     margin-top: 30px;
@@ -620,14 +634,14 @@ input[type="date"]:focus {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-02 08:22:47</sys_created_on>
         <sys_id>442f83d683721210cccd5d10feaad37d</sys_id>
-        <sys_mod_count>229</sys_mod_count>
+        <sys_mod_count>246</sys_mod_count>
         <sys_name>standard Service Request</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sp_widget_442f83d683721210cccd5d10feaad37d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-13 13:17:08</sys_updated_on>
+        <sys_updated_on>2025-01-16 09:47:48</sys_updated_on>
         <template><![CDATA[<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -696,10 +710,10 @@ input[type="date"]:focus {
                 </div>
 
                 <!-- Total Cost -->
-                <div class="cost-section" ng-if="c.selectedVehicle">
-                    <div class="cost-row" style= "background:#E9f9f9">
+                <div class="cost-sectiontotal" ng-if="c.selectedVehicle">
+                    <div class="cost-row">
                         <h3>Total Cost</h3>
-                        <p style=" font-weight: Bold">{{ c.totalCost | number:2 }} EGP</p>
+                        <p>{{ c.totalCost | number:2 }} EGP</p>
                     </div>
                 </div>
             </div>

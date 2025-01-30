@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>Get Data</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+	var senderId = request.pathParams.senderId;
+    var receiverId = request.pathParams.receiverId;
+
+    if (!senderId || !receiverId) {
+        response.setStatus(440);
+        response.setBody({ error: "Missing senderId or receiverId in the URL path" });
+        return;
+    }
+    var gr = new GlideRecord('x_1522458_automo_0_chating');
+
+    gr.addQuery('sender', senderId);
+    gr.addQuery('receiver', receiverId);
+    //gr.addOrCondition('sender', receiverId).addCondition('receiver', senderId);
+
+    gr.orderBy('sys_created_on'); 
+    gr.query();
+
+    var messages = [];
+
+    while (gr.next()) {
+        messages.push({
+            message: gr.getValue('message'),
+            sender: gr.getValue('sender'),
+            receiver: gr.getValue('receiver'),
+            timestamp: gr.getValue('sys_created_on')
+        });
+    }
+
+    response.setStatus(200);
+    response.setBody(messages);
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1522458_automo_0/chat_data/{sender}/{receiver}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/{sender}/{receiver}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-22 08:11:59</sys_created_on>
+        <sys_id>085c8678831f1610cccd5d10feaad399</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Get Data</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ws_operation_085c8678831f1610cccd5d10feaad399</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-22 08:46:58</sys_updated_on>
+        <web_service_definition display_value="Chat Data">110cce38831f1610cccd5d10feaad3fc</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>085c8678831f1610cccd5d10feaad399</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-22 08:11:59</sys_created_on>
+        <sys_id>b47c8a38831f1610cccd5d10feaad320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-22 08:11:59</sys_updated_on>
+        <table>sys_ws_operation</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

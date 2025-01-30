@@ -4,13 +4,27 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-14 08:05:47</sys_created_on>
-            <sys_id>005eb81683835210cccd5d10feaad378</sys_id>
+            <sys_created_on>2025-01-19 11:13:22</sys_created_on>
+            <sys_id>60399bf383071210cccd5d10feaad36c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_notification" sys_domain="global" view="Default view">805eb81683835210cccd5d10feaad374</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-14 08:05:47</sys_updated_on>
+            <sys_updated_on>2025-01-19 11:13:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>field_for_debugging</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-19 11:13:22</sys_created_on>
+            <sys_id>ac399bf383071210cccd5d10feaad36c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1522458_automo_0_notification" sys_domain="global" view="Default view">805eb81683835210cccd5d10feaad374</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-19 11:13:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

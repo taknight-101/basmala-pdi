@@ -407,13 +407,8 @@
                                                     "value": []
                                                 },
                                                 "fixedQuery": {
-                                                    "binding": {
-                                                        "address": [
-                                                            "TaskQuery",
-                                                            "Query"
-                                                        ]
-                                                    },
-                                                    "type": "STATE_BINDING"
+                                                    "type": "JSON_LITERAL",
+                                                    "value": ""
                                                 },
                                                 "groupByField": {
                                                     "type": "JSON_LITERAL",
@@ -671,12 +666,8 @@
                                                     "value": ""
                                                 },
                                                 "refreshRequested": {
-                                                    "binding": {
-                                                        "address": [
-                                                            "ListRefreh"
-                                                        ]
-                                                    },
-                                                    "type": "STATE_BINDING"
+                                                    "type": "JSON_LITERAL",
+                                                    "value": ""
                                                 },
                                                 "selectedListId": {
                                                     "type": "JSON_LITERAL",
@@ -1920,6 +1911,186 @@
                                             },
                                             "slot": null,
                                             "styles": null
+                                        },
+                                        {
+                                            "definition": {
+                                                "id": "63ea66b3c5a122819f729b7254789c34",
+                                                "type": "MACROPONENT"
+                                            },
+                                            "elementId": "pagination_control_1",
+                                            "elementLabel": "Pagination control 1",
+                                            "eventMappings": [
+                                                {
+                                                    "eventMappingId": "cmffycchoxiaaccjjmddffiiffcxjvbeth",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "sn_pagination_cont.NOW_PAGINATION_CONTROL#SELECTED_PAGE_SET",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "sn_pagination_cont.NOW_PAGINATION_CONTROL#SELECTED_PAGE_SET",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": {
+                                                                "payload": {
+                                                                    "type": "JSON_LITERAL",
+                                                                    "value": {}
+                                                                },
+                                                                "sysId": "9c8c03268383d210cccd5d10feaad3c3"
+                                                            },
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": null,
+                                                            "operation": null,
+                                                            "targetId": "cmffycchoxjaaccjjnddffiiffekwvoaadh",
+                                                            "type": "CLIENT_SCRIPT"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "eventMappingId": "cmffycchwuwaaccjjpddffiiffyknrbggqx",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "sn_pagination_cont.NOW_PAGINATION_CONTROL#SELECTED_PAGE_SIZE_SET",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "sn_pagination_cont.NOW_PAGINATION_CONTROL#SELECTED_PAGE_SIZE_SET",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": null,
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": {
+                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                "payload": {
+                                                                    "container": {
+                                                                        "propName": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "pageLimit"
+                                                                        },
+                                                                        "value": {
+                                                                            "binding": {
+                                                                                "address": [
+                                                                                    "value"
+                                                                                ]
+                                                                            },
+                                                                            "type": "EVENT_PAYLOAD_BINDING"
+                                                                        }
+                                                                    },
+                                                                    "type": "MAP_CONTAINER"
+                                                                },
+                                                                "sysId": "32408b42ff7a10109046e490703bf176"
+                                                            },
+                                                            "operation": null,
+                                                            "targetId": "cmffycchwuwaaccjjqddffiiffriijccbyzhh",
+                                                            "type": "EVENT"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "configAria": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideGoToFirst": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideGoToLast": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideGoToNext": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideGoToPrevious": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hidePageNumbers": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hidePageSizeControl": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideRange": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "manageSelectedPage": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "manageSelectedPageSize": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "pageSizeLabel": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "pageSizes": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": [
+                                                        10,
+                                                        20,
+                                                        50,
+                                                        100
+                                                    ]
+                                                },
+                                                "pagesOverride": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "rangeLabel": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "selectedPage": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "0"
+                                                },
+                                                "selectedPageSize": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "pageLimit"
+                                                        ]
+                                                    },
+                                                    "type": "STATE_BINDING"
+                                                },
+                                                "total": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "totalRecords"
+                                                        ]
+                                                    },
+                                                    "type": "STATE_BINDING"
+                                                },
+                                                "visiblePages": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": ""
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
                                         }
                                     ],
                                     "layout": {
@@ -1941,6 +2112,10 @@
                                                 },
                                                 {
                                                     "element_id": "repeater_1",
+                                                    "styles": {}
+                                                },
+                                                {
+                                                    "element_id": "pagination_control_1",
                                                     "styles": {}
                                                 }
                                             ],
@@ -2173,7 +2348,7 @@
                                                                     "elementLabel": "Scheduled",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmffaaoijaasaabbzeddjiiffjjmjzhjugg",
+                                                                            "eventMappingId": "cmffybbdupfaabbyuddffiifflbbbbhaoco",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2192,45 +2367,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "0a49170b83aa1e10cccd5d10feaad3eb"
+                                                                                        "sysId": "5c8c03268383d210cccd5d10feaad3c3"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmffaaoijaasaabbzfddjiiffiicukjjjhjj",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "4a49170b83aa1e10cccd5d10feaad3eb"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffaapsbbtsaaccelddjiiffrqjjiieelccz",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "4e49170b83aa1e10cccd5d10feaad3eb"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffaasbbpuccaaccmkddjiiffpjjbbdvzuee",
+                                                                                    "targetId": "cmffybbdupfaabbyvddffiiffiiiivesyyjj",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -2284,7 +2427,7 @@
                                                                         },
                                                                         "name": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": "scheduled"
                                                                         },
                                                                         "readonly": {
                                                                             "type": "JSON_LITERAL",
@@ -2311,7 +2454,7 @@
                                                                     "elementLabel": "Checkbox 2",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmffaasktvqaaccoaaddjiiffvpeeqvggjjo",
+                                                                            "eventMappingId": "cmffybbeeegnaabbywddffiiffppqbbqvsa",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2330,45 +2473,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "8e49170b83aa1e10cccd5d10feaad3eb"
+                                                                                        "sysId": "5c8c03268383d210cccd5d10feaad3c3"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmffaasktvqaaccobbddjiiffccccqiijulg",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "4a49170b83aa1e10cccd5d10feaad3eb"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffaaskyphhaaccoccddjiiffqqjklxvo",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "4e49170b83aa1e10cccd5d10feaad3eb"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffaaslffhiiaaccoddddjiiffhhbbaeebqggr",
+                                                                                    "targetId": "cmffybbeeegnaabbyxddffiiffiikovdckt",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -2422,7 +2533,7 @@
                                                                         },
                                                                         "name": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": "in_progress"
                                                                         },
                                                                         "readonly": {
                                                                             "type": "JSON_LITERAL",
@@ -2449,7 +2560,7 @@
                                                                     "elementLabel": "Checkbox 3",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmffaasljezaaccoffddjiiffggnpccwqbz",
+                                                                            "eventMappingId": "cmffybbefqwaabbzaaddffiiffcwiiwwjjaacc",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2468,45 +2579,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "ce49170b83aa1e10cccd5d10feaad3eb"
+                                                                                        "sysId": "5c8c03268383d210cccd5d10feaad3c3"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmffaasljezaaccoggddjiifffaaheiihhggd",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "4a49170b83aa1e10cccd5d10feaad3eb"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffaaslqubaaccohhddjiiffmwkjjiizh",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "4e49170b83aa1e10cccd5d10feaad3eb"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffaaslxtbbaaccoiiddjiiffahhjlxjeey",
+                                                                                    "targetId": "cmffybbefqwaabbzbbddffiiffmoffiovut",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -2560,7 +2639,7 @@
                                                                         },
                                                                         "name": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": "completed"
                                                                         },
                                                                         "readonly": {
                                                                             "type": "JSON_LITERAL",
@@ -2587,7 +2666,7 @@
                                                                     "elementLabel": "Checkbox 4",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "cmffaasmiihjaaccojjddjiiffobbmlhhycn",
+                                                                            "eventMappingId": "cmffybbeogdaabbzddddffiiffcciggokiejj",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
                                                                             "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
@@ -2606,45 +2685,13 @@
                                                                                             "type": "JSON_LITERAL",
                                                                                             "value": {}
                                                                                         },
-                                                                                        "sysId": "0249170b83aa1e10cccd5d10feaad3ec"
+                                                                                        "sysId": "5c8c03268383d210cccd5d10feaad3c3"
                                                                                     },
                                                                                     "conditional": null,
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "cmffaasmiihjaaccoaddjiiffbmfhkzzt",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "4a49170b83aa1e10cccd5d10feaad3eb"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffaasmelbaaccobddjiiffksqccccrn",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "4e49170b83aa1e10cccd5d10feaad3eb"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmffaasmkmbbaaccocddjiiffeqrldkffii",
+                                                                                    "targetId": "cmffybbeogdaabbzeeddffiifflyaauviito",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -2698,7 +2745,7 @@
                                                                         },
                                                                         "name": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": "closed_complete"
                                                                         },
                                                                         "readonly": {
                                                                             "type": "JSON_LITERAL",
@@ -3112,19 +3159,32 @@
         "eventMappings": [],
         "inputValues": {
             "encodedQuery": {
-                "type": "JSON_LITERAL",
-                "value": "request.department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe"
+                "binding": {
+                    "address": [
+                        "Default1"
+                    ]
+                },
+                "type": "STATE_BINDING"
             },
             "limit": {
-                "type": "JSON_LITERAL",
-                "value": "10000"
+                "binding": {
+                    "address": [
+                        "pageLimit"
+                    ]
+                },
+                "type": "STATE_BINDING"
             },
             "offset": {
-                "type": "JSON_LITERAL",
-                "value": null
+                "binding": {
+                    "address": [
+                        "pageOffset"
+                    ]
+                },
+                "type": "STATE_BINDING"
             },
             "orderBy": {
-                "type": "JSON_LITERAL"
+                "type": "JSON_LITERAL",
+                "value": "sys_created_on"
             },
             "queryCategory": {
                 "type": "JSON_LITERAL",
@@ -3140,7 +3200,113 @@
             },
             "sortType": {
                 "type": "JSON_LITERAL",
-                "value": "asc"
+                "value": "desc"
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "x_1522458_automo_0_task"
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "546cccd25310101024e5ddeeff7b123b",
+            "type": "GRAPHQL"
+        },
+        "elementId": "tasks_count",
+        "elementLabel": "Tasks count",
+        "eventMappings": [
+            {
+                "eventMappingId": "cmffyccchhpiiaacchhffddffiiffcutsaypc",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_uxf.DATA_FETCH_SUCCEEDED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_uxf.DATA_FETCH_SUCCEEDED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "container": {
+                                    "propName": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "totalRecords"
+                                    },
+                                    "value": {
+                                        "binding": {
+                                            "address": [
+                                                "tasks_count",
+                                                "output",
+                                                "data",
+                                                "GlideAggregate_Query",
+                                                "0",
+                                                "count"
+                                            ]
+                                        },
+                                        "type": "DATA_OUTPUT_BINDING"
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "cmffyccchhpiiaacchhggddffiiffeezeeccxlccw",
+                        "type": "EVENT"
+                    }
+                ]
+            }
+        ],
+        "inputValues": {
+            "avgField": {
+                "type": "JSON_LITERAL"
+            },
+            "encodedQuery": {
+                "binding": {
+                    "address": [
+                        "Default1"
+                    ]
+                },
+                "type": "STATE_BINDING"
+            },
+            "groupBy": {
+                "type": "JSON_LITERAL"
+            },
+            "having": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "maxField": {
+                "type": "JSON_LITERAL"
+            },
+            "minField": {
+                "type": "JSON_LITERAL"
+            },
+            "orderBy": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "queryCategory": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "returnRowCount": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "sumField": {
+                "type": "JSON_LITERAL"
             },
             "table": {
                 "type": "JSON_LITERAL",
@@ -3225,66 +3391,69 @@
         <state_persistence_config/>
         <state_properties>[
     {
-        "fieldType": "json",
         "id": "",
         "initialValue": {
             "type": "JSON_LITERAL",
-            "value": {
-                "ClosedComplete": {
-                    "active": false,
-                    "value": "closed_complete"
-                },
-                "Completed": {
-                    "active": false,
-                    "value": "completed"
-                },
-                "InProgress": {
-                    "active": false,
-                    "value": "in_progress"
-                },
-                "Scheduled": {
-                    "active": false,
-                    "value": "scheduled"
-                }
-            }
+            "value": "request.department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe^stateINscheduled,in_progress,completed,closed_complete"
         },
-        "name": "TasksStates",
-        "shape": "",
-        "valueType": "json"
-    },
-    {
-        "fieldType": "json",
-        "id": "",
-        "initialValue": {
-            "type": "JSON_LITERAL",
-            "value": {
-                "Query": "request.department.dept_headDYNAMIC90d1921e5f510100a9ad2572f2b477fe"
-            }
-        },
-        "name": "TaskQuery",
-        "shape": "",
-        "valueType": "json"
-    },
-    {
-        "id": "",
-        "initialValue": null,
-        "name": "ListRefreh",
+        "name": "Default1",
         "shape": "",
         "valueType": "string"
+    },
+    {
+        "fieldType": "json",
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": []
+        },
+        "name": "state",
+        "shape": "",
+        "valueType": "json"
+    },
+    {
+        "fieldType": "number",
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": 10
+        },
+        "name": "pageLimit",
+        "shape": "",
+        "valueType": "number"
+    },
+    {
+        "fieldType": "number",
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": 0
+        },
+        "name": "pageOffset",
+        "shape": "",
+        "valueType": "number"
+    },
+    {
+        "fieldType": "number",
+        "id": "",
+        "initialValue": null,
+        "name": "totalRecords",
+        "shape": "",
+        "valueType": "number"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-22 13:31:25</sys_created_on>
         <sys_id>7d4c23be832ada10cccd5d10feaad354</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>81</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sys_ux_macroponent_7d4c23be832ada10cccd5d10feaad354</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-08 19:41:17</sys_updated_on>
+        <sys_updated_on>2025-01-15 15:55:05</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=7d4c23be832ada10cccd5d10feaad354"/>
 </record_update>

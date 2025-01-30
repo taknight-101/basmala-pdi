@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="Service Manager Side">d3cc71cb83dad210cccd5d10feaad381</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <event_mappings>[
+    {
+        "eventMappingId": "cmggdipggnoaabbxaddjiifffqhwccpb",
+        "isConfiguration": false,
+        "offRowStorageId": null,
+        "sourceEventApiName": "x_1522458_automo_0.SCREEN_STATUS_CHANGED_RELAY_77bf0b6a8383d210cccd5d10feaad3bc",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "x_1522458_automo_0.SCREEN_STATUS_CHANGED_RELAY_77bf0b6a8383d210cccd5d10feaad3bc",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.SCREEN_STATUS_CHANGED",
+                    "payload": {
+                        "container": {
+                            "clearStyles": {
+                                "binding": {
+                                    "address": [
+                                        "clearStyles"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "color": {
+                                "binding": {
+                                    "address": [
+                                        "color"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "dirtyModalId": {
+                                "binding": {
+                                    "address": [
+                                        "dirtyModalId"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "hasError": {
+                                "binding": {
+                                    "address": [
+                                        "hasError"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "hasUpdate": {
+                                "binding": {
+                                    "address": [
+                                        "hasUpdate"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "highlightedValue": {
+                                "binding": {
+                                    "address": [
+                                        "highlightedValue"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "icon": {
+                                "binding": {
+                                    "address": [
+                                        "icon"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "isDirty": {
+                                "binding": {
+                                    "address": [
+                                        "isDirty"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "message": {
+                                "binding": {
+                                    "address": [
+                                        "message"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "screenKey": {
+                                "binding": {
+                                    "address": [
+                                        "screenKey"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "secondaryTitle": {
+                                "binding": {
+                                    "address": [
+                                        "secondaryTitle"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "status": {
+                                "binding": {
+                                    "address": [
+                                        "status"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "title": {
+                                "binding": {
+                                    "address": [
+                                        "title"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "tooltipPreview": {
+                                "binding": {
+                                    "address": [
+                                        "tooltipPreview"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            }
+                        },
+                        "type": "MAP_CONTAINER"
+                    },
+                    "sysId": "f71f58643791ec0183da148626eb757d"
+                },
+                "operation": null,
+                "targetId": "cmggdipggnoaabbxjjddjiiffddaawueexydd",
+                "type": "EVENT"
+            }
+        ]
+    },
+    {
+        "eventMappingId": "cmggdjjjsffhhaabbxxddjiifflyffoabxj",
+        "isConfiguration": false,
+        "offRowStorageId": null,
+        "sourceEventApiName": "x_1522458_automo_0.UXR_APP_SHELL_DATA_SOURCE_1_REFRESH_RELAY_77bf0b6a8383d210cccd5d10feaad3bc",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "x_1522458_automo_0.UXR_APP_SHELL_DATA_SOURCE_1_REFRESH_RELAY_77bf0b6a8383d210cccd5d10feaad3bc",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": null,
+                "operation": {
+                    "dataBrokerId": "eaa5861c530210105a20ddeeff7b12fd",
+                    "operationName": "REFRESH",
+                    "parentResourceId": "uxr_app_shell_data_source_1",
+                    "payload": {
+                        "type": "JSON_LITERAL",
+                        "value": {}
+                    }
+                },
+                "targetId": "cmggdjjjsffhhaabbxwddjiifffgddiiffwcchh",
+                "type": "DATABROKER_OP"
+            }
+        ]
+    },
+    {
+        "eventMappingId": "cmggdjoggdiiaabbyrddjiiffeecrbbnjly",
+        "isConfiguration": false,
+        "offRowStorageId": null,
+        "sourceEventApiName": "x_1522458_automo_0.UXR_APP_SHELL_DATA_SOURCE_1_REFRESH_RELAY_77bf0b6a8383d210cccd5d10feaad3bc",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "x_1522458_automo_0.UXR_APP_SHELL_DATA_SOURCE_1_REFRESH_RELAY_77bf0b6a8383d210cccd5d10feaad3bc",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": null,
+                "operation": {
+                    "dataBrokerId": "eaa5861c530210105a20ddeeff7b12fd",
+                    "operationName": "REFRESH",
+                    "parentResourceId": "uxr_app_shell_data_source_1",
+                    "payload": {
+                        "type": "JSON_LITERAL",
+                        "value": {}
+                    }
+                },
+                "targetId": "cmggdjoggdiiaabbyqddjiiffminrwmxx",
+                "type": "DATABROKER_OP"
+            }
+        ]
+    }
+]</event_mappings>
+        <macroponent display_value="Default">77bf0b6a8383d210cccd5d10feaad3bc</macroponent>
+        <macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config>
+        <name>Default</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Chatting Page">77bf476a8383d210cccd5d10feaad380</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-15 13:19:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3fbf0b6a8383d210cccd5d10feaad3bf</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sys_ux_screen_3fbf0b6a8383d210cccd5d10feaad3bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-26 11:51:00</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=3fbf0b6a8383d210cccd5d10feaad3bf"/>
+</record_update>

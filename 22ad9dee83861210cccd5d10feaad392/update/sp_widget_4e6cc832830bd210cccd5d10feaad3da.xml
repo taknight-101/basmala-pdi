@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function(spUtil, $scope, $timeout) {
+  var c = this;
+  c.currentUser = c.data.currentUser;
+  c.newMessageCount = localStorage.getItem('newMessageCount') ? parseInt(localStorage.getItem('newMessageCount')) : 0;
+  c.audio = new Audio('https://directory.audio/sound-effects/interface-ui/34634-new-notification-7');
+
+  // Open the chat window
+  c.openChat = function() {
+    document.getElementById('chat-container').classList.remove('hidden');
+    c.newMessageCount = 0; // Reset counter when chat is opened
+    localStorage.setItem('newMessageCount', c.newMessageCount);
+    $timeout(function() {
+      c.scrollToBottom();
+    }, 100);
+  };
+
+  // Close the chat window
+  c.closeChat = function() {
+    document.getElementById('chat-container').classList.add('hidden');
+  };
+
+  // Check if the chat is open or closed
+  function isChatOpen() {
+    return !document.getElementById('chat-container').classList.contains('hidden');
+  }
+
+  // Watch for changes in the chat messages
+  spUtil.recordWatch($scope, "x_1522458_automo_0_chating", "", function(name, data) {
+    spUtil.update($scope);
+
+    var receiver = name.data.record.receiver.value;
+    var sender = name.data.record.sender.value;
+
+    if (c.currentUser === receiver && !isChatOpen()) {
+      // Increment the counter only if the chat is closed
+      c.newMessageCount++;
+      localStorage.setItem('newMessageCount', c.newMessageCount);
+      c.audio.play(); // Play notification sound
+    }
+
+    $timeout(function() {
+      c.scrollToBottom();
+    }, 100);
+  });
+
+  // Function to send a new message
+  c.sendMessage = function() {
+    if (!c.data.message || c.data.message.trim() === "") return;
+
+    // Send the message to the server
+    c.server.update().then(function(response) {
+      c.data.message = ""; // Clear the input field after sending
+    });
+  };
+
+  // Check if the Enter key is pressed
+  c.checkEnterKey = function(event) {
+    if (event.key === "Enter" || event.keyCode === 13) {
+      c.sendMessage();
+      event.preventDefault();
+    }
+  };
+
+  // Function to scroll to the bottom of the chat body
+  c.scrollToBottom = function() {
+    var chatBody = document.getElementById('chat-body');
+    chatBody.scrollTop = chatBody.scrollHeight;
+  };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.chatbot-button {
+  background-color: #1282A2;  
+  color:#ffffff;
+  border: none;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: fixed; 
+  bottom: 20px;
+  right: 30px;
+  z-index: 9999; 
+}
+.chatbot-button:hover {
+  background-color:#034078;
+}
+.notification-counter {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.manager-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Ensures the image fits well */
+  border: 2px solid #fff; /* Optional: Add a border */
+}
+
+.Container{
+  position: relative;
+  padding-bottom:70px;
+  width: 100%;
+}
+
+.chat-header {
+  background-color: #1282A2;
+  color: #ffffff;
+  font-weight:bold;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.chat-body {
+  height: 700px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  overflow: hidden; /* Hide the scrollbar */
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.form-group input[type="text"] {
+  flex: 3; /* Gives the input field more space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-right: 10px; /* Adds spacing between the input and button */
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  flex: 1; /* Keeps the button smaller */
+  background-color: #1282A2;
+  color: #ffffff;
+  border: none;
+  
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  height:36px;
+}
+
+input[type="submit"]:hover {
+  background-color: #034078;
+}
+
+.hidden {
+  display: none;
+}
+
+.icon{
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-3deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.icon {
+  animation: 1s wiggle ease infinite;
+}
+
+#chat-container {
+  position: fixed; 
+  bottom: 90px;
+  right: 30px;
+  width: 400px; 
+  z-index: 9999; 
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Style for chat messages */
+.receiver-message {
+  max-width: 50%;
+  padding: 8px;
+  padding-top:10px;
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;
+  animation: fadeIn 0.5s ease-in-out;
+  margin-bottom: 7px; /* Adds space between messages */
+  display: block;
+  background-color: #f0f0f0; /* Receiver's message (gray) */
+  color: #333333;
+  text-align: left;
+  border-bottom-right-radius: 10px; /* Rounded corners */
+  margin-right: auto;
+}
+
+.sender-message {
+  max-width: 50%;
+  padding: 8px;
+  padding-top:12px;
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;
+  animation: fadeIn 0.5s ease-in-out;
+  margin-bottom: 7px; /* Adds space between messages */
+  display: block;
+  background-color: #1282A2; /* Sender's message (blue) */
+  color: #ffffff;
+  text-align: left;
+  border-bottom-right-radius: 10px; /* Rounded corners */
+  margin-left: auto;
+}
+
+/* Hide scrollbar, but allow scroll behavior */
+#chat-body {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+#chat-body::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar in webkit-based browsers */
+}
+
+#chat-body {
+  -ms-overflow-style: none;  /* For Internet Explorer */
+  scrollbar-width: none;  /* For Firefox */
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>technician_chat</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Technician Chat</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+  data.messages = [];
+  var instanceUrl = gs.getProperty('glide.servlet.uri');
+  var currentUserID = gs.getUserID();
+
+  var grChat = new GlideRecordSecure('x_1522458_automo_0_chating');
+  grChat.addEncodedQuery('senderDYNAMIC90d1921e5f510100a9ad2572f2b477fe^ORreceiverDYNAMIC90d1921e5f510100a9ad2572f2b477fe');
+  grChat.orderBy('sys_created_on');
+  grChat.query();
+
+  while (grChat.next()) {
+    var messages = {};
+    messages.message = grChat.getValue('message');
+    messages.sender = grChat.getValue('sender');
+    messages.receiver = grChat.getValue('receiver');
+    messages.created = new GlideDateTime(grChat.getValue('sys_created_on')).getLocalTime().getByFormat('hh:mm a');
+    data.messages.push(messages);
+  }
+
+  data.currentUser = currentUserID;
+
+  var userGr = new GlideRecord('sys_user');
+  if (userGr.get(currentUserID)) {
+    var departmentSysID = userGr.getValue('department');
+    if (departmentSysID) {
+      var managerGr = new GlideRecord('sys_user');
+      if (departmentSysID === "3d510ffa83429210cccd5d10feaad3d1") {
+        if (managerGr.get("803a7a3283429210cccd5d10feaad3d3")) {
+          data.managerName = managerGr.getValue('first_name') + " " + managerGr.getValue('last_name');
+          data.managerPhoto = getImageUrl(managerGr.getValue('photo'));
+        }
+      } else if (departmentSysID === "1a814bfa83429210cccd5d10feaad3d7") {
+        if (managerGr.get("af7a32b283429210cccd5d10feaad3b3")) {
+          data.managerName = managerGr.getValue('first_name') + " " + managerGr.getValue('last_name');
+          data.managerPhoto = getImageUrl(managerGr.getValue('photo'));
+        }
+      }
+    }
+  }
+
+  function getImageUrl(imageSysId) {
+    if (!imageSysId) return '';
+    var attachmentGr = new GlideRecord('sys_attachment');
+    attachmentGr.addQuery('sys_id', imageSysId);
+    attachmentGr.query();
+    return attachmentGr.next() ? instanceUrl + '/sys_attachment.do?sys_id=' + attachmentGr.sys_id : '';
+  }
+
+  if (input && input.message) {
+    var receiverID = "";
+    if (userGr.get(currentUserID)) {
+      var departmentID = userGr.getValue('department');
+      if (departmentID === "3d510ffa83429210cccd5d10feaad3d1") {
+        receiverID = "803a7a3283429210cccd5d10feaad3d3";
+      } else if (departmentID === "1a814bfa83429210cccd5d10feaad3d7") {
+        receiverID = "af7a32b283429210cccd5d10feaad3b3";
+      }
+    }
+
+    if (receiverID) {
+      var gr = new GlideRecord("x_1522458_automo_0_chating");
+      gr.initialize();
+      gr.setValue("message", input.message);
+      gr.setValue("sender", currentUserID);
+      gr.setValue("receiver", receiverID);
+      gr.insert();
+    }
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-15 17:44:42</sys_created_on>
+        <sys_id>4e6cc832830bd210cccd5d10feaad3da</sys_id>
+        <sys_mod_count>346</sys_mod_count>
+        <sys_name>Technician Chat</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>sp_widget_4e6cc832830bd210cccd5d10feaad3da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-26 12:03:36</sys_updated_on>
+        <template><![CDATA[<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+<div>
+  <div id="chat-container" class="chat-container hidden">
+    <div class="chat-header">
+      <div style="display: flex; align-items: center;">
+        <img 
+          ng-src="{{c.data.managerPhoto || '/path/to/default/image.png'}}" 
+          alt="Manager Photo" 
+          class="manager-photo"
+        />
+        <span style="margin-left: 10px;">{{c.data.managerName || 'Service Manager'}}</span>
+      </div>
+      <button ng-click="c.closeChat()" style="border:none; background:none; color:white; font-size:24px; cursor:pointer;">&times;</button>
+    </div>
+
+    <div class="chat-body" id="chat-body" ng-scroll="scrollToBottom()">
+      <!-- ng-repeat will display messages here -->
+      <div 
+        ng-repeat="msg in c.data.messages" 
+        ng-class="{
+          'sender-message': msg.sender === c.currentUser,  
+          'receiver-message': msg.receiver === c.currentUser
+        }">
+        <p>
+          {{msg.message}}
+          <span style="float:right; margin-top:20px; font-size:11px;">
+            {{msg.created | date:'hh:mm a'}}
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input
+        type="text"
+        id="chat-input"
+        placeholder="Type a message..."
+        class="form-control"
+        ng-model="c.data.message"
+        ng-keydown="c.checkEnterKey($event)"
+      />
+      <input ng-click="c.sendMessage()" value="Send" type="submit" />
+    </div>
+  </div>
+
+  <div class="Container">
+    <div class="chatbot-button" ng-click="c.openChat()">
+      <i class="icon fa-solid fa-comment-dots"></i>
+      <span id="chat-notification" class="notification-counter" ng-show="c.newMessageCount > 0">{{ c.newMessageCount }}</span>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

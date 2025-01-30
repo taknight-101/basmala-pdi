@@ -30,7 +30,8 @@ position: relative;
 .footer-logos {
   display: flex;
   justify-content: center;
-  gap: 40px; /* Space between logos */
+  
+  gap: 60px; /* Space between logos */
   margin-bottom: 15px;
 }
 
@@ -79,21 +80,32 @@ position: relative;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-01 14:22:33</sys_created_on>
         <sys_id>614ea704831a1210cccd5d10feaad3a8</sys_id>
-        <sys_mod_count>109</sys_mod_count>
+        <sys_mod_count>146</sys_mod_count>
         <sys_name>Footer widget</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sp_widget_614ea704831a1210cccd5d10feaad3a8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-17 11:40:50</sys_updated_on>
+        <sys_updated_on>2025-01-30 09:50:27</sys_updated_on>
         <template><![CDATA[<div class="footer">
 <div class="footer-container">
   <div class="footer-logos">
-    <img src="https://pngimg.com/uploads/opel/opel_PNG11.png" alt="Opel" class="footer-logo">
-    <img src="https://logodownload.org/wp-content/uploads/2014/07/shell-logo-1.png" alt="Shell" class="footer-logo">
+   <!--  <img src="https://pngimg.com/uploads/opel/opel_PNG11.png" alt="Opel" class="footer-logo"> 
+    <img src="https://logodownload.org/wp-content/uploads/2014/07/shell-logo-1.png" alt="Shell" class="footer-logo"> -->
+
     <img src="https://ulearn.tech/wp-content/uploads/2021/01/07-GM_logo_2021.png" alt="GM" class="footer-logo">
+   
     <img src="https://logos-world.net/wp-content/uploads/2020/08/Bosch-Symbol-700x394.png" alt="Bosch" class="footer-logo">
+      <img src="https://logowik.com/content/uploads/images/old-car-service9700.logowik.com.webp" alt="Bosch" style="border-radius: 45px; max-width:60px" class="footer-logo">   
+  
+     <!--
+      <img src="https://logos-world.net/wp-content/uploads/2020/08/Bosch-Symbol-700x394.png" alt="Bosch" class="footer-logo">
+      <img src="https://logos-world.net/wp-content/uploads/2020/08/Bosch-Symbol-700x394.png" alt="Bosch" class="footer-logo">
+      <img src="https://logos-world.net/wp-content/uploads/2020/08/Bosch-Symbol-700x394.png" alt="Bosch" class="footer-logo">
+      <img ng-if="data.imageSrc" ng-src="{{data.imageSrc}}" alt="ServiceNow Image" style="max-width: 100%; height: auto;">
+      <img  ng-src="{{data.imageSrc}}" alt="ServiceNow Image" style="max-width: 100%; height: auto;">
+-->
   </div>
   <div class="footer-contact">
     <p><strong>Contact Us:</strong></p>
@@ -104,7 +116,7 @@ position: relative;
 </div>
 </div>
 
-]]></template>
+https://logowik.com/content/uploads/images/old-car-service9700.logowik.com.webp]]></template>
     </sp_widget>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>614ea704831a1210cccd5d10feaad3a8</id>

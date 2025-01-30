@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>35286b9f83d39610cccd5d10feaad33e</image>
+        <name>x_1522458_automo_0.logo_footer1.svg</name>
+        <size_bytes>2186</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 09:17:04</sys_created_on>
+        <sys_id>6df72fdf83d39610cccd5d10feaad396</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_1522458_automo_0.logo_footer1.svg</sys_name>
+        <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
+        <sys_update_name>db_image_6df72fdf83d39610cccd5d10feaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 09:17:26</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>image</file_name>
+        <hash>a1912a70d0a8780f008fdb99b12c58b702898b1b9d3647bff6a751dfc90607a2</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>2186</size_bytes>
+        <size_compressed>998</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 09:17:26</sys_created_on>
+        <sys_id>35286b9f83d39610cccd5d10feaad33e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-01-30 09:17:26</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>6df72fdf83d39610cccd5d10feaad396</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="35286b9f83d39610cccd5d10feaad33e">35286b9f83d39610cccd5d10feaad33e</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 09:17:26</sys_created_on>
+        <sys_id>75286b9f83d39610cccd5d10feaad33e</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>dVbLbhtJDLznKwjdmxqy34FtwOtr/AO5CUoQG5A3QWJEgb5+q7olW14rgMyZaQ1ZxWJ1y1e/fn+TP0+7f39drx6en398XK/3+73uo37/+W3ty7Ks8cZKfj9+3f/z/c/1apFFUsNnJY9frlfPjz+/rm4+iFz92Dw/CFbuU9LSxNPGxISvm2hJwbTvTEvUnDbu2lxm5BtLKOoWLGnsd7FrdOnC67hIfy0VNGWUan2npQaN6RZVapcZRy1Aa3WxO1yXIhHPksSjpPMynWWi70AnkNbtO07S1LNU9QKsJKZ+zsO0NnRECgFULtAwYKq3nWvUWm9f1fChT9kN3HBRD4EeTahHZX4OQHurJ/j0T12SabpAfSBLqjsgBxQ4y0Ue0j951mR44wI2YJNzIm1HXObntwUCKxAa07mAnuqcwed7Su8bQytt5uImzMexMpTk/efVzdWaFnrrJevaohhUTduAaUJu0yVjMGAWAyaawVBmnE7K2ppEdLCLOrTeGGZVZcbZAkxoaGvxwxOa7Sib0WERfF6K9MAiQK3oAQ3DiYTEH42E0Y2S5awkRNiq412jMzNdDArAye1wj+cGF0IMyNllxpkKwdTiFrNWAxUHyFKJhsY0xXNiQg2KdvCK2iO/N9wVG/bEXaMxYjk8BXjHyDAOtlRxxKl5BD8OEoShJi1Mbb1z46Rbw+yJyThhY9IMAQph2VFlaJm9YQW50Jmg1tQgA+RkkeQy49FXnRsq9q3WQqqNZaAbrqzSIrXxKjOeiM79HjEIx14cClkijTRwCKrugdRHvsmMR23D0Ja9Ic81NVYAmHP7V2irlmXGk8JVhsKRDULgzNmWcVpwKGMNxsmoi+I45wpVH+G0QShMgWMTHRNnm8ZF7KsKc5VC45YsM07POQeKqrZN9JzRchAZ/qw4ilKkmToMi6aJFoHbTUY4HUk4ywDsdxy1eFMAxFGmgjfOUgw42xs/EXGp6LXSPZEbxsdZ3YlBrg29FgwJ3yz9HSZIywJ5e0KhDh/RJmiEZMC6dSrsQ2E/KZxPOTmwuUB1nbuQwjGH4mKkkME2VepZe9zPEfoUqtE4j4XEhiANhdv/ugujO1bigU2YxkKLASfSRbEOA+XA+aE7nMwjvEzSJiTmhGQnYmnH5hJna/0vowxjlLQaDeScDL3NrisIgGwhNtAcX1kGeGUfNb/8TFAmikplIexpy0+R3gsb8jEjC3WFrKxR5DQKzhEUMk6qTZZ83B9x9uwyl4Zs7BFLB57fXjcQ+3h6o2OZT2NzSjxcPreZ9/qjM36R5Owp+Nl5f8X/MG4+/AcwOYk2iggAAA==</data>
+        <length>1320</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="35286b9f83d39610cccd5d10feaad33e">35286b9f83d39610cccd5d10feaad33e</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 09:17:26</sys_created_on>
+        <sys_id>f5286b9f83d39610cccd5d10feaad33e</sys_id>
+    </sys_attachment_doc>
+</record_update>

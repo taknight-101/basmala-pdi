@@ -9,7 +9,6 @@
       "/customer_portal?id=asm_request_service%20&table=x_1522458_automo_0_service_request&view=Customer_view";
   };
 
-  // Define phase-to-state mappings
   c.phases = {
     "INSPECTION PHASE": ["Waiting Inspection", "Under Inspection", "Inspected"],
     "OFFER PHASE": ["Waiting Approval", "Offer Approved"],
@@ -18,11 +17,13 @@
     "SERVICE INCOMPLETE": ["Closed Incomplete"],
   };
 
-  c.filterPhase = ""; // Initialize filter phase
-  c.sortColumnKey = ""; // Current column to sort by
-  c.sortAscending = true; // Current sorting order
+  c.filterPhase = "";  // Filter state initialized
+  c.sortColumnKey = "";
+  c.sortAscending = true;
 
-  // Transform state values for display
+  c.currentPage = 1; // Initialize current page
+  c.itemsPerPage = 6; // Number of items per page
+
   c.getDisplayState = function (state) {
     if (c.phases["INSPECTION PHASE"].includes(state)) {
       return "INSPECTION PHASE";
@@ -42,11 +43,8 @@
     return state;
   };
 
-  // Filter requests based on the selected phase
   c.filteredRequests = function () {
     var requests = c.data.requests;
-
-    // Filter by phase if selected
     if (c.filterPhase) {
       var validStates = c.phases[c.filterPhase] || [];
       requests = requests.filter(function (request) {
@@ -54,7 +52,6 @@
       });
     }
 
-    // Sort the filtered results
     if (c.sortColumnKey) {
       requests = requests.sort(function (a, b) {
         var valA = a[c.sortColumnKey] || "";
@@ -79,13 +76,37 @@
     return requests;
   };
 
-  // Handle sorting by column
+  c.paginatedRequests = function () {
+    var startIndex = (c.currentPage - 1) * c.itemsPerPage;
+    var endIndex = startIndex + c.itemsPerPage;
+    return c.filteredRequests().slice(startIndex, endIndex);
+  };
+
+  c.previousPage = function () {
+    if (c.currentPage > 1) c.currentPage--;
+  };
+
+  c.nextPage = function () {
+    if (c.currentPage < c.totalPages) c.currentPage++;
+  };
+
+  // Reset pagination to first page when filter changes
+  c.onFilterChange = function () {
+    c.currentPage = 1;
+  };
+
+  Object.defineProperty(c, "totalPages", {
+    get: function () {
+      return Math.ceil(c.filteredRequests().length / c.itemsPerPage);
+    },
+  });
+
   c.sortColumn = function (key) {
     if (c.sortColumnKey === key) {
-      c.sortAscending = !c.sortAscending; // Toggle sorting order
+      c.sortAscending = !c.sortAscending;
     } else {
       c.sortColumnKey = key;
-      c.sortAscending = true; // Default to ascending order
+      c.sortAscending = true;
     }
   };
 
@@ -93,7 +114,6 @@
     return new Date(b.CreatedOn) - new Date(a.CreatedOn);
   });
 
-  // Generate the list of phases for the filter dropdown
   c.myPhases = Object.keys(c.phases);
 };
 ]]></client_script>
@@ -281,6 +301,43 @@ tbody td {
 }
 
 
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination-container button {
+  padding: 8px 15px;
+  background-color: #034078;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.pagination-container button:hover {
+  background-color: #001F54;
+}
+
+.pagination-container button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.pagination-container span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -322,90 +379,94 @@ tbody td {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-01 18:54:29</sys_created_on>
         <sys_id>a5dc2cd8831e1210cccd5d10feaad351</sys_id>
-        <sys_mod_count>399</sys_mod_count>
+        <sys_mod_count>411</sys_mod_count>
         <sys_name>ASM List</sys_name>
         <sys_package display_value="Automotive Service Management" source="x_1522458_automo_0">22ad9dee83861210cccd5d10feaad392</sys_package>
         <sys_policy/>
         <sys_scope display_value="Automotive Service Management">22ad9dee83861210cccd5d10feaad392</sys_scope>
         <sys_update_name>sp_widget_a5dc2cd8831e1210cccd5d10feaad351</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-30 13:36:05</sys_updated_on>
+        <sys_updated_on>2025-01-15 17:58:57</sys_updated_on>
         <template><![CDATA[<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <div class="Container">
-<div class="tableContainer">
-  
-<div class="header-container">
-<h3>My Requests</h3>
-<div class="filter-container">
-  <label for="phaseFilter">Filter by Phase:</label>
-  <select id="phaseFilter" class="state-dropdown" ng-model="c.filterPhase">
-    <option value="">All Phases</option>
-    <option ng-repeat="phase in c.myPhases" value="{{phase}}">
-      {{phase}}
-    </option>
-  </select>
-  <button id="new" ng-click="c.navigate()">New</button>
-</div>
+  <div class="tableContainer">
+    <div class="header-container">
+      <h3>My Requests</h3>
+      <div class="filter-container">
+        <label for="phaseFilter">Filter by Phase:</label>
+        <select id="phaseFilter" class="state-dropdown" ng-model="c.filterPhase" ng-change="c.onFilterChange()">
+          <option value="">All Phases</option>
+          <option ng-repeat="phase in c.myPhases" value="{{phase}}">
+            {{phase}}
+          </option>
+        </select>
+        <button id="new" ng-click="c.navigate()">New</button>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr class="headRow">
+          <th ng-click="c.sortColumn('RequestNumber')">
+            Request Number 
+            <i class="fas" ng-class="{'fa-sort-up': c.sortColumnKey === 'RequestNumber' && c.sortAscending, 'fa-sort-down': c.sortColumnKey === 'RequestNumber' && !c.sortAscending}"></i>
+          </th>
+          <th ng-click="c.sortColumn('Type')">
+            Type 
+            <i class="fas" ng-class="{'fa-sort-up': c.sortColumnKey === 'Type' && c.sortAscending, 'fa-sort-down': c.sortColumnKey === 'Type' && !c.sortAscending}"></i>
+          </th>
+          <th ng-click="c.sortColumn('State')">
+            State 
+            <i class="fas" ng-class="{'fa-sort-up': c.sortColumnKey === 'State' && c.sortAscending, 'fa-sort-down': c.sortColumnKey === 'State' && !c.sortAscending}"></i>
+          </th>
+          <th ng-click="c.sortColumn('CreatedOn')">
+            Created At 
+            <i class="fas" ng-class="{'fa-sort-up': c.sortColumnKey === 'CreatedOn' && c.sortAscending, 'fa-sort-down': c.sortColumnKey === 'CreatedOn' && !c.sortAscending}"></i>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-if="!c.paginatedRequests().length">
+          <td colspan="4" style="text-align: center; font-style: italic; color: #888;font-weight:bold;font-size:17px">
+            <i class="fas fa-tasks"></i>
+            No data available to display
+          </td>
+        </tr>
+        <tr class="item" ng-repeat="s in c.paginatedRequests()">
+          <td>
+            <a href="customer_portal?id=asm_request_details&sys_id={{s.ID}}">
+              {{s.RequestNumber}}
+            </a>
+          </td>
+          <td>{{s.Type}}</td>
+          <td>
+            <span
+              class="status 
+                {{c.getDisplayState(s.State) === 'INSPECTION PHASE' ? 'inspection-phase' : 
+                c.getDisplayState(s.State) === 'OFFER PHASE' ? 'offer-phase' : 
+                c.getDisplayState(s.State) === 'REPAIRING PHASE' ? 'repairing-phase' : 
+                c.getDisplayState(s.State) === 'SERVICE COMPLETE' ? 'service-complete' : 
+                c.getDisplayState(s.State) === 'SERVICE INCOMPLETE' ? 'service-incomplete' : 
+                s.State.toLowerCase().replace(' ', '-').replace(' ', '-')}}"
+            >
+              {{c.getDisplayState(s.State)}}
+            </span>
+          </td>
+          <td>
+            {{s.CreatedOn.split(' ')[0]}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Pagination Controls -->
+    <div class="pagination-container">
+      <button ng-click="c.previousPage()" ng-disabled="c.currentPage === 1">Previous</button>
+      <span>Page {{c.currentPage}} of {{c.totalPages}}</span>
+      <button ng-click="c.nextPage()" ng-disabled="c.currentPage === c.totalPages">Next</button>
+    </div>
   </div>
-
-<table>
-  <thead>
-    <tr class="headRow">
-      <th ng-click="c.sortColumn('RequestNumber')">
-        Request Number 
-        <i class="fas" ng-class="{'fa-sort-up': c.sortColumnKey === 'RequestNumber' && c.sortAscending, 'fa-sort-down': c.sortColumnKey === 'RequestNumber' && !c.sortAscending}"></i>
-      </th>
-      <th ng-click="c.sortColumn('Type')">
-        Type 
-        <i class="fas" ng-class="{'fa-sort-up': c.sortColumnKey === 'Type' && c.sortAscending, 'fa-sort-down': c.sortColumnKey === 'Type' && !c.sortAscending}"></i>
-      </th>
-      <th ng-click="c.sortColumn('State')">
-        State 
-        <i class="fas" ng-class="{'fa-sort-up': c.sortColumnKey === 'State' && c.sortAscending, 'fa-sort-down': c.sortColumnKey === 'State' && !c.sortAscending}"></i>
-      </th>
-      <th ng-click="c.sortColumn('CreatedOn')">
-        Created At 
-        <i class="fas" ng-class="{'fa-sort-up': c.sortColumnKey === 'CreatedOn' && c.sortAscending, 'fa-sort-down': c.sortColumnKey === 'CreatedOn' && !c.sortAscending}"></i>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-if="!c.filteredRequests().length">
-      <td colspan="4" style="text-align: center; font-style: italic; color: #888;font-weight:bold;font-size:17px">
-        <i class="fas fa-tasks"></i>
-        No data available to display
-      </td>
-    </tr>
-    <tr class="item" ng-repeat="s in c.filteredRequests()">
-      <td>
-        <a href="customer_portal?id=asm_request_details&sys_id={{s.ID}}">
-          {{s.RequestNumber}}
-        </a>
-      </td>
-      <td>{{s.Type}}</td>
-      <td>
-        <span
-          class="status 
-            {{c.getDisplayState(s.State) === 'INSPECTION PHASE' ? 'inspection-phase' : 
-            c.getDisplayState(s.State) === 'OFFER PHASE' ? 'offer-phase' : 
-            c.getDisplayState(s.State) === 'REPAIRING PHASE' ? 'repairing-phase' : 
-            c.getDisplayState(s.State) === 'SERVICE COMPLETE' ? 'service-complete' : 
-            c.getDisplayState(s.State) === 'SERVICE INCOMPLETE' ? 'service-incomplete' : 
-            s.State.toLowerCase().replace(' ', '-').replace(' ', '-')}}"
-        >
-          {{c.getDisplayState(s.State)}}
-        </span>
-      </td>
-      <td>
-        {{s.CreatedOn.split(' ')[0]}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-</div>
-
+</div> 
 ]]></template>
     </sp_widget>
 </record_update>

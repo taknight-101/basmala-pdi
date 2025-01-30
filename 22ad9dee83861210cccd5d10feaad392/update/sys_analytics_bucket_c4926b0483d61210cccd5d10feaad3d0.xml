@@ -3,7 +3,7 @@
         <analytics_channel display_value="web">6496ef61c7001010393d265c95c260b9</analytics_channel>
         <application_name>Customer Portal</application_name>
         <bucket_document_id>435223c083d61210cccd5d10feaad311</bucket_document_id>
-        <bucket_metadata/>
+        <bucket_metadata>{"MaxSessionDuration":"14400","ConfigReloadTime":"86400000","SessionTimeout":"1800000","HeartbeatInterval":"5000","MetadataRecordingRatio":"1","ClientLogsUploadPolicy":"1","AutoDetectScreens":"true","MaxDataPointsPerHeartbeat":"1000"}</bucket_metadata>
         <bucket_metadata_customer_override/>
         <bucket_table_name>sp_portal</bucket_table_name>
         <bucket_type>service_portal</bucket_type>
